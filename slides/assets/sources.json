@@ -40,6 +40,14 @@
     "method": "原始內嵌影像擷取，未重畫"
   },
   {
+    "asset": "slides/assets/book_fig_1_23.png",
+    "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
+    "pdf_page": 32,
+    "printed_page": 32,
+    "figure": "1-23",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
     "asset": "slides/assets/book_fig_1_24.png",
     "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
     "pdf_page": 33,
