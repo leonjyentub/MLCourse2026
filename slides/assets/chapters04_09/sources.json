@@ -1,0 +1,1352 @@
+[
+  {
+    "figure": "4-1",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 5,
+    "bbox": [
+      126.25076293945312,
+      145.05001831054688,
+      378.249267578125,
+      306.75787353515625
+    ],
+    "caption": "A randomly generated linear dataset",
+    "asset": "slides/assets/chapters04_09/book_fig_4_1.png",
+    "printed_page": 139,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-2",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 6,
+    "bbox": [
+      126.25076293945312,
+      276.95538330078125,
+      378.249267578125,
+      438.6632385253906
+    ],
+    "caption": "Linear regression model predictions",
+    "asset": "slides/assets/chapters04_09/book_fig_4_2.png",
+    "printed_page": 140,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-3",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 8,
+    "bbox": [
+      126.25,
+      385.25042724609375,
+      378.25,
+      524.8810424804688
+    ],
+    "caption": "In this depiction of gradient descent, the model parameters are initialized\nrandomly and get tweaked repeatedly to minimize the cost function; the learning step\nsize is proportional to the slope of the cost function, so the steps gradually get smaller as\nthe cost approaches the minimum",
+    "asset": "slides/assets/chapters04_09/book_fig_4_3.png",
+    "printed_page": 142,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-4",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 9,
+    "bbox": [
+      126.25,
+      115.64999389648438,
+      378.25,
+      245.32638549804688
+    ],
+    "caption": "Learning rate too small",
+    "asset": "slides/assets/chapters04_09/book_fig_4_4.png",
+    "printed_page": 143,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-5",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 9,
+    "bbox": [
+      126.25,
+      341.15643310546875,
+      378.25,
+      470.83282470703125
+    ],
+    "caption": "Learning rate too high",
+    "asset": "slides/assets/chapters04_09/book_fig_4_5.png",
+    "printed_page": 143,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-6",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 10,
+    "bbox": [
+      126.25,
+      90.44999694824219,
+      378.25,
+      220.89443969726562
+    ],
+    "caption": "Gradient descent pitfalls",
+    "asset": "slides/assets/chapters04_09/book_fig_4_6.png",
+    "printed_page": 144,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-7",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 11,
+    "bbox": [
+      90.25,
+      103.05000305175781,
+      414.25,
+      248.6449432373047
+    ],
+    "caption": "Gradient descent with (left) and without (right) feature scaling",
+    "asset": "slides/assets/chapters04_09/book_fig_4_7.png",
+    "printed_page": 145,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-8",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 13,
+    "bbox": [
+      79.44999694824219,
+      244.03651428222656,
+      425.04998779296875,
+      372.28179931640625
+    ],
+    "caption": "Gradient descent with various learning rates",
+    "asset": "slides/assets/chapters04_09/book_fig_4_8.png",
+    "printed_page": 147,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-9",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 15,
+    "bbox": [
+      153.25,
+      115.65000915527344,
+      351.25,
+      261.49090576171875
+    ],
+    "caption": "With stochastic gradient descent, each training step is much faster but also\nmuch more stochastic than when using batch gradient descent",
+    "asset": "slides/assets/chapters04_09/book_fig_4_9.png",
+    "printed_page": 149,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-10",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 16,
+    "bbox": [
+      126.25,
+      114.44999694824219,
+      378.25,
+      276.1588134765625
+    ],
+    "caption": "The first 20 steps of stochastic gradient descent",
+    "asset": "slides/assets/chapters04_09/book_fig_4_10.png",
+    "printed_page": 150,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-11",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 18,
+    "bbox": [
+      126.25,
+      115.6500244140625,
+      378.25,
+      251.6175537109375
+    ],
+    "caption": "Gradient descent paths in parameter space",
+    "asset": "slides/assets/chapters04_09/book_fig_4_11.png",
+    "printed_page": 152,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-12",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 19,
+    "bbox": [
+      135.25001525878906,
+      230.97398376464844,
+      369.25,
+      380.62188720703125
+    ],
+    "caption": "Generated nonlinear and noisy dataset",
+    "asset": "slides/assets/chapters04_09/book_fig_4_12.png",
+    "printed_page": 153,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-13",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 20,
+    "bbox": [
+      135.25001525878906,
+      106.05000305175781,
+      369.25,
+      255.69790649414062
+    ],
+    "caption": "Polynomial regression model predictions",
+    "asset": "slides/assets/chapters04_09/book_fig_4_13.png",
+    "printed_page": 154,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-14",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 21,
+    "bbox": [
+      135.25001525878906,
+      59.25,
+      369.25,
+      208.8979034423828
+    ],
+    "caption": "High-degree polynomial regression",
+    "asset": "slides/assets/chapters04_09/book_fig_4_14.png",
+    "printed_page": 155,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-15",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 22,
+    "bbox": [
+      144.25,
+      187.64999389648438,
+      360.25,
+      326.5905456542969
+    ],
+    "caption": "Learning curves",
+    "asset": "slides/assets/chapters04_09/book_fig_4_15.png",
+    "printed_page": 156,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-16",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 23,
+    "bbox": [
+      144.25,
+      263.8499755859375,
+      360.25,
+      402.79052734375
+    ],
+    "caption": "Learning curves for the 10th-degree polynomial model",
+    "asset": "slides/assets/chapters04_09/book_fig_4_16.png",
+    "printed_page": 157,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-17",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 24,
+    "bbox": [
+      97.42500305175781,
+      349.5,
+      406.57501220703125,
+      494.01263427734375
+    ],
+    "caption": "Bias/variance trade-off",
+    "asset": "slides/assets/chapters04_09/book_fig_4_17.png",
+    "printed_page": 158,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-18",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 27,
+    "bbox": [
+      79.44999694824219,
+      59.25000762939453,
+      425.04998779296875,
+      182.88037109375
+    ],
+    "caption": "Linear (left) and polynomial (right) models, both with various levels of\nridge regularization",
+    "asset": "slides/assets/chapters04_09/book_fig_4_18.png",
+    "printed_page": 161,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-19",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 29,
+    "bbox": [
+      79.44999694824219,
+      59.25000762939453,
+      425.04998779296875,
+      182.88037109375
+    ],
+    "caption": "Linear (left) and polynomial (right) models, both using various levels of\nlasso regularization",
+    "asset": "slides/assets/chapters04_09/book_fig_4_19.png",
+    "printed_page": 163,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-20",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 30,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      328.23565673828125
+    ],
+    "caption": "Lasso versus ridge regularization",
+    "asset": "slides/assets/chapters04_09/book_fig_4_20.png",
+    "printed_page": 164,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-21",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 32,
+    "bbox": [
+      135.25001525878906,
+      282.259033203125,
+      369.25,
+      432.7779541015625
+    ],
+    "caption": "Early stopping regularization",
+    "asset": "slides/assets/chapters04_09/book_fig_4_21.png",
+    "printed_page": 166,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-22",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 34,
+    "bbox": [
+      115.44949340820312,
+      289.58892822265625,
+      389.0505065917969,
+      381.4725646972656
+    ],
+    "caption": "Logistic function",
+    "asset": "slides/assets/chapters04_09/book_fig_4_22.png",
+    "printed_page": 168,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-23",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 37,
+    "bbox": [
+      90.25,
+      59.25,
+      414.25,
+      239.24998474121094
+    ],
+    "caption": "Flowers of three iris plant species14",
+    "asset": "slides/assets/chapters04_09/book_fig_4_23.png",
+    "printed_page": 171,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-24",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 38,
+    "bbox": [
+      90.25,
+      275.8499755859375,
+      414.25,
+      385.8040771484375
+    ],
+    "caption": "Estimated probabilities and decision boundary",
+    "asset": "slides/assets/chapters04_09/book_fig_4_24.png",
+    "printed_page": 172,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-25",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 39,
+    "bbox": [
+      79.44999694824219,
+      244.0500030517578,
+      425.04998779296875,
+      373.28900146484375
+    ],
+    "caption": "Linear decision boundary",
+    "asset": "slides/assets/chapters04_09/book_fig_4_25.png",
+    "printed_page": 173,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "4-26",
+    "source": "book/CHAPTER 04 Training Models.pdf",
+    "pdf_page": 43,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      188.12799072265625
+    ],
+    "caption": "Softmax regression decision boundaries",
+    "asset": "slides/assets/chapters04_09/book_fig_4_26.png",
+    "printed_page": 177,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-1",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 2,
+    "bbox": [
+      90.25,
+      330.4297790527344,
+      414.25,
+      562.6297607421875
+    ],
+    "caption": "Iris decision tree",
+    "asset": "slides/assets/chapters04_09/book_fig_5_1.png",
+    "printed_page": 180,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-2",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 4,
+    "bbox": [
+      79.44999694824219,
+      316.6365661621094,
+      425.04998779296875,
+      479.1915283203125
+    ],
+    "caption": "Decision tree decision boundaries",
+    "asset": "slides/assets/chapters04_09/book_fig_5_2.png",
+    "printed_page": 182,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-3",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 10,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      187.75308227539062
+    ],
+    "caption": "Decision boundaries of an unregularized tree (left) and a regularized tree\n(right)",
+    "asset": "slides/assets/chapters04_09/book_fig_5_3.png",
+    "printed_page": 188,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-4",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 11,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      199.93460083007812
+    ],
+    "caption": "A decision tree for regression",
+    "asset": "slides/assets/chapters04_09/book_fig_5_4.png",
+    "printed_page": 189,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-5",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 11,
+    "bbox": [
+      79.45144653320312,
+      416.3511657714844,
+      425.0485534667969,
+      545.5723266601562
+    ],
+    "caption": "Predictions of two decision tree regression models",
+    "asset": "slides/assets/chapters04_09/book_fig_5_5.png",
+    "printed_page": 189,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-6",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 12,
+    "bbox": [
+      90.25,
+      289.2575988769531,
+      414.25,
+      409.729248046875
+    ],
+    "caption": "Predictions of an unregularized regression tree (left) and a regularized tree\n(right)",
+    "asset": "slides/assets/chapters04_09/book_fig_5_6.png",
+    "printed_page": 190,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-7",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 13,
+    "bbox": [
+      79.44999694824219,
+      90.44999694824219,
+      425.04998779296875,
+      219.19349670410156
+    ],
+    "caption": "Sensitivity to training set rotation",
+    "asset": "slides/assets/chapters04_09/book_fig_5_7.png",
+    "printed_page": 191,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-8",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 14,
+    "bbox": [
+      79.45205688476562,
+      59.25,
+      425.0479431152344,
+      221.9459228515625
+    ],
+    "caption": "A tree’s decision boundaries on the scaled and PCA-rotated iris dataset",
+    "asset": "slides/assets/chapters04_09/book_fig_5_8.png",
+    "printed_page": 192,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "5-9",
+    "source": "book/CHAPTER 05 Decision Trees.pdf",
+    "pdf_page": 14,
+    "bbox": [
+      79.44999694824219,
+      394.1696472167969,
+      425.04998779296875,
+      556.724609375
+    ],
+    "caption": "Retraining the same model on the same data may produce a very different\nmodel",
+    "asset": "slides/assets/chapters04_09/book_fig_5_9.png",
+    "printed_page": 192,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-1",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 2,
+    "bbox": [
+      116.16954040527344,
+      127.77398681640625,
+      388.3304443359375,
+      273.2144775390625
+    ],
+    "caption": "Training diverse classifiers",
+    "asset": "slides/assets/chapters04_09/book_fig_6_1.png",
+    "printed_page": 196,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-2",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 2,
+    "bbox": [
+      118.68954467773438,
+      356.44451904296875,
+      385.8104553222656,
+      523.72509765625
+    ],
+    "caption": "Hard voting classifier predictions",
+    "asset": "slides/assets/chapters04_09/book_fig_6_2.png",
+    "printed_page": 196,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-3",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 3,
+    "bbox": [
+      79.44999694824219,
+      285.45001220703125,
+      425.04998779296875,
+      423.87255859375
+    ],
+    "caption": "The law of large numbers",
+    "asset": "slides/assets/chapters04_09/book_fig_6_3.png",
+    "printed_page": 197,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-4",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 6,
+    "bbox": [
+      103.20948791503906,
+      146.84999084472656,
+      401.29052734375,
+      335.0106201171875
+    ],
+    "caption": "Bagging and pasting involve training several predictors on different random\nsamples of the training set",
+    "asset": "slides/assets/chapters04_09/book_fig_6_4.png",
+    "printed_page": 200,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-5",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 8,
+    "bbox": [
+      79.44999694824219,
+      300.4500427246094,
+      425.04998779296875,
+      428.953125
+    ],
+    "caption": "A single decision tree (left) versus a bagging ensemble of 500 trees (right)",
+    "asset": "slides/assets/chapters04_09/book_fig_6_5.png",
+    "printed_page": 202,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-6",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 12,
+    "bbox": [
+      153.25,
+      419.21807861328125,
+      351.25,
+      563.8384399414062
+    ],
+    "caption": "MNIST pixel importance (according to a random forest classifier)",
+    "asset": "slides/assets/chapters04_09/book_fig_6_6.png",
+    "printed_page": 206,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-7",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 13,
+    "bbox": [
+      117.25,
+      343.0594482421875,
+      387.25,
+      522.5894775390625
+    ],
+    "caption": "AdaBoost sequential training with instance weight updates",
+    "asset": "slides/assets/chapters04_09/book_fig_6_7.png",
+    "printed_page": 207,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-8",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 14,
+    "bbox": [
+      79.44999694824219,
+      191.25,
+      425.04998779296875,
+      319.7530822753906
+    ],
+    "caption": "Decision boundaries of consecutive predictors",
+    "asset": "slides/assets/chapters04_09/book_fig_6_8.png",
+    "printed_page": 208,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-9",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 18,
+    "bbox": [
+      79.45226287841797,
+      116.25,
+      425.0477600097656,
+      461.1923828125
+    ],
+    "caption": "In this depiction of gradient boosting, the first predictor (top left) is trained\nnormally, then each consecutive predictor (middle left and lower left) is trained on the\nprevious predictor’s residuals; the right column shows the resulting ensemble’s predictions",
+    "asset": "slides/assets/chapters04_09/book_fig_6_9.png",
+    "printed_page": 212,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-10",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 19,
+    "bbox": [
+      79.44999694824219,
+      116.83650207519531,
+      425.04998779296875,
+      245.33958435058594
+    ],
+    "caption": "GBRT ensembles with not enough predictors (left) and just enough (right)",
+    "asset": "slides/assets/chapters04_09/book_fig_6_10.png",
+    "printed_page": 213,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-11",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 22,
+    "bbox": [
+      180.25,
+      90.44998168945312,
+      324.25,
+      274.1187744140625
+    ],
+    "caption": "Aggregating predictions using a blending predictor",
+    "asset": "slides/assets/chapters04_09/book_fig_6_11.png",
+    "printed_page": 216,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-12",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 23,
+    "bbox": [
+      153.25,
+      59.25001525878906,
+      351.25,
+      279.553466796875
+    ],
+    "caption": "Training the blender in a stacking ensemble",
+    "asset": "slides/assets/chapters04_09/book_fig_6_12.png",
+    "printed_page": 217,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "6-13",
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 23,
+    "bbox": [
+      180.25,
+      318.9834899902344,
+      324.25,
+      554.3818359375
+    ],
+    "caption": "Predictions in a multilayer stacking ensemble",
+    "asset": "slides/assets/chapters04_09/book_fig_6_13.png",
+    "printed_page": 217,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-1",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 2,
+    "bbox": [
+      108.25,
+      259.85040283203125,
+      396.25,
+      355.0177917480469
+    ],
+    "caption": "Point, segment, square, cube, and tesseract (0D to 4D hypercubes)2",
+    "asset": "slides/assets/chapters04_09/book_fig_7_1.png",
+    "printed_page": 222,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-2",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 4,
+    "bbox": [
+      117.25,
+      103.05000305175781,
+      387.25,
+      341.5911865234375
+    ],
+    "caption": "A 3D dataset lying close to a 2D subspace",
+    "asset": "slides/assets/chapters04_09/book_fig_7_2.png",
+    "printed_page": 224,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-3",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 4,
+    "bbox": [
+      126.25,
+      381.02117919921875,
+      378.25,
+      527.5883178710938
+    ],
+    "caption": "The new 2D dataset after projection",
+    "asset": "slides/assets/chapters04_09/book_fig_7_3.png",
+    "printed_page": 224,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-4",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 5,
+    "bbox": [
+      126.25,
+      136.63150024414062,
+      378.25,
+      322.41387939453125
+    ],
+    "caption": "Swiss roll dataset",
+    "asset": "slides/assets/chapters04_09/book_fig_7_4.png",
+    "printed_page": 225,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-5",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 5,
+    "bbox": [
+      79.44999694824219,
+      418.2439270019531,
+      425.04998779296875,
+      546.9874267578125
+    ],
+    "caption": "Squashing by projecting onto a plane (left) versus unrolling the Swiss roll\n(right)",
+    "asset": "slides/assets/chapters04_09/book_fig_7_5.png",
+    "printed_page": 225,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-6",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 7,
+    "bbox": [
+      79.44999694824219,
+      90.45001220703125,
+      425.04998779296875,
+      342.6849670410156
+    ],
+    "caption": "The decision boundary may not always be simpler with lower dimensions",
+    "asset": "slides/assets/chapters04_09/book_fig_7_6.png",
+    "printed_page": 227,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-7",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 8,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      222.45001220703125
+    ],
+    "caption": "Selecting the subspace on which to project",
+    "asset": "slides/assets/chapters04_09/book_fig_7_7.png",
+    "printed_page": 228,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-8",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 12,
+    "bbox": [
+      135.25001525878906,
+      155.2432403564453,
+      369.25,
+      303.6813049316406
+    ],
+    "caption": "Explained variance as a function of the number of dimensions",
+    "asset": "slides/assets/chapters04_09/book_fig_7_8.png",
+    "printed_page": 232,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-9",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 14,
+    "bbox": [
+      144.25,
+      59.25,
+      360.25,
+      175.43319702148438
+    ],
+    "caption": "MNIST compression that preserves 95% of the variance",
+    "asset": "slides/assets/chapters04_09/book_fig_7_9.png",
+    "printed_page": 234,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-10",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 19,
+    "bbox": [
+      135.25001525878906,
+      347.35369873046875,
+      369.25,
+      518.2584228515625
+    ],
+    "caption": "Unrolled Swiss roll using LLE",
+    "asset": "slides/assets/chapters04_09/book_fig_7_10.png",
+    "printed_page": 239,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "7-11",
+    "source": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "pdf_page": 22,
+    "bbox": [
+      79.45226287841797,
+      236.49002075195312,
+      425.0477600097656,
+      352.74072265625
+    ],
+    "caption": "Using various techniques to reduce the Swiss roll to 2D",
+    "asset": "slides/assets/chapters04_09/book_fig_7_11.png",
+    "printed_page": 242,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-1",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 3,
+    "bbox": [
+      79.45368957519531,
+      128.25,
+      425.04632568359375,
+      253.67324829101562
+    ],
+    "caption": "Classification (left) versus clustering (right): in clustering, the dataset is\nunlabeled so the algorithm must identify the clusters without guidance",
+    "asset": "slides/assets/chapters04_09/book_fig_8_1.png",
+    "printed_page": 247,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-2",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 5,
+    "bbox": [
+      79.45205688476562,
+      174.4315185546875,
+      425.0479431152344,
+      337.12744140625
+    ],
+    "caption": "An unlabeled dataset composed of five blobs of instances",
+    "asset": "slides/assets/chapters04_09/book_fig_8_2.png",
+    "printed_page": 249,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-3",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 6,
+    "bbox": [
+      79.45205688476562,
+      371.23651123046875,
+      425.0479431152344,
+      533.9324340820312
+    ],
+    "caption": "k-means decision boundaries (Voronoi tessellation)",
+    "asset": "slides/assets/chapters04_09/book_fig_8_3.png",
+    "printed_page": 250,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-4",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 8,
+    "bbox": [
+      79.44999694824219,
+      195.08999633789062,
+      425.04998779296875,
+      467.843505859375
+    ],
+    "caption": "The k-means algorithm",
+    "asset": "slides/assets/chapters04_09/book_fig_8_4.png",
+    "printed_page": 252,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-5",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 9,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      158.90301513671875
+    ],
+    "caption": "Suboptimal solutions due to unlucky centroid initializations",
+    "asset": "slides/assets/chapters04_09/book_fig_8_5.png",
+    "printed_page": 253,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-6",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 12,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      158.90301513671875
+    ],
+    "caption": "Bad choices for the number of clusters: when k is too small, separate clusters\nget merged (left), and when k is too large, some clusters get chopped into multiple pieces\n(right)",
+    "asset": "slides/assets/chapters04_09/book_fig_8_6.png",
+    "printed_page": 256,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-7",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 12,
+    "bbox": [
+      99.25,
+      223.53302001953125,
+      405.25,
+      346.364013671875
+    ],
+    "caption": "Plotting the inertia as a function of the number of clusters k",
+    "asset": "slides/assets/chapters04_09/book_fig_8_7.png",
+    "printed_page": 256,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-8",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 13,
+    "bbox": [
+      117.25,
+      177.4432373046875,
+      387.25,
+      266.3885498046875
+    ],
+    "caption": "Selecting the number of clusters k using the silhouette score",
+    "asset": "slides/assets/chapters04_09/book_fig_8_8.png",
+    "printed_page": 257,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-9",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 14,
+    "bbox": [
+      79.44999694824219,
+      59.25,
+      425.04998779296875,
+      341.2129211425781
+    ],
+    "caption": "Analyzing the silhouette diagrams for various values of k",
+    "asset": "slides/assets/chapters04_09/book_fig_8_9.png",
+    "printed_page": 258,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-10",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 15,
+    "bbox": [
+      79.45010375976562,
+      59.24999237060547,
+      425.0498962402344,
+      159.60104370117188
+    ],
+    "caption": "k-means fails to cluster these ellipsoidal blobs properly",
+    "asset": "slides/assets/chapters04_09/book_fig_8_10.png",
+    "printed_page": 259,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-11",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 17,
+    "bbox": [
+      108.25099182128906,
+      59.25,
+      396.2490234375,
+      204.79739379882812
+    ],
+    "caption": "Image segmentation using k-means with various numbers of color clusters",
+    "asset": "slides/assets/chapters04_09/book_fig_8_11.png",
+    "printed_page": 261,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-12",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 18,
+    "bbox": [
+      117.25,
+      261.45001220703125,
+      387.25,
+      331.64697265625
+    ],
+    "caption": "Fifty representative digit images (one per cluster)",
+    "asset": "slides/assets/chapters04_09/book_fig_8_12.png",
+    "printed_page": 262,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-13",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 22,
+    "bbox": [
+      79.45054626464844,
+      116.24325561523438,
+      425.0494384765625,
+      228.68496704101562
+    ],
+    "caption": "DBSCAN clustering using two different neighborhood radiuses",
+    "asset": "slides/assets/chapters04_09/book_fig_8_13.png",
+    "printed_page": 266,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-14",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 23,
+    "bbox": [
+      108.25,
+      198.44325256347656,
+      396.25,
+      333.1811218261719
+    ],
+    "caption": "Decision boundary between two clusters",
+    "asset": "slides/assets/chapters04_09/book_fig_8_14.png",
+    "printed_page": 267,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-15",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 28,
+    "bbox": [
+      79.45205688476562,
+      302.2432861328125,
+      425.0479431152344,
+      464.17962646484375
+    ],
+    "caption": "Cluster means, decision boundaries, and density contours of a trained\nGaussian mixture model",
+    "asset": "slides/assets/chapters04_09/book_fig_8_15.png",
+    "printed_page": 272,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-16",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 29,
+    "bbox": [
+      79.44999694824219,
+      310.009521484375,
+      425.04998779296875,
+      453.48382568359375
+    ],
+    "caption": "Gaussian mixtures for tied clusters (left) and spherical clusters (right)",
+    "asset": "slides/assets/chapters04_09/book_fig_8_16.png",
+    "printed_page": 273,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-17",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 30,
+    "bbox": [
+      79.45205688476562,
+      342.259033203125,
+      425.0479431152344,
+      504.19537353515625
+    ],
+    "caption": "Anomaly detection using a Gaussian mixture model",
+    "asset": "slides/assets/chapters04_09/book_fig_8_17.png",
+    "printed_page": 274,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-18",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 32,
+    "bbox": [
+      85.25,
+      317.75,
+      427.25,
+      500.80718994140625
+    ],
+    "caption": "A model’s parametric function (top left), and some derived functions: a PDF\n(lower left), a likelihood function (top right), and a log likelihood function (lower right)",
+    "asset": "slides/assets/chapters04_09/book_fig_8_18.png",
+    "printed_page": 276,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-19",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 33,
+    "bbox": [
+      99.25,
+      467.3321838378906,
+      405.25,
+      569.7353515625
+    ],
+    "caption": "AIC and BIC for different numbers of clusters k",
+    "asset": "slides/assets/chapters04_09/book_fig_8_19.png",
+    "printed_page": 277,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "8-20",
+    "source": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "pdf_page": 34,
+    "bbox": [
+      79.44999694824219,
+      409.6180419921875,
+      425.04998779296875,
+      521.1495361328125
+    ],
+    "caption": "Fitting a Gaussian mixture to nonellipsoidal clusters",
+    "asset": "slides/assets/chapters04_09/book_fig_8_20.png",
+    "printed_page": 278,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-1",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 6,
+    "bbox": [
+      79.44999694824219,
+      115.65000915527344,
+      425.04998779296875,
+      338.6801452636719
+    ],
+    "caption": "A biological neuron4",
+    "asset": "slides/assets/chapters04_09/book_fig_9_1.png",
+    "printed_page": 288,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-2",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 7,
+    "bbox": [
+      79.44999694824219,
+      59.24999237060547,
+      425.04998779296875,
+      169.98489379882812
+    ],
+    "caption": "Multiple layers in a biological neural network (human cortex)6",
+    "asset": "slides/assets/chapters04_09/book_fig_9_2.png",
+    "printed_page": 289,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-3",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 7,
+    "bbox": [
+      99.25,
+      349.79644775390625,
+      405.25,
+      450.6978759765625
+    ],
+    "caption": "ANNs performing simple logical computations",
+    "asset": "slides/assets/chapters04_09/book_fig_9_3.png",
+    "printed_page": 289,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-4",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 8,
+    "bbox": [
+      174.24974060058594,
+      380.6590576171875,
+      330.250244140625,
+      497.0594482421875
+    ],
+    "caption": "TLU: an artificial neuron that computes a weighted sum of its inputs w⊺ x,\nplus a bias term b, then applies a step function",
+    "asset": "slides/assets/chapters04_09/book_fig_9_4.png",
+    "printed_page": 290,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-5",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 9,
+    "bbox": [
+      163.08969116210938,
+      336.10040283203125,
+      341.4102783203125,
+      478.4208984375
+    ],
+    "caption": "Architecture of a perceptron with two inputs and three output neurons",
+    "asset": "slides/assets/chapters04_09/book_fig_9_5.png",
+    "printed_page": 291,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-6",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 13,
+    "bbox": [
+      126.24957275390625,
+      59.25,
+      378.25042724609375,
+      247.65065002441406
+    ],
+    "caption": "XOR classification problem and an MLP that solves it",
+    "asset": "slides/assets/chapters04_09/book_fig_9_6.png",
+    "printed_page": 295,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-7",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 13,
+    "bbox": [
+      156.60968017578125,
+      287.08062744140625,
+      347.89031982421875,
+      465.4012451171875
+    ],
+    "caption": "Architecture of a multilayer perceptron with two inputs, one hidden layer of\nfour neurons, and three output neurons",
+    "asset": "slides/assets/chapters04_09/book_fig_9_7.png",
+    "printed_page": 295,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-8",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 17,
+    "bbox": [
+      79.44999694824219,
+      298.050048828125,
+      425.04998779296875,
+      431.91534423828125
+    ],
+    "caption": "Activation functions (left) and their derivatives (right)",
+    "asset": "slides/assets/chapters04_09/book_fig_9_8.png",
+    "printed_page": 299,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-9",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 20,
+    "bbox": [
+      126.24627685546875,
+      128.24998474121094,
+      378.25372314453125,
+      380.5086669921875
+    ],
+    "caption": "MLP regressor’s predictions versus the targets",
+    "asset": "slides/assets/chapters04_09/book_fig_9_9.png",
+    "printed_page": 302,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-10",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 22,
+    "bbox": [
+      152.5296630859375,
+      241.05001831054688,
+      351.9703369140625,
+      420.57061767578125
+    ],
+    "caption": "A modern MLP (including ReLU and softmax) for classification",
+    "asset": "slides/assets/chapters04_09/book_fig_9_10.png",
+    "printed_page": 304,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  },
+  {
+    "figure": "9-11",
+    "source": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "pdf_page": 24,
+    "bbox": [
+      79.45208740234375,
+      59.25,
+      425.04791259765625,
+      190.61041259765625
+    ],
+    "caption": "First four samples from each class in Fashion MNIST",
+    "asset": "slides/assets/chapters04_09/book_fig_9_11.png",
+    "printed_page": 306,
+    "method": "PDF 圖形區域高解析擷取，保留原圖坐標與圖例；中文解說另寫於 Marp"
+  }
+]

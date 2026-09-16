@@ -1,0 +1,6 @@
+{
+  "binary_test_accuracy": 1.0,
+  "OvR_test_accuracy": 0.8444444444444444,
+  "OvO_test_accuracy": 0.9111111111111111,
+  "OvO_vote_ties": 0
+}

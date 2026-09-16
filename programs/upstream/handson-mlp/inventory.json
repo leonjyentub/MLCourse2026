@@ -1,0 +1,441 @@
+{
+  "repository": "ageron/handson-mlp",
+  "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+  "default_branch": "main",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51cdbee8a72f0d8ead82fba51d139d9c36afc473",
+      "size": 48,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/51cdbee8a72f0d8ead82fba51d139d9c36afc473"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "769baf281039062dca61f4c6a50c4c23970cbb7b",
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/trees/769baf281039062dca61f4c6a50c4c23970cbb7b"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f40eeea3a4f5177be468b1ec636c4f4e4a1b9eba",
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/trees/f40eeea3a4f5177be468b1ec636c4f4e4a1b9eba"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "badc7b6c365579ced96c2a80924e153ab7a30383",
+      "size": 2219,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/badc7b6c365579ced96c2a80924e153ab7a30383"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/clarification-request.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "710286844905510459c41cc85235692fc371c272",
+      "size": 1945,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/710286844905510459c41cc85235692fc371c272"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec4bb386bcf8a4946923eff961cc7cdf70c0aedf",
+      "size": 27,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/ec4bb386bcf8a4946923eff961cc7cdf70c0aedf"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature-or-improvement-request.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47fe27fbc31638b0cfc1dca300e9b65ad4942e71",
+      "size": 2144,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/47fe27fbc31638b0cfc1dca300e9b65ad4942e71"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "159d9af36cc01d1ace1d12a05298c8c26703cf56",
+      "size": 178,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/159d9af36cc01d1ace1d12a05298c8c26703cf56"
+    },
+    {
+      "path": ".python-version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4fba2183587225f216eeada4c78dfab6b2e65f5",
+      "size": 5,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/e4fba2183587225f216eeada4c78dfab6b2e65f5"
+    },
+    {
+      "path": "01_the_machine_learning_landscape.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67cd92c94a0ec1f53e2afab90477f16c5e7dad00",
+      "size": 374807,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/67cd92c94a0ec1f53e2afab90477f16c5e7dad00"
+    },
+    {
+      "path": "02_end_to_end_machine_learning_project.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "003297c1a0f69cfa27cdeaca1aea7bb2df16bb7f",
+      "size": 2361412,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/003297c1a0f69cfa27cdeaca1aea7bb2df16bb7f"
+    },
+    {
+      "path": "03_classification.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d1b89f7786dc7102cbb554a507c7de92d3c6aa3",
+      "size": 1409522,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/9d1b89f7786dc7102cbb554a507c7de92d3c6aa3"
+    },
+    {
+      "path": "04_training_linear_models.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8632638149baf3977d0cbb34417da240e12c4371",
+      "size": 1205319,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/8632638149baf3977d0cbb34417da240e12c4371"
+    },
+    {
+      "path": "05_decision_trees.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7768e135c4ce5467c6435240cd63efac12733338",
+      "size": 400881,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/7768e135c4ce5467c6435240cd63efac12733338"
+    },
+    {
+      "path": "06_ensemble_learning_and_random_forests.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f440ddf0a3f3dcc4e27226685a831ed7e2c0f8ba",
+      "size": 580059,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/f440ddf0a3f3dcc4e27226685a831ed7e2c0f8ba"
+    },
+    {
+      "path": "07_dimensionality_reduction.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef7677e1d150134ccc6cc3da2ad81a4fa76a4182",
+      "size": 7952091,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/ef7677e1d150134ccc6cc3da2ad81a4fa76a4182"
+    },
+    {
+      "path": "08_unsupervised_learning.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "154ade280d531b9ef957f1435dc999ea9e213c91",
+      "size": 5703693,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/154ade280d531b9ef957f1435dc999ea9e213c91"
+    },
+    {
+      "path": "09_artificial_neural_networks.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7994a3ec4d27fc08cdfaceffa633b9ebc24bbbb4",
+      "size": 312580,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/7994a3ec4d27fc08cdfaceffa633b9ebc24bbbb4"
+    },
+    {
+      "path": "10_neural_nets_with_pytorch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3133a714b1f41885452c422fa1d769a8c1836077",
+      "size": 188511,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/3133a714b1f41885452c422fa1d769a8c1836077"
+    },
+    {
+      "path": "11_training_deep_neural_networks.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "325564100cc99b1a631760e0ce3b03dd0bee534b",
+      "size": 525992,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/325564100cc99b1a631760e0ce3b03dd0bee534b"
+    },
+    {
+      "path": "12_deep_computer_vision_with_cnns.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bdf109a735e88c0252995dcf154cdbf7eb90b8f",
+      "size": 5237357,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/4bdf109a735e88c0252995dcf154cdbf7eb90b8f"
+    },
+    {
+      "path": "13_processing_sequences_using_rnns_and_cnns.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ca8fc35125d59c0a7e75e2895c9ed4dcdc6c947",
+      "size": 908277,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/5ca8fc35125d59c0a7e75e2895c9ed4dcdc6c947"
+    },
+    {
+      "path": "14_nlp_with_rnns_and_attention.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "216aa869e4943945b0b0bbc40b0a323be4206bcb",
+      "size": 186873,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/216aa869e4943945b0b0bbc40b0a323be4206bcb"
+    },
+    {
+      "path": "15_transformers_for_nlp_and_chatbots.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32a452683b2ed2fe6a995645e7aec6dd790ce803",
+      "size": 315543,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/32a452683b2ed2fe6a995645e7aec6dd790ce803"
+    },
+    {
+      "path": "16_vision_and_multimodal_transformers.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2389e5223ec3cb1e5d7bdaac206ab06c2943a149",
+      "size": 3655146,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/2389e5223ec3cb1e5d7bdaac206ab06c2943a149"
+    },
+    {
+      "path": "17_speeding_up_transformers.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "773a1df3378c58cbe119d8d2b001b13380ec1176",
+      "size": 38953,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/773a1df3378c58cbe119d8d2b001b13380ec1176"
+    },
+    {
+      "path": "18_autoencoders_gans_and_diffusion_models.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01d1f6bb001b6b8ef71705ea529061677b102396",
+      "size": 3011000,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/01d1f6bb001b6b8ef71705ea529061677b102396"
+    },
+    {
+      "path": "19_reinforcement_learning.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0510763d8a9e5afb661da5539666c6968836446d",
+      "size": 253130,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/0510763d8a9e5afb661da5539666c6968836446d"
+    },
+    {
+      "path": "Appendix_A_autodiff.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e909128e9f5db3f9c8a9b9f4c3f76308d9e3dbf",
+      "size": 35369,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/9e909128e9f5db3f9c8a9b9f4c3f76308d9e3dbf"
+    },
+    {
+      "path": "Appendix_B_mixed_precision_and_quantization.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "313e397a2b9996bce936aa00178dcd5d3d7ce972",
+      "size": 33638,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/313e397a2b9996bce936aa00178dcd5d3d7ce972"
+    },
+    {
+      "path": "Appendix_C_support_vector_machines.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f979af0692c12fab9b608d26ab4cb167dfdf8b71",
+      "size": 1062819,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/f979af0692c12fab9b608d26ab4cb167dfdf8b71"
+    },
+    {
+      "path": "Appendix_D_relative_positional_encoding.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31fddbd18d3c9d3edb52487546163271dc9b2179",
+      "size": 11224,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/31fddbd18d3c9d3edb52487546163271dc9b2179"
+    },
+    {
+      "path": "Appendix_E_state_space_models.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32e04594df08a2275a5b4ed9456504857146b27b",
+      "size": 290242,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/32e04594df08a2275a5b4ed9456504857146b27b"
+    },
+    {
+      "path": "CHANGES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc7afe2a6ebd8f923ce0bb25694137e6c7245501",
+      "size": 4536,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/cc7afe2a6ebd8f923ce0bb25694137e6c7245501"
+    },
+    {
+      "path": "INSTALL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64cb972dcfcef7922d4fa07d5d80c0c19d2ea88a",
+      "size": 5588,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/64cb972dcfcef7922d4fa07d5d80c0c19d2ea88a"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4909afd04fffa2413fb5ae911d24eb69ce3037d2",
+      "size": 10175,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/4909afd04fffa2413fb5ae911d24eb69ce3037d2"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6390783c4cffa401bc1ef4332063dc301c3e273",
+      "size": 3257,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/d6390783c4cffa401bc1ef4332063dc301c3e273"
+    },
+    {
+      "path": "apt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e45043dfa4b4eda9af7c844b84eac9298c68cfb",
+      "size": 48,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/5e45043dfa4b4eda9af7c844b84eac9298c68cfb"
+    },
+    {
+      "path": "docker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0410188c6aabae958e2e8f30ce880be7127756db",
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/trees/0410188c6aabae958e2e8f30ce880be7127756db"
+    },
+    {
+      "path": "docker/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc9fb35a8f96788070284d0d1f36a32b5b8d82c",
+      "size": 1263,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/2bc9fb35a8f96788070284d0d1f36a32b5b8d82c"
+    },
+    {
+      "path": "docker/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "418a298c27fff03c691c9cc2518798861869fc55",
+      "size": 3332,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/418a298c27fff03c691c9cc2518798861869fc55"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b24b97dbb9eaa7a35e53bdefe6fc4d3bb2ec1035",
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/trees/b24b97dbb9eaa7a35e53bdefe6fc4d3bb2ec1035"
+    },
+    {
+      "path": "images/end_to_end_project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05e786b3df19f24cdf33710fec12877e23ad76cf",
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/trees/05e786b3df19f24cdf33710fec12877e23ad76cf"
+    },
+    {
+      "path": "images/end_to_end_project/california.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07bb27672d5f2f5d78c5be229b86da8f0ba99f8e",
+      "size": 17156,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/07bb27672d5f2f5d78c5be229b86da8f0ba99f8e"
+    },
+    {
+      "path": "images/unsupervised_learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51a0194c6b5d5a170f9f5c0699c285db36031dd3",
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/trees/51a0194c6b5d5a170f9f5c0699c285db36031dd3"
+    },
+    {
+      "path": "images/unsupervised_learning/ladybug.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "171b7cdb13b95bb507ff3742328ffa6c2165b039",
+      "size": 574025,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/171b7cdb13b95bb507ff3742328ffa6c2165b039"
+    },
+    {
+      "path": "index.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50be3d2b1a104cf108d41b8b51229fdacdf66d98",
+      "size": 6060,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/50be3d2b1a104cf108d41b8b51229fdacdf66d98"
+    },
+    {
+      "path": "math_differential_calculus.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41acb54f49101c0a243bb2a3384f3753c7ed1c54",
+      "size": 421085,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/41acb54f49101c0a243bb2a3384f3753c7ed1c54"
+    },
+    {
+      "path": "math_linear_algebra.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe9623f19b84742372f38a68fe82a566ec9e761b",
+      "size": 1048392,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/fe9623f19b84742372f38a68fe82a566ec9e761b"
+    },
+    {
+      "path": "ml-project-checklist.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6f6e0e93fa98865ad5aee9e86bb1bd6a5e4e4e7",
+      "size": 7688,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/a6f6e0e93fa98865ad5aee9e86bb1bd6a5e4e4e7"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b98f38e1b5b2fc9892ee31bf44b37ccfffea1ecc",
+      "size": 2139,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/b98f38e1b5b2fc9892ee31bf44b37ccfffea1ecc"
+    },
+    {
+      "path": "tools_matplotlib.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0bece334153f88d339de2631e510b4ca5fbce1d",
+      "size": 2047127,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/b0bece334153f88d339de2631e510b4ca5fbce1d"
+    },
+    {
+      "path": "tools_numpy.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16ea526bd85796059f8fea85b026719c39d11e5d",
+      "size": 580882,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/16ea526bd85796059f8fea85b026719c39d11e5d"
+    },
+    {
+      "path": "tools_pandas.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad56e1355f0e300bb0c0171f5006da5c1371e038",
+      "size": 73543,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/ad56e1355f0e300bb0c0171f5006da5c1371e038"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e2a8f6d229fa9105887b85d4e8b61ed840681ae",
+      "size": 481960,
+      "url": "https://api.github.com/repos/ageron/handson-mlp/git/blobs/2e2a8f6d229fa9105887b85d4e8b61ed840681ae"
+    }
+  ]
+}

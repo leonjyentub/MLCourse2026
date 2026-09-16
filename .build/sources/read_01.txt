@@ -1,0 +1,695 @@
+
+### PDF PAGE 21
+data and react to abnormal data; for example, using an anomaly detection algorithm
+(see Chapter 8).
+
+Instance-Based Versus Model-Based Learning
+One more way to categorize machine learning systems is by how they generalize.
+Most machine learning tasks are about making predictions. This means that given a
+number of training examples, the system needs to be able to make good predictions
+for (generalize to) examples it has never seen before. Having a good performance
+measure on the training data is good, but insufficient; the true goal is to perform well
+on new instances.
+There are two main approaches to generalization: instance-based learning and
+model-based learning.
+
+Instance-based learning
+Possibly the most trivial form of learning is simply to learn by heart. If you were to
+create a spam filter this way, it would just flag all emails that are identical to emails
+that have already been flagged by users—not the worst solution, but certainly not the
+best.
+Instead of just flagging emails that are identical to known spam emails, your spam
+filter could be programmed to also flag emails that are very similar to known spam
+emails. This requires a measure of similarity between two emails. A (very basic)
+similarity measure between two emails could be to count the number of words they
+have in common. The system would flag an email as spam if it has many words in
+common with a known spam email.
+This is called instance-based learning: the system learns the examples by heart, then
+generalizes to new cases by using a similarity measure to compare them to the
+learned examples (or a subset of them). For example, in Figure 1-15 the new instance
+would be classified as a triangle because the majority of the most similar instances
+belong to that class.
+Instance-based learning often shines with small datasets, especially if the data keeps
+changing, but it does not scale very well: it requires deploying a whole copy of
+the training set to production; making predictions requires searching for similar
+instances, which can be quite slow; and it doesn’t work well with high-dimensional
+data such as images.
+
+
+
+
+                                                        Types of Machine Learning Systems   |   21
+
+### PDF PAGE 22
+Figure 1-15. Instance-based learning: in this example we consider the class of the three
+nearest neighbors in the training set
+
+Model-based learning and a typical machine learning workflow
+Another way to generalize from a set of examples is to build a model of these
+examples and then use that model to make predictions. This is called model-based
+learning (Figure 1-16).
+
+
+
+
+Figure 1-16. Model-based learning
+
+For example, suppose you want to know if money makes people happy, so you
+download the Better Life Index data from the OECD’s website, and World Bank stats
+about gross domestic product (GDP) per capita. Then you join the tables and sort by
+GDP per capita. Table 1-1 shows an excerpt of what you get.
+
+
+
+
+22   |   Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 23
+Table 1-1. Does money make people happier?
+Country       GDP per capita (USD) Life satisfaction
+Turkey        28,384               5.5
+Hungary       31,008                5.6
+France        42,026                6.5
+United States 60,236                6.9
+New Zealand 42,404                  7.3
+Australia     48,698                7.3
+Denmark       55,938                7.6
+
+Let’s plot the data for these countries (Figure 1-17).
+
+
+
+
+Figure 1-17. Do you see a trend here?
+
+There does seem to be a trend here! Although the data is noisy (i.e., partly random),
+it looks like life satisfaction goes up more or less linearly as the country’s GDP per
+capita increases. So you decide to model life satisfaction as a linear function of GDP
+per capita (you assume that any deviation from that line is just random noise). This
+step is called model selection: you selected a linear model of life satisfaction with just
+one attribute, GDP per capita (Equation 1-1).
+
+    Equation 1-1. A simple linear model
+    life_satisfaction = θ0 + θ1 × GDP_per_capita
+
+This model has two model parameters, θ0 and θ1.4 By tweaking these parameters, you
+can make your model represent any linear function, as shown in Figure 1-18.
+
+
+4 By convention, the Greek letter θ (theta) is frequently used to represent model parameters.
+
+
+
+                                                                       Types of Machine Learning Systems   |   23
+
+### PDF PAGE 24
+Figure 1-18. A few possible linear models
+
+Before you can use your model, you need to define the parameter values θ0 and θ1.
+How can you know which values will make your model perform best? To answer this
+question, you need to specify a performance measure. You can either define a utility
+function (or fitness function) that measures how good your model is, or you can define
+a cost function (a.k.a., loss function) that measures how bad it is. For linear regression
+problems, people typically use a cost function that measures the distance between the
+linear model’s predictions and the training examples; the objective is to minimize this
+distance.
+This is where the linear regression algorithm comes in: you feed it your training
+examples, and it finds the parameters that make the linear model fit best to your data.
+This is called training the model. In our case, the algorithm finds that the optimal
+parameter values are θ0 = 3.75 and θ1 = 6.78 × 10–5.
+
+                    Confusingly, the word “model” can refer to a type of model (e.g.,
+                    linear regression), to a fully specified model architecture (e.g., linear
+                    regression with one input and one output), or to the final trained
+                    model ready to be used for predictions (e.g., linear regression with
+                    one input and one output, using θ0 = 3.75 and θ1 = 6.78 × 10–5).
+                    Model selection consists in choosing the type of model and fully
+                    specifying its architecture. Training a model means running an
+                    algorithm to find the model parameters that will make it best fit the
+                    training data, and hopefully make good predictions on new data.
+
+Now the model fits the training data as closely as possible (for a linear model), as you
+can see in Figure 1-19.
+
+
+
+
+24   |   Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 25
+Figure 1-19. The linear model that fits the training data best
+
+You are finally ready to run the model to make predictions. For example, say you
+want to know how happy Puerto Ricans are, and the OECD data does not have the
+answer. Fortunately, you can use your model to make a good prediction: you look up
+Puerto Rico’s GDP per capita, find $33,442, and then apply your model and find that
+life satisfaction is likely to be somewhere around 3.75 + 33,442 × 6.78 × 10–5 = 6.02.
+To whet your appetite, Example 1-1 shows the Python code that loads the data,
+separates the inputs X from the labels y, creates a scatterplot for visualization, and
+then trains a linear model and makes a prediction.5
+
+Example 1-1. Training and running a linear model using Scikit-Learn
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+
+# Download and prepare the data
+data_root = "https://github.com/ageron/data/raw/main/"
+lifesat = pd.read_csv(data_root + "lifesat/lifesat.csv")
+X = lifesat[["GDP per capita (USD)"]].values
+y = lifesat[["Life satisfaction"]].values
+
+# Visualize the data
+lifesat.plot(kind='scatter', grid=True,
+             x="GDP per capita (USD)", y="Life satisfaction")
+plt.axis([23_500, 62_500, 4, 9])
+plt.show()
+
+
+
+5 It’s OK if you don’t understand all the code yet; I will present Scikit-Learn in the following chapters.
+
+
+
+                                                                          Types of Machine Learning Systems   |   25
+
+### PDF PAGE 26
+# Select a linear model
+model = LinearRegression()
+
+# Train the model
+model.fit(X, y)
+
+# Make a prediction for Puerto Rico
+X_new = [[33_442.8]] # Puerto Rico' GDP per capita in 2020
+print(model.predict(X_new)) # outputs [[6.01610329]]
+
+                    If you had used an instance-based learning algorithm instead, you
+                    would have found that Poland has the closest GDP per capita to
+                    that of Puerto Rico ($32,238), and since the OECD data tells us
+                    that Poles’ life satisfaction is 6.1, you would have predicted a life
+                    satisfaction of 6.1 as well for Puerto Rico. If you zoom out a bit
+                    and look at the next two closest countries, you will find Portugal
+                    with a life satisfaction of 5.4, and Estonia with a life satisfaction
+                    of 5.7. Averaging these three values, you get 5.73, which is a bit
+                    below your model-based prediction. This simple algorithm is called
+                    k-nearest neighbors regression (in this example, k = 3).
+                    Replacing the linear regression model with k-nearest neighbors
+                    regression in the previous code is as easy as replacing these lines:
+                          from sklearn.linear_model import LinearRegression
+                          model = LinearRegression()
+                    with these two:
+                          from sklearn.neighbors import KNeighborsRegressor
+                          model = KNeighborsRegressor(n_neighbors=3)
+
+
+If all went well, your model will make good predictions. If not, you may need to
+use more attributes (employment rate, health, air pollution, etc.), get more or better-
+quality training data, or perhaps select a more powerful model (e.g., a polynomial
+regression model).
+In summary:
+
+     • You studied the data.
+     • You selected a model.
+     • You trained it on the training data (i.e., the learning algorithm searched for the
+       model parameter values that minimize a cost function).
+     • Finally, you applied the model to make predictions on new cases (this is called
+       inference), hoping that this model will generalize well.
+
+
+
+
+26    | Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 27
+This is what a typical machine learning project looks like. In Chapter 2 you will
+experience this firsthand by going through a project end to end.
+We discussed quite a few categories of ML systems, but this field has more! For
+example, ensemble learning involves training multiple models and combining their
+individual predictions into improved predictions (see Chapter 6); federated learning
+is a decentralized approach where models are trained across multiple devices (e.g.,
+smartphones) and adapted to each user without exchanging raw data, thereby pro‐
+tecting the user’s privacy; meta-learning is a learning-to-learn approach where models
+learn how to learn new tasks quickly with minimal data. And the list goes on!
+Figure 1-20 summarizes the various classifications of ML systems we have discussed
+so far.
+
+
+
+
+Figure 1-20. Overview of ML categories
+
+We have covered a lot of ground so far: you now know what machine learning is
+really about, why it is useful, what some of the most common categories of ML
+systems are, and what a typical project workflow looks like. Now let’s look at what can
+go wrong in learning and prevent you from making accurate predictions.
+
+Main Challenges of Machine Learning
+In short, since your main task is to select a model and train it on some data, the two
+things that can go wrong are “bad model” and “bad data”. Let’s start with examples of
+bad data.
+
+Insufficient Quantity of Training Data
+For a toddler to learn what an apple is, all it takes is for you to point to an apple and
+say “apple” (possibly repeating this procedure a few times). Now the child is able to
+recognize apples in all sorts of colors and shapes. Genius.
+
+
+
+
+                                                      Main Challenges of Machine Learning   |   27
+
+### PDF PAGE 28
+Machine learning is not quite there yet; it takes a lot of data for most machine
+learning algorithms to work properly. Even for very simple problems you typically
+need thousands of examples, and for complex problems such as image or speech
+recognition you may need millions of examples (unless you can reuse parts of an
+existing model, i.e., transfer learning).
+
+
+                            The Unreasonable Effectiveness of Data
+     In a famous paper published in 2001, Microsoft researchers Michele Banko and Eric
+     Brill showed that very different machine learning algorithms, including fairly simple
+     ones, performed almost identically well on a complex problem of natural language
+     disambiguation6 once they were given enough data (as you can see in Figure 1-21).
+
+
+
+
+     Figure 1-21. The importance of data versus algorithms7
+
+
+
+
+6 For example, knowing whether to write “to”, “two”, or “too”, depending on the context.
+7 Figure reproduced with permission from Michele Banko and Eric Brill, “Scaling to Very Very Large Corpora
+     for Natural Language Disambiguation”, Proceedings of the 39th Annual Meeting of the Association for Computa‐
+     tional Linguistics (2001): 26–33.
+
+
+28     | Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 29
+  As the authors put it, “these results suggest that we may want to reconsider the trade-
+  off between spending time and money on algorithm development versus spending it
+  on corpus development”.
+  The idea that data matters more than algorithms for complex problems was further
+  popularized by Peter Norvig et al. in a paper titled “The Unreasonable Effectiveness of
+  Data”, published in 2009.8 It should be noted, however, that small and medium-sized
+  datasets are still very common, and it is not always easy or cheap to get extra training
+  data—so don’t abandon algorithms just yet.
+
+
+Nonrepresentative Training Data
+In order to generalize well, it is crucial that your training data be representative of
+the new cases you want to generalize to. This is true whether you use instance-based
+learning or model-based learning.
+For example, the set of countries you used earlier for training the linear model was
+not perfectly representative; it did not contain any country with a GDP per capita
+lower than $23,500 or higher than $62,500. Figure 1-22 shows what the data looks
+like when you add such countries.
+If you train a linear model on this data, you get the solid line, while the old model is
+represented by the dotted line. As you can see, not only does adding a few missing
+countries significantly alter the model, but it makes it clear that such a simple linear
+model is probably never going to work well. It seems that very rich countries are not
+happier than moderately rich countries (in fact, they seem slightly unhappier!), and
+conversely some poor countries seem happier than many rich countries.
+By using a nonrepresentative training set, you trained a model that is unlikely to
+make accurate predictions, especially for very poor and very rich countries.
+It is crucial to use a training set that is representative of the cases you want to
+generalize to. This is often harder than it sounds: if the sample is too small, you
+will have sampling noise (i.e., nonrepresentative data as a result of chance), but even
+very large samples can be nonrepresentative if the sampling method is flawed. This is
+called sampling bias.
+
+
+
+
+8 Peter Norvig et al., “The Unreasonable Effectiveness of Data”, IEEE Intelligent Systems 24, no. 2 (2009): 8–12.
+
+
+
+                                                                       Main Challenges of Machine Learning   |      29
+
+### PDF PAGE 30
+Figure 1-22. A more representative training sample
+
+
+                                      Examples of Sampling Bias
+     Perhaps the most famous example of sampling bias happened during the US presi‐
+     dential election in 1936, which pitted Landon against Roosevelt: the Literary Digest
+     conducted a very large poll, sending mail to about 10 million people. It got 2.4 million
+     answers, and predicted with high confidence that Landon would get 57% of the votes.
+     Instead, Roosevelt won with 62% of the votes. The flaw was in the Literary Digest’s
+     sampling method:
+
+       • First, to obtain the addresses to send the polls to, the Literary Digest used tele‐
+         phone directories, lists of magazine subscribers, club membership lists, and the
+         like. All of these lists tended to favor wealthier people, who were more likely to
+         vote Republican (hence Landon).
+       • Second, less than 25% of the people who were polled answered. Again this
+         introduced a sampling bias, by potentially ruling out people who didn’t care
+         much about politics, people who didn’t like the Literary Digest, and other key
+         groups. This is a special type of sampling bias called nonresponse bias.
+
+     Here is another example: say you want to build a system to recognize funk music
+     videos. One way to build your training set is to search for “funk music” on YouTube
+     and use the resulting videos. But this assumes that YouTube’s search engine returns
+     a set of videos that are representative of all the funk music videos on YouTube. In
+     reality, the search results are likely to be biased toward popular artists (and if you live
+     in Brazil you will get a lot of “funk carioca” videos, which sound nothing like James
+     Brown). On the other hand, how else can you get a large training set?
+
+
+
+
+30     |   Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 31
+Poor-Quality Data
+Obviously, if your training data is full of errors, outliers, and noise (e.g., due to poor-
+quality measurements), it will make it harder for the system to detect the underlying
+patterns, so your system is less likely to perform well. It is often well worth the effort
+to spend time cleaning up your training data. The truth is, most data scientists spend
+a significant part of their time doing just that. The following are a couple examples of
+when you’d want to clean up training data:
+
+  • If some instances are clearly outliers, it may help to simply discard them or try to
+    fix the errors manually.
+  • If some instances are missing a few features (e.g., 5% of your customers did not
+    specify their age), you must decide whether you want to ignore this attribute
+    altogether, ignore these instances, fill in the missing values (e.g., with the median
+    age), or train one model with the feature and one model without it.
+
+Irrelevant Features
+As the saying goes: garbage in, garbage out. Your system will only be capable of
+learning if the training data contains enough relevant features and not too many
+irrelevant ones. A critical part of the success of a machine learning project is coming
+up with a good set of features to train on. This process, called feature engineering,
+involves the following steps:
+
+  • Feature selection (selecting the most useful features to train on among existing
+    features)
+  • Feature extraction (combining existing features to produce a more useful one—as
+    we saw earlier, dimensionality reduction algorithms can help)
+  • Creating new features by gathering new data
+
+Now that we have looked at many examples of bad data, let’s look at a couple
+examples of bad algorithms.
+
+Overfitting the Training Data
+Say you are visiting a foreign country and the taxi driver rips you off. You might be
+tempted to say that all taxi drivers in that country are thieves. Overgeneralizing is
+something that we humans do all too often, and unfortunately machines can fall into
+the same trap if we are not careful. In machine learning this is called overfitting: it
+means that the model performs well on the training data, but it does not generalize
+well.
+
+
+
+
+                                                        Main Challenges of Machine Learning   |   31
+
+### PDF PAGE 32
+Figure 1-23 shows an example of a high-degree polynomial life satisfaction model
+that strongly overfits the training data. Even though it performs much better on the
+training data than the simple linear model, would you really trust its predictions?
+
+
+
+
+Figure 1-23. Overfitting the training data
+
+Complex models such as deep neural networks can detect subtle patterns in the
+data, but if the training set is noisy, or if it is too small, which introduces sampling
+noise, then the model is likely to detect patterns in the noise itself (as in the taxi
+driver example). Obviously these patterns will not generalize to new instances. For
+example, say you feed your life satisfaction model many more attributes, including
+uninformative ones such as the country’s name. In that case, a complex model may
+detect patterns like the fact that all countries in the training data with a w in their
+name have a life satisfaction greater than 7: New Zealand (7.3), Norway (7.6), Sweden
+(7.3), and Switzerland (7.5). How confident are you that the w-satisfaction rule
+generalizes to Rwanda or Zimbabwe? Obviously this pattern occurred in the training
+data by pure chance, but the model has no way to tell whether a pattern is real or
+simply the result of noise in the data.
+
+                    Overfitting happens when the model is too complex relative to
+                    the amount and noisiness of the training data, so it starts to learn
+                    random patterns in the training data. Here are possible solutions:
+
+                       • Simplify the model by selecting one with fewer parameters
+                         (e.g., a linear model rather than a high-degree polynomial
+                         model), by reducing the number of attributes in the training
+                         data, or by constraining the model.
+                       • Gather more training data.
+                       • Reduce the noise in the training data (e.g., fix data errors and
+                         remove outliers).
+
+
+
+
+32   |   Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 33
+Constraining a model to make it simpler and reduce the risk of overfitting is called
+regularization. For example, the linear model we defined earlier has two parameters,
+θ0 and θ1. This gives the learning algorithm two degrees of freedom to adapt the model
+to the training data: it can tweak both the height (θ0) and the slope (θ1) of the line. If
+we forced θ1 = 0, the algorithm would have only one degree of freedom and would
+have a much harder time fitting the data properly: all it could do is move the line
+up or down to get as close as possible to the training instances, so it would end up
+around the mean. A very simple model indeed! If we allow the algorithm to modify
+θ1 but we force it to keep it small, then the learning algorithm will effectively have
+somewhere in between one and two degrees of freedom. It will produce a model that’s
+simpler than one with two degrees of freedom, but more complex than one with just
+one. You want to find the right balance between fitting the training data perfectly and
+keeping the model simple enough to ensure that it will generalize well.
+Figure 1-24 shows three models. The dotted line represents the original model that
+was trained on the countries represented as circles (without the countries represented
+as squares), the solid line is our second model trained with all countries (circles and
+squares), and the dashed line is a model trained with the same data as the first model
+but with a regularization constraint. You can see that regularization forced the model
+to have a smaller slope: this model does not fit the training data (circles) as well as
+the first model, but it actually generalizes better to new examples that it did not see
+during training (squares).
+
+
+
+
+Figure 1-24. Regularization reduces the risk of overfitting
+
+The amount of regularization to apply during learning can be controlled by a hyper‐
+parameter. A hyperparameter is a parameter of a learning algorithm (not of the
+model). As such, it is not affected by the learning algorithm itself; it must be set
+prior to training and remains constant during training. If you set the regularization
+hyperparameter to a very large value, you will get an almost flat model (a slope close
+to zero); the learning algorithm will almost certainly not overfit the training data, but
+it will be less likely to find a good solution. Tuning hyperparameters is an important
+
+
+
+                                                        Main Challenges of Machine Learning   |   33
+
+### PDF PAGE 34
+part of building a machine learning system (you will see a detailed example in the
+next chapter).
+
+Underfitting the Training Data
+As you might guess, underfitting is the opposite of overfitting: it occurs when your
+model is too simple to learn the underlying structure of the data. For example, a
+linear model of life satisfaction is prone to underfit; reality is just more complex
+than the model, so its predictions are bound to be inaccurate, even on the training
+examples.
+Here are the main options for fixing this problem:
+
+     • Select a more powerful model, with more parameters.
+     • Feed better features to the learning algorithm (feature engineering).
+     • Reduce the constraints on the model (for example by reducing the regularization
+       hyperparameter).
+
+Deployment Issues
+Even if you have a large and clean dataset and you manage to train a beautiful model
+that neither underfits nor overfits the data, you may still run into issues during
+deployment: for example, the model may be too complex to maintain, or too large
+to fit in memory, or too slow, or it may not scale properly, it may have security
+vulnerabilities, it may become outdated if you don’t update it often enough, etc.
+In short, there’s more to an ML project than just data and models. However, the
+skillset required to handle these operational problems are fairly different from those
+required for data modeling, which is why companies often have a dedicated MLOps
+team (ML operations) to handle this.
+
+Stepping Back
+By now you know a lot about machine learning. However, we went through so many
+concepts that you may be feeling a little lost, so let’s step back and look at the big
+picture:
+
+     • Machine learning is about making machines get better at some task by learning
+       from data, instead of having to explicitly code rules.
+     • There are many different types of ML systems: supervised or not, batch or online,
+       instance-based or model-based.
+     • In an ML project you gather data in a training set, and you feed the training set to
+       a learning algorithm. If the algorithm is model-based, it tunes some parameters
+       to fit the model to the training set (i.e., to make good predictions on the training
+
+
+34    |   Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 35
+    set itself), and then hopefully it will be able to make good predictions on new
+    cases as well. If the algorithm is instance-based, it just learns the examples by
+    heart and generalizes to new instances by using a similarity measure to compare
+    them to the learned instances.
+  • The system will not perform well if your training set is too small, or if the data
+    is not representative, is noisy, or is polluted with irrelevant features (garbage in,
+    garbage out). Your model needs to be neither too simple (in which case it will
+    underfit) nor too complex (in which case it will overfit). Lastly, you must think
+    carefully about deployment constraints.
+
+There’s just one last important topic to cover: once you have trained a model, you
+don’t want to just “hope” it generalizes to new cases. You want to evaluate it and
+fine-tune it if necessary. Let’s see how to do that.
+
+Testing and Validating
+The only way to know how well a model will generalize to new cases is to actually
+try it out on new cases. One way to do that is to put your model in production and
+monitor how well it performs. This works well, but if your model is horribly bad,
+your users will complain—not the best idea.
+A better option is to split your data into two sets: the training set and the test set.
+As these names imply, you train your model using the training set, and you test it
+using the test set. The error rate on new cases is called the generalization error (or
+out-of-sample error), and by evaluating your model on the test set, you get an estimate
+of this error. This value tells you how well your model will perform on instances it
+has never seen before.
+If the training error is low (i.e., your model makes few mistakes on the training
+set) but the generalization error is high, it means that your model is overfitting the
+training data.
+
+               It is common to use 80% of the data for training and hold out 20%
+               for testing. However, this depends on the size of the dataset: if it
+               contains 10 million instances, then holding out 1% means your test
+               set will contain 100,000 instances, probably more than enough to
+               get a good estimate of the generalization error.
+
+
+Hyperparameter Tuning and Model Selection
+Evaluating a model is simple enough: just use a test set. But suppose you are hesitat‐
+ing between two types of models (say, a linear model and a polynomial model): how
+can you decide between them? One option is to train both and compare how well
+they generalize using the test set.
+
+                                                                   Testing and Validating   |   35
+
+### PDF PAGE 36
+Now suppose that the linear model generalizes better, but you want to apply some
+regularization to avoid overfitting. The question is, how do you choose the value of
+the regularization hyperparameter? One option is to train 100 different models using
+100 different values for this hyperparameter. Suppose you find the best hyperparame‐
+ter value that produces a model with the lowest generalization error—say, just 5%
+error. You launch this model into production, but unfortunately it does not perform
+as well as expected and produces 15% errors. What just happened?
+The problem is that you measured the generalization error multiple times on the test
+set, and you adapted the model and hyperparameters to produce the best model for
+that particular set. This means the model is unlikely to perform as well on new data.
+A common solution to this problem is called holdout validation (Figure 1-25): you
+simply hold out part of the training set to evaluate several candidate models and
+select the best one. The new held-out set is called the validation set (or the devel‐
+opment set, or dev set). More specifically, you train multiple models with various
+hyperparameters on the reduced training set (i.e., the full training set minus the
+validation set), and you select the model that performs best on the validation set.
+After this holdout validation process, you train the best model on the full training set
+(including the validation set), and this gives you the final model. Lastly, you evaluate
+this final model on the test set to get an estimate of the generalization error.
+
+
+
+
+Figure 1-25. Model selection using holdout validation
+
+This solution usually works quite well. However, if the validation set is too small,
+then the model evaluations will be imprecise: you may end up selecting a suboptimal
+model by mistake. Conversely, if the validation set is too large, then the remaining
+training set will be much smaller than the full training set. Why is this bad? Well,
+since the final model will be trained on the full training set, it is not ideal to compare
+
+
+36   |   Chapter 1: The Machine Learning Landscape
+
+### PDF PAGE 37
+candidate models trained on a much smaller training set. It would be like selecting
+the fastest sprinter to participate in a marathon. One way to solve this problem is
+to perform repeated cross-validation, using many small validation sets. Each model
+is evaluated once per validation set after it is trained on the rest of the data. By
+averaging out all the evaluations of a model, you get a much more accurate measure
+of its performance. There is a drawback, however: the training time is multiplied by
+the number of validation sets.
+
+Data Mismatch
+In some cases, it’s easy to get a large amount of data for training, but this data
+probably won’t be perfectly representative of the data that will be used in production.
+For example, suppose you want to create a mobile app to take pictures of flowers and
+automatically determine their species. You can easily download millions of pictures
+of flowers on the web, but they won’t be perfectly representative of the pictures that
+will actually be taken using the app on a mobile device. Perhaps you only have 1,000
+representative pictures (i.e., actually taken with the app).
+In this case, the most important rule to remember is that both the validation set and
+the test set must be as representative as possible of the data you expect to use in
+production, so they should be composed exclusively of representative pictures: you
+can shuffle them and put half in the validation set and half in the test set (making
+sure that no duplicates or near-duplicates end up in both sets). After training your
+model on the web pictures, if you observe that the performance of the model on the
+validation set is disappointing, you will not know whether this is because your model
+has overfit the training set, or whether this is just due to the mismatch between the
+web pictures and the mobile app pictures.
+One solution is to hold out some of the training pictures (from the web) in yet
+another set that Andrew Ng dubbed the train-dev set (Figure 1-26). After the model
+is trained (on the training set, not on the train-dev set), you can evaluate it on the
+train-dev set. If the model performs poorly, then it must have overfit the training set,
+so you should try to simplify or regularize the model, get more training data, and
+clean up the training data. But if it performs well on the train-dev set, then you can
+evaluate the model on the dev set. If it performs poorly, then the problem must be
+coming from the data mismatch. You can try to tackle this problem by preprocessing
+the web images to make them look more like the pictures that will be taken by the
+mobile app, and then retraining the model. Once you have a model that performs
+well on both the train-dev set and the dev set, you can evaluate it one last time on the
+test set to know how well it is likely to perform in production.
+
+
+
+
+                                                                 Testing and Validating   |   37
+
+### PDF PAGE 38
+Figure 1-26. When real data is scarce (right), you may use similar abundant data (left)
+for training and hold out some of it in a train-dev set to evaluate overfitting; the real
+data is then used to evaluate data mismatch (dev set) and to evaluate the final model’s
+performance (test set)
+
+
+                                         No Free Lunch Theorem
+     A model is a simplified representation of the data. The simplifications are meant to
+     discard the superfluous details that are unlikely to generalize to new instances. When
+     you select a particular type of model, you are implicitly making assumptions about
+     the data. For example, if you choose a linear model, you are implicitly assuming that
+     the data is fundamentally linear and that the distance between the instances and the
+     straight line is just noise, which can safely be ignored.
+     In a famous 1996 paper,9 David Wolpert demonstrated that if you make absolutely
+     no assumption about the data, then there is no reason to prefer one model over any
+     other. This is called the No Free Lunch (NFL) theorem. For some datasets the best
+     model is a linear model, while for other datasets it is a neural network. There is no
+     model that is a priori guaranteed to work better (hence the name of the theorem).
+     The only way to know for sure which model is best is to evaluate them all. Since
+     this is not possible, in practice you make some reasonable assumptions about the
+     data and evaluate only a few reasonable models. For example, for simple tasks you
+     may evaluate linear models with various levels of regularization, and for a complex
+     problem you may evaluate various neural networks.
+
+
+
+
+9 David Wolpert, “The Lack of A Priori Distinctions Between Learning Algorithms”, Neural Computation 8, no.
+     7 (1996): 1341–1390.
+
+
+38     |   Chapter 1: The Machine Learning Landscape

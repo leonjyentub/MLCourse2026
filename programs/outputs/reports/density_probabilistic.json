@@ -1,0 +1,49 @@
+{
+  "neighbor_counts": [
+    3,
+    3,
+    4,
+    2,
+    1
+  ],
+  "em_responsibilities": [
+    0.8,
+    0.2
+  ],
+  "em_update_A": {
+    "mean": 0.4,
+    "variance": 0.6400000000000001
+  },
+  "aic_bic_worked_example": {
+    "A": [
+      210,
+      223.02585092994047
+    ],
+    "B": [
+      208,
+      228.84136148790475
+    ]
+  },
+  "covariance_types": {
+    "n_parameters": {
+      "full": 17,
+      "tied": 11,
+      "spherical": 11,
+      "diag": 14
+    },
+    "mean_log_likelihood": {
+      "full": -3.649634523593082,
+      "tied": -3.957775245470666,
+      "spherical": -3.978047282086054,
+      "diag": -3.912857989933206
+    },
+    "BIC": {
+      "full": 5220.856698726053,
+      "tied": 5612.94722734441,
+      "spherical": 5641.328078605953,
+      "diag": 5569.716310597096
+    }
+  },
+  "best_n_by_bic": 3,
+  "anomaly_threshold": -6.876212686247474
+}

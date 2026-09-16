@@ -1,0 +1,62 @@
+{
+  "gini_entropy_check": {
+    "Gini": {
+      "[4,0]": 0.0,
+      "[2,2]": 0.5,
+      "[3,1]": 0.375
+    },
+    "Entropy": {
+      "[4,0]": -0.0,
+      "[2,2]": 1.0,
+      "[3,1]": 0.8112781244591328
+    }
+  },
+  "split_gain": {
+    "A_drop": 0.3,
+    "B_drop": 0.0
+  },
+  "moons_regularization": {
+    "depth": {
+      "no limit": 11,
+      "min_samples_leaf=20": 5
+    },
+    "train_acc": {
+      "no limit": 1.0,
+      "min_samples_leaf=20": 0.875
+    },
+    "test_acc": {
+      "no limit": 0.8666666666666667,
+      "min_samples_leaf=20": 0.9083333333333333
+    }
+  },
+  "tree_depth_raw_vs_pca": [
+    5,
+    4
+  ],
+  "model_comparison": {
+    "CV_accuracy": {
+      "tree_d2": 0.8357142857142857,
+      "tree_d4": 0.8214285714285715,
+      "tree_d8": 0.8178571428571428,
+      "tree_full": 0.8285714285714285,
+      "logistic_std": 0.8392857142857142,
+      "svm_rbf_std": 0.8642857142857142
+    },
+    "CV_sd": {
+      "tree_d2": 0.06961995960577827,
+      "tree_d4": 0.07783748113465486,
+      "tree_d8": 0.07405871911902757,
+      "tree_full": 0.06752739428996084,
+      "logistic_std": 0.03992978531249627,
+      "svm_rbf_std": 0.04824734316466534
+    },
+    "test_accuracy": {
+      "tree_d2": 0.8833333333333333,
+      "tree_d4": 0.875,
+      "tree_d8": 0.8666666666666667,
+      "tree_full": 0.8666666666666667,
+      "logistic_std": 0.8166666666666667,
+      "svm_rbf_std": 0.8916666666666667
+    }
+  }
+}

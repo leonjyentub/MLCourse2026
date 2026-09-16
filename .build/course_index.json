@@ -1,0 +1,906 @@
+[
+  {
+    "deck": "00_課程導覽",
+    "slide": 1,
+    "title": "機器學習概念與評估",
+    "minutes": 2,
+    "cumulative": 2,
+    "source": "TOC 印刷頁 v–vii，PDF 頁 7–9"
+  },
+  {
+    "deck": "00_課程導覽",
+    "slide": 2,
+    "title": "主教材中的學習位置",
+    "minutes": 3,
+    "cumulative": 5,
+    "source": "TOC 印刷頁 v–vii，PDF 頁 7–9"
+  },
+  {
+    "deck": "00_課程導覽",
+    "slide": 3,
+    "title": "三週的學習任務",
+    "minutes": 3,
+    "cumulative": 8,
+    "source": "TOC 印刷頁 v–vii；課程設計"
+  },
+  {
+    "deck": "00_課程導覽",
+    "slide": 4,
+    "title": "完成課程後應能解釋的事情",
+    "minutes": 2,
+    "cumulative": 10,
+    "source": "課程設計；TOC 印刷頁 v–vii"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 1,
+    "title": "第一週：機器學習概觀",
+    "minutes": 2,
+    "cumulative": 2,
+    "source": "B1 p.3–4"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 2,
+    "title": "什麼是機器學習？",
+    "minutes": 4,
+    "cumulative": 6,
+    "source": "B1 p.4; 補充：P0 s.3,5"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 3,
+    "title": "規則程式與資料學習",
+    "minutes": 4,
+    "cumulative": 10,
+    "source": "B1 p.5–8，圖1-1–1-4"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 4,
+    "title": "機器學習系統的三個分類軸",
+    "minutes": 3,
+    "cumulative": 13,
+    "source": "B1 p.9–10,17–22; 補充：P0 s.6–14"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 5,
+    "title": "監督式學習：迴歸與分類",
+    "minutes": 5,
+    "cumulative": 18,
+    "source": "B1 p.10–11; 補充：P0 s.7–8"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 6,
+    "title": "樣本、特徵與目標",
+    "minutes": 4,
+    "cumulative": 22,
+    "source": "B1 p.10–11；課堂示例"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 7,
+    "title": "分類模型的樣本、特徵與目標",
+    "minutes": 2,
+    "cumulative": 24,
+    "source": "B1 p.10–11; 補充：P0 s.8"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 8,
+    "title": "非監督式學習",
+    "minutes": 4,
+    "cumulative": 28,
+    "source": "B1 p.11–13，圖1-7–1-8"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 9,
+    "title": "半監督式學習",
+    "minutes": 2,
+    "cumulative": 30,
+    "source": "B1 p.14–15"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 10,
+    "title": "自監督式學習",
+    "minutes": 2,
+    "cumulative": 32,
+    "source": "B1 p.15–16，圖1-11"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 11,
+    "title": "遷移學習的做法",
+    "minutes": 2,
+    "cumulative": 34,
+    "source": "B1 p.16; 補充：P0 s.16"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 12,
+    "title": "強化學習：從互動回饋學策略",
+    "minutes": 3,
+    "cumulative": 37,
+    "source": "B1 p.16–17，圖1-12; 補充：P0 s.13"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 13,
+    "title": "批次學習與線上學習",
+    "minutes": 4,
+    "cumulative": 41,
+    "source": "B1 p.17–20"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 14,
+    "title": "實例式與模型式泛化",
+    "minutes": 4,
+    "cumulative": 45,
+    "source": "B1 p.21–22，圖1-15–1-16"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 15,
+    "title": "生活滿意度：先看資料代表什麼",
+    "minutes": 3,
+    "cumulative": 48,
+    "source": "B1 p.23，表1-1"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 16,
+    "title": "線性模型的參數",
+    "minutes": 5,
+    "cumulative": 53,
+    "source": "B1 p.23–25，式1-1; 補充：P1 s.2–3,8"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 17,
+    "title": "一條線如何產生新預測？",
+    "minutes": 3,
+    "cumulative": 56,
+    "source": "B1 p.24–26，圖1-19"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 18,
+    "title": "Example 1-1：準備資料與散布圖",
+    "minutes": 2,
+    "cumulative": 58,
+    "source": "B1 p.25–26，Example 1-1"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 19,
+    "title": "Example 1-1：訓練與執行線性模型",
+    "minutes": 2,
+    "cumulative": 60,
+    "source": "B1 p.26，Example 1-1"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 20,
+    "title": "損失函數：把「擬合好不好」變成數字",
+    "minutes": 5,
+    "cumulative": 65,
+    "source": "B1 p.24–26; 補充：P1 s.4,9,12,14"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 21,
+    "title": "ML 的主要挑戰",
+    "minutes": 1,
+    "cumulative": 66,
+    "source": "B1 p.27–38"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 22,
+    "title": "資料不足與不具代表性",
+    "minutes": 4,
+    "cumulative": 70,
+    "source": "B1 p.27–31"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 23,
+    "title": "樣本範圍會改變我們看到的關係",
+    "minutes": 4,
+    "cumulative": 74,
+    "source": "B1 p.29–30，圖1-22"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 24,
+    "title": "資料品質與特徵工程",
+    "minutes": 4,
+    "cumulative": 78,
+    "source": "B1 p.31–32"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 25,
+    "title": "過度擬合：更貼近訓練資料，未必更能泛化",
+    "minutes": 5,
+    "cumulative": 83,
+    "source": "B1 p.31–32; 補充：P2 s.7–8"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 26,
+    "title": "舊稿結果：訓練誤差與測試誤差",
+    "minutes": 4,
+    "cumulative": 87,
+    "source": "B1 p.32; 補充：P2 s.8"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 27,
+    "title": "正則化：限制模型追隨資料的自由度",
+    "minutes": 4,
+    "cumulative": 91,
+    "source": "B1 p.33，圖1-24"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 28,
+    "title": "欠擬合與過度擬合的判讀",
+    "minutes": 4,
+    "cumulative": 95,
+    "source": "B1 p.33–34; 補充：P2 s.9–10"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 29,
+    "title": "泛化與部署是不同的檢查面向",
+    "minutes": 3,
+    "cumulative": 98,
+    "source": "B1 p.34–35"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 30,
+    "title": "訓練、驗證與測試的分工",
+    "minutes": 5,
+    "cumulative": 103,
+    "source": "B1 p.35–36; 補充：P2 s.2–4"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 31,
+    "title": "參數與超參數",
+    "minutes": 4,
+    "cumulative": 107,
+    "source": "B1 p.33,35–36; 補充：P2 s.3–4"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 32,
+    "title": "交叉驗證的基本概念",
+    "minutes": 4,
+    "cumulative": 111,
+    "source": "B1 p.36–37; 補充：P2 s.5–6"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 33,
+    "title": "早停：訓練輪數也需要驗證",
+    "minutes": 6,
+    "cumulative": 117,
+    "source": "B1 p.35–37; 補充：P2 s.9"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 34,
+    "title": "分布不一致與切分單位",
+    "minutes": 4,
+    "cumulative": 121,
+    "source": "B1 p.37–38，圖1-26；課程延伸"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 35,
+    "title": "活動 B：設計一個可以相信的評估",
+    "minutes": 10,
+    "cumulative": 131,
+    "source": "B1 p.35–38；課堂活動B"
+  },
+  {
+    "deck": "01_機器學習概觀",
+    "slide": 36,
+    "title": "第一週回顧與離堂題",
+    "minutes": 5,
+    "cumulative": 136,
+    "source": "B1 p.38–39；課程統整"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 1,
+    "title": "第二週：端到端機器學習專案",
+    "minutes": 2,
+    "cumulative": 2,
+    "source": "B2 p.41–43"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 2,
+    "title": "專案全貌",
+    "minutes": 3,
+    "cumulative": 5,
+    "source": "B2 p.41–43"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 3,
+    "title": "問題定義：預測的是區域房價中位數",
+    "minutes": 5,
+    "cumulative": 10,
+    "source": "B2 p.43–45"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 4,
+    "title": "迴歸的評估指標",
+    "minutes": 5,
+    "cumulative": 15,
+    "source": "B2 p.45–47，式2-1–2-2; 補充：P1 s.4"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 5,
+    "title": "活動 C：平均誤差為零，預測就很好嗎？",
+    "minutes": 7,
+    "cumulative": 22,
+    "source": "B2 p.45–47；課堂活動C"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 6,
+    "title": "指標之前，還有用途與假設",
+    "minutes": 3,
+    "cumulative": 25,
+    "source": "B2 p.47–48"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 7,
+    "title": "取得資料與保留可重現流程",
+    "minutes": 3,
+    "cumulative": 28,
+    "source": "B2 p.48–54"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 8,
+    "title": "20,640 個區域、10 個欄位",
+    "minutes": 5,
+    "cumulative": 33,
+    "source": "B2 p.54–55，圖2-6"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 9,
+    "title": "資料摘要透露的問題",
+    "minutes": 4,
+    "cumulative": 37,
+    "source": "B2 p.54–56，圖2-7"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 10,
+    "title": "直方圖：偏態、尺度與截頂",
+    "minutes": 6,
+    "cumulative": 43,
+    "source": "B2 p.56–57，圖2-8"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 11,
+    "title": "截頂標籤限制了能學到的事情",
+    "minutes": 4,
+    "cumulative": 47,
+    "source": "B2 p.57"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 12,
+    "title": "在深入探索前保留測試集",
+    "minutes": 4,
+    "cumulative": 51,
+    "source": "B2 p.57–60; 補充：P2 s.3–4"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 13,
+    "title": "分層抽樣保留重要群體比例",
+    "minutes": 4,
+    "cumulative": 55,
+    "source": "B2 p.60–62，圖2-9–2-10；課堂示例"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 14,
+    "title": "地理視覺化：同時閱讀位置、人口與價格",
+    "minutes": 5,
+    "cumulative": 60,
+    "source": "B2 p.62–65，圖2-13"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 15,
+    "title": "相關係數：線性關係的摘要",
+    "minutes": 4,
+    "cumulative": 64,
+    "source": "B2 p.65–68"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 16,
+    "title": "散布圖補上相關係數看不到的細節",
+    "minutes": 4,
+    "cumulative": 68,
+    "source": "B2 p.66–68，圖2-15"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 17,
+    "title": "補充：Iris 散布矩陣的讀法",
+    "minutes": 4,
+    "cumulative": 72,
+    "source": "B2 p.66，散布矩陣; 補充：P1 s.42"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 18,
+    "title": "特徵組合：總量與比例回答不同問題",
+    "minutes": 4,
+    "cumulative": 76,
+    "source": "B2 p.68–69"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 19,
+    "title": "活動 D：從總量改成比例，結論會改變嗎？",
+    "minutes": 8,
+    "cumulative": 84,
+    "source": "B2 p.62–69；課堂活動D"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 20,
+    "title": "資料準備要能重複套用",
+    "minutes": 3,
+    "cumulative": 87,
+    "source": "B2 p.69–70"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 21,
+    "title": "缺失值：刪除或補值都有假設",
+    "minutes": 5,
+    "cumulative": 92,
+    "source": "B2 p.70–73"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 22,
+    "title": "類別特徵：整數編碼不代表有大小",
+    "minutes": 5,
+    "cumulative": 97,
+    "source": "B2 p.73–77"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 23,
+    "title": "特徵縮放與正則化不同",
+    "minutes": 5,
+    "cumulative": 102,
+    "source": "B2 p.77–78; 補充：P1 s.23"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 24,
+    "title": "分布轉換與新表示",
+    "minutes": 4,
+    "cumulative": 106,
+    "source": "B2 p.78–85，圖2-17"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 25,
+    "title": "Pipeline：把前處理與模型包成同一流程",
+    "minutes": 4,
+    "cumulative": 110,
+    "source": "B2 p.86–90"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 26,
+    "title": "fit、transform、predict 各自做什麼？",
+    "minutes": 3,
+    "cumulative": 113,
+    "source": "B2 p.71–73,86–90"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 27,
+    "title": "基準模型：改善應該有比較對象",
+    "minutes": 4,
+    "cumulative": 117,
+    "source": "B2 p.43–44,90–91；基準延伸"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 28,
+    "title": "訓練分數可能非常誤導",
+    "minutes": 4,
+    "cumulative": 121,
+    "source": "B2 p.90–94"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 29,
+    "title": "每一折都是一次完整的模型訓練",
+    "minutes": 6,
+    "cumulative": 127,
+    "source": "B2 p.92–93，圖2-20; 補充：P2 s.5–6"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 30,
+    "title": "常見洩漏：切分後仍可能發生",
+    "minutes": 5,
+    "cumulative": 132,
+    "source": "B2 p.78,86–95；課程延伸"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 31,
+    "title": "超參數搜尋：比較整個流程",
+    "minutes": 4,
+    "cumulative": 136,
+    "source": "B2 p.94–97"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 32,
+    "title": "調參結果要連同評估方式閱讀",
+    "minutes": 4,
+    "cumulative": 140,
+    "source": "B2 p.93–97"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 33,
+    "title": "錯誤分析：平均分數之外",
+    "minutes": 3,
+    "cumulative": 143,
+    "source": "B2 p.98–99"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 34,
+    "title": "最終測試與不確定性",
+    "minutes": 3,
+    "cumulative": 146,
+    "source": "B2 p.99–100"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 35,
+    "title": "部署、監測與維護",
+    "minutes": 3,
+    "cumulative": 149,
+    "source": "B2 p.100–103"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 36,
+    "title": "活動 E：找出評估流程的問題",
+    "minutes": 8,
+    "cumulative": 157,
+    "source": "B2 p.69–100；課堂活動E"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 37,
+    "title": "第二週回顧與課後整理",
+    "minutes": 3,
+    "cumulative": 160,
+    "source": "B2 p.103–105；課程統整"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 1,
+    "title": "第三週：分類與模型評估",
+    "minutes": 2,
+    "cumulative": 2,
+    "source": "B3 p.107"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 2,
+    "title": "MNIST：影像也可以表示成特徵矩陣",
+    "minutes": 4,
+    "cumulative": 6,
+    "source": "B3 p.107–110，圖3-2"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 3,
+    "title": "二元分類：先辨識「是不是 5」",
+    "minutes": 4,
+    "cumulative": 10,
+    "source": "B3 p.110–111"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 4,
+    "title": "補充：邏輯斯迴歸把分數轉為機率估計",
+    "minutes": 5,
+    "cumulative": 15,
+    "source": "B3 p.110; 補充：P1 s.25–28"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 5,
+    "title": "決策邊界：在特徵空間畫出判斷分界",
+    "minutes": 4,
+    "cumulative": 19,
+    "source": "B3 p.110–111; 補充：P1 s.44,47–48"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 6,
+    "title": "訓練損失與分類正確率不同",
+    "minutes": 5,
+    "cumulative": 24,
+    "source": "B3 p.110–111；二元分類延伸; 補充：P1 s.29–40"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 7,
+    "title": "用未參與訓練的預測評估",
+    "minutes": 3,
+    "cumulative": 27,
+    "source": "B3 p.111–113"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 8,
+    "title": "類別不平衡：什麼都判成「不是 5」",
+    "minutes": 5,
+    "cumulative": 32,
+    "source": "B3 p.111–113"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 9,
+    "title": "混淆矩陣：列是真實，欄是預測",
+    "minutes": 5,
+    "cumulative": 37,
+    "source": "B3 p.112–114; 補充：P1 s.50–51"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 10,
+    "title": "教材的混淆矩陣",
+    "minutes": 4,
+    "cumulative": 41,
+    "source": "B3 p.113–115"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 11,
+    "title": "Precision 與 recall 的分母不同",
+    "minutes": 5,
+    "cumulative": 46,
+    "source": "B3 p.113–115，式3-1–3-2; 補充：P1 s.53"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 12,
+    "title": "F1：精確率與召回率的調和平均",
+    "minutes": 4,
+    "cumulative": 50,
+    "source": "B3 p.115，式3-3; 補充：P1 s.53"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 13,
+    "title": "活動 F：從四格算出三個分數",
+    "minutes": 5,
+    "cumulative": 55,
+    "source": "B3 p.112–115；課堂活動F"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 14,
+    "title": "決策閾值控制哪些樣本被判成正類",
+    "minutes": 4,
+    "cumulative": 59,
+    "source": "B3 p.115–117"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 15,
+    "title": "圖上的閾值如何改變誤報與漏判？",
+    "minutes": 4,
+    "cumulative": 63,
+    "source": "B3 p.115–117，圖3-4"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 16,
+    "title": "用八筆分數追蹤每一次決策",
+    "minutes": 5,
+    "cumulative": 68,
+    "source": "B3 p.115–121；課堂示例"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 17,
+    "title": "活動 G：閾值不同，混淆矩陣也不同",
+    "minutes": 8,
+    "cumulative": 76,
+    "source": "B3 p.115–121；課堂活動G"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 18,
+    "title": "教材的 precision／recall 與閾值曲線",
+    "minutes": 4,
+    "cumulative": 80,
+    "source": "B3 p.117–119，圖3-5"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 19,
+    "title": "ROC：真陽性率對偽陽性率",
+    "minutes": 5,
+    "cumulative": 85,
+    "source": "B3 p.120–121; 補充：P1 s.55–56"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 20,
+    "title": "八筆資料的 ROC 與 PR",
+    "minutes": 5,
+    "cumulative": 90,
+    "source": "B3 p.120–121；課堂示例"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 21,
+    "title": "ROC AUC 衡量排序能力",
+    "minutes": 4,
+    "cumulative": 94,
+    "source": "B3 p.120–121；課堂示例"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 22,
+    "title": "PR 與 ROC 關注的比較對象",
+    "minutes": 5,
+    "cumulative": 99,
+    "source": "B3 p.121–123"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 23,
+    "title": "很小的 FPR，也可能帶來很多誤報",
+    "minutes": 4,
+    "cumulative": 103,
+    "source": "B3 p.121；課堂示例"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 24,
+    "title": "教材的兩個分類器比較",
+    "minutes": 4,
+    "cumulative": 107,
+    "source": "B3 p.121–123，圖3-8"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 25,
+    "title": "閾值選擇還要考慮處理成本",
+    "minutes": 3,
+    "cumulative": 110,
+    "source": "B3 p.115–123；課程延伸"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 26,
+    "title": "多類別分類：每張影像選一個數字",
+    "minutes": 3,
+    "cumulative": 113,
+    "source": "B3 p.124–126; 補充：P1 s.60–61"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 27,
+    "title": "一對其餘與一對一",
+    "minutes": 4,
+    "cumulative": 117,
+    "source": "B3 p.124–125; 補充：P1 s.61–62"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 28,
+    "title": "補充：Softmax 與多類別目標",
+    "minutes": 4,
+    "cumulative": 121,
+    "source": "B3 p.124–126；多類別補充; 補充：P1 s.63–64"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 29,
+    "title": "多類別混淆矩陣",
+    "minutes": 4,
+    "cumulative": 125,
+    "source": "B3 p.126–127，圖3-9"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 30,
+    "title": "列正規化與欄正規化的分母",
+    "minutes": 4,
+    "cumulative": 129,
+    "source": "B3 p.127–128；課堂示例"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 31,
+    "title": "多類別分數如何平均？",
+    "minutes": 4,
+    "cumulative": 133,
+    "source": "B3 p.127–131；課程延伸"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 32,
+    "title": "錯誤案例檢查：3 與 5 為何混淆？",
+    "minutes": 4,
+    "cumulative": 137,
+    "source": "B3 p.128–130，圖3-11"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 33,
+    "title": "多標籤分類：一筆樣本可以同時有多個答案",
+    "minutes": 4,
+    "cumulative": 141,
+    "source": "B3 p.130–132"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 34,
+    "title": "多輸出：一次預測多個目標",
+    "minutes": 3,
+    "cumulative": 144,
+    "source": "B3 p.132–133，圖3-12"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 35,
+    "title": "活動 H：寫一份有決策依據的分類報告",
+    "minutes": 12,
+    "cumulative": 156,
+    "source": "B1–B3；課堂活動H"
+  },
+  {
+    "deck": "03_分類與模型評估",
+    "slide": 36,
+    "title": "三週回顧：一份可信的機器學習報告",
+    "minutes": 4,
+    "cumulative": 160,
+    "source": "B1–B3；TOC p.vii；課程統整"
+  }
+]

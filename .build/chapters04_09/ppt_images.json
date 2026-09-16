@@ -1,0 +1,1605 @@
+[
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 3,
+    "index": 0,
+    "media": "ppt/media/image3.png",
+    "path": ".build/chapters04_09/ppt_images/03_03_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 3,
+    "index": 1,
+    "media": "ppt/media/image2.png",
+    "path": ".build/chapters04_09/ppt_images/03_03_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 8,
+    "index": 0,
+    "media": "ppt/media/image4.png",
+    "path": ".build/chapters04_09/ppt_images/03_08_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 9,
+    "index": 0,
+    "media": "ppt/media/image5.png",
+    "path": ".build/chapters04_09/ppt_images/03_09_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 11,
+    "index": 0,
+    "media": "ppt/media/image5.wmf",
+    "path": ".build/chapters04_09/ppt_images/03_11_0.wmf"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 12,
+    "index": 0,
+    "media": "ppt/media/image6.png",
+    "path": ".build/chapters04_09/ppt_images/03_12_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 12,
+    "index": 1,
+    "media": "ppt/media/image7.png",
+    "path": ".build/chapters04_09/ppt_images/03_12_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 12,
+    "index": 2,
+    "media": "ppt/media/image8.png",
+    "path": ".build/chapters04_09/ppt_images/03_12_2.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 12,
+    "index": 3,
+    "media": "ppt/media/image9.png",
+    "path": ".build/chapters04_09/ppt_images/03_12_3.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 12,
+    "index": 4,
+    "media": "ppt/media/image10.png",
+    "path": ".build/chapters04_09/ppt_images/03_12_4.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 13,
+    "index": 0,
+    "media": "ppt/media/image11.png",
+    "path": ".build/chapters04_09/ppt_images/03_13_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 13,
+    "index": 1,
+    "media": "ppt/media/image12.png",
+    "path": ".build/chapters04_09/ppt_images/03_13_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 13,
+    "index": 2,
+    "media": "ppt/media/image13.png",
+    "path": ".build/chapters04_09/ppt_images/03_13_2.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 13,
+    "index": 3,
+    "media": "ppt/media/image14.png",
+    "path": ".build/chapters04_09/ppt_images/03_13_3.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 14,
+    "index": 0,
+    "media": "ppt/media/image150.png",
+    "path": ".build/chapters04_09/ppt_images/03_14_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 14,
+    "index": 1,
+    "media": "ppt/media/image160.png",
+    "path": ".build/chapters04_09/ppt_images/03_14_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 14,
+    "index": 2,
+    "media": "ppt/media/image170.png",
+    "path": ".build/chapters04_09/ppt_images/03_14_2.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 14,
+    "index": 3,
+    "media": "ppt/media/image180.png",
+    "path": ".build/chapters04_09/ppt_images/03_14_3.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 14,
+    "index": 4,
+    "media": "ppt/media/image191.png",
+    "path": ".build/chapters04_09/ppt_images/03_14_4.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 15,
+    "index": 0,
+    "media": "ppt/media/image200.png",
+    "path": ".build/chapters04_09/ppt_images/03_15_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 15,
+    "index": 1,
+    "media": "ppt/media/image210.png",
+    "path": ".build/chapters04_09/ppt_images/03_15_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 16,
+    "index": 0,
+    "media": "ppt/media/image15.png",
+    "path": ".build/chapters04_09/ppt_images/03_16_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 16,
+    "index": 1,
+    "media": "ppt/media/image16.png",
+    "path": ".build/chapters04_09/ppt_images/03_16_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 18,
+    "index": 0,
+    "media": "ppt/media/image17.png",
+    "path": ".build/chapters04_09/ppt_images/03_18_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 19,
+    "index": 0,
+    "media": "ppt/media/image18.png",
+    "path": ".build/chapters04_09/ppt_images/03_19_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 19,
+    "index": 1,
+    "media": "ppt/media/image19.png",
+    "path": ".build/chapters04_09/ppt_images/03_19_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 19,
+    "index": 2,
+    "media": "ppt/media/image20.png",
+    "path": ".build/chapters04_09/ppt_images/03_19_2.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 19,
+    "index": 3,
+    "media": "ppt/media/image21.png",
+    "path": ".build/chapters04_09/ppt_images/03_19_3.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 19,
+    "index": 4,
+    "media": "ppt/media/image21.png",
+    "path": ".build/chapters04_09/ppt_images/03_19_4.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 19,
+    "index": 5,
+    "media": "ppt/media/image21.png",
+    "path": ".build/chapters04_09/ppt_images/03_19_5.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 20,
+    "index": 0,
+    "media": "ppt/media/image22.png",
+    "path": ".build/chapters04_09/ppt_images/03_20_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 21,
+    "index": 0,
+    "media": "ppt/media/image23.png",
+    "path": ".build/chapters04_09/ppt_images/03_21_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 22,
+    "index": 0,
+    "media": "ppt/media/image181.png",
+    "path": ".build/chapters04_09/ppt_images/03_22_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 22,
+    "index": 1,
+    "media": "ppt/media/image192.png",
+    "path": ".build/chapters04_09/ppt_images/03_22_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 23,
+    "index": 0,
+    "media": "ppt/media/image24.png",
+    "path": ".build/chapters04_09/ppt_images/03_23_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 24,
+    "index": 0,
+    "media": "ppt/media/image25.png",
+    "path": ".build/chapters04_09/ppt_images/03_24_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 25,
+    "index": 0,
+    "media": "ppt/media/image26.jpeg",
+    "path": ".build/chapters04_09/ppt_images/03_25_0.jpeg"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 26,
+    "index": 0,
+    "media": "ppt/media/image190.png",
+    "path": ".build/chapters04_09/ppt_images/03_26_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 26,
+    "index": 1,
+    "media": "ppt/media/image27.png",
+    "path": ".build/chapters04_09/ppt_images/03_26_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 27,
+    "index": 0,
+    "media": "ppt/media/image250.png",
+    "path": ".build/chapters04_09/ppt_images/03_27_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 27,
+    "index": 1,
+    "media": "ppt/media/image16.png",
+    "path": ".build/chapters04_09/ppt_images/03_27_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 28,
+    "index": 0,
+    "media": "ppt/media/image28.png",
+    "path": ".build/chapters04_09/ppt_images/03_28_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 28,
+    "index": 1,
+    "media": "ppt/media/image29.png",
+    "path": ".build/chapters04_09/ppt_images/03_28_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 28,
+    "index": 2,
+    "media": "ppt/media/image30.png",
+    "path": ".build/chapters04_09/ppt_images/03_28_2.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 29,
+    "index": 0,
+    "media": "ppt/media/image31.png",
+    "path": ".build/chapters04_09/ppt_images/03_29_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 29,
+    "index": 1,
+    "media": "ppt/media/image32.png",
+    "path": ".build/chapters04_09/ppt_images/03_29_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 29,
+    "index": 2,
+    "media": "ppt/media/image33.png",
+    "path": ".build/chapters04_09/ppt_images/03_29_2.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 30,
+    "index": 0,
+    "media": "ppt/media/image34.png",
+    "path": ".build/chapters04_09/ppt_images/03_30_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 31,
+    "index": 0,
+    "media": "ppt/media/image35.png",
+    "path": ".build/chapters04_09/ppt_images/03_31_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 32,
+    "index": 0,
+    "media": "ppt/media/image36.png",
+    "path": ".build/chapters04_09/ppt_images/03_32_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 33,
+    "index": 0,
+    "media": "ppt/media/image37.png",
+    "path": ".build/chapters04_09/ppt_images/03_33_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 33,
+    "index": 1,
+    "media": "ppt/media/image38.png",
+    "path": ".build/chapters04_09/ppt_images/03_33_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 38,
+    "index": 0,
+    "media": "ppt/media/image39.png",
+    "path": ".build/chapters04_09/ppt_images/03_38_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 39,
+    "index": 0,
+    "media": "ppt/media/image40.png",
+    "path": ".build/chapters04_09/ppt_images/03_39_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 39,
+    "index": 1,
+    "media": "ppt/media/image41.png",
+    "path": ".build/chapters04_09/ppt_images/03_39_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 40,
+    "index": 0,
+    "media": "ppt/media/image42.png",
+    "path": ".build/chapters04_09/ppt_images/03_40_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 40,
+    "index": 1,
+    "media": "ppt/media/image43.png",
+    "path": ".build/chapters04_09/ppt_images/03_40_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 42,
+    "index": 0,
+    "media": "ppt/media/image44.png",
+    "path": ".build/chapters04_09/ppt_images/03_42_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 43,
+    "index": 0,
+    "media": "ppt/media/image45.png",
+    "path": ".build/chapters04_09/ppt_images/03_43_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 43,
+    "index": 1,
+    "media": "ppt/media/image46.png",
+    "path": ".build/chapters04_09/ppt_images/03_43_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 44,
+    "index": 0,
+    "media": "ppt/media/image47.png",
+    "path": ".build/chapters04_09/ppt_images/03_44_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 45,
+    "index": 0,
+    "media": "ppt/media/image48.png",
+    "path": ".build/chapters04_09/ppt_images/03_45_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 46,
+    "index": 0,
+    "media": "ppt/media/image49.png",
+    "path": ".build/chapters04_09/ppt_images/03_46_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 47,
+    "index": 0,
+    "media": "ppt/media/image50.png",
+    "path": ".build/chapters04_09/ppt_images/03_47_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 47,
+    "index": 1,
+    "media": "ppt/media/image51.png",
+    "path": ".build/chapters04_09/ppt_images/03_47_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 49,
+    "index": 0,
+    "media": "ppt/media/image52.png",
+    "path": ".build/chapters04_09/ppt_images/03_49_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 49,
+    "index": 1,
+    "media": "ppt/media/image53.png",
+    "path": ".build/chapters04_09/ppt_images/03_49_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 50,
+    "index": 0,
+    "media": "ppt/media/image54.png",
+    "path": ".build/chapters04_09/ppt_images/03_50_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 50,
+    "index": 1,
+    "media": "ppt/media/image55.png",
+    "path": ".build/chapters04_09/ppt_images/03_50_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 50,
+    "index": 2,
+    "media": "ppt/media/image56.png",
+    "path": ".build/chapters04_09/ppt_images/03_50_2.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 51,
+    "index": 0,
+    "media": "ppt/media/image55.png",
+    "path": ".build/chapters04_09/ppt_images/03_51_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 51,
+    "index": 1,
+    "media": "ppt/media/image57.png",
+    "path": ".build/chapters04_09/ppt_images/03_51_1.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 54,
+    "index": 0,
+    "media": "ppt/media/image58.png",
+    "path": ".build/chapters04_09/ppt_images/03_54_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 56,
+    "index": 0,
+    "media": "ppt/media/image59.png",
+    "path": ".build/chapters04_09/ppt_images/03_56_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 57,
+    "index": 0,
+    "media": "ppt/media/image590.png",
+    "path": ".build/chapters04_09/ppt_images/03_57_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 59,
+    "index": 0,
+    "media": "ppt/media/image60.png",
+    "path": ".build/chapters04_09/ppt_images/03_59_0.png"
+  },
+  {
+    "source": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "slide": 60,
+    "index": 0,
+    "media": "ppt/media/image61.png",
+    "path": ".build/chapters04_09/ppt_images/03_60_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 2,
+    "index": 0,
+    "media": "ppt/media/image1.png",
+    "path": ".build/chapters04_09/ppt_images/04_02_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 7,
+    "index": 0,
+    "media": "ppt/media/image2.png",
+    "path": ".build/chapters04_09/ppt_images/04_07_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 8,
+    "index": 0,
+    "media": "ppt/media/image3.png",
+    "path": ".build/chapters04_09/ppt_images/04_08_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 9,
+    "index": 0,
+    "media": "ppt/media/image4.png",
+    "path": ".build/chapters04_09/ppt_images/04_09_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 9,
+    "index": 1,
+    "media": "ppt/media/image5.gif",
+    "path": ".build/chapters04_09/ppt_images/04_09_1.gif"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 10,
+    "index": 0,
+    "media": "ppt/media/image6.png",
+    "path": ".build/chapters04_09/ppt_images/04_10_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 10,
+    "index": 1,
+    "media": "ppt/media/image7.png",
+    "path": ".build/chapters04_09/ppt_images/04_10_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 10,
+    "index": 2,
+    "media": "ppt/media/image70.png",
+    "path": ".build/chapters04_09/ppt_images/04_10_2.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 11,
+    "index": 0,
+    "media": "ppt/media/image8.png",
+    "path": ".build/chapters04_09/ppt_images/04_11_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 12,
+    "index": 0,
+    "media": "ppt/media/image9.png",
+    "path": ".build/chapters04_09/ppt_images/04_12_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 13,
+    "index": 0,
+    "media": "ppt/media/image10.png",
+    "path": ".build/chapters04_09/ppt_images/04_13_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 13,
+    "index": 1,
+    "media": "ppt/media/image11.png",
+    "path": ".build/chapters04_09/ppt_images/04_13_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 14,
+    "index": 0,
+    "media": "ppt/media/image12.png",
+    "path": ".build/chapters04_09/ppt_images/04_14_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 15,
+    "index": 0,
+    "media": "ppt/media/image13.png",
+    "path": ".build/chapters04_09/ppt_images/04_15_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 16,
+    "index": 0,
+    "media": "ppt/media/image14.png",
+    "path": ".build/chapters04_09/ppt_images/04_16_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 16,
+    "index": 1,
+    "media": "ppt/media/image15.png",
+    "path": ".build/chapters04_09/ppt_images/04_16_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 17,
+    "index": 0,
+    "media": "ppt/media/image16.png",
+    "path": ".build/chapters04_09/ppt_images/04_17_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 18,
+    "index": 0,
+    "media": "ppt/media/image17.png",
+    "path": ".build/chapters04_09/ppt_images/04_18_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 18,
+    "index": 1,
+    "media": "ppt/media/image18.png",
+    "path": ".build/chapters04_09/ppt_images/04_18_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 19,
+    "index": 0,
+    "media": "ppt/media/image19.png",
+    "path": ".build/chapters04_09/ppt_images/04_19_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 20,
+    "index": 0,
+    "media": "ppt/media/image20.png",
+    "path": ".build/chapters04_09/ppt_images/04_20_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 20,
+    "index": 1,
+    "media": "ppt/media/image21.png",
+    "path": ".build/chapters04_09/ppt_images/04_20_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 21,
+    "index": 0,
+    "media": "ppt/media/image22.png",
+    "path": ".build/chapters04_09/ppt_images/04_21_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 23,
+    "index": 0,
+    "media": "ppt/media/image23.png",
+    "path": ".build/chapters04_09/ppt_images/04_23_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 24,
+    "index": 0,
+    "media": "ppt/media/image24.png",
+    "path": ".build/chapters04_09/ppt_images/04_24_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 25,
+    "index": 0,
+    "media": "ppt/media/image25.png",
+    "path": ".build/chapters04_09/ppt_images/04_25_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 26,
+    "index": 0,
+    "media": "ppt/media/image250.png",
+    "path": ".build/chapters04_09/ppt_images/04_26_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 27,
+    "index": 0,
+    "media": "ppt/media/image26.png",
+    "path": ".build/chapters04_09/ppt_images/04_27_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 27,
+    "index": 1,
+    "media": "ppt/media/image27.png",
+    "path": ".build/chapters04_09/ppt_images/04_27_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 28,
+    "index": 0,
+    "media": "ppt/media/image28.png",
+    "path": ".build/chapters04_09/ppt_images/04_28_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 28,
+    "index": 1,
+    "media": "ppt/media/image25.jpeg",
+    "path": ".build/chapters04_09/ppt_images/04_28_1.jpeg"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 29,
+    "index": 0,
+    "media": "ppt/media/image29.png",
+    "path": ".build/chapters04_09/ppt_images/04_29_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 29,
+    "index": 1,
+    "media": "ppt/media/image30.png",
+    "path": ".build/chapters04_09/ppt_images/04_29_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 30,
+    "index": 0,
+    "media": "ppt/media/image31.png",
+    "path": ".build/chapters04_09/ppt_images/04_30_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 32,
+    "index": 0,
+    "media": "ppt/media/image130.png",
+    "path": ".build/chapters04_09/ppt_images/04_32_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 33,
+    "index": 0,
+    "media": "ppt/media/image32.png",
+    "path": ".build/chapters04_09/ppt_images/04_33_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 34,
+    "index": 0,
+    "media": "ppt/media/image33.png",
+    "path": ".build/chapters04_09/ppt_images/04_34_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 35,
+    "index": 0,
+    "media": "ppt/media/image34.png",
+    "path": ".build/chapters04_09/ppt_images/04_35_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 38,
+    "index": 0,
+    "media": "ppt/media/image35.png",
+    "path": ".build/chapters04_09/ppt_images/04_38_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 38,
+    "index": 1,
+    "media": "ppt/media/image38.png",
+    "path": ".build/chapters04_09/ppt_images/04_38_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 38,
+    "index": 2,
+    "media": "ppt/media/image39.png",
+    "path": ".build/chapters04_09/ppt_images/04_38_2.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 39,
+    "index": 0,
+    "media": "ppt/media/image200.png",
+    "path": ".build/chapters04_09/ppt_images/04_39_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 39,
+    "index": 1,
+    "media": "ppt/media/image210.png",
+    "path": ".build/chapters04_09/ppt_images/04_39_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 39,
+    "index": 2,
+    "media": "ppt/media/image40.png",
+    "path": ".build/chapters04_09/ppt_images/04_39_2.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 39,
+    "index": 3,
+    "media": "ppt/media/image41.png",
+    "path": ".build/chapters04_09/ppt_images/04_39_3.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 40,
+    "index": 0,
+    "media": "ppt/media/image42.png",
+    "path": ".build/chapters04_09/ppt_images/04_40_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 40,
+    "index": 1,
+    "media": "ppt/media/image43.png",
+    "path": ".build/chapters04_09/ppt_images/04_40_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 41,
+    "index": 0,
+    "media": "ppt/media/image44.png",
+    "path": ".build/chapters04_09/ppt_images/04_41_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 41,
+    "index": 1,
+    "media": "ppt/media/image45.png",
+    "path": ".build/chapters04_09/ppt_images/04_41_1.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 42,
+    "index": 0,
+    "media": "ppt/media/image36.png",
+    "path": ".build/chapters04_09/ppt_images/04_42_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 43,
+    "index": 0,
+    "media": "ppt/media/image37.png",
+    "path": ".build/chapters04_09/ppt_images/04_43_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 44,
+    "index": 0,
+    "media": "ppt/media/image46.png",
+    "path": ".build/chapters04_09/ppt_images/04_44_0.png"
+  },
+  {
+    "source": "source_pptx/04_DimensionReduction.pptx",
+    "slide": 45,
+    "index": 0,
+    "media": "ppt/media/image47.png",
+    "path": ".build/chapters04_09/ppt_images/04_45_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 5,
+    "index": 0,
+    "media": "ppt/media/image1.png",
+    "path": ".build/chapters04_09/ppt_images/05_05_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 6,
+    "index": 0,
+    "media": "ppt/media/image2.png",
+    "path": ".build/chapters04_09/ppt_images/05_06_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 6,
+    "index": 1,
+    "media": "ppt/media/image3.png",
+    "path": ".build/chapters04_09/ppt_images/05_06_1.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 7,
+    "index": 0,
+    "media": "ppt/media/image4.png",
+    "path": ".build/chapters04_09/ppt_images/05_07_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 8,
+    "index": 0,
+    "media": "ppt/media/image5.png",
+    "path": ".build/chapters04_09/ppt_images/05_08_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 9,
+    "index": 0,
+    "media": "ppt/media/image6.png",
+    "path": ".build/chapters04_09/ppt_images/05_09_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 10,
+    "index": 0,
+    "media": "ppt/media/image7.png",
+    "path": ".build/chapters04_09/ppt_images/05_10_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 11,
+    "index": 0,
+    "media": "ppt/media/image8.png",
+    "path": ".build/chapters04_09/ppt_images/05_11_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 11,
+    "index": 1,
+    "media": "ppt/media/image9.png",
+    "path": ".build/chapters04_09/ppt_images/05_11_1.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 11,
+    "index": 2,
+    "media": "ppt/media/image9.png",
+    "path": ".build/chapters04_09/ppt_images/05_11_2.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 13,
+    "index": 0,
+    "media": "ppt/media/image8.png",
+    "path": ".build/chapters04_09/ppt_images/05_13_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 13,
+    "index": 1,
+    "media": "ppt/media/image80.png",
+    "path": ".build/chapters04_09/ppt_images/05_13_1.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 14,
+    "index": 0,
+    "media": "ppt/media/image10.png",
+    "path": ".build/chapters04_09/ppt_images/05_14_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 14,
+    "index": 1,
+    "media": "ppt/media/image11.png",
+    "path": ".build/chapters04_09/ppt_images/05_14_1.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 17,
+    "index": 0,
+    "media": "ppt/media/image12.png",
+    "path": ".build/chapters04_09/ppt_images/05_17_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 19,
+    "index": 0,
+    "media": "ppt/media/image13.png",
+    "path": ".build/chapters04_09/ppt_images/05_19_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 20,
+    "index": 0,
+    "media": "ppt/media/image13.png",
+    "path": ".build/chapters04_09/ppt_images/05_20_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 20,
+    "index": 1,
+    "media": "ppt/media/image14.png",
+    "path": ".build/chapters04_09/ppt_images/05_20_1.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 20,
+    "index": 2,
+    "media": "ppt/media/image15.png",
+    "path": ".build/chapters04_09/ppt_images/05_20_2.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 23,
+    "index": 0,
+    "media": "ppt/media/image16.png",
+    "path": ".build/chapters04_09/ppt_images/05_23_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 25,
+    "index": 0,
+    "media": "ppt/media/image17.png",
+    "path": ".build/chapters04_09/ppt_images/05_25_0.png"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 25,
+    "index": 1,
+    "media": "ppt/media/image18.gif",
+    "path": ".build/chapters04_09/ppt_images/05_25_1.gif"
+  },
+  {
+    "source": "source_pptx/05_Clustering.pptx",
+    "slide": 27,
+    "index": 0,
+    "media": "ppt/media/image19.png",
+    "path": ".build/chapters04_09/ppt_images/05_27_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 2,
+    "index": 0,
+    "media": "ppt/media/image1.png",
+    "path": ".build/chapters04_09/ppt_images/06_02_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 5,
+    "index": 0,
+    "media": "ppt/media/image2.jpeg",
+    "path": ".build/chapters04_09/ppt_images/06_05_0.jpeg"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 5,
+    "index": 1,
+    "media": "ppt/media/image3.jpeg",
+    "path": ".build/chapters04_09/ppt_images/06_05_1.jpeg"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 6,
+    "index": 0,
+    "media": "ppt/media/image4.jpeg",
+    "path": ".build/chapters04_09/ppt_images/06_06_0.jpeg"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 6,
+    "index": 1,
+    "media": "ppt/media/image5.png",
+    "path": ".build/chapters04_09/ppt_images/06_06_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 6,
+    "index": 2,
+    "media": "ppt/media/image6.png",
+    "path": ".build/chapters04_09/ppt_images/06_06_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 6,
+    "index": 3,
+    "media": "ppt/media/image7.png",
+    "path": ".build/chapters04_09/ppt_images/06_06_3.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 7,
+    "index": 0,
+    "media": "ppt/media/image4.jpeg",
+    "path": ".build/chapters04_09/ppt_images/06_07_0.jpeg"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 9,
+    "index": 0,
+    "media": "ppt/media/image8.png",
+    "path": ".build/chapters04_09/ppt_images/06_09_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 9,
+    "index": 1,
+    "media": "ppt/media/image9.png",
+    "path": ".build/chapters04_09/ppt_images/06_09_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 9,
+    "index": 2,
+    "media": "ppt/media/image10.png",
+    "path": ".build/chapters04_09/ppt_images/06_09_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 9,
+    "index": 3,
+    "media": "ppt/media/image11.png",
+    "path": ".build/chapters04_09/ppt_images/06_09_3.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 10,
+    "index": 0,
+    "media": "ppt/media/image12.png",
+    "path": ".build/chapters04_09/ppt_images/06_10_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 11,
+    "index": 0,
+    "media": "ppt/media/image13.png",
+    "path": ".build/chapters04_09/ppt_images/06_11_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 11,
+    "index": 1,
+    "media": "ppt/media/image14.jpeg",
+    "path": ".build/chapters04_09/ppt_images/06_11_1.jpeg"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 12,
+    "index": 0,
+    "media": "ppt/media/image15.jpeg",
+    "path": ".build/chapters04_09/ppt_images/06_12_0.jpeg"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 13,
+    "index": 0,
+    "media": "ppt/media/image16.png",
+    "path": ".build/chapters04_09/ppt_images/06_13_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 15,
+    "index": 0,
+    "media": "ppt/media/image17.png",
+    "path": ".build/chapters04_09/ppt_images/06_15_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 15,
+    "index": 1,
+    "media": "ppt/media/image18.png",
+    "path": ".build/chapters04_09/ppt_images/06_15_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 15,
+    "index": 2,
+    "media": "ppt/media/image19.png",
+    "path": ".build/chapters04_09/ppt_images/06_15_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 16,
+    "index": 0,
+    "media": "ppt/media/image20.png",
+    "path": ".build/chapters04_09/ppt_images/06_16_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 16,
+    "index": 1,
+    "media": "ppt/media/image21.png",
+    "path": ".build/chapters04_09/ppt_images/06_16_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 16,
+    "index": 2,
+    "media": "ppt/media/image22.png",
+    "path": ".build/chapters04_09/ppt_images/06_16_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 16,
+    "index": 3,
+    "media": "ppt/media/image23.png",
+    "path": ".build/chapters04_09/ppt_images/06_16_3.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 16,
+    "index": 4,
+    "media": "ppt/media/image24.png",
+    "path": ".build/chapters04_09/ppt_images/06_16_4.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 17,
+    "index": 0,
+    "media": "ppt/media/image25.png",
+    "path": ".build/chapters04_09/ppt_images/06_17_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 17,
+    "index": 1,
+    "media": "ppt/media/image26.png",
+    "path": ".build/chapters04_09/ppt_images/06_17_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 17,
+    "index": 2,
+    "media": "ppt/media/image27.png",
+    "path": ".build/chapters04_09/ppt_images/06_17_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 18,
+    "index": 0,
+    "media": "ppt/media/image28.png",
+    "path": ".build/chapters04_09/ppt_images/06_18_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 18,
+    "index": 1,
+    "media": "ppt/media/image29.png",
+    "path": ".build/chapters04_09/ppt_images/06_18_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 18,
+    "index": 2,
+    "media": "ppt/media/image30.png",
+    "path": ".build/chapters04_09/ppt_images/06_18_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 18,
+    "index": 3,
+    "media": "ppt/media/image29.png",
+    "path": ".build/chapters04_09/ppt_images/06_18_3.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 18,
+    "index": 4,
+    "media": "ppt/media/image31.png",
+    "path": ".build/chapters04_09/ppt_images/06_18_4.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 19,
+    "index": 0,
+    "media": "ppt/media/image32.png",
+    "path": ".build/chapters04_09/ppt_images/06_19_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 19,
+    "index": 1,
+    "media": "ppt/media/image33.png",
+    "path": ".build/chapters04_09/ppt_images/06_19_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 19,
+    "index": 2,
+    "media": "ppt/media/image34.png",
+    "path": ".build/chapters04_09/ppt_images/06_19_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 20,
+    "index": 0,
+    "media": "ppt/media/image32.png",
+    "path": ".build/chapters04_09/ppt_images/06_20_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 20,
+    "index": 1,
+    "media": "ppt/media/image34.png",
+    "path": ".build/chapters04_09/ppt_images/06_20_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 20,
+    "index": 2,
+    "media": "ppt/media/image35.png",
+    "path": ".build/chapters04_09/ppt_images/06_20_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 20,
+    "index": 3,
+    "media": "ppt/media/image36.png",
+    "path": ".build/chapters04_09/ppt_images/06_20_3.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 21,
+    "index": 0,
+    "media": "ppt/media/image37.png",
+    "path": ".build/chapters04_09/ppt_images/06_21_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 21,
+    "index": 1,
+    "media": "ppt/media/image38.png",
+    "path": ".build/chapters04_09/ppt_images/06_21_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 22,
+    "index": 0,
+    "media": "ppt/media/image39.png",
+    "path": ".build/chapters04_09/ppt_images/06_22_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 23,
+    "index": 0,
+    "media": "ppt/media/image40.png",
+    "path": ".build/chapters04_09/ppt_images/06_23_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 23,
+    "index": 1,
+    "media": "ppt/media/image41.png",
+    "path": ".build/chapters04_09/ppt_images/06_23_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 23,
+    "index": 2,
+    "media": "ppt/media/image42.png",
+    "path": ".build/chapters04_09/ppt_images/06_23_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 24,
+    "index": 0,
+    "media": "ppt/media/image43.png",
+    "path": ".build/chapters04_09/ppt_images/06_24_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 26,
+    "index": 0,
+    "media": "ppt/media/image44.png",
+    "path": ".build/chapters04_09/ppt_images/06_26_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 27,
+    "index": 0,
+    "media": "ppt/media/image45.png",
+    "path": ".build/chapters04_09/ppt_images/06_27_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 27,
+    "index": 1,
+    "media": "ppt/media/image46.png",
+    "path": ".build/chapters04_09/ppt_images/06_27_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 27,
+    "index": 2,
+    "media": "ppt/media/image47.png",
+    "path": ".build/chapters04_09/ppt_images/06_27_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 30,
+    "index": 0,
+    "media": "ppt/media/image48.png",
+    "path": ".build/chapters04_09/ppt_images/06_30_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 0,
+    "media": "ppt/media/image49.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 1,
+    "media": "ppt/media/image50.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 2,
+    "media": "ppt/media/image51.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 3,
+    "media": "ppt/media/image52.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_3.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 4,
+    "media": "ppt/media/image53.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_4.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 5,
+    "media": "ppt/media/image54.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_5.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 6,
+    "media": "ppt/media/image55.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_6.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 31,
+    "index": 7,
+    "media": "ppt/media/image56.png",
+    "path": ".build/chapters04_09/ppt_images/06_31_7.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 0,
+    "media": "ppt/media/image57.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 1,
+    "media": "ppt/media/image58.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 2,
+    "media": "ppt/media/image59.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 3,
+    "media": "ppt/media/image60.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_3.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 4,
+    "media": "ppt/media/image61.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_4.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 5,
+    "media": "ppt/media/image62.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_5.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 6,
+    "media": "ppt/media/image63.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_6.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 32,
+    "index": 7,
+    "media": "ppt/media/image64.png",
+    "path": ".build/chapters04_09/ppt_images/06_32_7.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 33,
+    "index": 0,
+    "media": "ppt/media/image65.png",
+    "path": ".build/chapters04_09/ppt_images/06_33_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 34,
+    "index": 0,
+    "media": "ppt/media/image66.png",
+    "path": ".build/chapters04_09/ppt_images/06_34_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 35,
+    "index": 0,
+    "media": "ppt/media/image67.png",
+    "path": ".build/chapters04_09/ppt_images/06_35_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 37,
+    "index": 0,
+    "media": "ppt/media/image68.png",
+    "path": ".build/chapters04_09/ppt_images/06_37_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 38,
+    "index": 0,
+    "media": "ppt/media/image69.png",
+    "path": ".build/chapters04_09/ppt_images/06_38_0.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 38,
+    "index": 1,
+    "media": "ppt/media/image70.png",
+    "path": ".build/chapters04_09/ppt_images/06_38_1.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 38,
+    "index": 2,
+    "media": "ppt/media/image71.png",
+    "path": ".build/chapters04_09/ppt_images/06_38_2.png"
+  },
+  {
+    "source": "source_pptx/06_Artificial Neural Networks.pptx",
+    "slide": 39,
+    "index": 0,
+    "media": "ppt/media/image72.png",
+    "path": ".build/chapters04_09/ppt_images/06_39_0.png"
+  }
+]

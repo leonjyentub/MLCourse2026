@@ -1,0 +1,41 @@
+[
+  {
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 18,
+    "figure": "6-9",
+    "detail": 1,
+    "asset": "slides/assets/chapters04_09/book_fig_6_9_detail_1.png",
+    "bbox": [
+      79.45226287841797,
+      116.25,
+      425.0477600097656,
+      229.7360439453125
+    ]
+  },
+  {
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 18,
+    "figure": "6-9",
+    "detail": 2,
+    "asset": "slides/assets/chapters04_09/book_fig_6_9_detail_2.png",
+    "bbox": [
+      79.45226287841797,
+      230.4259287109375,
+      425.0477600097656,
+      343.91197265625
+    ]
+  },
+  {
+    "source": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "pdf_page": 18,
+    "figure": "6-9",
+    "detail": 3,
+    "asset": "slides/assets/chapters04_09/book_fig_6_9_detail_3.png",
+    "bbox": [
+      79.45226287841797,
+      345.6366845703125,
+      425.0477600097656,
+      461.1923828125
+    ]
+  }
+]

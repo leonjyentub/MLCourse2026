@@ -1,0 +1,1884 @@
+{
+  "repository": "leonjyentub/MachineLearning2025",
+  "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+  "default_branch": "main",
+  "files": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2768c2dfbd5ca1b63ab8f4348b52149a3bd9b6fa",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/2768c2dfbd5ca1b63ab8f4348b52149a3bd9b6fa"
+    },
+    {
+      "path": ".claude/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "719af60449d969ba7e3f2d7caccc42a07f2f4f99",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/719af60449d969ba7e3f2d7caccc42a07f2f4f99"
+    },
+    {
+      "path": ".claude/skills/pdf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3e7babdd8d9cc8b5627311c16e07f1218c39bff",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/f3e7babdd8d9cc8b5627311c16e07f1218c39bff"
+    },
+    {
+      "path": ".claude/skills/pdf/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/c55ab42224874608473643de0a85736b7fec0730"
+    },
+    {
+      "path": ".claude/skills/pdf/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9",
+      "size": 7068,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+    },
+    {
+      "path": ".claude/skills/pdf/forms.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e234506dcb180158eeb7e057f7c576c263a2d43",
+      "size": 9438,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/4e234506dcb180158eeb7e057f7c576c263a2d43"
+    },
+    {
+      "path": ".claude/skills/pdf/reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41400bf4fc67f15fb062d43695ec92f078226023",
+      "size": 16692,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/41400bf4fc67f15fb062d43695ec92f078226023"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6637fbbc258f48474bd6657e49c025324186079f",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/6637fbbc258f48474bd6657e49c025324186079f"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/check_bounding_boxes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7443660c07171df1a2793d2303ebd1461772696a",
+      "size": 3139,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/7443660c07171df1a2793d2303ebd1461772696a"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/check_bounding_boxes_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dbb463c878566001448eb1fcaa058980305f2f4",
+      "size": 8818,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/1dbb463c878566001448eb1fcaa058980305f2f4"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/check_fillable_fields.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc43d18213e818844212c225eeecdd5d70e2578e",
+      "size": 362,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/dc43d18213e818844212c225eeecdd5d70e2578e"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/convert_pdf_to_images.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8a4ec524b28eb1b380a536c24ea589faa3b7a2e",
+      "size": 1123,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f8a4ec524b28eb1b380a536c24ea589faa3b7a2e"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/create_validation_image.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4913f8f8d60e3dcadac05e07eb36504a1afd6a0e",
+      "size": 1603,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/4913f8f8d60e3dcadac05e07eb36504a1afd6a0e"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/extract_form_field_info.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f42a2df847f4af044f652f5dbd2c9200227ffde3",
+      "size": 6127,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f42a2df847f4af044f652f5dbd2c9200227ffde3"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/fill_fillable_fields.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac35753c5c63f565ed7ec4b89d6c6fd792aa5a8c",
+      "size": 4863,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/ac35753c5c63f565ed7ec4b89d6c6fd792aa5a8c"
+    },
+    {
+      "path": ".claude/skills/pdf/scripts/fill_pdf_form_with_annotations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f98053135007739d8a017846a2fc3d299f947411",
+      "size": 3596,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f98053135007739d8a017846a2fc3d299f947411"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80454050db55200e769d2ad469e2bfc911161545",
+      "size": 144,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/80454050db55200e769d2ad469e2bfc911161545"
+    },
+    {
+      "path": ".python-version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24ee5b1be9961e38a503c8e764b7385dbb6ba124",
+      "size": 5,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/24ee5b1be9961e38a503c8e764b7385dbb6ba124"
+    },
+    {
+      "path": "00_sklearn_shuffle.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adf7d3d4f553169294026701e4028a66a2ea0f61",
+      "size": 587,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/adf7d3d4f553169294026701e4028a66a2ea0f61"
+    },
+    {
+      "path": "00_whatisSigmoid.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b936fa19730fc0df797e1d98e72ca462b4e2af53",
+      "size": 332,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b936fa19730fc0df797e1d98e72ca462b4e2af53"
+    },
+    {
+      "path": "01_Logistic_Regression_scratch_Iris1.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e07c6bc41ee7885a6c95758073401baf1b493772",
+      "size": 587534,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e07c6bc41ee7885a6c95758073401baf1b493772"
+    },
+    {
+      "path": "01_Logistic_Regression_scratch_Iris2.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68b2aef5e25f495af356999a0563d1f8e780c8c3",
+      "size": 5640,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/68b2aef5e25f495af356999a0563d1f8e780c8c3"
+    },
+    {
+      "path": "01_Logistic_Regression_scratch_breast_cancer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4e80e117ae1673bb0c99e2c5cd6ff8a403df9dd",
+      "size": 3617,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e4e80e117ae1673bb0c99e2c5cd6ff8a403df9dd"
+    },
+    {
+      "path": "01_Logistic_Regression_scratch_gd.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de23b0f80f101ea30f07d9ef2455499830f2a53a",
+      "size": 1425279,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/de23b0f80f101ea30f07d9ef2455499830f2a53a"
+    },
+    {
+      "path": "01_Logistic_Regression_sklearn_iris2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10a1e69cf99e8cb5e937db6db1fbf59921a2c279",
+      "size": 1402,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/10a1e69cf99e8cb5e937db6db1fbf59921a2c279"
+    },
+    {
+      "path": "01_Logistic_Regression_sklearn_iris3.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a55a9d7308f8518cdf977b19ca8c624e265d446c",
+      "size": 3582,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/a55a9d7308f8518cdf977b19ca8c624e265d446c"
+    },
+    {
+      "path": "01_Logistic_regression_dogcat.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d1017d3a47ef0d793da3a64eae0b30d4e636e29",
+      "size": 396013,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5d1017d3a47ef0d793da3a64eae0b30d4e636e29"
+    },
+    {
+      "path": "01_Logistic_regression_dogcat_kaggle.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a123c136a25fd4c96d36e53b4336a15ffcc48c",
+      "size": 38964,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d9a123c136a25fd4c96d36e53b4336a15ffcc48c"
+    },
+    {
+      "path": "01_ROC_AUC.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "201ffde214e55a3f5e6d0104b3c3b733b13a9023",
+      "size": 2102,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/201ffde214e55a3f5e6d0104b3c3b733b13a9023"
+    },
+    {
+      "path": "01_batchgradientDescent.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00c5eb94b82278bdeedb5b0027224b2a34923640",
+      "size": 231516,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/00c5eb94b82278bdeedb5b0027224b2a34923640"
+    },
+    {
+      "path": "01_gradientDescent_demo.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf676cd1a8d87dfaef2589cd96f460487936f0c5",
+      "size": 566684,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/cf676cd1a8d87dfaef2589cd96f460487936f0c5"
+    },
+    {
+      "path": "01_gradientDescent_weight.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7889cb1401173e3fb953c7c9f7caa8d629a5f3d",
+      "size": 117044,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d7889cb1401173e3fb953c7c9f7caa8d629a5f3d"
+    },
+    {
+      "path": "01_gradientDescent_weight_bias.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3568d96c4e47075853a1ac7ce0a774834b889b4e",
+      "size": 285076,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3568d96c4e47075853a1ac7ce0a774834b889b4e"
+    },
+    {
+      "path": "01_linear-regression-using-gradient-descent.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e1cca90f67049004a47953d685a8efcc4728439",
+      "size": 179294,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/8e1cca90f67049004a47953d685a8efcc4728439"
+    },
+    {
+      "path": "01_regression.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "974775021a9669a7b3ba38f93e98c14d9eaf24e7",
+      "size": 753236,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/974775021a9669a7b3ba38f93e98c14d9eaf24e7"
+    },
+    {
+      "path": "02_Polynomial_Regression_Early_stopping.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bd962c3edcb0d3216ba85496d367e0b45f3773e",
+      "size": 151020,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3bd962c3edcb0d3216ba85496d367e0b45f3773e"
+    },
+    {
+      "path": "02_Polynomial_Regression_overfitting.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b83a24165bfe75deb2afef479c7d827db2e037f8",
+      "size": 123577,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b83a24165bfe75deb2afef479c7d827db2e037f8"
+    },
+    {
+      "path": "02_Regularization_Regression.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "255154e1085e8da7c056422063c4931be9ae6eba",
+      "size": 217135,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/255154e1085e8da7c056422063c4931be9ae6eba"
+    },
+    {
+      "path": "02_kfold_StratifiedKFold.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b28f92c109c7b660bcb2b2883e081a85b10879a4",
+      "size": 528,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b28f92c109c7b660bcb2b2883e081a85b10879a4"
+    },
+    {
+      "path": "03_Adaboost_from_scratch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e1762e057aec47439816b1606a675eb32eeec4f",
+      "size": 159451,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/4e1762e057aec47439816b1606a675eb32eeec4f"
+    },
+    {
+      "path": "03_Adaboost_from_scratch_with_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "370b8d7251774d98bc69c69fab405307b47058f9",
+      "size": 8603,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/370b8d7251774d98bc69c69fab405307b47058f9"
+    },
+    {
+      "path": "03_Decision_Tree_from_scratch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe1ecb96fe18f4d86eb5864883134eb9f8af978f",
+      "size": 8112,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/fe1ecb96fe18f4d86eb5864883134eb9f8af978f"
+    },
+    {
+      "path": "03_Decision_Tree_sklearn.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dafbcd62ea8e94e1804e2fa37fe09e6119bdee15",
+      "size": 1027,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/dafbcd62ea8e94e1804e2fa37fe09e6119bdee15"
+    },
+    {
+      "path": "03_Decision_Tree_sklearn_moon.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "611d1dc95fd7a33e826c14101f2ff40de2ccb94d",
+      "size": 2353,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/611d1dc95fd7a33e826c14101f2ff40de2ccb94d"
+    },
+    {
+      "path": "03_Decision_Tree_sklearn_plot.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5851a2563f73df49c39f5114e5e20e07b4a315a8",
+      "size": 2601,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5851a2563f73df49c39f5114e5e20e07b4a315a8"
+    },
+    {
+      "path": "03_LawofLargeNumber.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7d231bc1069c0fb13b51f79754787cc6eaa3f39",
+      "size": 848,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b7d231bc1069c0fb13b51f79754787cc6eaa3f39"
+    },
+    {
+      "path": "03_LawofLargeNumber2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f981ed1026dda17d627e37dfba4d82cf429714d1",
+      "size": 1858,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f981ed1026dda17d627e37dfba4d82cf429714d1"
+    },
+    {
+      "path": "03_Random_Forest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c5f338637751195d13dc6f600e2a9a0d03c14ca",
+      "size": 2294,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/2c5f338637751195d13dc6f600e2a9a0d03c14ca"
+    },
+    {
+      "path": "03_ensemble_learning_and_random_forests.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa30a0659789d8fba4d726e94bb854c3cb3f2ce4",
+      "size": 1226869,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/aa30a0659789d8fba4d726e94bb854c3cb3f2ce4"
+    },
+    {
+      "path": "03_hingeloss.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22591278934e72cfc5cc262122e603907fd5c60d",
+      "size": 54459,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/22591278934e72cfc5cc262122e603907fd5c60d"
+    },
+    {
+      "path": "03_svm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4177fde831f600e2d14c418d8a79e30d5364cb6",
+      "size": 4238,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e4177fde831f600e2d14c418d8a79e30d5364cb6"
+    },
+    {
+      "path": "03_svm2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba2c3fc61276e167c094e5af5877b13faae2e3f3",
+      "size": 3178,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/ba2c3fc61276e167c094e5af5877b13faae2e3f3"
+    },
+    {
+      "path": "03_svm_kernel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b597d1b451a16963378a684c8ca6ba2c885d6181",
+      "size": 5162,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b597d1b451a16963378a684c8ca6ba2c885d6181"
+    },
+    {
+      "path": "04_LDA.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8188fbc19b5a78d13ecf0046c62c4aa8cfb5699",
+      "size": 223425,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/c8188fbc19b5a78d13ecf0046c62c4aa8cfb5699"
+    },
+    {
+      "path": "04_LLE_1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "756d1af068ebe5dcc973d07faaccb582bb64269f",
+      "size": 2964,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/756d1af068ebe5dcc973d07faaccb582bb64269f"
+    },
+    {
+      "path": "04_LLE_swiss_roll.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "972a280b2cff2b408f8b9387b0d516adb016eadc",
+      "size": 1164552,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/972a280b2cff2b408f8b9387b0d516adb016eadc"
+    },
+    {
+      "path": "04_LLE_tSNE.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35724d6d3914bf056c1406a9e18915a906ae93a3",
+      "size": 4409,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/35724d6d3914bf056c1406a9e18915a906ae93a3"
+    },
+    {
+      "path": "04_Locally_Linear_Embedding.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9ced8fa48ef03cb0946a23ae3274ffeddfca25d",
+      "size": 175457,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d9ced8fa48ef03cb0946a23ae3274ffeddfca25d"
+    },
+    {
+      "path": "04_PCA_MNIST.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "045df3b04215bf607044ba34fe39b82da0c3055f",
+      "size": 714184,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/045df3b04215bf607044ba34fe39b82da0c3055f"
+    },
+    {
+      "path": "04_PCA_MNIST_compare.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d524a8aa27700926c68c63d589e5aacc21b45a9",
+      "size": 3235,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5d524a8aa27700926c68c63d589e5aacc21b45a9"
+    },
+    {
+      "path": "04_PCA_from_scratch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebb63c0d60f5ba127c024295de054df848948ed6",
+      "size": 2665,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/ebb63c0d60f5ba127c024295de054df848948ed6"
+    },
+    {
+      "path": "04_PCA_simple.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6eebb2fe58d7ded6f3899617c6a8779faaef47d8",
+      "size": 3060,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/6eebb2fe58d7ded6f3899617c6a8779faaef47d8"
+    },
+    {
+      "path": "04_SVD_MNIST.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c38662dd735c6303a1b24d0a44b0ed927f4ba7ea",
+      "size": 3602,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/c38662dd735c6303a1b24d0a44b0ed927f4ba7ea"
+    },
+    {
+      "path": "04_SVD_from_scratch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d240ccceca542a5ee96c75cbbad1c69f8a87d7a4",
+      "size": 3697,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d240ccceca542a5ee96c75cbbad1c69f8a87d7a4"
+    },
+    {
+      "path": "04_UMAP_from_scratch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "725a13fea28eff1641336ef10e3a0d6df97db790",
+      "size": 131840,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/725a13fea28eff1641336ef10e3a0d6df97db790"
+    },
+    {
+      "path": "04_dimensionality_reduction.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e3f0bc06c53f89599bad96e28dd4328f61a607f",
+      "size": 2164109,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/1e3f0bc06c53f89599bad96e28dd4328f61a607f"
+    },
+    {
+      "path": "04_pdf_compare_1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6e5cb0aa6f65a9b13bf0b2f3a7e36951b293c85",
+      "size": 896,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e6e5cb0aa6f65a9b13bf0b2f3a7e36951b293c85"
+    },
+    {
+      "path": "04_pdf_compare_2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77409f5eddf21a613696cdf9bfbc082a5125290b",
+      "size": 1254,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/77409f5eddf21a613696cdf9bfbc082a5125290b"
+    },
+    {
+      "path": "04_pdf_compare_3.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f1860d73679550162dbad4ffe772565e669b1b6",
+      "size": 802,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3f1860d73679550162dbad4ffe772565e669b1b6"
+    },
+    {
+      "path": "04_tSNE-MNIST.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3a95c4f660055a48e9e052291e48778cf74087b",
+      "size": 1096,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b3a95c4f660055a48e9e052291e48778cf74087b"
+    },
+    {
+      "path": "04_tSNE-PCA-MNIST.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1e0c76b3b9271267a088fd404a2eae1e3f0e680",
+      "size": 1118,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b1e0c76b3b9271267a088fd404a2eae1e3f0e680"
+    },
+    {
+      "path": "04_tSNE_UMAP.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9adcaad9fb8cd2cc5a25d8bc6d7f3faa083c09e8",
+      "size": 6575639,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9adcaad9fb8cd2cc5a25d8bc6d7f3faa083c09e8"
+    },
+    {
+      "path": "05.Cat_and_Dog_Pytorch_ANN.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b642c38e7b3edb71bcda18cbaee28e654f939c14",
+      "size": 390279,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b642c38e7b3edb71bcda18cbaee28e654f939c14"
+    },
+    {
+      "path": "05_Cluster_1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5ab510c91c6e798f17a5f720c0cfcadeb951708",
+      "size": 1840,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f5ab510c91c6e798f17a5f720c0cfcadeb951708"
+    },
+    {
+      "path": "05_Clustering_DBSCAN.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c8a6661e7419cb8ce653b80e02cf706047ab1ad",
+      "size": 1538,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3c8a6661e7419cb8ce653b80e02cf706047ab1ad"
+    },
+    {
+      "path": "05_Cluter_Hierarchical_Clustering.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aed3b69d2ebcddf258282b1cd4554772dc3ce98f",
+      "size": 5910,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/aed3b69d2ebcddf258282b1cd4554772dc3ce98f"
+    },
+    {
+      "path": "05_DBSCAN.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e27b15018e5e4ff41f7a0d3bdc67595d5312155a",
+      "size": 211004,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e27b15018e5e4ff41f7a0d3bdc67595d5312155a"
+    },
+    {
+      "path": "05_GMM-K_means.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b4f0536dab17140c04655841963ee5c4925887d",
+      "size": 1568607,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3b4f0536dab17140c04655841963ee5c4925887d"
+    },
+    {
+      "path": "05_GMM_1.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08ff2cdd1e6baa634dec1f5d9d0619c3ccf8c2dd",
+      "size": 122665,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/08ff2cdd1e6baa634dec1f5d9d0619c3ccf8c2dd"
+    },
+    {
+      "path": "05_GMM_2.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "939e1291a82f61852f7411be8419a33ff0ea5458",
+      "size": 482952,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/939e1291a82f61852f7411be8419a33ff0ea5458"
+    },
+    {
+      "path": "05_GMM_from_scratch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f42b954f9efe2f6d700563400d20868beb4e32c",
+      "size": 9033,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/1f42b954f9efe2f6d700563400d20868beb4e32c"
+    },
+    {
+      "path": "05_Kmeans+SemiSupervisedLearning.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58d658072753ee5ec42236b3ad9583717a63b4ca",
+      "size": 103680,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/58d658072753ee5ec42236b3ad9583717a63b4ca"
+    },
+    {
+      "path": "05_unsupervised_learning.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91fe5051a278d80a07b8234475181ce2652df887",
+      "size": 2097150,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/91fe5051a278d80a07b8234475181ce2652df887"
+    },
+    {
+      "path": "06_ANN_from_Scratch_BreastCancer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b009f383d9c07f1fd7fcb88ac1553af8a0afc30b",
+      "size": 5489,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b009f383d9c07f1fd7fcb88ac1553af8a0afc30b"
+    },
+    {
+      "path": "06_ANN_from_Scratch_HousePrice.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "191b2e291c40c251576b66d8c14491790746daa1",
+      "size": 4945,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/191b2e291c40c251576b66d8c14491790746daa1"
+    },
+    {
+      "path": "06_ANN_from_Scratch_MNIST.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1b428be0aae0aa7adac82c89aea2693086df075",
+      "size": 10825,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f1b428be0aae0aa7adac82c89aea2693086df075"
+    },
+    {
+      "path": "06_ANN_from_Scratch_MNIST_dropout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "371d108fd52220b67470592d9e7637b1fe59f9eb",
+      "size": 7301,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/371d108fd52220b67470592d9e7637b1fe59f9eb"
+    },
+    {
+      "path": "06_ANN_from_Scratch_compare_HousePrice.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cead93013f07b8ce58a886ad069bc39478bff78",
+      "size": 6336,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3cead93013f07b8ce58a886ad069bc39478bff78"
+    },
+    {
+      "path": "06_ANN_pytorch_MNIST.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f4e8823e9dce8e0f77cf08dfde779d7d4295527",
+      "size": 5075,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/0f4e8823e9dce8e0f77cf08dfde779d7d4295527"
+    },
+    {
+      "path": "06_Activation_functions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c432900e7cb99979577c0d4cff8fbd26c223326",
+      "size": 3621,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9c432900e7cb99979577c0d4cff8fbd26c223326"
+    },
+    {
+      "path": "06_neural_nets_with_keras.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6abab0a1f58eaacf9a79a49ea6d03d81358821b2",
+      "size": 454449,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/6abab0a1f58eaacf9a79a49ea6d03d81358821b2"
+    },
+    {
+      "path": "07_AutoEncoder_MNIST.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61ea71e98cac38aec651122befebbf9c47d0f6a8",
+      "size": 1235070,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/61ea71e98cac38aec651122befebbf9c47d0f6a8"
+    },
+    {
+      "path": "07_CAM_Heatmap_VGG_Visualization.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d983daf8f8cd417cd00c789db120e095938d1486",
+      "size": 847941,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d983daf8f8cd417cd00c789db120e095938d1486"
+    },
+    {
+      "path": "07_CNN_Pretrain.ipynb",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6951588e9f4113eb50c6d8a9cef7176f3bb21ed6",
+      "size": 20170,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/6951588e9f4113eb50c6d8a9cef7176f3bb21ed6"
+    },
+    {
+      "path": "07_CNN_from_Scratch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08b223243e0b0894ca92ec1059fad56f82603d64",
+      "size": 10483,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/08b223243e0b0894ca92ec1059fad56f82603d64"
+    },
+    {
+      "path": "07_CNN_pytorch_MNIST.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bcdd4f4cf49a084489dee27247400bebb50913e",
+      "size": 6114,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5bcdd4f4cf49a084489dee27247400bebb50913e"
+    },
+    {
+      "path": "07_ConvVAE.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "992109c551ec5f63c1da152d609fe2b3b1b1e1d1",
+      "size": 73598,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/992109c551ec5f63c1da152d609fe2b3b1b1e1d1"
+    },
+    {
+      "path": "07_SimpleGAN.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3070bf5e8c9d6e40082925588c33b6620a7408d9",
+      "size": 17584,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3070bf5e8c9d6e40082925588c33b6620a7408d9"
+    },
+    {
+      "path": "07_SimpleGAN_MNIST.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "413ee26838492218ecc2abd1330f8bd4530630b5",
+      "size": 8525,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/413ee26838492218ecc2abd1330f8bd4530630b5"
+    },
+    {
+      "path": "07_VAE_pytorch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "299b9e2cb2406e047f51121bed19385d3e53289c",
+      "size": 2355431,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/299b9e2cb2406e047f51121bed19385d3e53289c"
+    },
+    {
+      "path": "07_Visualizing_Feature_Maps_using_PyTorch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3caa5a1d0ed5309a094a3b7a322a20b849c76043",
+      "size": 755488,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3caa5a1d0ed5309a094a3b7a322a20b849c76043"
+    },
+    {
+      "path": "07_cVAE.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abb1010648cbe62b22c884b1dc4693e54ad7c141",
+      "size": 575694,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/abb1010648cbe62b22c884b1dc4693e54ad7c141"
+    },
+    {
+      "path": "07_cat-dog-pytorch-cnn.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc1c45f719f46f839a8a3b678a0a1ae3ace26072",
+      "size": 511427,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/bc1c45f719f46f839a8a3b678a0a1ae3ace26072"
+    },
+    {
+      "path": "07_deep_computer_vision_with_cnns.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5206f6cdb7a3f988575d120f578aa66298298acd",
+      "size": 1230725,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5206f6cdb7a3f988575d120f578aa66298298acd"
+    },
+    {
+      "path": "08_LSTM from scratch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37c26c3b4d67fa547deac7aff47c29056036effd",
+      "size": 31211,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/37c26c3b4d67fa547deac7aff47c29056036effd"
+    },
+    {
+      "path": "08_RNN_pytorch_IMDB_glove6b.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01bc48056b6dddc4b8bbed9051bdbd169cb3f30e",
+      "size": 9002,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/01bc48056b6dddc4b8bbed9051bdbd169cb3f30e"
+    },
+    {
+      "path": "08_RNN_stock_prediction.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18a55cabb25df766f44baa7934460a8370b8aae8",
+      "size": 259548,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/18a55cabb25df766f44baa7934460a8370b8aae8"
+    },
+    {
+      "path": "08_Text_Generation_LSTM.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96c5720fc578e498d829e7f07ab8e1d7f1982834",
+      "size": 4098,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/96c5720fc578e498d829e7f07ab8e1d7f1982834"
+    },
+    {
+      "path": "08_Text_Generation_LSTM_char.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2744633edb94e314706673bb2066fae7aceb5c36",
+      "size": 3484,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/2744633edb94e314706673bb2066fae7aceb5c36"
+    },
+    {
+      "path": "08_VanillaRNN.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a39d9ea6cb9ac0503f6d46725bd783884cca0baf",
+      "size": 17459,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/a39d9ea6cb9ac0503f6d46725bd783884cca0baf"
+    },
+    {
+      "path": "08_VanillaRNN.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6771d47568427180b889de8a08acf99e6175c605",
+      "size": 10661,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/6771d47568427180b889de8a08acf99e6175c605"
+    },
+    {
+      "path": "08_VanillaRnn from scratch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d27f6d385db5f1fa07bca516f2d6525c3e48151c",
+      "size": 25431,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d27f6d385db5f1fa07bca516f2d6525c3e48151c"
+    },
+    {
+      "path": "08_bagOfWords.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17ff3ecbbf0746cb5112b8c7e5d15c5b3eeaec98",
+      "size": 593,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/17ff3ecbbf0746cb5112b8c7e5d15c5b3eeaec98"
+    },
+    {
+      "path": "08_onehotencoding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "890133b36f6505ba39143c7e56b0ed204725aa21",
+      "size": 519,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/890133b36f6505ba39143c7e56b0ed204725aa21"
+    },
+    {
+      "path": "08_seq2seq_translation_tutorial.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9aec9516f856b7dc5ed34bba35294ded26d2ca23",
+      "size": 85758,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9aec9516f856b7dc5ed34bba35294ded26d2ca23"
+    },
+    {
+      "path": "08_tf_idf_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69512fc4f6f024af1dc35adab0dfece5b4ff3377",
+      "size": 718,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/69512fc4f6f024af1dc35adab0dfece5b4ff3377"
+    },
+    {
+      "path": "08_tf_idf_vectorizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ec792b7f8c3ee805d864bcf8da1c7777640c9c8",
+      "size": 637,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5ec792b7f8c3ee805d864bcf8da1c7777640c9c8"
+    },
+    {
+      "path": "08_word2vec_scratch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0de137d5d5173c5139d4b61e9360d1739b12ed4d",
+      "size": 3515,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/0de137d5d5173c5139d4b61e9360d1739b12ed4d"
+    },
+    {
+      "path": "08_word2vec_training_skipgram_scratch.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac26f63ed86941fcfc6d7a9911134bfea712647b",
+      "size": 51301,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/ac26f63ed86941fcfc6d7a9911134bfea712647b"
+    },
+    {
+      "path": "09_key_word_tfidf.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d62deef4161eaa374995cf6bba14eb5ac030523",
+      "size": 6880,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9d62deef4161eaa374995cf6bba14eb5ac030523"
+    },
+    {
+      "path": "09_nltk_all.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53d457797f02c461bd7d1442225be42810663110",
+      "size": 5379,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/53d457797f02c461bd7d1442225be42810663110"
+    },
+    {
+      "path": "09_nltk_chat_eliza.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e58f745df1947dbf7d2669d641452eba6a0bddd",
+      "size": 1743,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/7e58f745df1947dbf7d2669d641452eba6a0bddd"
+    },
+    {
+      "path": "09_nltk_freqdist_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "455135e7acb4c2e1e42ae2501089308de9be6d45",
+      "size": 296,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/455135e7acb4c2e1e42ae2501089308de9be6d45"
+    },
+    {
+      "path": "09_nltk_stem_compare.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43dbe4fada2a1cb3401922c64876b452ae7a7668",
+      "size": 505,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/43dbe4fada2a1cb3401922c64876b452ae7a7668"
+    },
+    {
+      "path": "09_pos_nltk_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3b8c089faa2a592d0dfc2c870e9ced5782f87be",
+      "size": 315,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b3b8c089faa2a592d0dfc2c870e9ced5782f87be"
+    },
+    {
+      "path": "09_pos_spacy_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b091f74204e6fe3aaff7d412b342b6a679c370ed",
+      "size": 352,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b091f74204e6fe3aaff7d412b342b6a679c370ed"
+    },
+    {
+      "path": "09_spacy_all.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "225cdd27bfe839a894364d1f0fa6c15827f16184",
+      "size": 9188,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/225cdd27bfe839a894364d1f0fa6c15827f16184"
+    },
+    {
+      "path": "09_spacy_chn_test.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15e9bb1731adcc57dc01bdd520c9ce94d45411ce",
+      "size": 35271,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/15e9bb1731adcc57dc01bdd520c9ce94d45411ce"
+    },
+    {
+      "path": "09_spacy_lemma.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102721b696bc88a44adb7b5ebf26c534336e7919",
+      "size": 360,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/102721b696bc88a44adb7b5ebf26c534336e7919"
+    },
+    {
+      "path": "09_text_blob_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459a7ca4dc02b5a5cad23ff3984cd3c209762f0b",
+      "size": 1191,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/459a7ca4dc02b5a5cad23ff3984cd3c209762f0b"
+    },
+    {
+      "path": "10_Attention_Comparison.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "085b4ebd961fe9157cb78f45a2c5fc06b98bde5b",
+      "size": 6242,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/085b4ebd961fe9157cb78f45a2c5fc06b98bde5b"
+    },
+    {
+      "path": "10_NanoGPT.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f9f91713f3d9927e0bf1b1a0518957429795aedd",
+      "size": 5630,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f9f91713f3d9927e0bf1b1a0518957429795aedd"
+    },
+    {
+      "path": "10_Text_Generation_Attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8adc4e3930d9f4c8f99ccf92c45938ac9032c58a",
+      "size": 4412,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/8adc4e3930d9f4c8f99ccf92c45938ac9032c58a"
+    },
+    {
+      "path": "10_Text_Generation_Attention_new.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "85111c31e615f1816ecdcede9a0e8a372ef0b771",
+      "size": 4657,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/85111c31e615f1816ecdcede9a0e8a372ef0b771"
+    },
+    {
+      "path": "10_Text_Generation_Transformer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8e67b2c4ec0ea68bc0039840c3ec8e7b1949832",
+      "size": 27673,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d8e67b2c4ec0ea68bc0039840c3ec8e7b1949832"
+    },
+    {
+      "path": "11_Image Captioning pytorch Flickr With Attention.ipynb",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "046589df831c78a317b0871d8a71d8b845f4267e",
+      "size": 21697,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/046589df831c78a317b0871d8a71d8b845f4267e"
+    },
+    {
+      "path": "11_Image Captioning pytorch Flickr.ipynb",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "011c58c29b34af0676dc7cd15c895851e2e33ea0",
+      "size": 13331,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/011c58c29b34af0676dc7cd15c895851e2e33ea0"
+    },
+    {
+      "path": "11_ImageCaptioningFlickr_attention.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "286063723eff0b900d1d0dd12b92e1ec950a2599",
+      "size": 15070,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/286063723eff0b900d1d0dd12b92e1ec950a2599"
+    },
+    {
+      "path": "11_Positional_Encoding.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5597bbf3510aa3142c5160fa59749bf06efe6c48",
+      "size": 193189,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5597bbf3510aa3142c5160fa59749bf06efe6c48"
+    },
+    {
+      "path": "31.simple-diffusion.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2b0e9e6617cf7a2ab4602916f3c5c45f06098a0",
+      "size": 215226,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f2b0e9e6617cf7a2ab4602916f3c5c45f06098a0"
+    },
+    {
+      "path": "40.Gym_CartPole.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f2937347c12984730d626e30a5276030db55d16",
+      "size": 313,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/4f2937347c12984730d626e30a5276030db55d16"
+    },
+    {
+      "path": "40.Reinforcement_Learning_TicTacToe.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e39af117c9c69a72e1b1e17977ff7698e08fd809",
+      "size": 5491,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e39af117c9c69a72e1b1e17977ff7698e08fd809"
+    },
+    {
+      "path": "40.Reinforcement_learning_1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3331998ec6d9af7924f21c90245ac7a2101b51ab",
+      "size": 10580,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3331998ec6d9af7924f21c90245ac7a2101b51ab"
+    },
+    {
+      "path": "40.Reinforcement_learning_2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a28813283f8edea88a4148fde7d386e3292b327",
+      "size": 18535,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/4a28813283f8edea88a4148fde7d386e3292b327"
+    },
+    {
+      "path": "40.Reinforcement_learning_3.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba22d128cb30b20b671e421fcd914f4a391528d",
+      "size": 7940,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/2ba22d128cb30b20b671e421fcd914f4a391528d"
+    },
+    {
+      "path": "40.init_ Reinforcement_learning.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9310cf8f30159fa01becd8dae28faf317d154461",
+      "size": 3990,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9310cf8f30159fa01becd8dae28faf317d154461"
+    },
+    {
+      "path": "41.DQNCartPoletk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63c46a018e65bd8474578bf7a78bd557742a558e",
+      "size": 8728,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/63c46a018e65bd8474578bf7a78bd557742a558e"
+    },
+    {
+      "path": "42.DQN_CartPole_tk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa54460eecfefe7b4d81ba27cc37f66c88c3057a",
+      "size": 8354,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/aa54460eecfefe7b4d81ba27cc37f66c88c3057a"
+    },
+    {
+      "path": "43.Simple_QLearning.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b6682043130e63e802a1e86866facc01d8edf8f",
+      "size": 1062,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5b6682043130e63e802a1e86866facc01d8edf8f"
+    },
+    {
+      "path": "99.RL_learning.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b466f71db64f2ccfa28784429a461c8477fe33e4",
+      "size": 14191,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b466f71db64f2ccfa28784429a461c8477fe33e4"
+    },
+    {
+      "path": "99.ch03.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dc263534b8122cd6a49ebeb463f3b2a8e2201f2",
+      "size": 19092,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5dc263534b8122cd6a49ebeb463f3b2a8e2201f2"
+    },
+    {
+      "path": "GEMINI.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "791a8f5d13e4cd14836a834c318afcaee8cd1bac",
+      "size": 3951,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/791a8f5d13e4cd14836a834c318afcaee8cd1bac"
+    },
+    {
+      "path": "Gauss_vs_Student.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "832f0bd9ee0ce2e2d3129d2f509703006bd43963",
+      "size": 156894,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/832f0bd9ee0ce2e2d3129d2f509703006bd43963"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9416d007f10ffb9f452d9dc26257b36efa39c4f",
+      "size": 2363,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e9416d007f10ffb9f452d9dc26257b36efa39c4f"
+    },
+    {
+      "path": "TensorboardExample.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b47b37747aff2f36a5f2c3ceacf26d95f7f532d8",
+      "size": 11558489,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b47b37747aff2f36a5f2c3ceacf26d95f7f532d8"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd4435eefcd930aaa1f2f14e3ea62bbd20537fbc",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/cd4435eefcd930aaa1f2f14e3ea62bbd20537fbc"
+    },
+    {
+      "path": "data/insurance.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24f62058c8cdf5334014a8fd08b028a47585f2e3",
+      "size": 55628,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/24f62058c8cdf5334014a8fd08b028a47585f2e3"
+    },
+    {
+      "path": "data/openml_cache",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ddb06b91f887f3f68440598f5656d551fb917292",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/ddb06b91f887f3f68440598f5656d551fb917292"
+    },
+    {
+      "path": "data/openml_cache/openml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b561be151f94a127d5278157670c1b7b53e6244",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/3b561be151f94a127d5278157670c1b7b53e6244"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7687e3c139bcc81223cad1b66d21b34b89813ea9",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/7687e3c139bcc81223cad1b66d21b34b89813ea9"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed00aae4a01ec0c8dbbfac4bb248618b8318f8e0",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/ed00aae4a01ec0c8dbbfac4bb248618b8318f8e0"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d5ac13becc7497380890d722d9457d726d1fd0f",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/0d5ac13becc7497380890d722d9457d726d1fd0f"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b82625b28ff1c5d0e506f90b627b8de6fdc77454",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/b82625b28ff1c5d0e506f90b627b8de6fdc77454"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ef4cbbd23f72da0194f86a9fa040dd4b83c94ed",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/6ef4cbbd23f72da0194f86a9fa040dd4b83c94ed"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/554.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04a900be4054deefa83bd7fb25dcdbd7ae76415a",
+      "size": 1940,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/04a900be4054deefa83bd7fb25dcdbd7ae76415a"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/features",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5a328dd75ffbf2981f41ef3af906834e8006dd1d",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/5a328dd75ffbf2981f41ef3af906834e8006dd1d"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/features/554.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebd06a652d5180ef3c8c5858b52621b7ec6a6fba",
+      "size": 4650,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/ebd06a652d5180ef3c8c5858b52621b7ec6a6fba"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/list",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "856cdd9ee2bc89a8fe4116cedaf16ba2cddf31fd",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/856cdd9ee2bc89a8fe4116cedaf16ba2cddf31fd"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/list/data_name",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0307e97b77ae2de1650555c97ee7e0a145f3857b",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/0307e97b77ae2de1650555c97ee7e0a145f3857b"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/list/data_name/mnist_784",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1caee699380dcb1b5cc674a79d87381aaea31d51",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/1caee699380dcb1b5cc674a79d87381aaea31d51"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/list/data_name/mnist_784/limit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c65ac1325f210c3f9a120c37eb5ce2e700d7f796",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/c65ac1325f210c3f9a120c37eb5ce2e700d7f796"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/list/data_name/mnist_784/limit/2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d79aeeee60213cbc9c3515fac70fe55647f92496",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/d79aeeee60213cbc9c3515fac70fe55647f92496"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/list/data_name/mnist_784/limit/2/data_version",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "658d8ac7d189ca49927cb006000c90e7d0a98ba9",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/658d8ac7d189ca49927cb006000c90e7d0a98ba9"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/list/data_name/mnist_784/limit/2/data_version/1.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d4e4031e6321a8664103dff64dae2154dac6b07",
+      "size": 314,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3d4e4031e6321a8664103dff64dae2154dac6b07"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/qualities",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "383595e184cd63f8cfb29080efe5b17ee70fc3d8",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/383595e184cd63f8cfb29080efe5b17ee70fc3d8"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/api/v1/json/data/qualities/554.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76602ca7d20160553a157e7749c0f794498bdbe7",
+      "size": 1285,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/76602ca7d20160553a157e7749c0f794498bdbe7"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2acc1baec83ee7bd57ae1712815ec0428e0c7970",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/2acc1baec83ee7bd57ae1712815ec0428e0c7970"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/data/v1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9775ae8f016b27e5a5d991e238e343e20bdb1d1",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/a9775ae8f016b27e5a5d991e238e343e20bdb1d1"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/data/v1/download",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29c413f5125cf96ae6d57a567ba22d2ab2df74d1",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/29c413f5125cf96ae6d57a567ba22d2ab2df74d1"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/data/v1/download/52667",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a167115433dc06f4cb2311603e1ccfe26057f979",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/a167115433dc06f4cb2311603e1ccfe26057f979"
+    },
+    {
+      "path": "data/openml_cache/openml/openml.org/data/v1/download/52667/mnist_784.arff.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f1cffc6e185de5ddd1d14eb1f4d5b8b47ad514b",
+      "size": 15469256,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9f1cffc6e185de5ddd1d14eb1f4d5b8b47ad514b"
+    },
+    {
+      "path": "dinos.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d3808ac4f22731346ac6e3b844641c6a11c59d8",
+      "size": 19909,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/8d3808ac4f22731346ac6e3b844641c6a11c59d8"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "02ac2d7d72afdbd722807e97dc601650481ec0cd",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/02ac2d7d72afdbd722807e97dc601650481ec0cd"
+    },
+    {
+      "path": "images/04_LLE_1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42ff3f0f90111f8a976b804b3cdbf04eaaf990f7",
+      "size": 1536002,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/42ff3f0f90111f8a976b804b3cdbf04eaaf990f7"
+    },
+    {
+      "path": "images/04_LLE_tSNE.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b63f4e132799d8c43c2406bd17e23a05b8b9cd6a",
+      "size": 1443680,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b63f4e132799d8c43c2406bd17e23a05b8b9cd6a"
+    },
+    {
+      "path": "images/04_SVD_MNIST.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e50df4dbfe2642a260b9123da84c5e7ac32f93fb",
+      "size": 29747,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/e50df4dbfe2642a260b9123da84c5e7ac32f93fb"
+    },
+    {
+      "path": "images/04_SVD_compare.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92172522ccb2f4784039d6a4fbfd2e96b3ee4afe",
+      "size": 30793,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/92172522ccb2f4784039d6a4fbfd2e96b3ee4afe"
+    },
+    {
+      "path": "images/04_tSNE-MNIST.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf31193836e5f29ca733e617b344c284e561a271",
+      "size": 341144,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/bf31193836e5f29ca733e617b344c284e561a271"
+    },
+    {
+      "path": "images/04_tSNE-PCA-MNIST.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cbec30d8930779be7dd6679e29740774c0c6214",
+      "size": 205100,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/1cbec30d8930779be7dd6679e29740774c0c6214"
+    },
+    {
+      "path": "images/04_tsne_dist.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e8df1cf4d2fd077ecf0a1c684b3eb8b48dd99ad",
+      "size": 36861,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/2e8df1cf4d2fd077ecf0a1c684b3eb8b48dd99ad"
+    },
+    {
+      "path": "images/05_Clustering_DBSCAN.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8320610db4fb26bedec0620bb1305618cbad3575",
+      "size": 498987,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/8320610db4fb26bedec0620bb1305618cbad3575"
+    },
+    {
+      "path": "images/05_Cluter_Hierarchical_Clustering.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e060bb7838f4ee2275e997b1ec5df6b25d16a8",
+      "size": 79541,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/d4e060bb7838f4ee2275e997b1ec5df6b25d16a8"
+    },
+    {
+      "path": "images/17.Activation_functions.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b161f54f52d5ad20dfe8d58cb83bc6cc338c66b",
+      "size": 864521,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/0b161f54f52d5ad20dfe8d58cb83bc6cc338c66b"
+    },
+    {
+      "path": "images/19.VAE_pytorch.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "217984da8369bc5a21a32ab7b70607c3c5910514",
+      "size": 354039,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/217984da8369bc5a21a32ab7b70607c3c5910514"
+    },
+    {
+      "path": "images/2d_decision_boundary.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20e3d78ca3e32feb063423ea9f61396201f54fee",
+      "size": 37618,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/20e3d78ca3e32feb063423ea9f61396201f54fee"
+    },
+    {
+      "path": "images/2d_decision_tree.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81b0c9d76aec85536c19a89a31fbc48b87b2b732",
+      "size": 91516,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/81b0c9d76aec85536c19a89a31fbc48b87b2b732"
+    },
+    {
+      "path": "images/Figure_02_weight_bias.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f62729c61d36cd4c2418c54425d66260d24d4a02",
+      "size": 214020,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f62729c61d36cd4c2418c54425d66260d24d4a02"
+    },
+    {
+      "path": "images/Iris_data_dist.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de6fe8e75ef21c42cedf07656b64f257d280fcfa",
+      "size": 216913,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/de6fe8e75ef21c42cedf07656b64f257d280fcfa"
+    },
+    {
+      "path": "images/cost_history.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a3888a4480111c6b179ad973a5ccd69f7262ff0",
+      "size": 22612,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5a3888a4480111c6b179ad973a5ccd69f7262ff0"
+    },
+    {
+      "path": "images/decision_boundary.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc86922f5f688555decc4745666ff229eb4ef53a",
+      "size": 35613,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/bc86922f5f688555decc4745666ff229eb4ef53a"
+    },
+    {
+      "path": "images/decision_tree.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd331b67c0389deb1f6b37920429cc3b5e6a53a8",
+      "size": 53984,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/fd331b67c0389deb1f6b37920429cc3b5e6a53a8"
+    },
+    {
+      "path": "images/decision_tree_sklearn.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "957303e571bc5cb97c950c5f6c9ef2fe7728291e",
+      "size": 81395,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/957303e571bc5cb97c950c5f6c9ef2fe7728291e"
+    },
+    {
+      "path": "images/dim_reduction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acc50bd22c337c67910b95fe5c5cd37eb31993db",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/acc50bd22c337c67910b95fe5c5cd37eb31993db"
+    },
+    {
+      "path": "images/dim_reduction/dataset_2d_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9391f601d4f08672ddbc6881c417ddfe855f386c",
+      "size": 51270,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9391f601d4f08672ddbc6881c417ddfe855f386c"
+    },
+    {
+      "path": "images/dim_reduction/explained_variance_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f66a2f5a5bbf7dbc09f3666d1b15fa315c4e06d",
+      "size": 81818,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3f66a2f5a5bbf7dbc09f3666d1b15fa315c4e06d"
+    },
+    {
+      "path": "images/dim_reduction/kernel_pca_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "457a5527c2611971a994a5d5f91a79e9455f4c1e",
+      "size": 494298,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/457a5527c2611971a994a5d5f91a79e9455f4c1e"
+    },
+    {
+      "path": "images/dim_reduction/lle_unrolling_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee9ba6bef2ca17ea34bc638b2626dd441fa7f82",
+      "size": 288941,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/fee9ba6bef2ca17ea34bc638b2626dd441fa7f82"
+    },
+    {
+      "path": "images/dim_reduction/manifold_decision_boundary_plot1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "420df6cb63f405e6942cdca1131c5827bfe50be4",
+      "size": 268566,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/420df6cb63f405e6942cdca1131c5827bfe50be4"
+    },
+    {
+      "path": "images/dim_reduction/manifold_decision_boundary_plot2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f9432cd6bc6e02d9649a9645b660210a979464a",
+      "size": 152058,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/6f9432cd6bc6e02d9649a9645b660210a979464a"
+    },
+    {
+      "path": "images/dim_reduction/manifold_decision_boundary_plot3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9bebcca49c54a59693062039f1eb6e1d8a351ed",
+      "size": 181619,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/f9bebcca49c54a59693062039f1eb6e1d8a351ed"
+    },
+    {
+      "path": "images/dim_reduction/manifold_decision_boundary_plot4.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dea7149c4534b3a0854bea75441c7c7bbd5495da",
+      "size": 147054,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/dea7149c4534b3a0854bea75441c7c7bbd5495da"
+    },
+    {
+      "path": "images/dim_reduction/mnist_compression_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "589e530011f711b69dde292ae50eb9ede364a66a",
+      "size": 89003,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/589e530011f711b69dde292ae50eb9ede364a66a"
+    },
+    {
+      "path": "images/dim_reduction/other_dim_reduction_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2681192baaf2e94a5679512deb5c0db7cb7baea",
+      "size": 527214,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/b2681192baaf2e94a5679512deb5c0db7cb7baea"
+    },
+    {
+      "path": "images/dim_reduction/pca_best_projection_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caa9f57ce5496986c056040f19b4425504e68441",
+      "size": 229399,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/caa9f57ce5496986c056040f19b4425504e68441"
+    },
+    {
+      "path": "images/dim_reduction/preimage_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "952a369a71fed7120c240aa0ecb31246682f3643",
+      "size": 280762,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/952a369a71fed7120c240aa0ecb31246682f3643"
+    },
+    {
+      "path": "images/dim_reduction/squished_swiss_roll_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1618124e7f7fa24893ebafdcdc502e756af6af10",
+      "size": 691265,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/1618124e7f7fa24893ebafdcdc502e756af6af10"
+    },
+    {
+      "path": "images/dim_reduction/swiss_roll_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e2521715955571931403df8db77684c8e689c3c",
+      "size": 578160,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/5e2521715955571931403df8db77684c8e689c3c"
+    },
+    {
+      "path": "images/early_stopping_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e51331ff1c2d25df0d4a4b31a6b2168870a1354",
+      "size": 37175,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/3e51331ff1c2d25df0d4a4b31a6b2168870a1354"
+    },
+    {
+      "path": "images/ensembles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0689ecb8755ac899c0eccd21fac22e22e98f64bd",
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/trees/0689ecb8755ac899c0eccd21fac22e22e98f64bd"
+    },
+    {
+      "path": "images/ensembles/boosting_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "729ccf39227170c6f533a721eb235f24472ddb79",
+      "size": 662216,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/729ccf39227170c6f533a721eb235f24472ddb79"
+    },
+    {
+      "path": "images/ensembles/decision_tree_without_and_with_bagging_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4861ac915fc7926652cb7f83e341810dd4abbfdb",
+      "size": 398054,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/4861ac915fc7926652cb7f83e341810dd4abbfdb"
+    },
+    {
+      "path": "images/ensembles/early_stopping_gbrt_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9841c9d9a428adad02308fe86b891f944c4d9ea7",
+      "size": 144745,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/9841c9d9a428adad02308fe86b891f944c4d9ea7"
+    },
+    {
+      "path": "images/ensembles/gbrt_learning_rate_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "597290f048650254883b585d6fe2a1d87a70bbcb",
+      "size": 132312,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/597290f048650254883b585d6fe2a1d87a70bbcb"
+    },
+    {
+      "path": "images/ensembles/gradient_boosting_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58dacf25300f243d4bcaf2c5562ffe08dd6bdbe1",
+      "size": 352046,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/58dacf25300f243d4bcaf2c5562ffe08dd6bdbe1"
+    },
+    {
+      "path": "images/ensembles/law_of_large_numbers_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "592810f421854119deba3bb952ab084a18da5f9b",
+      "size": 248369,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/592810f421854119deba3bb952ab084a18da5f9b"
+    },
+    {
+      "path": "images/ensembles/mnist_feature_importance_plot.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623bfcf8769c006b88ad68d46fe2928a25da09ee",
+      "size": 32393,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/623bfcf8769c006b88ad68d46fe2928a25da09ee"
+    },
+    {
+      "path": "images/inverse regularization.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "195a0cc4e0c8287ee1deb9ca394a38f57860703d",
+      "size": 77441,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/195a0cc4e0c8287ee1deb9ca394a38f57860703d"
+    },
+    {
+      "path": "images/mnist_tsne.mov",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af539f4bef46efbce1bb3df996907617fce256db",
+      "size": 16212881,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/af539f4bef46efbce1bb3df996907617fce256db"
+    },
+    {
+      "path": "images/moons_decision_boundary-min_samples_leaf_4.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20e2dd2f48950c57e2ddd1ad2eb154af04966a4e",
+      "size": 56876,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/20e2dd2f48950c57e2ddd1ad2eb154af04966a4e"
+    },
+    {
+      "path": "images/moons_decision_boundary-nocut.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e3aa02f1148368f26f39927ae701389e2112da6",
+      "size": 58661,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/8e3aa02f1148368f26f39927ae701389e2112da6"
+    },
+    {
+      "path": "images/moons_decision_boundary.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff405f1efc6fd44ebf6fe1eb8a9a7a284ab75041",
+      "size": 56306,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/ff405f1efc6fd44ebf6fe1eb8a9a7a284ab75041"
+    },
+    {
+      "path": "images/moons_decision_tree.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06ad51c563a40d20e69ba5bfd1e26e107a116fea",
+      "size": 87511,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/06ad51c563a40d20e69ba5bfd1e26e107a116fea"
+    },
+    {
+      "path": "msjh.ttc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee3108933e7c6b6e0a3ef5a5b378e6d59cad0f98",
+      "size": 21402152,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/ee3108933e7c6b6e0a3ef5a5b378e6d59cad0f98"
+    },
+    {
+      "path": "msjhbd.ttc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf4b6044a64f40c3e95849e9b65d7fd17fc91ca0",
+      "size": 14441192,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/bf4b6044a64f40c3e95849e9b65d7fd17fc91ca0"
+    },
+    {
+      "path": "msjhl.ttc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc31ca2c223f92ee7c52ec7a90f9ac30c261154e",
+      "size": 12875740,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/fc31ca2c223f92ee7c52ec7a90f9ac30c261154e"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77b3482f49eab4b88c1dea1ea262f99bf48d742b",
+      "size": 578,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/77b3482f49eab4b88c1dea1ea262f99bf48d742b"
+    },
+    {
+      "path": "tSNE_MNIST_Clusters.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74eaf6551642a478909ba18a7d23a78299652f23",
+      "size": 417764,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/74eaf6551642a478909ba18a7d23a78299652f23"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4312d003afebecef7cdef36f6c866c419f273c65",
+      "size": 314441,
+      "url": "https://api.github.com/repos/leonjyentub/MachineLearning2025/git/blobs/4312d003afebecef7cdef36f6c866c419f273c65"
+    }
+  ]
+}

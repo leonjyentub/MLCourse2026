@@ -1,0 +1,37 @@
+{
+  "least_squares_theta": [
+    6.983278197393733,
+    1.6317637510636203
+  ],
+  "gd_learning_rates": [
+    {
+      "eta": 0.02,
+      "note": "too small",
+      "final_logged_MSE": 1.4315837220955456
+    },
+    {
+      "eta": 0.3,
+      "note": "good",
+      "final_logged_MSE": 1.0154699207945863
+    },
+    {
+      "eta": 1.05,
+      "note": "diverges",
+      "final_logged_MSE": 3940429.6860215664
+    }
+  ],
+  "learning_curve_gap": {
+    "1": {
+      "train_RMSE_full": 1.616353211309319,
+      "CV_RMSE_full": 1.6384905332147075
+    },
+    "2": {
+      "train_RMSE_full": 0.9971555764278314,
+      "CV_RMSE_full": 0.9995766920181545
+    },
+    "10": {
+      "train_RMSE_full": 0.9665534047939373,
+      "CV_RMSE_full": 1.0319451591320317
+    }
+  }
+}

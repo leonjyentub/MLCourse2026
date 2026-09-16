@@ -1,0 +1,101 @@
+
+===== CELL 0 (markdown) =====
+# Iris 多元分類（One-vs-Rest）
+本範例使用自訂的 LogisticRegressionGD 類別，搭配 scikit-learn 的 iris 資料集，實作多元分類（OvR）。
+
+===== CELL 1 (code) =====
+import numpy as np
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+===== CELL 2 (code) =====
+class LogisticRegressionGD:
+    def __init__(self, eta=0.05, n_iter=100, random_state=42):
+        self.eta = eta
+        self.n_iter = n_iter
+        self.random_state = random_state
+
+    def fit(self, X, y):
+        rgen = np.random.RandomState(self.random_state)
+        self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + X.shape[1])
+        self.cost_ = []
+        for i in range(self.n_iter):
+            net_input = self.net_input(X)
+            output = self.activation(net_input)
+            errors = (output - y)
+            self.w_[1:] -= self.eta * X.T.dot(errors)
+            self.w_[0] -= self.eta * errors.sum()
+            cost = -y.dot(np.log(output)) - ((1 - y).dot(np.log(1 - output)))
+            self.cost_.append(cost)
+        return self
+
+    def net_input(self, X):
+        return np.dot(X, self.w_[1:]) + self.w_[0]
+
+    def activation(self, z):
+        return 1. / (1. + np.exp(-np.clip(z, -100, 100)))
+
+    def predict(self, X):
+        return np.where(self.net_input(X) >= 0.0, 1, 0)
+
+===== CELL 3 (code) =====
+# 載入資料集
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+# 標準化
+sc = StandardScaler()
+X_std = sc.fit_transform(X)
+
+# 切分訓練/測試集
+X_train, X_test, y_train, y_test = train_test_split(X_std, y, test_size=0.3, random_state=1, stratify=y)
+
+===== CELL 4 (code) =====
+# One-vs-Rest 訓練三個二元分類器
+classifiers = []
+for class_idx in np.unique(y_train):
+    y_binary = (y_train == class_idx).astype(int)
+    clf = LogisticRegressionGD(eta=0.1, n_iter=300, random_state=1)
+    clf.fit(X_train, y_binary)
+    classifiers.append(clf)
+
+===== CELL 5 (code) =====
+# 預測：對每個分類器計算 net_input，選最大者
+def predict_ovr(X):
+    net_inputs = np.array([clf.net_input(X) for clf in classifiers])
+    return np.argmax(net_inputs, axis=0)
+
+y_pred = predict_ovr(X_test)
+from sklearn.metrics import accuracy_score
+print('Test accuracy:', accuracy_score(y_test, y_pred))
+
+===== CELL 6 (code) =====
+# One-vs-One 訓練三個二元分類器
+from itertools import combinations
+classifiers_ovo = []
+class_pairs = list(combinations(np.unique(y_train), 2))
+for (class1, class2) in class_pairs:
+    idx = np.where((y_train == class1) | (y_train == class2))
+    X_pair = X_train[idx]
+    y_pair = y_train[idx]
+    y_binary = (y_pair == class1).astype(int)
+    clf = LogisticRegressionGD(eta=0.1, n_iter=300, random_state=1)
+    clf.fit(X_pair, y_binary)
+    classifiers_ovo.append((clf, class1, class2))
+
+
+===== CELL 7 (code) =====
+# 預測：對每個分類器進行投票
+def predict_ovo(X):
+    votes = np.zeros((X.shape[0], len(np.unique(y_train))), dtype=int)
+    for clf, class1, class2 in classifiers_ovo:
+        preds = clf.predict(X)
+        votes[:, class1] += (preds == 1)
+        votes[:, class2] += (preds == 0)
+    return np.argmax(votes, axis=1)
+
+y_pred = predict_ovo(X_test)
+from sklearn.metrics import accuracy_score
+print('Test accuracy:', accuracy_score(y_test, y_pred))

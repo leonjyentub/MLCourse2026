@@ -1,0 +1,5 @@
+{
+  "multilabel_validation_macro_F1": 0.9368946674203882,
+  "noisy_validation_pixel_MSE": 3265.6484906462583,
+  "reconstructed_validation_pixel_MSE": 2986.6831845238094
+}

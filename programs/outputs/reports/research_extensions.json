@@ -1,0 +1,43 @@
+{
+  "leakage_mean": {
+    "leaky": 0.7536458333333333,
+    "proper_pipeline": 0.5083333333333333
+  },
+  "group_validation": {
+    "random_row_CV": 1.0,
+    "unseen_group_CV": 0.4770833333333333
+  },
+  "mismatch": [
+    {
+      "split": "source train",
+      "RMSE": 1.3112601354388251,
+      "x_mean": -0.04107890400161979
+    },
+    {
+      "split": "source train-dev",
+      "RMSE": 1.3587873891189297,
+      "x_mean": 0.10249049196504048
+    },
+    {
+      "split": "target dev",
+      "RMSE": 10.337109103110691,
+      "x_mean": 2.938994558338584
+    }
+  ],
+  "robust_models": [
+    {
+      "model": "OLS",
+      "test_RMSE": 1.2493116588554798,
+      "test_MAE": 1.0495864427345833
+    },
+    {
+      "model": "Huber",
+      "test_RMSE": 0.3103032811862879,
+      "test_MAE": 0.24964308082529135
+    }
+  ],
+  "stream_last5_mean_RMSE": {
+    "frozen_RMSE": 3.911581763347761,
+    "online_RMSE": 0.4978889156222417
+  }
+}

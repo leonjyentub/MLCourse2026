@@ -1,0 +1,27 @@
+{
+  "profile": "fast",
+  "fit_rows": 9000,
+  "validation_rows": 3000,
+  "test_rows": 10000,
+  "binary_model": "RandomForest",
+  "threshold": 0.31666666666666665,
+  "binary_test_accuracy": 0.9866,
+  "binary_test_precision": 0.9437939110070258,
+  "binary_test_recall": 0.9035874439461884,
+  "binary_test_AP": 0.976717461079692,
+  "binary_test_ROC_AUC": 0.9969172249892175,
+  "binary_test_CM": [
+    [
+      9060,
+      48
+    ],
+    [
+      86,
+      806
+    ]
+  ],
+  "multiclass_test_accuracy": 0.8638,
+  "multiclass_test_macro_F1": 0.8621474896975801,
+  "multiclass_test_weighted_F1": 0.8646049813494395,
+  "multiclass_test_micro_F1": 0.8638
+}

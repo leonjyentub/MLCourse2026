@@ -1,0 +1,12 @@
+{
+  "python": "3.12.10 (main, May 17 2025, 13:40:56) [Clang 20.1.4 ]",
+  "versions": {
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "scipy": "1.16.2",
+    "scikit-learn": "1.7.2",
+    "matplotlib": "3.10.6",
+    "nbclient": "0.10.4"
+  },
+  "profile": "fast"
+}

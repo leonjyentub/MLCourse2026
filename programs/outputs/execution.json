@@ -1,0 +1,121 @@
+[
+  {
+    "notebook": "00_\u74b0\u5883\u8207\u91cd\u73fe\u6027.ipynb",
+    "seconds": 1.38,
+    "code_cells": 4,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "01_\u5f9e\u8cc7\u6599\u5230\u7dda\u6027\u6a21\u578b.ipynb",
+    "seconds": 1.87,
+    "code_cells": 5,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "02_\u9a57\u8b49\u6b63\u5247\u5316\u8207\u65e9\u505c.ipynb",
+    "seconds": 2.56,
+    "code_cells": 8,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "03_\u623f\u50f9\u8cc7\u6599\u63a2\u7d22\u8207\u5207\u5206.ipynb",
+    "seconds": 2.71,
+    "code_cells": 8,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "04_\u623f\u50f9Pipeline\u8207\u6a21\u578b\u9078\u64c7.ipynb",
+    "seconds": 13.04,
+    "code_cells": 10,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "05_Iris\u908f\u8f2f\u65af\u8ff4\u6b78\u8207\u591a\u985e\u5225.ipynb",
+    "seconds": 1.86,
+    "code_cells": 7,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "06_\u6df7\u6dc6\u77e9\u9663\u95be\u503c\u8207ROC.ipynb",
+    "seconds": 1.92,
+    "code_cells": 6,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "07_MNIST\u5206\u985e\u8207\u932f\u8aa4\u5206\u6790.ipynb",
+    "seconds": 23.01,
+    "code_cells": 10,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "08_\u7814\u7a76\u5ef6\u4f38\u8207\u5e38\u898b\u9677\u9631.ipynb",
+    "seconds": 2.53,
+    "code_cells": 9,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "09_\u7dda\u6027\u6a21\u578b\u8207\u6700\u4f73\u5316.ipynb",
+    "seconds": 2.56,
+    "code_cells": 8,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "10_\u6b63\u5247\u5316\u8207\u6a5f\u7387\u5206\u985e.ipynb",
+    "seconds": 2.46,
+    "code_cells": 9,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "11_\u6c7a\u7b56\u6a39\u8207SVM.ipynb",
+    "seconds": 3.2,
+    "code_cells": 9,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "12_\u96c6\u6210\u5b78\u7fd2\u8207\u96a8\u6a5f\u68ee\u6797.ipynb",
+    "seconds": 10.82,
+    "code_cells": 8,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "13_\u964d\u7dad\u8207\u8cc7\u6599\u8868\u793a.ipynb",
+    "seconds": 3.22,
+    "code_cells": 8,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "14_\u5206\u7fa4\u8207\u8868\u793a\u61c9\u7528.ipynb",
+    "seconds": 3.03,
+    "code_cells": 7,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "15_\u5bc6\u5ea6\u5206\u7fa4\u8207\u6a5f\u7387\u6a21\u578b.ipynb",
+    "seconds": 2.44,
+    "code_cells": 9,
+    "errors": 0,
+    "profile": "fast"
+  },
+  {
+    "notebook": "16_\u4eba\u5de5\u795e\u7d93\u7db2\u8def\u5165\u9580.ipynb",
+    "seconds": 2.51,
+    "code_cells": 8,
+    "errors": 0,
+    "profile": "fast"
+  }
+]

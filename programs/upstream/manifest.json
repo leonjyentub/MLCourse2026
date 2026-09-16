@@ -1,0 +1,354 @@
+[
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "README.md",
+    "local": "upstream/handson-mlp/README.md",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/README.md",
+    "sha256": "05e223bee5a3b444521fd513e1df63b8ca65bb5a5bfc8f8f1e8c0253c1f1e615"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "LICENSE",
+    "local": "upstream/handson-mlp/LICENSE",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/LICENSE",
+    "sha256": "e1925845017bf307c7d465af432e8bb20cbb6ce17b10cd323af59da717753075"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "pyproject.toml",
+    "local": "upstream/handson-mlp/pyproject.toml",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/pyproject.toml",
+    "sha256": "b5fece540adf4f017dd561dbd27cee05b7129eb4cb29d8ebfb521087a2397a5a"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "01_the_machine_learning_landscape.ipynb",
+    "local": "upstream/handson-mlp/01_the_machine_learning_landscape.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/01_the_machine_learning_landscape.ipynb",
+    "sha256": "9133d7efae64e7b4c79b1928ae89b3c2eefe6aeeb93f28d7e15fe203ff33fc6c"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "02_end_to_end_machine_learning_project.ipynb",
+    "local": "upstream/handson-mlp/02_end_to_end_machine_learning_project.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/02_end_to_end_machine_learning_project.ipynb",
+    "sha256": "a35c1604c5c7aab21a623766ee3b9d172ffd409c8334766896386d90e117d64a"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "03_classification.ipynb",
+    "local": "upstream/handson-mlp/03_classification.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/03_classification.ipynb",
+    "sha256": "aa0f85e331ab608a143753addf7fcfe443ffb85c8f7455cbc2bb655592ddb616"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "04_training_linear_models.ipynb",
+    "local": "upstream/handson-mlp/04_training_linear_models.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/04_training_linear_models.ipynb",
+    "sha256": "92ce8985d8ac36eba67bae098e1f5820676ee795197ffa792117570cb4a27e38"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "05_decision_trees.ipynb",
+    "local": "upstream/handson-mlp/05_decision_trees.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/05_decision_trees.ipynb",
+    "sha256": "559f4e3c14dfccd4dbbeeae1c47c7e00eb8aa22064ef4efb8191b718e2fac594"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "06_ensemble_learning_and_random_forests.ipynb",
+    "local": "upstream/handson-mlp/06_ensemble_learning_and_random_forests.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/06_ensemble_learning_and_random_forests.ipynb",
+    "sha256": "3ecd4704e1ba20829375c94e7136cbfaa4ec636dfdd61e639e9670ec96e88df6"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "07_dimensionality_reduction.ipynb",
+    "local": "upstream/handson-mlp/07_dimensionality_reduction.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/07_dimensionality_reduction.ipynb",
+    "sha256": "ad9ccc9667627c14188ecbd4b00a6442f9b67648d8943cbd58205746100c432c"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "08_unsupervised_learning.ipynb",
+    "local": "upstream/handson-mlp/08_unsupervised_learning.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/08_unsupervised_learning.ipynb",
+    "sha256": "74d38b0b8c39796259b9bbd1b468aa7973ccf8e61b8d98418c2a8943dbc110ac"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "09_artificial_neural_networks.ipynb",
+    "local": "upstream/handson-mlp/09_artificial_neural_networks.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/09_artificial_neural_networks.ipynb",
+    "sha256": "00922f67cddf9d59157c5f03a4afcbe70ddd14c39a5f40260c0f3d1adf8e42e0"
+  },
+  {
+    "repo": "ageron/handson-mlp",
+    "commit": "47eba45aacc85feae51ba7db68dd1ca66cb25e0a",
+    "path": "Appendix_C_support_vector_machines.ipynb",
+    "local": "upstream/handson-mlp/Appendix_C_support_vector_machines.ipynb",
+    "url": "https://raw.githubusercontent.com/ageron/handson-mlp/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/Appendix_C_support_vector_machines.ipynb",
+    "sha256": "c66ee7f77508491ebd13d72acddc5b9a2061216b7ce27b3a4bf830117c0ad3e7"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "README.md",
+    "local": "upstream/MachineLearning2025/README.md",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/README.md",
+    "sha256": "1a0a4dbcc0ef135943d3dfd6d9f2ccd24f4e540bc7471ef8154f0a87869ede54"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "pyproject.toml",
+    "local": "upstream/MachineLearning2025/pyproject.toml",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/pyproject.toml",
+    "sha256": "a29bd71ba357b7f2d1c42e16dada14e8d68a06512a8ecf91e1a520ca4567cb49"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "00_whatisSigmoid.py",
+    "local": "upstream/MachineLearning2025/00_whatisSigmoid.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/00_whatisSigmoid.py",
+    "sha256": "212614f5d5b9d9d101e6d5379b7e3a4242dfa09941d6f02ebefeb40b22f2e97e"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "00_sklearn_shuffle.py",
+    "local": "upstream/MachineLearning2025/00_sklearn_shuffle.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/00_sklearn_shuffle.py",
+    "sha256": "4a3b48d5f22c6368729c99892724fda38ed91ee2a6242ed5a34e2b1f7a1ca5a5"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "01_regression.ipynb",
+    "local": "upstream/MachineLearning2025/01_regression.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/01_regression.ipynb",
+    "sha256": "f66f011ef6b0df78209d7579e18f6c482d5fc021d4d465bccdf57ea104c810d4"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "01_batchgradientDescent.ipynb",
+    "local": "upstream/MachineLearning2025/01_batchgradientDescent.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/01_batchgradientDescent.ipynb",
+    "sha256": "e740dc5a906d4cd2d7fedd8384cb8f3ad5ee84521bd8487d8ff9343a0dd0d17a"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "01_gradientDescent_weight_bias.ipynb",
+    "local": "upstream/MachineLearning2025/01_gradientDescent_weight_bias.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/01_gradientDescent_weight_bias.ipynb",
+    "sha256": "e00a888919da740723ce1f57d2298ca5e1e60bd130e92739d5d7d2d0c05b9803"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "01_Logistic_Regression_scratch_Iris1.ipynb",
+    "local": "upstream/MachineLearning2025/01_Logistic_Regression_scratch_Iris1.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/01_Logistic_Regression_scratch_Iris1.ipynb",
+    "sha256": "dfa95e2e055b81393b9b072197878e2168803ce75e2e88a595910737c6f781a5"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "01_Logistic_Regression_scratch_Iris2.ipynb",
+    "local": "upstream/MachineLearning2025/01_Logistic_Regression_scratch_Iris2.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/01_Logistic_Regression_scratch_Iris2.ipynb",
+    "sha256": "e28e5ea929a42336822d06b30d131d8e9b82b0310205cb1450bcef8a8cd85c9f"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "01_Logistic_Regression_sklearn_iris3.py",
+    "local": "upstream/MachineLearning2025/01_Logistic_Regression_sklearn_iris3.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/01_Logistic_Regression_sklearn_iris3.py",
+    "sha256": "569724455131799fec763bc5b2001c24dcda299202a96d9abd23b85de95fdc5b"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "01_ROC_AUC.py",
+    "local": "upstream/MachineLearning2025/01_ROC_AUC.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/01_ROC_AUC.py",
+    "sha256": "9a48ab4817e60e9e5bfae6ba4deaf00ffa93f4fd23c235bfb44f6eee91c63251"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "02_Polynomial_Regression_Early_stopping.ipynb",
+    "local": "upstream/MachineLearning2025/02_Polynomial_Regression_Early_stopping.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/02_Polynomial_Regression_Early_stopping.ipynb",
+    "sha256": "3773ac09061f16fa3f2c5105b31f743c9163b341fd3f222433072503279276e9"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "02_Polynomial_Regression_overfitting.ipynb",
+    "local": "upstream/MachineLearning2025/02_Polynomial_Regression_overfitting.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/02_Polynomial_Regression_overfitting.ipynb",
+    "sha256": "a371dd6b004d15464aa2efb1bbcb936f1e71513ee355618695bee62fe5ff6ac1"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "02_Regularization_Regression.ipynb",
+    "local": "upstream/MachineLearning2025/02_Regularization_Regression.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/02_Regularization_Regression.ipynb",
+    "sha256": "4a0832f3afb9c5afc74f1f27867b22e204e47b9ae83f6029bc27307f31206045"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "02_kfold_StratifiedKFold.py",
+    "local": "upstream/MachineLearning2025/02_kfold_StratifiedKFold.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/02_kfold_StratifiedKFold.py",
+    "sha256": "8b7f8af8c47cc34401b58a838744dab00b5e80420c25e7ade6df6862e87e0e33"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "03_Decision_Tree_from_scratch.py",
+    "local": "upstream/MachineLearning2025/03_Decision_Tree_from_scratch.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/03_Decision_Tree_from_scratch.py",
+    "sha256": "55b1bea3cd5705724f2e5657cabbb37f41d4bf7bc7ef620f64686053390466b8"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "03_Decision_Tree_sklearn_moon.py",
+    "local": "upstream/MachineLearning2025/03_Decision_Tree_sklearn_moon.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/03_Decision_Tree_sklearn_moon.py",
+    "sha256": "20a89eed9867a8a91e1538637c37501a5f2fcd7be5cb91d3c181e7e6d4aaa2b4"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "03_Adaboost_from_scratch.ipynb",
+    "local": "upstream/MachineLearning2025/03_Adaboost_from_scratch.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/03_Adaboost_from_scratch.ipynb",
+    "sha256": "1d701a8c2bafe4f78cfc214570e08a958956d10f1fefde7d4453580b50cd31a8"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "03_hingeloss.ipynb",
+    "local": "upstream/MachineLearning2025/03_hingeloss.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/03_hingeloss.ipynb",
+    "sha256": "b9af94560ef234e36b9fec0a3c06d0c42be0fd341494f7d4ea985c1be7f35106"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "03_svm_kernel.py",
+    "local": "upstream/MachineLearning2025/03_svm_kernel.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/03_svm_kernel.py",
+    "sha256": "3cbc0c7c421c0615f8e94e0e83dc8c778eca95d9685ef6cdd6ef2ea68185b271"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "03_Random_Forest.py",
+    "local": "upstream/MachineLearning2025/03_Random_Forest.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/03_Random_Forest.py",
+    "sha256": "1e9383065240073f8890ff3df5ab4198d6bce4520e137f3fa0f7c550bf2fed35"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "04_PCA_from_scratch.py",
+    "local": "upstream/MachineLearning2025/04_PCA_from_scratch.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/04_PCA_from_scratch.py",
+    "sha256": "564938ee85469293378df911e6dfef9c9efd9b3d27129b7baaa22b7e65de2455"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "04_SVD_from_scratch.py",
+    "local": "upstream/MachineLearning2025/04_SVD_from_scratch.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/04_SVD_from_scratch.py",
+    "sha256": "1060336f3c0e33aa01a843db708b675ade54c3adf2d7ee3fbb4d9476888a269e"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "04_LLE_swiss_roll.ipynb",
+    "local": "upstream/MachineLearning2025/04_LLE_swiss_roll.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/04_LLE_swiss_roll.ipynb",
+    "sha256": "0508bffad2719828e55a0b0b26aa26a41f555fffb84f91cef8661832dadd5260"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "05_GMM_from_scratch.py",
+    "local": "upstream/MachineLearning2025/05_GMM_from_scratch.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/05_GMM_from_scratch.py",
+    "sha256": "57ee983b16273f93f55f6b2b192fb1ac6076baa47b9d95f9cf57500df09ce50f"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "05_DBSCAN.ipynb",
+    "local": "upstream/MachineLearning2025/05_DBSCAN.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/05_DBSCAN.ipynb",
+    "sha256": "1fbc87a5f54eab39d7a821ed756f04d954f9d8aeeaa9f656728b46a0b08d71ba"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "05_Clustering_DBSCAN.py",
+    "local": "upstream/MachineLearning2025/05_Clustering_DBSCAN.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/05_Clustering_DBSCAN.py",
+    "sha256": "2b19e9953938b1c09a9f9c017badb5c0e02a5963d1ce428e1fdeb07c74c05175"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "05_Kmeans+SemiSupervisedLearning.ipynb",
+    "local": "upstream/MachineLearning2025/05_Kmeans+SemiSupervisedLearning.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/05_Kmeans+SemiSupervisedLearning.ipynb",
+    "sha256": "9c7dc9c5210c70147b479eb02d5da626a5a388a3399355be8f0e3e765661f0c3"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "06_ANN_from_Scratch_MNIST.py",
+    "local": "upstream/MachineLearning2025/06_ANN_from_Scratch_MNIST.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/06_ANN_from_Scratch_MNIST.py",
+    "sha256": "8c773f70854413a2c5a55421e86243f4b5f172919edf15e7af22dcb8000ccc36"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "06_Activation_functions.py",
+    "local": "upstream/MachineLearning2025/06_Activation_functions.py",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/06_Activation_functions.py",
+    "sha256": "c4e1d3170a8e8a013f15942d95b44b31e0897a014df3a2d8a20e6ffa1eb68810"
+  },
+  {
+    "repo": "leonjyentub/MachineLearning2025",
+    "commit": "3da2cb56b9efd17d7cd34602589f392554b40603",
+    "path": "06_neural_nets_with_keras.ipynb",
+    "local": "upstream/MachineLearning2025/06_neural_nets_with_keras.ipynb",
+    "url": "https://raw.githubusercontent.com/leonjyentub/MachineLearning2025/3da2cb56b9efd17d7cd34602589f392554b40603/06_neural_nets_with_keras.ipynb",
+    "sha256": "179ff99236272b354f02828b2ede3eb369f1a6071da8500ef5fac32e5c1e220d"
+  }
+]

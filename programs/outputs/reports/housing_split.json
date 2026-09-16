@@ -1,0 +1,7 @@
+{
+  "train_rows": 16512,
+  "test_rows": 4128,
+  "overlap": 0,
+  "hash_stable": true,
+  "hash_test_rows": 216
+}

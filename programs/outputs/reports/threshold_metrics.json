@@ -1,0 +1,19 @@
+{
+  "toy_auc": 0.6875,
+  "toy_AP": 0.7470238095238095,
+  "selected_threshold": 0.5,
+  "original_models": [
+    {
+      "model": "original model 1",
+      "AUC": 0.95,
+      "pairwise_AUC": 0.95,
+      "accuracy_at_0.5": 0.9
+    },
+    {
+      "model": "original model 2",
+      "AUC": 0.57,
+      "pairwise_AUC": 0.57,
+      "accuracy_at_0.5": 0.45
+    }
+  ]
+}

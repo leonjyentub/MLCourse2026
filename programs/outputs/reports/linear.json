@@ -1,0 +1,9 @@
+{
+  "gdp_query": 33442.8,
+  "linear_prediction": 6.016103294356055,
+  "knn_prediction": 5.733333333333333,
+  "gd_weights_standardized": [
+    6.5666666666666655,
+    0.6407015559440816
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "decks": [
+    {
+      "file": "slides/04_線性模型與最佳化.md",
+      "slides": 39,
+      "minutes": 180,
+      "images": 17,
+      "python_snippets_parsed": 2,
+      "pdf_pages": 39
+    },
+    {
+      "file": "slides/05_正則化與機率分類.md",
+      "slides": 33,
+      "minutes": 180,
+      "images": 9,
+      "python_snippets_parsed": 1,
+      "pdf_pages": 33
+    },
+    {
+      "file": "slides/06_決策樹與SVM補充.md",
+      "slides": 33,
+      "minutes": 180,
+      "images": 9,
+      "python_snippets_parsed": 1,
+      "pdf_pages": 33
+    },
+    {
+      "file": "slides/07_集成學習與隨機森林.md",
+      "slides": 40,
+      "minutes": 180,
+      "images": 16,
+      "python_snippets_parsed": 0,
+      "pdf_pages": 40
+    },
+    {
+      "file": "slides/08_降維與資料表示.md",
+      "slides": 34,
+      "minutes": 180,
+      "images": 11,
+      "python_snippets_parsed": 1,
+      "pdf_pages": 34
+    },
+    {
+      "file": "slides/09_分群與表示應用.md",
+      "slides": 34,
+      "minutes": 180,
+      "images": 12,
+      "python_snippets_parsed": 2,
+      "pdf_pages": 34
+    },
+    {
+      "file": "slides/10_密度分群與機率模型.md",
+      "slides": 36,
+      "minutes": 180,
+      "images": 8,
+      "python_snippets_parsed": 3,
+      "pdf_pages": 36
+    },
+    {
+      "file": "slides/11_人工神經網路入門.md",
+      "slides": 37,
+      "minutes": 180,
+      "images": 11,
+      "python_snippets_parsed": 1,
+      "pdf_pages": 37
+    }
+  ],
+  "worked_examples": {
+    "gradient_step": {
+      "gradient": [
+        -4,
+        -3
+      ],
+      "theta": [
+        0.4,
+        0.30000000000000004
+      ],
+      "mse_before": 5,
+      "mse_after": 2.8249999999999997
+    },
+    "tree": {
+      "entropy_3_1": 0.8112781244591328,
+      "split_gini": 0.1999999999999999,
+      "leaf_mse": [
+        5.666666666666667,
+        4.666666666666667,
+        5.666666666666667
+      ]
+    },
+    "thresholds": {
+      ".5": {
+        "TP": 1,
+        "FP": 1,
+        "FN": 1,
+        "TN": 1
+      },
+      ".3": {
+        "TP": 2,
+        "FP": 1,
+        "FN": 0,
+        "TN": 1
+      }
+    },
+    "softmax": {
+      "p": [
+        0.09003057317038046,
+        0.24472847105479764,
+        0.6652409557748218
+      ],
+      "loss_class2": 0.40760596444438046
+    },
+    "adaboost": {
+      "alpha": 1.0986122886681098,
+      "weights": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.5000000000000001
+      ]
+    },
+    "pca": {
+      "covariance_entry": 3.3333333333333335,
+      "eigenvalues": [
+        6.666666666666667,
+        0
+      ],
+      "reconstruction_sse": 9.860761315262648e-31
+    },
+    "kmeans": {
+      "inertia_initial": 2,
+      "inertia_updated": 1.0
+    },
+    "dbscan": {
+      "neighbor_counts": [
+        3,
+        3,
+        4,
+        2,
+        1
+      ]
+    },
+    "gmm": {
+      "responsibility": 0.8,
+      "mean": 0.4,
+      "variance": 0.6400000000000001,
+      "aic": [
+        210,
+        208
+      ],
+      "bic": [
+        223.02585092994047,
+        228.84136148790475
+      ]
+    },
+    "neural": {
+      "xor": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "dw": -0.10575418556853343,
+      "db": -0.052877092784266715,
+      "new_w": 0.5105754185568534,
+      "new_b": 0.005287709278426672,
+      "new_prediction": 0.7362248514170207,
+      "new_loss": 0.03478866450498642,
+      "parameter_count": 703
+    }
+  },
+  "input_integrity": [
+    {
+      "path": "book/CHAPTER 04 Training Models.pdf",
+      "sha256": "0dd3e4754656a6e1ee81679ea7108060605c70b838dae49d734fceeca70ef3dc",
+      "unchanged": true
+    },
+    {
+      "path": "book/CHAPTER 05 Decision Trees.pdf",
+      "sha256": "38d11febd737c0da70a1e863d193b349e0b6b053a8b8437fd9f25e553458dd0c",
+      "unchanged": true
+    },
+    {
+      "path": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+      "sha256": "955101bb862834a4df1d9d162ecd273a030c64e7bcc72506089c3a36e2eb329c",
+      "unchanged": true
+    },
+    {
+      "path": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+      "sha256": "e11ac9a9a48f08a7c1f9a5886291b4d89c1f5cce63219c122c984d0133b95d27",
+      "unchanged": true
+    },
+    {
+      "path": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+      "sha256": "18c4fa580526705fa78121c5b47978743af0ac06ba62fb1487f88197000d87fb",
+      "unchanged": true
+    },
+    {
+      "path": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+      "sha256": "a88e40b4e9507222612485348e67136d31ad907aa2a6018abc6ed664dab9fc75",
+      "unchanged": true
+    },
+    {
+      "path": "source_pptx/00_Machine Learning.pptx",
+      "sha256": "bb0404402f507a58ad2d9bb8db8c402dedeeb46dd88653220c33ce780f092a29",
+      "unchanged": true
+    },
+    {
+      "path": "source_pptx/01_Regressions.pptx",
+      "sha256": "84e40663ad82c66623466f92782334dd2ce2f5553b3ca11e9ae23adf888851c0",
+      "unchanged": true
+    },
+    {
+      "path": "source_pptx/02_Validation and Regularization.pptx",
+      "sha256": "72fe48ef604c44dfa603b63c2eb7744138b046417860c50affd85f480a176fb9",
+      "unchanged": true
+    },
+    {
+      "path": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+      "sha256": "182ab73b445e056fb770ef5b881e7f42c522ddf7773f9147d304728a9d244d8b",
+      "unchanged": true
+    },
+    {
+      "path": "source_pptx/04_DimensionReduction.pptx",
+      "sha256": "fc02a0e10894df4d0f397fec3ca56565ba500ffa6263cccb5902dc822cafd332",
+      "unchanged": true
+    },
+    {
+      "path": "source_pptx/05_Clustering.pptx",
+      "sha256": "0fa8f2babae9a56d20dc693e9a061ea6a9358551c02748aef100877399ec1ff4",
+      "unchanged": true
+    },
+    {
+      "path": "source_pptx/06_Artificial Neural Networks.pptx",
+      "sha256": "e67eb3fe2254d1bf39823ae046e80f5a098f2d07d1f48df40d5ad89ee6b26aa8",
+      "unchanged": true
+    },
+    {
+      "path": "slides/.DS_Store",
+      "sha256": "05eb5631ac5aaa49939bedef9e626fd72dc0ba759361a02aa0bbc7a273c4a88b",
+      "unchanged": true
+    },
+    {
+      "path": "slides/00_課程導覽.md",
+      "sha256": "83370881f492c14e2c2e410be673736dd3cae40b8cfb5d3947ac9b3f8dab6eca",
+      "unchanged": true
+    },
+    {
+      "path": "slides/01_機器學習概觀.md",
+      "sha256": "f963445ace96f6cd951a7177ce03f009f5b53aa98a8931bde68a2a2611476be8",
+      "unchanged": true
+    },
+    {
+      "path": "slides/02_端到端機器學習專案.md",
+      "sha256": "52dbe3569e670cd8bb89834455c1ce10b2ecc35466ff7b9592cd4a48670078db",
+      "unchanged": true
+    },
+    {
+      "path": "slides/03_分類與模型評估.md",
+      "sha256": "44782a562bd1da284e1b8d2205dab61b759f7f21570f5b22aa36230aa10fb2d4",
+      "unchanged": true
+    },
+    {
+      "path": "slides/theme.css",
+      "sha256": "30173a93aca195342a90e3e04a3ac96d4186b2f5bdbb33914e94fb4c0a6057b3",
+      "unchanged": true
+    }
+  ],
+  "numbered_figures": 90,
+  "numbered_equations": 42,
+  "numbered_tables": 4,
+  "layout_audit": {
+    "decks": 8,
+    "slides": 286,
+    "issues": 0
+  },
+  "total_slides": 286,
+  "teaching_hours_including_breaks": 24
+}

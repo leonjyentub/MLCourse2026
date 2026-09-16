@@ -1,0 +1,17 @@
+{
+  "profile": "fast",
+  "train_rows": 6000,
+  "test_rows": 4128,
+  "chosen_search": "grid",
+  "best_params": {
+    "model__max_features": 0.6,
+    "model__min_samples_leaf": 1
+  },
+  "test_RMSE": 53174.846597021766,
+  "test_MAE": 35352.76238493217,
+  "test_R2": 0.78876644906992,
+  "RMSE_CI_95": [
+    50976.833838637045,
+    55673.41547333377
+  ]
+}

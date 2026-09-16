@@ -1,0 +1,91 @@
+[
+  {
+    "path": "book/CHAPTER 04 Training Models.pdf",
+    "sha256": "0dd3e4754656a6e1ee81679ea7108060605c70b838dae49d734fceeca70ef3dc",
+    "pages": 44
+  },
+  {
+    "path": "book/CHAPTER 05 Decision Trees.pdf",
+    "sha256": "38d11febd737c0da70a1e863d193b349e0b6b053a8b8437fd9f25e553458dd0c",
+    "pages": 16
+  },
+  {
+    "path": "book/CHAPTER 06 Ensemble Learning and Random Forests.pdf",
+    "sha256": "955101bb862834a4df1d9d162ecd273a030c64e7bcc72506089c3a36e2eb329c",
+    "pages": 26
+  },
+  {
+    "path": "book/CHAPTER 07 Dimensionality Reduction.pdf",
+    "sha256": "e11ac9a9a48f08a7c1f9a5886291b4d89c1f5cce63219c122c984d0133b95d27",
+    "pages": 24
+  },
+  {
+    "path": "book/CHAPTER 08 Unsupervised Learning Techniques.pdf",
+    "sha256": "18c4fa580526705fa78121c5b47978743af0ac06ba62fb1487f88197000d87fb",
+    "pages": 38
+  },
+  {
+    "path": "book/CHAPTER 09 Introduction to Artificial Neural Networks.pdf",
+    "sha256": "a88e40b4e9507222612485348e67136d31ad907aa2a6018abc6ed664dab9fc75",
+    "pages": 34
+  },
+  {
+    "path": "source_pptx/00_Machine Learning.pptx",
+    "sha256": "bb0404402f507a58ad2d9bb8db8c402dedeeb46dd88653220c33ce780f092a29",
+    "slides": 18
+  },
+  {
+    "path": "source_pptx/01_Regressions.pptx",
+    "sha256": "84e40663ad82c66623466f92782334dd2ce2f5553b3ca11e9ae23adf888851c0",
+    "slides": 64
+  },
+  {
+    "path": "source_pptx/02_Validation and Regularization.pptx",
+    "sha256": "72fe48ef604c44dfa603b63c2eb7744138b046417860c50affd85f480a176fb9",
+    "slides": 15
+  },
+  {
+    "path": "source_pptx/03_SVM_DecistionTree_RandomForest.pptx",
+    "sha256": "182ab73b445e056fb770ef5b881e7f42c522ddf7773f9147d304728a9d244d8b",
+    "slides": 60
+  },
+  {
+    "path": "source_pptx/04_DimensionReduction.pptx",
+    "sha256": "fc02a0e10894df4d0f397fec3ca56565ba500ffa6263cccb5902dc822cafd332",
+    "slides": 46
+  },
+  {
+    "path": "source_pptx/05_Clustering.pptx",
+    "sha256": "0fa8f2babae9a56d20dc693e9a061ea6a9358551c02748aef100877399ec1ff4",
+    "slides": 27
+  },
+  {
+    "path": "source_pptx/06_Artificial Neural Networks.pptx",
+    "sha256": "e67eb3fe2254d1bf39823ae046e80f5a098f2d07d1f48df40d5ad89ee6b26aa8",
+    "slides": 39
+  },
+  {
+    "path": "slides/.DS_Store",
+    "sha256": "05eb5631ac5aaa49939bedef9e626fd72dc0ba759361a02aa0bbc7a273c4a88b"
+  },
+  {
+    "path": "slides/00_課程導覽.md",
+    "sha256": "83370881f492c14e2c2e410be673736dd3cae40b8cfb5d3947ac9b3f8dab6eca"
+  },
+  {
+    "path": "slides/01_機器學習概觀.md",
+    "sha256": "f963445ace96f6cd951a7177ce03f009f5b53aa98a8931bde68a2a2611476be8"
+  },
+  {
+    "path": "slides/02_端到端機器學習專案.md",
+    "sha256": "52dbe3569e670cd8bb89834455c1ce10b2ecc35466ff7b9592cd4a48670078db"
+  },
+  {
+    "path": "slides/03_分類與模型評估.md",
+    "sha256": "44782a562bd1da284e1b8d2205dab61b759f7f21570f5b22aa36230aa10fb2d4"
+  },
+  {
+    "path": "slides/theme.css",
+    "sha256": "30173a93aca195342a90e3e04a3ac96d4186b2f5bdbb33914e94fb4c0a6057b3"
+  }
+]

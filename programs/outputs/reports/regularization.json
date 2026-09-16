@@ -1,0 +1,7 @@
+{
+  "CV_selected_model": "Ridge",
+  "CV_selected_test_RMSE": 2.762190448704046,
+  "early_stopped_test_RMSE": 2.7641025619537145,
+  "best_epoch": 514,
+  "epochs_executed": 594
+}

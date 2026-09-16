@@ -1,0 +1,180 @@
+[
+  {
+    "asset": "slides/assets/book_fig_1_7.png",
+    "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
+    "pdf_page": 12,
+    "printed_page": 12,
+    "figure": "1-7",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_1_8.png",
+    "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
+    "pdf_page": 13,
+    "printed_page": 13,
+    "figure": "1-8",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_1_11.png",
+    "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
+    "pdf_page": 15,
+    "printed_page": 15,
+    "figure": "1-11",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_1_19.png",
+    "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
+    "pdf_page": 25,
+    "printed_page": 25,
+    "figure": "1-19",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_1_22.png",
+    "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
+    "pdf_page": 30,
+    "printed_page": 30,
+    "figure": "1-22",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_1_24.png",
+    "source": "book/CHAPTER 01 The Machine Learning Landscape.pdf",
+    "pdf_page": 33,
+    "printed_page": 33,
+    "figure": "1-24",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_2_8.png",
+    "source": "book/CHAPTER 02 End-to-End Machine Learning Project.pdf",
+    "pdf_page": 16,
+    "printed_page": 56,
+    "figure": "2-8",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_2_13.png",
+    "source": "book/CHAPTER 02 End-to-End Machine Learning Project.pdf",
+    "pdf_page": 25,
+    "printed_page": 65,
+    "figure": "2-13",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_2_15.png",
+    "source": "book/CHAPTER 02 End-to-End Machine Learning Project.pdf",
+    "pdf_page": 27,
+    "printed_page": 67,
+    "figure": "2-15",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_2_17.png",
+    "source": "book/CHAPTER 02 End-to-End Machine Learning Project.pdf",
+    "pdf_page": 39,
+    "printed_page": 79,
+    "figure": "2-17",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_3_2.png",
+    "source": "book/CHAPTER 03 Classification.pdf",
+    "pdf_page": 4,
+    "printed_page": 110,
+    "figure": "3-2",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_3_4.png",
+    "source": "book/CHAPTER 03 Classification.pdf",
+    "pdf_page": 10,
+    "printed_page": 116,
+    "figure": "3-4",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_3_5.png",
+    "source": "book/CHAPTER 03 Classification.pdf",
+    "pdf_page": 11,
+    "printed_page": 117,
+    "figure": "3-5",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_3_8.png",
+    "source": "book/CHAPTER 03 Classification.pdf",
+    "pdf_page": 17,
+    "printed_page": 123,
+    "figure": "3-8",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_3_9.png",
+    "source": "book/CHAPTER 03 Classification.pdf",
+    "pdf_page": 21,
+    "printed_page": 127,
+    "figure": "3-9",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_3_11.png",
+    "source": "book/CHAPTER 03 Classification.pdf",
+    "pdf_page": 23,
+    "printed_page": 129,
+    "figure": "3-11",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/book_fig_3_12.png",
+    "source": "book/CHAPTER 03 Classification.pdf",
+    "pdf_page": 27,
+    "printed_page": 133,
+    "figure": "3-12",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  {
+    "asset": "slides/assets/ppt_supervised_regression.png",
+    "source": "source_pptx/00_Machine Learning.pptx",
+    "slide": 7,
+    "media": "ppt/media/image13.png",
+    "method": "原始內嵌影像擷取；舊稿示例，不視為本次實驗"
+  },
+  {
+    "asset": "slides/assets/ppt_supervised_classification.png",
+    "source": "source_pptx/00_Machine Learning.pptx",
+    "slide": 8,
+    "media": "ppt/media/image14.png",
+    "method": "原始內嵌影像擷取；舊稿示例，不視為本次實驗"
+  },
+  {
+    "asset": "slides/assets/ppt_iris_pairplot.png",
+    "source": "source_pptx/01_Regressions.pptx",
+    "slide": 42,
+    "media": "ppt/media/image48.png",
+    "method": "原始內嵌影像擷取；舊稿示例，不視為本次實驗"
+  },
+  {
+    "asset": "slides/assets/ppt_logistic_regions.png",
+    "source": "source_pptx/01_Regressions.pptx",
+    "slide": 48,
+    "media": "ppt/media/image50.png",
+    "method": "原始內嵌影像擷取；舊稿示例，不視為本次實驗"
+  },
+  {
+    "asset": "slides/assets/ppt_polynomial_fit.png",
+    "source": "source_pptx/02_Validation and Regularization.pptx",
+    "slide": 8,
+    "media": "ppt/media/image6.png",
+    "method": "原始內嵌影像擷取；舊稿示例，不視為本次實驗"
+  },
+  {
+    "asset": "slides/assets/ppt_l1_l2_geometry.jpeg",
+    "source": "source_pptx/02_Validation and Regularization.pptx",
+    "slide": 11,
+    "media": "ppt/media/image8.jpeg",
+    "method": "原始內嵌影像擷取；舊稿示例，不視為本次實驗"
+  }
+]

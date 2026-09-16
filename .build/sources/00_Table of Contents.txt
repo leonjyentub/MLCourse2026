@@ -1,0 +1,589 @@
+Hands-On
+Machine Learning
+with Scikit-Learn
+and PyTorch
+Concepts, Tools, and Techniques
+to Build Intelligent Systems
+
+                                  Aurélien Géron
+    “This book is an excellent starting point for beginners looking to understand
+     the essential history and foundational concepts of machine learning. With
+     well-structured code sections and practical examples, it takes readers from
+     the basics to cutting-edge machine learning and deep learning techniques,
+     leveraging PyTorch and Scikit-Learn for hands-on implementation.”
+    Louis-François Bouchard, educator and cofounder and CTO at Towards AI
+
+    “Géron strikes the sweet spot: practical Scikit-Learn and PyTorch implementations
+     that teach concepts, balanced with theory that clarifies rather than overwhelms.
+     This is the book I recommend for getting started in ML.”
+    Ulf Bissbort, cofounder and CTO at ZefHub
+
+
+
+    Hands-On Machine Learning with
+    Scikit-Learn and PyTorch
+    The potential of machine learning today is extraordinary, yet many aspiring developers and tech professionals
+    find themselves daunted by its complexity. Whether you’re looking to enhance your skill set and apply
+    machine learning to real-world projects or are simply curious about how AI systems function, this book
+    is your jumping-off place.
+    With an approachable yet deeply informative style, author Aurélien Géron delivers the ultimate introductory
+    guide to machine learning and deep learning. With a focus on clear explanations and real-world examples,
+    the book takes you through cutting-edge tools like Scikit-Learn, PyTorch, and Hugging Face libraries —
+    from basic regression techniques to advanced neural networks. Whether you’re a student, professional,
+    or hobbyist, you’ll gain the skills to build intelligent systems.
+
+    • Understand ML fundamentals, including concepts like                     Aurélien Géron is a machine
+      overfitting and hyperparameter tuning                                   learning consultant and former
+    • Complete an end-to-end ML project using Scikit-Learn,                   YouTube video classification lead
+      covering everything from data exploration to model evaluation           at Google. He cofounded tech
+    • Learn techniques for unsupervised learning, such as clustering          firms Wifirst and Polyconseil,
+      and anomaly detection                                                   authored technical books, and has
+                                                                              a diverse background in finance,
+    • Build advanced architectures like transformer-based
+      chatbots and diffusion models with PyTorch                              defense, and healthcare.
+    • Harness the power of pretrained models—including LLMs—
+      and learn to fine-tune and accelerate them
+    • Train autonomous agents using reinforcement learning
+
+    DATA
+
+
+    US $89.99 CAN $112.99
+    ISBN: 979-8-341-60798-9
+                               58999
+
+9    798341 607989
+         Praise for Hands-On Machine Learning
+             with Scikit-Learn and PyTorch
+
+
+      This book is an excellent starting point for beginners looking to understand
+       the essential history and foundational concepts of machine learning. With
+       well-structured code sections and practical examples, it takes readers from
+       the basics to cutting-edge machine learning and deep learning techniques,
+              leveraging PyTorch and Scikit-Learn for hands-on implementation.
+                                         —Louis-François Bouchard, educator and
+                                              cofounder and CTO at Towards AI
+
+
+Géron strikes the sweet spot: practical Scikit-Learn and PyTorch implementations
+  that teach concepts, balanced with theory that clarifies rather than overwhelms.
+From first principles to state-of-the-art methods, this hands-on approach gets you
+      productive quickly. This is the book I recommend for getting started in ML.
+                                     —Ulf Bissbort, cofounder and CTO at ZefHub
+
+
+                     This book is your ultimate map for navigating the uncharted
+                                 world of machine learning. Keep it within reach.
+                                               —Haesun Park, Microsoft AI MVP,
+                                               Google Cloud Champion Innovator
+
+
+      This book launched a generation of ML practitioners. Brilliantly updated to
+        cover PyTorch, it is once again the definitive hands-on guide to the field.
+                     —Tarun Narayanan, machine learning engineer, Amazon AGI
+        A true bible for beginners in machine learning, this book not
+only provides clear explanations and hands-on examples but also uses
+thoughtfully designedfigures to simplify complex concepts, making it
+          an indispensable resource for building a strong foundation.
+                                                   —Meetu Malhotra,
+             Harrisburg University of Science and Technology, PA USA
+Hands-On Machine Learning with
+       Scikit-Learn and PyTorch
+          Concepts, Tools, and Techniques
+              to Build Intelligent Systems
+
+
+
+
+                            Aurélien Geron
+Hands-On Machine Learning with Scikit-Learn and PyTorch
+by Aurélien Geron
+Copyright © 2026 Aurélien Geron. All rights reserved.
+Published by O’Reilly Media, Inc., 141 Stony Circle, Suite 195, Santa Rosa, CA 95401.
+O’Reilly books may be purchased for educational, business, or sales promotional use. Online editions
+are also available for most titles (https://oreilly.com). For more information, contact our corporate/institu‐
+tional sales department: 800-998-9938 or corporate@oreilly.com.
+
+Acquisitions Editor: Nicole Butterfield                   Indexer: Potomac Indexing LLC
+Develeopment Editor: Michele Cronin                       Cover Designer: Susan Brown
+Production Editor: Beth Kelly                             Cover Illustrator: José Marzan Jr.
+Copyeditor: Sonia Saruba                                  Interior Designer: David Futato
+Proofreader: Kim Cofer                                    Interior Illustrator: Kate Dullea
+
+October 2025:             First Edition
+
+Revision History for the First Edition
+2025-10-22:      First Release
+
+See https://oreilly.com/catalog/errata.csp?isbn=9798341607989 for release details.
+
+The O’Reilly logo is a registered trademark of O’Reilly Media, Inc. Hands-On Machine Learning with
+Scikit-Learn and PyTorch, the cover image, and related trade dress are trademarks of O’Reilly Media, Inc.
+The views expressed in this work are those of the author, and do not represent the publisher’s views.
+While the publisher and the author have used good faith efforts to ensure that the information and
+instructions contained in this work are accurate, the publisher and the author disclaim all responsibility
+for errors or omissions, including without limitation responsibility for damages resulting from the use
+of or reliance on this work. Use of the information and instructions contained in this work is at your
+own risk. If any code samples or other technology this work contains or describes is subject to open
+source licenses or the intellectual property rights of others, it is your responsibility to ensure that your use
+thereof complies with such licenses and/or rights.
+
+
+
+
+979-8-341-60798-9
+[LSI]
+                                                                                          Table of Contents
+
+
+
+
+Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii
+
+
+Part I.          The Fundamentals of Machine Learning
+  1. The Machine Learning Landscape. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+        What Is Machine Learning?                                                                                                                  4
+        Why Use Machine Learning?                                                                                                                  5
+        Examples of Applications                                                                                                                   8
+        Types of Machine Learning Systems                                                                                                          9
+          Training Supervision                                                                                                                    10
+          Batch Versus Online Learning                                                                                                            17
+          Instance-Based Versus Model-Based Learning                                                                                              21
+        Main Challenges of Machine Learning                                                                                                       27
+          Insufficient Quantity of Training Data                                                                                                  27
+          Nonrepresentative Training Data                                                                                                         29
+          Poor-Quality Data                                                                                                                       31
+          Irrelevant Features                                                                                                                     31
+          Overfitting the Training Data                                                                                                           31
+          Underfitting the Training Data                                                                                                          34
+          Deployment Issues                                                                                                                       34
+          Stepping Back                                                                                                                           34
+        Testing and Validating                                                                                                                    35
+          Hyperparameter Tuning and Model Selection                                                                                               35
+          Data Mismatch                                                                                                                           37
+        Exercises                                                                                                                                 39
+
+
+
+
+                                                                                                                                                     v
+     2. End-to-End Machine Learning Project. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+            Working with Real Data                                                                                                          41
+            Look at the Big Picture                                                                                                         43
+              Frame the Problem                                                                                                             43
+              Select a Performance Measure                                                                                                  45
+              Check the Assumptions                                                                                                         47
+            Get the Data                                                                                                                    48
+              Running the Code Examples Using Google Colab                                                                                  48
+              Saving Your Code Changes and Your Data                                                                                        50
+              The Power and Danger of Interactivity                                                                                         51
+              Book Code Versus Notebook Code                                                                                                52
+              Download the Data                                                                                                             52
+              Take a Quick Look at the Data Structure                                                                                       54
+              Create a Test Set                                                                                                             57
+            Explore and Visualize the Data to Gain Insights                                                                                 62
+              Visualizing Geographical Data                                                                                                 63
+              Look for Correlations                                                                                                         65
+              Experiment with Attribute Combinations                                                                                        68
+            Prepare the Data for Machine Learning Algorithms                                                                                69
+              Clean the Data                                                                                                                70
+              Handling Text and Categorical Attributes                                                                                      73
+              Feature Scaling and Transformation                                                                                            77
+              Custom Transformers                                                                                                           81
+              Transformation Pipelines                                                                                                      86
+            Select and Train a Model                                                                                                        90
+              Train and Evaluate on the Training Set                                                                                        90
+              Better Evaluation Using Cross-Validation                                                                                      92
+            Fine-Tune Your Model                                                                                                            94
+              Grid Search                                                                                                                   94
+              Randomized Search                                                                                                             96
+              Ensemble Methods                                                                                                              97
+              Analyzing the Best Models and Their Errors                                                                                    98
+              Evaluate Your System on the Test Set                                                                                          99
+            Launch, Monitor, and Maintain Your System                                                                                      100
+            Try It Out!                                                                                                                    103
+            Exercises                                                                                                                      104
+
+     3. Classification. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+            MNIST                                                                                                                          107
+            Training a Binary Classifier                                                                                                   110
+            Performance Measures                                                                                                           111
+              Measuring Accuracy Using Cross-Validation                                                                                    111
+
+
+vi      |    Table of Contents
+       Confusion Matrices                                                                                                              112
+       Precision and Recall                                                                                                            114
+       The Precision/Recall Trade-Off                                                                                                  115
+       The ROC Curve                                                                                                                   120
+     Multiclass Classification                                                                                                         124
+     Error Analysis                                                                                                                    126
+     Multilabel Classification                                                                                                         130
+     Multioutput Classification                                                                                                        132
+     Exercises                                                                                                                         133
+
+4. Training Models. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+     Linear Regression                                                                                                                 136
+       The Normal Equation                                                                                                             138
+       Computational Complexity                                                                                                        141
+     Gradient Descent                                                                                                                  142
+       Batch Gradient Descent                                                                                                          145
+       Stochastic Gradient Descent                                                                                                     148
+       Mini-Batch Gradient Descent                                                                                                     151
+     Polynomial Regression                                                                                                             153
+     Learning Curves                                                                                                                   154
+     Regularized Linear Models                                                                                                         159
+       Ridge Regression                                                                                                                159
+       Lasso Regression                                                                                                                162
+       Elastic Net Regression                                                                                                          165
+       Early Stopping                                                                                                                  166
+     Logistic Regression                                                                                                               167
+       Estimating Probabilities                                                                                                        168
+       Training and Cost Function                                                                                                      169
+       Decision Boundaries                                                                                                             170
+       Softmax Regression                                                                                                              174
+     Exercises                                                                                                                         177
+
+5. Decision Trees. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179
+     Training and Visualizing a Decision Tree                                                                                          179
+     Making Predictions                                                                                                                181
+     Estimating Class Probabilities                                                                                                    183
+     The CART Training Algorithm                                                                                                       183
+     Computational Complexity                                                                                                          185
+     Gini Impurity or Entropy?                                                                                                         185
+     Regularization Hyperparameters                                                                                                    186
+     Regression                                                                                                                        188
+     Sensitivity to Axis Orientation                                                                                                   190
+
+
+                                                                                                           Table of Contents       |    vii
+       Decision Trees Have a High Variance                                                                                  192
+       Exercises                                                                                                            193
+
+  6. Ensemble Learning and Random Forests. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 195
+       Voting Classifiers                                                                                                   196
+       Bagging and Pasting                                                                                                  199
+         Bagging and Pasting in Scikit-Learn                                                                                201
+         Out-of-Bag Evaluation                                                                                              202
+         Random Patches and Random Subspaces                                                                                203
+       Random Forests                                                                                                       204
+         Extra-Trees                                                                                                        205
+         Feature Importance                                                                                                 206
+       Boosting                                                                                                             207
+         AdaBoost                                                                                                           207
+         Gradient Boosting                                                                                                  210
+         Histogram-Based Gradient Boosting                                                                                  214
+       Stacking                                                                                                             215
+       Exercises                                                                                                            219
+
+  7. Dimensionality Reduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 221
+       The Curse of Dimensionality                                                                                          222
+       Main Approaches for Dimensionality Reduction                                                                         223
+         Projection                                                                                                         223
+         Manifold Learning                                                                                                  225
+       PCA                                                                                                                  227
+         Preserving the Variance                                                                                            227
+         Principal Components                                                                                               228
+         Projecting Down to d Dimensions                                                                                    230
+         Using Scikit-Learn                                                                                                 230
+         Explained Variance Ratio                                                                                           231
+         Choosing the Right Number of Dimensions                                                                            231
+         PCA for Compression                                                                                                233
+         Randomized PCA                                                                                                     234
+         Incremental PCA                                                                                                    234
+       Random Projection                                                                                                    236
+       LLE                                                                                                                  239
+       Other Dimensionality Reduction Techniques                                                                            241
+       Exercises                                                                                                            242
+
+  8. Unsupervised Learning Techniques. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 245
+       Clustering Algorithms: k-means and DBSCAN                                                                            246
+         k-Means Clustering                                                                                                 249
+
+
+viii   |   Table of Contents
+        Limits of k-Means                                                                                        258
+        Using Clustering for Image Segmentation                                                                  259
+        Using Clustering for Semi-Supervised Learning                                                            261
+        DBSCAN                                                                                                   265
+        Other Clustering Algorithms                                                                              267
+      Gaussian Mixtures                                                                                          269
+        Using Gaussian Mixtures for Anomaly Detection                                                            274
+        Selecting the Number of Clusters                                                                         275
+        Bayesian Gaussian Mixture Models                                                                         278
+        Other Algorithms for Anomaly and Novelty Detection                                                       279
+      Exercises                                                                                                  280
+
+
+Part II. Neural Networks and Deep Learning
+ 9. Introduction to Artificial Neural Networks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 285
+      From Biological to Artificial Neurons                                                                      286
+        Biological Neurons                                                                                       287
+        Logical Computations with Neurons                                                                        289
+        The Perceptron                                                                                           290
+        The Multilayer Perceptron and Backpropagation                                                            294
+      Building and Training MLPs with Scikit-Learn                                                               300
+        Regression MLPs                                                                                          300
+        Classification MLPs                                                                                      303
+      Hyperparameter Tuning Guidelines                                                                           308
+        Number of Hidden Layers                                                                                  308
+        Number of Neurons per Hidden Layer                                                                       309
+        Learning Rate                                                                                            310
+        Batch Size                                                                                               311
+        Other Hyperparameters                                                                                    312
+      Exercises                                                                                                  313
+
+10. Building Neural Networks with PyTorch. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+      PyTorch Fundamentals                                                                                       318
+        PyTorch Tensors                                                                                          318
+        Hardware Acceleration                                                                                    321
+        Autograd                                                                                                 323
+      Implementing Linear Regression                                                                             327
+        Linear Regression Using Tensors and Autograd                                                             328
+        Linear Regression Using PyTorch’s High-Level API                                                         330
+      Implementing a Regression MLP                                                                              334
+      Implementing Mini-Batch Gradient Descent Using DataLoaders                                                 335
+
+
+                                                                                             Table of Contents   |   ix
+        Model Evaluation                                                                                              337
+        Building Nonsequential Models Using Custom Modules                                                            340
+          Building Models with Multiple Inputs                                                                        342
+          Building Models with Multiple Outputs                                                                       344
+        Building an Image Classifier with PyTorch                                                                     346
+          Using TorchVision to Load the Dataset                                                                       346
+          Building the Classifier                                                                                     348
+        Fine-Tuning Neural Network Hyperparameters with Optuna                                                        352
+        Saving and Loading PyTorch Models                                                                             356
+        Compiling and Optimizing a PyTorch Model                                                                      358
+        Exercises                                                                                                     360
+
+11. Training Deep Neural Networks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
+        The Vanishing/Exploding Gradients Problems                                                                    364
+          Glorot Initialization and He Initialization                                                                 365
+          Better Activation Functions                                                                                 368
+          Batch Normalization                                                                                         375
+          Layer Normalization                                                                                         381
+          Gradient Clipping                                                                                           382
+        Reusing Pretrained Layers                                                                                     383
+          Transfer Learning with PyTorch                                                                              384
+          Unsupervised Pretraining                                                                                    386
+          Pretraining on an Auxiliary Task                                                                            388
+        Faster Optimizers                                                                                             389
+          Momentum                                                                                                    389
+          Nesterov Accelerated Gradient                                                                               390
+          AdaGrad                                                                                                     392
+          RMSProp                                                                                                     393
+          Adam                                                                                                        394
+          AdaMax                                                                                                      395
+          NAdam                                                                                                       395
+          AdamW                                                                                                       396
+        Learning Rate Scheduling                                                                                      398
+          Exponential Scheduling                                                                                      399
+          Cosine Annealing                                                                                            400
+          Performance Scheduling                                                                                      401
+          Warming Up the Learning Rate                                                                                401
+          Cosine Annealing with Warm Restarts                                                                         403
+          1cycle Scheduling                                                                                           404
+        Avoiding Overfitting Through Regularization                                                                   405
+          ℓ1 and ℓ2 Regularization                                                                                    405
+          Dropout                                                                                                     407
+
+
+x   |   Table of Contents
+       Monte Carlo Dropout                                                                                  410
+       Max-Norm Regularization                                                                              412
+     Practical Guidelines                                                                                   413
+     Exercises                                                                                              414
+
+12. Deep Computer Vision Using Convolutional Neural Networks. . . . . . . . . . . . . . . . . . . 417
+     The Architecture of the Visual Cortex                                                                  418
+     Convolutional Layers                                                                                   419
+       Filters                                                                                              422
+       Stacking Multiple Feature Maps                                                                       423
+       Implementing Convolutional Layers with PyTorch                                                       425
+     Pooling Layers                                                                                         429
+     Implementing Pooling Layers with PyTorch                                                               431
+     CNN Architectures                                                                                      433
+       LeNet-5                                                                                              437
+       AlexNet                                                                                              437
+       GoogLeNet                                                                                            440
+       ResNet                                                                                               443
+       Xception                                                                                             447
+       SENet                                                                                                449
+       Other Noteworthy Architectures                                                                       451
+       Choosing the Right CNN Architecture                                                                  453
+       GPU RAM Requirements: Inference Versus Training                                                      454
+       Reversible Residual Networks (RevNets)                                                               456
+     Implementing a ResNet-34 CNN Using PyTorch                                                             457
+     Using TorchVision’s Pretrained Models                                                                  458
+     Pretrained Models for Transfer Learning                                                                460
+     Classification and Localization                                                                        464
+     Object Detection                                                                                       468
+       Fully Convolutional Networks                                                                         470
+       You Only Look Once                                                                                   472
+     Object Tracking                                                                                        476
+     Semantic Segmentation                                                                                  477
+     Exercises                                                                                              481
+
+13. Processing Sequences Using RNNs and CNNs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 483
+     Recurrent Neurons and Layers                                                                           484
+       Memory Cells                                                                                         486
+       Input and Output Sequences                                                                           487
+     Training RNNs                                                                                          489
+     Forecasting a Time Series                                                                              490
+       The ARMA Model Family                                                                                495
+
+
+                                                                                        Table of Contents   |   xi
+            Preparing the Data for Machine Learning Models                                           498
+            Forecasting Using a Linear Model                                                         500
+            Forecasting Using a Simple RNN                                                           501
+            Forecasting Using a Deep RNN                                                             504
+            Forecasting Multivariate Time Series                                                     505
+            Forecasting Several Time Steps Ahead                                                     506
+            Forecasting Using a Sequence-to-Sequence Model                                           509
+          Handling Long Sequences                                                                    511
+            Fighting the Unstable Gradients Problem                                                  512
+            Tackling the Short-Term Memory Problem                                                   513
+          Exercises                                                                                  523
+
+14. Natural Language Processing with RNNs and Attention. . . . . . . . . . . . . . . . . . . . . . . . 525
+          Generating Shakespearean Text Using a Character RNN                                        526
+            Creating the Training Dataset                                                            527
+            Embeddings                                                                               530
+            Building and Training the Char-RNN Model                                                 533
+            Generating Fake Shakespearean Text                                                       535
+          Sentiment Analysis Using Hugging Face Libraries                                            537
+            Tokenization Using the Hugging Face Tokenizers Library                                   538
+            Reusing Pretrained Tokenizers                                                            544
+            Building and Training a Sentiment Analysis Model                                         546
+            Bidirectional RNNs                                                                       549
+            Reusing Pretrained Embeddings and Language Models                                        551
+            Task-Specific Classes                                                                    553
+            The Trainer API                                                                          555
+            Hugging Face Pipelines                                                                   557
+          An Encoder-Decoder Network for Neural Machine Translation                                  560
+          Beam Search                                                                                567
+          Attention Mechanisms                                                                       569
+          Exercises                                                                                  575
+
+15. Transformers for Natural Language Processing and Chatbots. . . . . . . . . . . . . . . . . . . 577
+          Attention Is All You Need: The Original Transformer Architecture                           581
+            Positional Encodings                                                                     584
+            Multi-Head Attention                                                                     585
+            Building the Rest of the Transformer                                                     590
+          Building an English-to-Spanish Transformer                                                 592
+          Encoder-Only Transformers for Natural Language Understanding                               594
+            BERT’s Architecture                                                                      595
+            BERT Pretraining                                                                         595
+            BERT Fine-Tuning                                                                         598
+
+
+xii   |    Table of Contents
+        Other Encoder-Only Models                                                                                     603
+      Decoder-Only Transformers                                                                                       609
+        GPT-1 Architecture and Generative Pretraining                                                                 610
+        GPT-2 and Zero-Shot Learning                                                                                  612
+        GPT-3, In-Context Learning, One-Shot Learning, and Few-Shot Learning                                          613
+        Using GPT-2 to Generate Text                                                                                  614
+        Using GPT-2 for Question Answering                                                                            616
+        Downloading and Running an Even Larger Model: Mistral-7B                                                      617
+      Turning a Large Language Model into a Chatbot                                                                   621
+        Fine-Tuning a Model for Chatting and Following
+          Instructions Using SFT and RLHF                                                                             626
+        Direct Preference Optimization (DPO)                                                                          627
+        Fine-Tuning a Model Using the TRL Library                                                                     631
+        From a Chatbot Model to a Full Chatbot System                                                                 633
+        Model Context Protocol                                                                                        636
+        Libraries and Tools                                                                                           638
+      Encoder-Decoder Models                                                                                          639
+      Exercises                                                                                                       641
+
+16. Vision and Multimodal Transformers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 643
+      Vision Transformers                                                                                             645
+        RNNs with Visual Attention                                                                                    645
+        DETR: A CNN-Transformer Hybrid for Object Detection                                                           646
+        The Original ViT                                                                                              647
+        Data-Efficient Image Transformer                                                                              652
+        Pyramid Vision Transformer for Dense Prediction Tasks                                                         653
+        The Swin Transformer: A Fast and Versatile ViT                                                                655
+        DINO: Self-Supervised Visual Representation Learning                                                          657
+        Other Major Vision Models and Techniques                                                                      660
+      Multimodal Transformers                                                                                         663
+        VideoBERT: A BERT Variant for Text plus Video                                                                 664
+        ViLBERT: A Dual-Stream Transformer for Text plus Image                                                        667
+        CLIP: A Dual-Encoder Text plus Image Model Trained
+          with Contrastive Pretraining                                                                                670
+        DALL·E: Generating Images from Text Prompts                                                                   675
+        Perceiver: Bridging High-Resolution Modalities with Latent Spaces                                             676
+        Perceiver IO: A Flexible Output Mechanism for the Perceiver                                                   680
+        Flamingo: Open-Ended Visual Dialogue                                                                          682
+        BLIP and BLIP-2                                                                                               684
+      Other Multimodal Models                                                                                         689
+      Exercises                                                                                                       691
+
+
+
+                                                                                             Table of Contents    |    xiii
+17. Speeding Up Transformers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 693
+
+18. Autoencoders, GANs, and Diffusion Models. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 695
+          Efficient Data Representations                                                                                   697
+          Performing PCA with an Undercomplete Linear Autoencoder                                                          699
+          Stacked Autoencoders                                                                                             700
+            Implementing a Stacked Autoencoder Using PyTorch                                                               701
+            Visualizing the Reconstructions                                                                                702
+            Anomaly Detection Using Autoencoders                                                                           703
+            Visualizing the Fashion MNIST Dataset                                                                          704
+            Unsupervised Pretraining Using Stacked Autoencoders                                                            705
+            Tying Weights                                                                                                  706
+            Training One Autoencoder at a Time                                                                             707
+          Convolutional Autoencoders                                                                                       708
+          Denoising Autoencoders                                                                                           710
+          Sparse Autoencoders                                                                                              711
+          Variational Autoencoders                                                                                         715
+          Generating Fashion MNIST Images                                                                                  719
+            Discrete Variational Autoencoders                                                                              720
+          Generative Adversarial Networks                                                                                  724
+            The Difficulties of Training GANs                                                                              728
+          Diffusion Models                                                                                                 730
+          Exercises                                                                                                        739
+
+19. Reinforcement Learning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 741
+          What Is Reinforcement Learning?                                                                                  742
+          Policy Gradients                                                                                                 744
+            Introduction to the Gymnasium Library                                                                          746
+            Neural Network Policies                                                                                        749
+            Evaluating Actions: The Credit Assignment Problem                                                              752
+            Solving the CartPole Using Policy Gradients                                                                    753
+          Value-Based Methods                                                                                              756
+            Markov Decision Processes                                                                                      756
+            Temporal Difference Learning                                                                                   761
+            Q-Learning                                                                                                     762
+            Exploration Policies                                                                                           764
+            Approximate Q-Learning and Deep Q-Learning                                                                     765
+            Implementing Deep Q-Learning                                                                                   766
+            DQN Improvements                                                                                               771
+          Actor-Critic Algorithms                                                                                          773
+          Mastering Atari Breakout Using the Stable-Baselines3 PPO Implementation                                          778
+          Overview of Some Popular RL Algorithms                                                                           782
+
+
+xiv   |     Table of Contents
+        Exercises                                                                                                                                 785
+        Thank You!                                                                                                                                785
+
+A. Autodiff. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 787
+
+B. Mixed Precision and Quantization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 795
+
+Index. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 815
+
+
+
+
+                                                                                                                     Table of Contents        |    xv
+

@@ -1,0 +1,250 @@
+## Slide 1
+Machine Learning
+
+## Slide 2
+The Difference Between AI, Machine Learning, and Deep Learning? | NVIDIA Blog
+
+## Slide 3
+什麼是人工智慧？​
+許多領域對於人工智慧的定義與見解都不大相同，但核心層面的定義是一樣的。 
+任何讓電腦能夠表現出「類似人類智慧行為」的科技；更具體一點的說法，人工智慧是一種可以感知、學習、推理、協助決策，並採取行動幫助我們解決問題的科技。
+傳統的程式是用一系列的指令以及規範來讓整個程式運作
+
+## Slide 4
+
+
+## Slide 5
+機器學習（
+Machine Learning
+）
+問題是：到底在學什麼？
+Mpg
+(
+英里
+/
+每加侖
+)
+ 
+Cylinders
+Displacement
+Horsepower
+Weight
+acceleration
+Yes/No
+(
+訂房取消預測
+)
+(
+是不是垃圾郵件
+)
+ 
+ 
+Airplane
+Automobile
+Bird
+Cat
+deer	
+Dog
+Frog
+Horse
+shiptruck
+Regression
+Classification
+
+## Slide 6
+Machine Learning
+
+## Slide 7
+監督式學習
+監督式學習最常處理的兩個問題：迴歸、分類。
+當你預測的目標為連續的數值，我們稱其為迴歸
+若目標為離散的，稱其為分類。
+迴歸
+：
+「畫出一條盡量通過這些點的線」
+如：股票走勢預測
+原物料價格變化對消費的影響。
+
+## Slide 8
+監督式學習
+分類
+：
+「把資料分到我
+指定的幾個類別中」
+情緒正向負向
+商品留言討論
+圖形分類問題
+手寫數字辨識
+演算法可能包含：
+k nearest neighbors, convolutional neural networks, random forests, support vector machines, linear and logistic regression……
+
+## Slide 9
+機器學習（
+Machine Learning
+）
+https://www.javatpoint.com/regression-vs-classification-in-machine-learning
+
+## Slide 10
+Regression 
+v.s
+. Classification
+Linear Regression
+Multi-classification
+
+## Slide 11
+非監督式學習
+非監督式學習 
+(
+Unsupervised Learning) 
+的訓練資料不需要事先以人力處理標籤，機器面對資料時，做的處理是依照關聯性去歸類 
+(
+Co-
+occurance
+ Grouping)
+、
+找出潛在規則與套路 
+(
+Association Rule Discovery)
+、
+形成集群 
+(
+Clustering)
+，
+不對資訊有正確或不正確的判別。
+
+## Slide 12
+非監督式學習
+主要問題領域：
+分群
+相似的商品或資料分成數群
+k-means, 
+hierarchical clustering, DBSCAN….
+異常偵測
+One-class SVM
+降維
+把具有很多維度的資料轉換
+(
+投影
+)
+到維度較少的空間中
+自然語言處理中很有名的
+word2Vec
+常用的
+PCA, 
+Singular Value Decomposition
+LLE
+、
+t-SNE
+生成
+Variational Autoencoders, and Generative Adversarial Networks (GANs)
+
+## Slide 13
+強化式學習
+強化式學習 
+(
+Reinforcement Learning) 
+的特徵是不需給機器任何的資料，讓機器直接從互動中去學習，這是最接近大自然與人類原本的學習方式
+(
+要學很久就是
+…….)
+。
+機器透過環境的正向、負向回饋 
+(
+positive / negative reward)
+，
+從中自我學習，並逐步形成對回饋刺激 
+(
+stimulus) 
+的預期，做出越來越有效率達成目標的行動 
+(
+action)
+，
+這個訓練過程的目標是獲取最大利益。
+
+## Slide 14
+還有
+..
+半監督式學習
+(semi-supervised learning)
+就像在監督學習中一樣，用少量標記的訓練數據訓練模型，直到得到好的結果。 
+然後將它與
+未標記的訓練數據集一起
+使用來預測輸出，這些輸出是偽標籤
+(pseudo labels)
+，因為它們可能不太準確。 
+將標記訓練數據中的標籤與上一步中創建的偽標籤鏈接起來。
+將標記訓練數據中的數據輸入與未標記數據中的輸入聯繫起來
+與開始時使用標記集相同的方式訓練模型，以減少錯誤並提高模型的準確性。
+
+## Slide 15
+Introduction of Machine Learning (ntu.edu.tw)
+，李宏毅教授投影片
+
+## Slide 16
+Transfer learning
+轉移學習就是把已經訓練好的模型、參數，轉移至另外的一個新模型上使得我們不需要從零開始，重新訓練一個新
+model
+舉例來說，你可以
+train
+好一個
+based on 
+Cifar
+ 10
+的
+CNN
+，然後把這個訓練出來的模型套用至其他影像辨識的數據上、甚至是使用這個模型成為一個特徵萃取機制，串接傳統的方法。
+
+## Slide 17
+Structured learning
+語音辨識 
+(
+Speech recognition) 
+的 
+input-output 
+分別都是 
+sequence
+；
+翻譯 
+(
+Translation)- 
+以中翻英為例， 
+input 
+中文和 
+output 
+英文分別都是 
+sequence
+；
+作文法剖析 
+(
+Syntactic parsing) 
+的 
+input-output 
+分別 
+sentence 
+和 
+tree structure
+；
+物件偵測 
+(
+Object detection)  
+的 
+input 
+是一張 
+image
+，
+output 
+則是一個 
+bounding box
+，
+以
+bounding box 
+框出 
+object 
+的位置
+
+## Slide 18
+參考內容
+Machine Learning with 
+PyTorch
+ and Scikit-Learn
+https://www.packtpub.com/product/machine-learning-with-pytorch-and-scikit-learn/9781801819312

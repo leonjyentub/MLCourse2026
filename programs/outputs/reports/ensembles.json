@@ -1,0 +1,69 @@
+{
+  "vote_check": {
+    "hard": 1,
+    "soft": 0
+  },
+  "bagging_oob": 0.8914285714285715,
+  "adaboost_round1": {
+    "r": 0.25,
+    "alpha": 1.0986122886681098
+  },
+  "gb_learning_rate_trees": [
+    {
+      "learning_rate": 1.0,
+      "n_estimators": 5,
+      "train_RMSE": 0.08539081082815095
+    },
+    {
+      "learning_rate": 1.0,
+      "n_estimators": 30,
+      "train_RMSE": 0.037269622115445
+    },
+    {
+      "learning_rate": 1.0,
+      "n_estimators": 120,
+      "train_RMSE": 0.0007080334816853186
+    },
+    {
+      "learning_rate": 0.1,
+      "n_estimators": 5,
+      "train_RMSE": 0.22577945849750827
+    },
+    {
+      "learning_rate": 0.1,
+      "n_estimators": 30,
+      "train_RMSE": 0.08593766729224352
+    },
+    {
+      "learning_rate": 0.1,
+      "n_estimators": 120,
+      "train_RMSE": 0.06193692386683693
+    }
+  ],
+  "stacking_leaky_vs_proper": [
+    1.0,
+    0.8685714285714287
+  ],
+  "model_comparison": {
+    "CV_accuracy": {
+      "shallow_tree": 0.8742857142857142,
+      "random_forest_200": 0.9,
+      "hist_grad_boosting": 0.9
+    },
+    "CV_sd": {
+      "shallow_tree": 0.027479120088101914,
+      "random_forest_200": 0.020203050891044242,
+      "hist_grad_boosting": 0.026726124191242463
+    },
+    "test_accuracy": {
+      "shallow_tree": 0.8866666666666667,
+      "random_forest_200": 0.9,
+      "hist_grad_boosting": 0.8933333333333333
+    },
+    "cv_seconds": {
+      "shallow_tree": 0.004,
+      "random_forest_200": 0.546,
+      "hist_grad_boosting": 2.081
+    }
+  }
+}

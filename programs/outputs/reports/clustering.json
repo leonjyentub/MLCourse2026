@@ -1,0 +1,11 @@
+{
+  "kmeans_1d": {
+    "inertia_before": 2.0,
+    "inertia_after": 1.0
+  },
+  "silhouette_best_k": 5,
+  "label_budget": 50,
+  "accuracy_random_labels": 0.837037037037037,
+  "accuracy_representative_labels": 0.8777777777777778,
+  "accuracy_after_propagation": 0.9333333333333333
+}
