@@ -245,7 +245,7 @@
     "title": "正則化：限制模型追隨資料的自由度",
     "minutes": 4,
     "cumulative": 91,
-    "source": "B1 p.33，圖1-24"
+    "source": "B1 p.31–33，圖1-23–1-24"
   },
   {
     "deck": "01_機器學習概觀",
@@ -306,17 +306,9 @@
   {
     "deck": "01_機器學習概觀",
     "slide": 35,
-    "title": "活動 B：設計一個可以相信的評估",
-    "minutes": 10,
-    "cumulative": 131,
-    "source": "B1 p.35–38；課堂活動B"
-  },
-  {
-    "deck": "01_機器學習概觀",
-    "slide": 36,
     "title": "第一週回顧與離堂題",
     "minutes": 5,
-    "cumulative": 136,
+    "cumulative": 126,
     "source": "B1 p.38–39；課程統整"
   },
   {
@@ -354,262 +346,302 @@
   {
     "deck": "02_端到端機器學習專案",
     "slide": 5,
-    "title": "活動 C：平均誤差為零，預測就很好嗎？",
-    "minutes": 7,
-    "cumulative": 22,
-    "source": "B2 p.45–47；課堂活動C"
-  },
-  {
-    "deck": "02_端到端機器學習專案",
-    "slide": 6,
     "title": "指標之前，還有用途與假設",
     "minutes": 3,
-    "cumulative": 25,
+    "cumulative": 18,
     "source": "B2 p.47–48"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 7,
+    "slide": 6,
     "title": "取得資料與保留可重現流程",
     "minutes": 3,
-    "cumulative": 28,
+    "cumulative": 21,
     "source": "B2 p.48–54"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 8,
+    "slide": 7,
     "title": "20,640 個區域、10 個欄位",
     "minutes": 5,
-    "cumulative": 33,
+    "cumulative": 26,
     "source": "B2 p.54–55，圖2-6"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 9,
+    "slide": 8,
     "title": "資料摘要透露的問題",
     "minutes": 4,
-    "cumulative": 37,
+    "cumulative": 30,
     "source": "B2 p.54–56，圖2-7"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 10,
+    "slide": 9,
     "title": "直方圖：偏態、尺度與截頂",
     "minutes": 6,
-    "cumulative": 43,
+    "cumulative": 36,
     "source": "B2 p.56–57，圖2-8"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 11,
+    "slide": 10,
     "title": "截頂標籤限制了能學到的事情",
     "minutes": 4,
-    "cumulative": 47,
+    "cumulative": 40,
     "source": "B2 p.57"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 12,
+    "slide": 11,
     "title": "在深入探索前保留測試集",
     "minutes": 4,
-    "cumulative": 51,
+    "cumulative": 44,
     "source": "B2 p.57–60; 補充：P2 s.3–4"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 13,
+    "slide": 12,
     "title": "分層抽樣保留重要群體比例",
     "minutes": 4,
-    "cumulative": 55,
+    "cumulative": 48,
     "source": "B2 p.60–62，圖2-9–2-10；課堂示例"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 14,
+    "slide": 13,
     "title": "地理視覺化：同時閱讀位置、人口與價格",
     "minutes": 5,
-    "cumulative": 60,
+    "cumulative": 53,
     "source": "B2 p.62–65，圖2-13"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 15,
+    "slide": 14,
     "title": "相關係數：線性關係的摘要",
     "minutes": 4,
-    "cumulative": 64,
+    "cumulative": 57,
     "source": "B2 p.65–68"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 16,
+    "slide": 15,
     "title": "散布圖補上相關係數看不到的細節",
     "minutes": 4,
-    "cumulative": 68,
+    "cumulative": 61,
     "source": "B2 p.66–68，圖2-15"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 17,
+    "slide": 16,
     "title": "補充：Iris 散布矩陣的讀法",
     "minutes": 4,
-    "cumulative": 72,
+    "cumulative": 65,
     "source": "B2 p.66，散布矩陣; 補充：P1 s.42"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 18,
+    "slide": 17,
     "title": "特徵組合：總量與比例回答不同問題",
     "minutes": 4,
-    "cumulative": 76,
+    "cumulative": 69,
     "source": "B2 p.68–69"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 19,
-    "title": "活動 D：從總量改成比例，結論會改變嗎？",
-    "minutes": 8,
-    "cumulative": 84,
-    "source": "B2 p.62–69；課堂活動D"
-  },
-  {
-    "deck": "02_端到端機器學習專案",
-    "slide": 20,
+    "slide": 18,
     "title": "資料準備要能重複套用",
     "minutes": 3,
-    "cumulative": 87,
+    "cumulative": 72,
     "source": "B2 p.69–70"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 21,
+    "slide": 19,
     "title": "缺失值：刪除或補值都有假設",
     "minutes": 5,
-    "cumulative": 92,
+    "cumulative": 77,
     "source": "B2 p.70–73"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 22,
+    "slide": 20,
     "title": "類別特徵：整數編碼不代表有大小",
     "minutes": 5,
-    "cumulative": 97,
+    "cumulative": 82,
     "source": "B2 p.73–77"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 23,
+    "slide": 21,
     "title": "特徵縮放與正則化不同",
     "minutes": 5,
-    "cumulative": 102,
+    "cumulative": 87,
     "source": "B2 p.77–78; 補充：P1 s.23"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 24,
+    "slide": 22,
     "title": "分布轉換與新表示",
     "minutes": 4,
-    "cumulative": 106,
+    "cumulative": 91,
     "source": "B2 p.78–85，圖2-17"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 25,
+    "slide": 23,
     "title": "Pipeline：把前處理與模型包成同一流程",
     "minutes": 4,
-    "cumulative": 110,
+    "cumulative": 95,
     "source": "B2 p.86–90"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 26,
+    "slide": 24,
     "title": "fit、transform、predict 各自做什麼？",
     "minutes": 3,
-    "cumulative": 113,
+    "cumulative": 98,
     "source": "B2 p.71–73,86–90"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 27,
+    "slide": 25,
     "title": "基準模型：改善應該有比較對象",
     "minutes": 4,
-    "cumulative": 117,
+    "cumulative": 102,
     "source": "B2 p.43–44,90–91；基準延伸"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 28,
+    "slide": 26,
     "title": "訓練分數可能非常誤導",
     "minutes": 4,
-    "cumulative": 121,
+    "cumulative": 106,
     "source": "B2 p.90–94"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 29,
+    "slide": 27,
     "title": "每一折都是一次完整的模型訓練",
     "minutes": 6,
-    "cumulative": 127,
+    "cumulative": 112,
     "source": "B2 p.92–93，圖2-20; 補充：P2 s.5–6"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 30,
+    "slide": 28,
     "title": "常見洩漏：切分後仍可能發生",
     "minutes": 5,
-    "cumulative": 132,
+    "cumulative": 117,
     "source": "B2 p.78,86–95；課程延伸"
   },
   {
     "deck": "02_端到端機器學習專案",
-    "slide": 31,
-    "title": "超參數搜尋：比較整個流程",
+    "slide": 29,
+    "title": "Fine-Tune Your Model：先固定評估規則",
+    "minutes": 3,
+    "cumulative": 120,
+    "source": "B2 p.93–94"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 30,
+    "title": "n-fold 交叉驗證如何支撐超參數搜尋",
     "minutes": 4,
-    "cumulative": 136,
-    "source": "B2 p.94–97"
+    "cumulative": 124,
+    "source": "B2 p.92–95，圖2-20"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 31,
+    "title": "Pipeline 的參數名稱可以一路往內指定",
+    "minutes": 3,
+    "cumulative": 127,
+    "source": "B2 p.94–95"
   },
   {
     "deck": "02_端到端機器學習專案",
     "slide": 32,
-    "title": "調參結果要連同評估方式閱讀",
-    "minutes": 4,
-    "cumulative": 140,
-    "source": "B2 p.93–97"
+    "title": "GridSearchCV：列出所有候選組合",
+    "minutes": 5,
+    "cumulative": 132,
+    "source": "B2 p.94–95"
   },
   {
     "deck": "02_端到端機器學習專案",
     "slide": 33,
-    "title": "錯誤分析：平均分數之外",
-    "minutes": 3,
-    "cumulative": 143,
-    "source": "B2 p.98–99"
+    "title": "GridSearchCV：讀取最佳設定與各折結果",
+    "minutes": 4,
+    "cumulative": 136,
+    "source": "B2 p.95–96"
   },
   {
     "deck": "02_端到端機器學習專案",
     "slide": 34,
-    "title": "最終測試與不確定性",
-    "minutes": 3,
-    "cumulative": 146,
-    "source": "B2 p.99–100"
+    "title": "RandomizedSearchCV：用固定預算抽樣",
+    "minutes": 5,
+    "cumulative": 141,
+    "source": "B2 p.96–97"
   },
   {
     "deck": "02_端到端機器學習專案",
     "slide": 35,
-    "title": "部署、監測與維護",
+    "title": "網格搜尋與隨機搜尋的選擇",
     "minutes": 3,
-    "cumulative": 149,
-    "source": "B2 p.100–103"
+    "cumulative": 144,
+    "source": "B2 p.95–97"
   },
   {
     "deck": "02_端到端機器學習專案",
     "slide": 36,
-    "title": "活動 E：找出評估流程的問題",
-    "minutes": 8,
-    "cumulative": 157,
-    "source": "B2 p.69–100；課堂活動E"
+    "title": "逐次減半：先用少量資源篩選候選",
+    "minutes": 2,
+    "cumulative": 146,
+    "source": "B2 p.97"
   },
   {
     "deck": "02_端到端機器學習專案",
     "slide": 37,
+    "title": "搜尋完成後才建立定案模型",
+    "minutes": 2,
+    "cumulative": 148,
+    "source": "B2 p.95,97–99"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 38,
+    "title": "活動：用計算預算設計超參數搜尋",
+    "minutes": 0,
+    "cumulative": 148,
+    "source": "B2 p.94–97；課堂活動（選配 10 分鐘）"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 39,
+    "title": "錯誤分析：平均分數之外",
+    "minutes": 3,
+    "cumulative": 151,
+    "source": "B2 p.98–99"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 40,
+    "title": "最終測試與不確定性",
+    "minutes": 3,
+    "cumulative": 154,
+    "source": "B2 p.99–100"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 41,
+    "title": "部署、監測與維護",
+    "minutes": 3,
+    "cumulative": 157,
+    "source": "B2 p.100–103"
+  },
+  {
+    "deck": "02_端到端機器學習專案",
+    "slide": 42,
     "title": "第二週回顧與課後整理",
     "minutes": 3,
     "cumulative": 160,

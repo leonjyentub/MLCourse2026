@@ -99,6 +99,15 @@ uv run python scripts/validate_deliverables.py
 uv run python scripts/execute_notebooks.py 03 04 --html
 ```
 
+若要在課堂上快速示範網格搜尋、隨機搜尋與 n-fold 成本，不必開啟 Notebook：
+
+```sh
+uv run python scripts/hyperparameter_search_demo.py
+```
+
+示例只讀本機 `data/housing.csv`，預設抽樣 3,000 列、使用 3-fold；可用
+`--rows`、`--cv` 與 `--n-iter` 調整規模。程式先以 CV 比較兩種搜尋，再由勝出者對保留測試集做一次最終評估。
+
 - `outputs/figures/`：PNG 與可編輯 SVG。
 - `outputs/reports/`：機器可讀的實際數據。
 - `outputs/execution.json`：逐本執行時間與成功狀態。
