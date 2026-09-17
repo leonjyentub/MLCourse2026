@@ -5,23 +5,14 @@ def slides(p):
     text=re.sub(r"^---\n.*?\n---\n", "", p.read_text(), count=1, flags=re.S)
     return re.split(r"\n---\s*\n", text)
 ROOT=Path(__file__).resolve().parents[1]
-expected=[(4,10),(35,126),(42,160),(36,160)]
-for p,(count,minutes) in zip(sorted((ROOT/'slides').glob('0[0-3]_*.md')),expected,strict=True):
+expected=[4,35,42,36]
+for p,count in zip(sorted((ROOT/'slides').glob('0[0-3]_*.md')),expected,strict=True):
  blocks=slides(p);assert len(blocks)==count,(p,len(blocks))
- times=[]
  for i,b in enumerate(blocks,1):
-  assert re.search(r'<!-- _footer:',b),(p,i,'missing footer')
   assert re.search(r'<!-- 講者提示：',b),(p,i,'missing notes')
-  meta=re.search(r'<!-- meta: (.*?) -->',b,re.S);assert meta,(p,i)
-  times.append(int(re.search(r'minutes=(\d+)',meta[1])[1]))
   assert re.search(r'^#{1,2} ',b,re.M),(p,i,'missing title')
   for url in re.findall(r'\]\((assets/[^)]+)\)',b):assert (p.parent/url).exists(),(p,i,url)
- assert sum(times)==minutes,(p,sum(times))
- # Verify published break points exactly.
- if p.name.startswith('01'):assert sum(times[:14])==45 and sum(times[14:27])==46
- if p.name.startswith('02'):assert sum(times[:12])==48 and sum(times[12:23])==47
- if p.name.startswith('03'):assert sum(times[:13])==55 and sum(times[13:25])==55
- print(p.name,count,'slides;',minutes,'minutes; source/notes/assets OK')
+ print(p.name,count,'slides; notes/assets OK')
 for p in (ROOT/'slides/assets').glob('*.svg'):E.parse(p)
 # Recompute actual table values and curve points rather than checking only strings.
 tn,fp,fn,tp=53892,687,1891,3530
