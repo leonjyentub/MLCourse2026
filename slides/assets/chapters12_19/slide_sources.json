@@ -1,0 +1,2039 @@
+[
+  {
+    "deck": "14_卷積神經網路_影像特徵與架構.md",
+    "chapter": "12",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "卷積神經網路：影像特徵與架構",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.12，PDF pp.1–37；兩次休息各10分鐘。"
+      },
+      {
+        "slide": 3,
+        "title": "影像分類的輸入與輸出",
+        "source": "書本 Ch.12，PDF pp.1–9"
+      },
+      {
+        "slide": 4,
+        "title": "MLP 與 CNN 的銜接",
+        "source": "補充：MachineLearning2025 06_ANN_from_Scratch_MNIST.py；僅作結構對照，原程式的Sigmoid與MSE並非本章分類設計。"
+      },
+      {
+        "slide": 5,
+        "title": "視覺皮質帶來的設計啟發",
+        "source": "書本 Ch.12，PDF pp.2–3"
+      },
+      {
+        "slide": 6,
+        "title": "局部感受野",
+        "source": "書本 Ch.12，PDF 4，圖 12-2。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 7,
+        "title": "參數共用的效果",
+        "source": "書本 Ch.12，PDF pp.3–9；自編尺寸例。"
+      },
+      {
+        "slide": 8,
+        "title": "濾波器與特徵圖",
+        "source": "書本 Ch.12，PDF 6，圖 12-5。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 9,
+        "title": "卷積手算：一個位置",
+        "source": "自編數例，依Ch.12 pp.3–8。深度學習Conv2d實際用互相關慣例，不翻轉kernel。答案右上=-1、左下=-1、右下=1。"
+      },
+      {
+        "slide": 10,
+        "title": "卷積手算：完整輸出",
+        "source": "自編數例解答；同上。"
+      },
+      {
+        "slide": 11,
+        "title": "Padding 保留邊界附近的資訊",
+        "source": "書本 Ch.12，PDF 5，圖 12-3。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 12,
+        "title": "輸出尺寸公式",
+        "source": "書本 Ch.12，PDF pp.5–12；公式為標準離散尺寸計算。"
+      },
+      {
+        "slide": 13,
+        "title": "多個通道如何合成輸出",
+        "source": "書本 Ch.12，PDF 7，圖 12-6。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 14,
+        "title": "Conv2d 的形狀檢查",
+        "source": "書本 Ch.12，PDF pp.9–12；程式依作者 12_deep_computer_vision_with_cnns.ipynb Cells 20–43 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 15,
+        "title": "讀碼練習：影像軸的順序",
+        "source": "書本 Ch.12，PDF pp.9–10；作者Cells20–24；X_nhwc為已載入影像。"
+      },
+      {
+        "slide": 16,
+        "title": "Max pooling",
+        "source": "書本 Ch.12，PDF 13，圖 12-9。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 17,
+        "title": "池化與平移的關係",
+        "source": "書本 Ch.12，PDF pp.13–17"
+      },
+      {
+        "slide": 18,
+        "title": "Pooling 的 PyTorch 實作",
+        "source": "書本 Ch.12，PDF pp.15–17；程式依作者 12_deep_computer_vision_with_cnns.ipynb Cells 44–61（教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 19,
+        "title": "分類 CNN 的典型組成",
+        "source": "書本 Ch.12，PDF 18，圖 12-12。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 20,
+        "title": "小型 CNN：先追蹤每一層尺寸",
+        "source": "書本 Ch.12，PDF pp.17–20；程式依作者 12_deep_computer_vision_with_cnns.ipynb Cell 64（簡化改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 21,
+        "title": "分類損失與評估",
+        "source": "書本 Ch.12，PDF pp.19–20；y為目前batch標籤。"
+      },
+      {
+        "slide": 22,
+        "title": "LeNet-5 與 AlexNet",
+        "source": "書本 Ch.12，PDF pp.21–23，表12-1、12-2；補充07_Convolutional Neural Networks.pptx架構段。"
+      },
+      {
+        "slide": 23,
+        "title": "資料增強改變訓練影像",
+        "source": "書本 Ch.12，PDF 23，圖 12-13。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 24,
+        "title": "增強的標籤檢查",
+        "source": "書本 Ch.12，PDF pp.22–23；自編教學判斷題，需依實際標註定義。"
+      },
+      {
+        "slide": 25,
+        "title": "Inception 的平行分支",
+        "source": "書本 Ch.12，PDF 24，圖 12-14。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 26,
+        "title": "1×1 卷積的計算量例子",
+        "source": "書本 Ch.12，PDF pp.24–27；自編計算。"
+      },
+      {
+        "slide": 27,
+        "title": "Residual learning",
+        "source": "書本 Ch.12，PDF 28，圖 12-16。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 28,
+        "title": "殘差相加的尺寸條件",
+        "source": "書本 Ch.12，PDF pp.28–31、41–42；作者Cell74僅檢查stride>1，其ResNet34呼叫設計在改通道時同時改stride；任意重用類別時須另檢查通道。"
+      },
+      {
+        "slide": 29,
+        "title": "殘差連接：一般化的尺寸判斷",
+        "source": "書本 Ch.12，PDF pp.41–42；程式依作者 12_deep_computer_vision_with_cnns.ipynb Cell 74（教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 30,
+        "title": "Depthwise separable convolution",
+        "source": "書本 Ch.12，PDF 32，圖 12-20。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 31,
+        "title": "一般卷積與可分離卷積",
+        "source": "書本 Ch.12，PDF pp.31–33；自編計算，補充Xception與MobileNet。"
+      },
+      {
+        "slide": 32,
+        "title": "Squeeze-and-Excitation",
+        "source": "書本 Ch.12，PDF 34，圖 12-22。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 33,
+        "title": "其他 CNN 架構的設計焦點",
+        "source": "書本 Ch.12，PDF pp.35–38；作概念比較，不當作即時排行榜。"
+      },
+      {
+        "slide": 34,
+        "title": "課堂活動：小影像分類設計",
+        "source": "自編活動，對應Ch.12卷積、增強與架構章節。"
+      },
+      {
+        "slide": 35,
+        "title": "離堂檢核",
+        "source": "自編檢核。答案：濾波器數可設計；16×16；非batch的C/H/W；分類可容忍局部位移但定位需要空間細節。"
+      },
+      {
+        "slide": 36,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "15_電腦視覺_遷移學習與偵測分割.md",
+    "chapter": "12",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "電腦視覺：遷移學習與偵測分割",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.12，PDF pp.37–66；兩次10分鐘休息。"
+      },
+      {
+        "slide": 3,
+        "title": "影像任務的輸出差異",
+        "source": "書本 Ch.12，PDF pp.48–64"
+      },
+      {
+        "slide": 4,
+        "title": "模型選擇的比較表",
+        "source": "書本 Ch.12，PDF pp.37–40，表12-3"
+      },
+      {
+        "slide": 5,
+        "title": "推論與訓練的記憶體",
+        "source": "書本 Ch.12，PDF pp.38–41"
+      },
+      {
+        "slide": 6,
+        "title": "預訓練模型與前處理成對使用",
+        "source": "書本 Ch.12，PDF pp.42–44；程式依作者 12_deep_computer_vision_with_cnns.ipynb Cells 78、82 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 7,
+        "title": "預訓練類別與目標類別",
+        "source": "書本 Ch.12，PDF pp.42–48；作者Cells78–104。"
+      },
+      {
+        "slide": 8,
+        "title": "遷移學習：凍結主幹與更換分類頭",
+        "source": "書本 Ch.12，PDF pp.44–48；程式依作者 12_deep_computer_vision_with_cnns.ipynb Cells 92–104 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 9,
+        "title": "凍結參數與 train／eval",
+        "source": "書本 Ch.12，PDF pp.44–48；銜接Ch.11遷移學習。"
+      },
+      {
+        "slide": 10,
+        "title": "定位需要額外的監督訊號",
+        "source": "書本 Ch.12，PDF pp.48–51；作者Cell106 FlowerLocator。"
+      },
+      {
+        "slide": 11,
+        "title": "IoU：框的交集與聯集",
+        "source": "書本 Ch.12，PDF 51，圖 12-24。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 12,
+        "title": "IoU 手算",
+        "source": "自編數例；Ch.12 PDF p.51。"
+      },
+      {
+        "slide": 13,
+        "title": "滑動視窗的重複運算",
+        "source": "書本 Ch.12，PDF pp.52–56"
+      },
+      {
+        "slide": 14,
+        "title": "全卷積網路處理不同尺寸",
+        "source": "書本 Ch.12，PDF 56，圖 12-26。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 15,
+        "title": "YOLO 的偵測流程",
+        "source": "書本 Ch.12，PDF pp.56–60；不把某一代的anchor或NMS設計推成所有版本共通。"
+      },
+      {
+        "slide": 16,
+        "title": "NMS 手算",
+        "source": "自編例；Ch.12 PDF pp.56–60。"
+      },
+      {
+        "slide": 17,
+        "title": "Precision、Recall 與 AP",
+        "source": "書本 Ch.12，PDF pp.58–60；Notebook Extra Material mAP。"
+      },
+      {
+        "slide": 18,
+        "title": "mAP 的定義要寫清楚",
+        "source": "書本 Ch.12，PDF pp.58–60；不同基準可能也對尺度與max detections有不同設定。"
+      },
+      {
+        "slide": 19,
+        "title": "偵測程式導讀",
+        "source": "程式：Ch12作者Notebook Cells125–131；未聲稱本次執行。"
+      },
+      {
+        "slide": 20,
+        "title": "物件追蹤與身分切換",
+        "source": "書本 Ch.12，PDF pp.60–61；作者Object Tracking Cells132–133。"
+      },
+      {
+        "slide": 21,
+        "title": "語意分割的像素標籤",
+        "source": "書本 Ch.12，PDF 62，圖 12-27。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 22,
+        "title": "語意、實例與全景分割",
+        "source": "書本 Ch.12，PDF pp.61–64；全景分割為任務對照補充。"
+      },
+      {
+        "slide": 23,
+        "title": "轉置卷積與上採樣",
+        "source": "書本 Ch.12，PDF 63，圖 12-28。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 24,
+        "title": "跳接保留細節",
+        "source": "書本 Ch.12，PDF 64，圖 12-29。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 25,
+        "title": "其他卷積層的用途",
+        "source": "書本 Ch.12，PDF pp.63–64"
+      },
+      {
+        "slide": 26,
+        "title": "課堂活動：校園垃圾辨識",
+        "source": "自編整合活動。"
+      },
+      {
+        "slide": 27,
+        "title": "離堂檢核",
+        "source": "自編檢核。答案：輸入分布一致；否；重複框可能為FP；不一定，需實例區分。"
+      },
+      {
+        "slide": 28,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "16_序列模型_RNN與時間序列預測.md",
+    "chapter": "13",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "序列模型：RNN 與時間序列預測",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.13，PDF pp.1–42；兩次10分鐘休息。"
+      },
+      {
+        "slide": 3,
+        "title": "循環層沿時間重用參數",
+        "source": "書本 Ch.13，PDF 3，圖 13-2。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 4,
+        "title": "RNN 的狀態更新",
+        "source": "書本 Ch.13，PDF pp.2–5"
+      },
+      {
+        "slide": 5,
+        "title": "循環狀態手算",
+        "source": "自編數例；先前輸入透過隱藏狀態影響結果。"
+      },
+      {
+        "slide": 6,
+        "title": "四種序列輸入與輸出",
+        "source": "書本 Ch.13，PDF 6，圖 13-4。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 7,
+        "title": "Hidden state 與 output",
+        "source": "書本 Ch.13，PDF pp.4–7"
+      },
+      {
+        "slide": 8,
+        "title": "Backpropagation through time",
+        "source": "書本 Ch.13，PDF 7，圖 13-5。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 9,
+        "title": "時間序列的季節性",
+        "source": "書本 Ch.13，PDF 9，圖 13-6。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 10,
+        "title": "先建立樸素基準",
+        "source": "書本 Ch.13，PDF pp.8–13"
+      },
+      {
+        "slide": 11,
+        "title": "ARMA、ARIMA 與 SARIMA",
+        "source": "書本 Ch.13，PDF pp.13–16"
+      },
+      {
+        "slide": 12,
+        "title": "時間切分與洩漏",
+        "source": "書本 Ch.13，PDF pp.16–18、23–29；自編資料洩漏檢核。"
+      },
+      {
+        "slide": 13,
+        "title": "單步預測的滑動視窗",
+        "source": "書本 Ch.13，PDF pp.16–18；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cell 48（簡化） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 14,
+        "title": "線性基準與公平比較",
+        "source": "書本 Ch.13，PDF pp.18–20；作者Cell52。"
+      },
+      {
+        "slide": 15,
+        "title": "RNN 的張量形狀",
+        "source": "書本 Ch.13，PDF pp.19–23；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cells 58–64（改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 16,
+        "title": "深層 RNN 的兩種深度",
+        "source": "書本 Ch.13，PDF 22，圖 13-10。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 17,
+        "title": "多變量預測的可用性",
+        "source": "書本 Ch.13，PDF pp.23–24；自編可用性例。"
+      },
+      {
+        "slide": 18,
+        "title": "遞迴式多步預測",
+        "source": "書本 Ch.13，PDF 25，圖 13-11。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 19,
+        "title": "多步預測的三種設計",
+        "source": "書本 Ch.13，PDF pp.24–29"
+      },
+      {
+        "slide": 20,
+        "title": "遞迴預測的時間軸",
+        "source": "書本 Ch.13，PDF pp.24–26；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cell 80 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 21,
+        "title": "Seq2seq 預測的標籤對齊",
+        "source": "書本 Ch.13，PDF pp.27–29；自編H=3對齊表，作者Cells87–102。"
+      },
+      {
+        "slide": 22,
+        "title": "評估多步預測",
+        "source": "書本 Ch.13，PDF pp.24–29；自編評估規格。"
+      },
+      {
+        "slide": 23,
+        "title": "長序列訓練的困難",
+        "source": "書本 Ch.13，PDF pp.29–32"
+      },
+      {
+        "slide": 24,
+        "title": "LSTM 的記憶路徑",
+        "source": "書本 Ch.13，PDF 32，圖 13-12。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 25,
+        "title": "LSTM 的核心更新",
+        "source": "書本 Ch.13，PDF pp.31–35"
+      },
+      {
+        "slide": 26,
+        "title": "LSTM 門值手算",
+        "source": "自編門控數例。遺忘門0時c=-0.1。"
+      },
+      {
+        "slide": 27,
+        "title": "GRU 的精簡門控",
+        "source": "書本 Ch.13，PDF 35，圖 13-13。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 28,
+        "title": "RNN、LSTM、GRU 的介面差異",
+        "source": "書本 Ch.13，PDF pp.31–36；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cells 107、112 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 29,
+        "title": "一維卷積處理序列",
+        "source": "書本 Ch.13，PDF pp.36–40"
+      },
+      {
+        "slide": 30,
+        "title": "因果卷積只在左側補值",
+        "source": "書本 Ch.13，PDF pp.38–40；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cell 123 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 31,
+        "title": "WaveNet 的擴張卷積",
+        "source": "書本 Ch.13，PDF 39，圖 13-14。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 32,
+        "title": "課堂實作：兩週運量預測",
+        "source": "自編實作；作者Exercises含雙運量預測、Bach音樂、QuickDraw與音訊分類，選讀不同任務對齊。"
+      },
+      {
+        "slide": 33,
+        "title": "離堂檢核",
+        "source": "自編檢核。參數跨樣本共用，state依序列而變；時間依賴；誤差回饋；左側。"
+      },
+      {
+        "slide": 34,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "17_自然語言處理_詞嵌入與注意力.md",
+    "chapter": "14",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "自然語言處理：詞嵌入與注意力",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.14，PDF pp.1–52；兩次10分鐘休息。"
+      },
+      {
+        "slide": 3,
+        "title": "字元語言模型的任務",
+        "source": "書本 Ch.14，PDF pp.2–6"
+      },
+      {
+        "slide": 4,
+        "title": "輸入與目標相差一個位置",
+        "source": "書本 Ch.14，PDF 5，圖 14-1。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 5,
+        "title": "字元視窗手算",
+        "source": "自編例；對應Ch14 pp.3–6。"
+      },
+      {
+        "slide": 6,
+        "title": "Embedding 是可學習的查表",
+        "source": "書本 Ch.14，PDF 7，圖 14-2。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 7,
+        "title": "Embedding 的輸入與輸出",
+        "source": "書本 Ch.14，PDF pp.6–9；程式依作者 14_nlp_with_rnns_and_attention.ipynb Cell 39 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 8,
+        "title": "舊稿補充：One-hot、詞袋與詞向量",
+        "source": "補充：08_Recurrent Neural Networks.pptx s.40–80；修正舊稿混用token one-hot與文件表示的說法。"
+      },
+      {
+        "slide": 9,
+        "title": "Char-RNN 的模型結構",
+        "source": "書本 Ch.14，PDF pp.9–11；程式依作者 14_nlp_with_rnns_and_attention.ipynb Cell 42（結構節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 10,
+        "title": "Temperature 與抽樣",
+        "source": "書本 Ch.14，PDF pp.11–13"
+      },
+      {
+        "slide": 11,
+        "title": "Stateful RNN 的資料順序",
+        "source": "程式：作者Cells55–72的stateful補充，銜接Ch14字元生成。"
+      },
+      {
+        "slide": 12,
+        "title": "情感分類的標籤單位",
+        "source": "書本 Ch.14，PDF pp.13–15、34–35；後三類為教學測例。"
+      },
+      {
+        "slide": 13,
+        "title": "三種子詞 tokenizer",
+        "source": "書本 Ch.14，PDF pp.14–21，表14-1；各實作的訓練準則與解碼行為需依tokenizer設定。"
+      },
+      {
+        "slide": 14,
+        "title": "Tokenizer 必須搭配預訓練模型",
+        "source": "書本 Ch.14，PDF pp.20–22；程式依作者 14_nlp_with_rnns_and_attention.ipynb Cell 125（改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 15,
+        "title": "Padding 與截斷",
+        "source": "書本 Ch.14，PDF pp.21–25"
+      },
+      {
+        "slide": 16,
+        "title": "Packed sequence 避免讀入尾端補值",
+        "source": "書本 Ch.14，PDF pp.23–25；程式依作者 14_nlp_with_rnns_and_attention.ipynb Cell 137（節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 17,
+        "title": "情感分類頭的損失與形狀",
+        "source": "書本 Ch.14，PDF pp.22–25；作者SentimentAnalysisModel Cells134–139的教學節錄。"
+      },
+      {
+        "slide": 18,
+        "title": "雙向 RNN 的上下文",
+        "source": "書本 Ch.14，PDF 25，圖 14-4。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 19,
+        "title": "POS tagging 的逐 token 標籤",
+        "source": "補充：09_POS tagging.pptx s.2–3。將舊稿jumps泛寫VB修正為Penn第三人稱單數現在式VBZ；與UD粗標籤不同。"
+      },
+      {
+        "slide": 20,
+        "title": "Stemming、lemmatization 與任務需求",
+        "source": "補充：09_POS tagging.pptx詞幹、詞形還原與spaCy段落；Ch14 tokenizer原則。"
+      },
+      {
+        "slide": 21,
+        "title": "預訓練表示的兩個層次",
+        "source": "書本 Ch.14，PDF pp.27–29；作者Cells143–160。"
+      },
+      {
+        "slide": 22,
+        "title": "Task-specific class、Trainer 與 pipeline",
+        "source": "書本 Ch.14，PDF pp.29–34；作者Cells161–186。"
+      },
+      {
+        "slide": 23,
+        "title": "偏差與公平性檢查",
+        "source": "書本 Ch.14，PDF pp.34–35；自編教學測試流程。"
+      },
+      {
+        "slide": 24,
+        "title": "Encoder–decoder 翻譯",
+        "source": "書本 Ch.14，PDF 36，圖 14-5。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 25,
+        "title": "Teacher forcing 的位移",
+        "source": "書本 Ch.14，PDF pp.36–42"
+      },
+      {
+        "slide": 26,
+        "title": "翻譯的固定向量瓶頸",
+        "source": "書本 Ch.14，PDF pp.42–45；最後一句為自編評估任務。"
+      },
+      {
+        "slide": 27,
+        "title": "Beam search 保留多條候選",
+        "source": "書本 Ch.14，PDF 44，圖 14-7。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 28,
+        "title": "Greedy 不一定選到整句高機率",
+        "source": "自編數例；Ch14 pp.43–45。實際以log probability避免連乘下溢，並注意長度偏好。"
+      },
+      {
+        "slide": 29,
+        "title": "Attention 動態讀取來源序列",
+        "source": "書本 Ch.14，PDF 46，圖 14-8。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 30,
+        "title": "注意力的三個步驟",
+        "source": "書本 Ch.14，PDF pp.45–50；加性與點積score皆可。"
+      },
+      {
+        "slide": 31,
+        "title": "注意力加權平均手算",
+        "source": "自編數例；對應Ch14 attention。"
+      },
+      {
+        "slide": 32,
+        "title": "程式導讀：Luong attention",
+        "source": "程式：作者Ch14 attention區段。補充10_Attention.pptx s.3–12的固定context瓶頸。"
+      },
+      {
+        "slide": 33,
+        "title": "課堂活動：可重現的情感分類比較",
+        "source": "自編活動。"
+      },
+      {
+        "slide": 34,
+        "title": "離堂檢核",
+        "source": "自編檢核。答案：否；否；真實前詞vs生成前詞；可讀所有來源位置。"
+      },
+      {
+        "slide": 35,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "18_Transformer_注意力架構與預訓練.md",
+    "chapter": "15",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "Transformer：注意力架構與預訓練",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.15，PDF pp.1–33；兩次10分鐘休息。"
+      },
+      {
+        "slide": 3,
+        "title": "三種 Transformer 家族",
+        "source": "書本 Ch.15，PDF pp.1–5、18、33、63–65"
+      },
+      {
+        "slide": 4,
+        "title": "原始 Transformer 的完整架構",
+        "source": "書本 Ch.15，PDF pp.5–7，圖15-3；保留原圖，右側依資訊流補充中文導讀。"
+      },
+      {
+        "slide": 5,
+        "title": "序列沒有循環，仍需要位置資訊",
+        "source": "書本 Ch.15，PDF pp.8–9；10_Attention.pptx s.38–48。"
+      },
+      {
+        "slide": 6,
+        "title": "可學習位置向量",
+        "source": "書本 Ch.15，PDF pp.8–9；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 31（移除Dropout以聚焦位置） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 7,
+        "title": "固定位置編碼的概念",
+        "source": "書本 Ch.15，PDF pp.8–9；作者Extra Material Fixed Positional Encodings。"
+      },
+      {
+        "slide": 8,
+        "title": "Q、K、V 的分工",
+        "source": "書本 Ch.15，PDF pp.9–14；補充10_Attention.pptx s.22–35。"
+      },
+      {
+        "slide": 9,
+        "title": "Scaled dot-product attention",
+        "source": "書本 Ch.15，PDF pp.9–13，式15-1。"
+      },
+      {
+        "slide": 10,
+        "title": "點積注意力手算",
+        "source": "自編數例。分數不變，輸出改為[0.660,2.680]。"
+      },
+      {
+        "slide": 11,
+        "title": "四行看懂 attention 核心",
+        "source": "書本 Ch.15，PDF pp.9–14；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 35（節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 12,
+        "title": "多頭注意力分別學習不同投影",
+        "source": "書本 Ch.15，PDF 11，圖 15-4。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 13,
+        "title": "多頭的維度追蹤",
+        "source": "書本 Ch.15，PDF pp.10–14；自編尺寸。"
+      },
+      {
+        "slide": 14,
+        "title": "兩種遮罩處理不同問題",
+        "source": "書本 Ch.15，PDF pp.14–18；作者Cell46；自寫MHA與nn.Transformer的True=block，F.scaled_dot_product_attention布林True=allow。"
+      },
+      {
+        "slide": 15,
+        "title": "Causal mask 手算",
+        "source": "自編矩陣；對應Ch15 decoder遮罩。"
+      },
+      {
+        "slide": 16,
+        "title": "Feed-forward network 與殘差",
+        "source": "書本 Ch.15，PDF pp.14–16"
+      },
+      {
+        "slide": 17,
+        "title": "LayerNorm 手算：舊稿的四維例子",
+        "source": "補充：10_Attention.pptx s.52–53；Ch15 pp.14–16。"
+      },
+      {
+        "slide": 18,
+        "title": "Pre-norm 與 post-norm",
+        "source": "書本 Ch.15，PDF pp.14–16；變體為架構對照。"
+      },
+      {
+        "slide": 19,
+        "title": "翻譯 Transformer 的遮罩位置",
+        "source": "書本 Ch.15，PDF pp.16–18；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 46（簡化） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 20,
+        "title": "Encoder-only 模型與 BERT",
+        "source": "書本 Ch.15，PDF pp.18–27"
+      },
+      {
+        "slide": 21,
+        "title": "BERT 的預訓練目標",
+        "source": "書本 Ch.15，PDF 21，圖 15-5。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 22,
+        "title": "MLM 的遮蔽規則",
+        "source": "書本 Ch.15，PDF pp.19–22"
+      },
+      {
+        "slide": 23,
+        "title": "小型 BERT：區分隨機初始化與預訓練",
+        "source": "書本 Ch.15，PDF pp.19–22；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 57（簡化） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 24,
+        "title": "分類頭與逐 token 任務頭",
+        "source": "書本 Ch.15，PDF 24，圖 15-7。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 25,
+        "title": "問答任務的輸出設計",
+        "source": "書本 Ch.15，PDF pp.22–27"
+      },
+      {
+        "slide": 26,
+        "title": "DistilBERT 的知識蒸餾",
+        "source": "書本 Ch.15，PDF 28，圖 15-9。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 27,
+        "title": "Encoder 模型的改良方向",
+        "source": "書本 Ch.15，PDF pp.27–33；補充ModernBERT等後續模型為架構延伸，不列即時效能排名。"
+      },
+      {
+        "slide": 28,
+        "title": "課堂活動：找出注意力錯誤",
+        "source": "自編活動。前兩者錯誤；第三者是常見正確資訊流。"
+      },
+      {
+        "slide": 29,
+        "title": "離堂檢核",
+        "source": "自編檢核；15%=候選token，80%=被選中token；config不含學好權重。"
+      },
+      {
+        "slide": 30,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "19_大型語言模型_生成與聊天系統.md",
+    "chapter": "15",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "大型語言模型：生成與聊天系統",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.15，PDF pp.33–66；兩次10分鐘休息。"
+      },
+      {
+        "slide": 3,
+        "title": "Decoder-only 逐 token 生成",
+        "source": "書本 Ch.15，PDF 33，圖 15-12。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 4,
+        "title": "語言模型的機率分解",
+        "source": "書本 Ch.15，PDF pp.33–38"
+      },
+      {
+        "slide": 5,
+        "title": "GPT-1、GPT-2、GPT-3 的閱讀重點",
+        "source": "書本 Ch.15，PDF pp.34–38；LLM.pptx與執行大型語言模型.pptx補充。"
+      },
+      {
+        "slide": 6,
+        "title": "小模型生成：明確限制輸出長度",
+        "source": "書本 Ch.15，PDF pp.38–41；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cells 70–73（簡化） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 7,
+        "title": "生成參數的效果",
+        "source": "書本 Ch.15，PDF pp.38–41、48–50"
+      },
+      {
+        "slide": 8,
+        "title": "Prompting 與微調",
+        "source": "書本 Ch.15，PDF pp.37–41、48–50；LLM.pptx s.16–30。"
+      },
+      {
+        "slide": 9,
+        "title": "可檢查的提示範例",
+        "source": "自編教學提示；呼應Ch15 prompting、LLM.pptx精確語言與測試變體。"
+      },
+      {
+        "slide": 10,
+        "title": "模型載入與資源估算",
+        "source": "書本 Ch.15，PDF pp.41–45；估算使用十進位GB，非完整記憶體需求。"
+      },
+      {
+        "slide": 11,
+        "title": "Base model 與聊天模型",
+        "source": "書本 Ch.15，PDF pp.45–51"
+      },
+      {
+        "slide": 12,
+        "title": "對話歷史與 context window",
+        "source": "書本 Ch.15，PDF pp.45–50"
+      },
+      {
+        "slide": 13,
+        "title": "聊天模型的訓練階段",
+        "source": "書本 Ch.15，PDF 50，圖 15-17。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 14,
+        "title": "SFT：用示範回答教模型",
+        "source": "書本 Ch.15，PDF pp.50–51、55–57"
+      },
+      {
+        "slide": 15,
+        "title": "RLHF 與 DPO 的差異",
+        "source": "書本 Ch.15，PDF pp.51–55"
+      },
+      {
+        "slide": 16,
+        "title": "DPO 損失的意義",
+        "source": "書本 Ch.15，PDF pp.52–55，式15-2。"
+      },
+      {
+        "slide": 17,
+        "title": "DPO 手算",
+        "source": "自編DPO數例；Ch15 pp.52–55。"
+      },
+      {
+        "slide": 18,
+        "title": "答案 log probability 的位移",
+        "source": "書本 Ch.15，PDF pp.53–55；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cells 117–124（教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 19,
+        "title": "TRL 訓練流程導讀",
+        "source": "程式：作者Ch15 TRL區段，需對應版本套件與完整前置儲存路徑。"
+      },
+      {
+        "slide": 20,
+        "title": "完整聊天系統的組成",
+        "source": "書本 Ch.15，PDF pp.57–63"
+      },
+      {
+        "slide": 21,
+        "title": "RAG 的工作流程",
+        "source": "書本 Ch.15，PDF pp.58–60；LLM.pptx s.31–32。"
+      },
+      {
+        "slide": 22,
+        "title": "工具呼叫與程式執行的邊界",
+        "source": "書本 Ch.15，PDF pp.58–62；自編工具邊界教學。"
+      },
+      {
+        "slide": 23,
+        "title": "MCP 與結構化生成",
+        "source": "書本 Ch.15，PDF pp.60–62；只講書中概念，不綁定即時協定版本。"
+      },
+      {
+        "slide": 24,
+        "title": "框架與執行環境的分工",
+        "source": "書本 Ch.15，PDF pp.62–63；是教材中的角色分類，產品功能可能跨層，不作安裝建議。"
+      },
+      {
+        "slide": 25,
+        "title": "Encoder–decoder 的 text-to-text 任務",
+        "source": "書本 Ch.15，PDF pp.63–65；ByT5仍有位元組編碼，不把「免子詞切分」誤寫成完全沒有離散輸入。"
+      },
+      {
+        "slide": 26,
+        "title": "課堂活動：課程規則問答",
+        "source": "自編活動，對應Ch15 pp.57–63。"
+      },
+      {
+        "slide": 27,
+        "title": "離堂檢核",
+        "source": "自編檢核。SFT更新；比較相對logprob並限制偏離；格式不保證真實；資料、檢索、提示、回答引用。"
+      },
+      {
+        "slide": 28,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "20_視覺與多模態Transformer.md",
+    "chapter": "16",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "視覺與多模態 Transformer",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.16，PDF pp.1–50；兩次10分鐘休息。"
+      },
+      {
+        "slide": 3,
+        "title": "視覺注意力的早期脈絡",
+        "source": "書本 Ch.16，PDF pp.3–4；補充11_Image Captioning.pptx s.3–5、20–25。"
+      },
+      {
+        "slide": 4,
+        "title": "DETR：用集合預測做偵測",
+        "source": "書本 Ch.16，PDF 5，圖 16-2。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 5,
+        "title": "DETR 的配對概念",
+        "source": "書本 Ch.16，PDF pp.4–5"
+      },
+      {
+        "slide": 6,
+        "title": "ViT 把影像切成 token 序列",
+        "source": "書本 Ch.16，PDF 6，圖 16-3。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 7,
+        "title": "Patch 數量手算",
+        "source": "自編尺寸計算，對應Ch16 pp.5–10。"
+      },
+      {
+        "slide": 8,
+        "title": "以 Conv2d 完成 patch embedding",
+        "source": "書本 Ch.16，PDF pp.5–10；程式依作者 16_vision_and_multimodal_transformers.ipynb Cell 20（簡化） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 9,
+        "title": "ViT 的模型結構導讀",
+        "source": "程式：Ch16 Cells20–39。"
+      },
+      {
+        "slide": 10,
+        "title": "DeiT 的蒸餾 token",
+        "source": "書本 Ch.16，PDF 11，圖 16-4。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 11,
+        "title": "PVT 的金字塔表示",
+        "source": "書本 Ch.16，PDF 12，圖 16-5。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 12,
+        "title": "Swin 的視窗注意力",
+        "source": "書本 Ch.16，PDF 14，圖 16-6。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 13,
+        "title": "全域與視窗注意力的成本",
+        "source": "書本 Ch.16，PDF pp.11–15；忽略head與batch係數。"
+      },
+      {
+        "slide": 14,
+        "title": "DINO 的自蒸餾",
+        "source": "書本 Ch.16，PDF 16，圖 16-7。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 15,
+        "title": "自監督表示與 attention 圖",
+        "source": "書本 Ch.16，PDF pp.15–18；作者Cell44明確註記方向，教材保留此區別。"
+      },
+      {
+        "slide": 16,
+        "title": "其他視覺 Transformer 的路線",
+        "source": "書本 Ch.16，PDF pp.18–20"
+      },
+      {
+        "slide": 17,
+        "title": "多模態的四種關係",
+        "source": "書本 Ch.16，PDF pp.21–34"
+      },
+      {
+        "slide": 18,
+        "title": "VideoBERT 與 ViLBERT",
+        "source": "書本 Ch.16，PDF pp.22–28"
+      },
+      {
+        "slide": 19,
+        "title": "CLIP 的圖文對比學習",
+        "source": "書本 Ch.16，PDF 30，圖 16-13。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 20,
+        "title": "CLIP 的相似度矩陣",
+        "source": "書本 Ch.16，PDF pp.28–33；公式為教材對比學習概念的簡化記號。"
+      },
+      {
+        "slide": 21,
+        "title": "Zero-shot 分類依賴候選文字",
+        "source": "書本 Ch.16，PDF pp.30–33"
+      },
+      {
+        "slide": 22,
+        "title": "CLIP 推論介面",
+        "source": "書本 Ch.16，PDF pp.30–33；程式依作者 16_vision_and_multimodal_transformers.ipynb Cell 49（改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 23,
+        "title": "DALL·E 與 DALL·E 2 的差異",
+        "source": "書本 Ch.16，PDF pp.33–34；生成機制延伸至Ch18。"
+      },
+      {
+        "slide": 24,
+        "title": "Perceiver 的 latent bottleneck",
+        "source": "書本 Ch.16，PDF 35，圖 16-15。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 25,
+        "title": "Perceiver IO 的輸出查詢",
+        "source": "書本 Ch.16，PDF pp.34–40；作者FourierPositionalEncoding與Perceiver區段。"
+      },
+      {
+        "slide": 26,
+        "title": "Flamingo 的交錯圖文輸入",
+        "source": "書本 Ch.16，PDF 41，圖 16-17。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 27,
+        "title": "BLIP 與 BLIP-2 的銜接",
+        "source": "書本 Ch.16，PDF pp.42–47"
+      },
+      {
+        "slide": 28,
+        "title": "BLIP-2 的 Q-Former",
+        "source": "書本 Ch.16，PDF 43，圖 16-18。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 29,
+        "title": "BLIP-2 的兩階段學習",
+        "source": "書本 Ch.16，PDF pp.42–47"
+      },
+      {
+        "slide": 30,
+        "title": "舊稿圖片描述程式的閱讀路線",
+        "source": "補充：11_Image Captioning.pptx s.14–25；重複中文檔為同主題來源，不另當課程順序。"
+      },
+      {
+        "slide": 31,
+        "title": "其他多模態任務的分類",
+        "source": "書本 Ch.16，PDF pp.47–49；其他命名模型採選讀。"
+      },
+      {
+        "slide": 32,
+        "title": "多模態評估：看得見與推測的差別",
+        "source": "自編評估活動，銜接Ch16多模態應用。"
+      },
+      {
+        "slide": 33,
+        "title": "課堂活動：圖片檢索與描述",
+        "source": "自編活動。"
+      },
+      {
+        "slide": 34,
+        "title": "離堂檢核",
+        "source": "自編檢核；196，加CLS為197；CLIP比對；避免對全部輸入反覆self-attention；權重不等於因果證據。"
+      },
+      {
+        "slide": 35,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "21_Transformer加速_推論與參數高效微調.md",
+    "chapter": "17",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "Transformer 加速：推論與參數高效微調",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "教材範圍與學習成果",
+        "source": "書本：本地Ch17 pp.1–2；線上版PDF共65頁，正文由第5頁起。"
+      },
+      {
+        "slide": 3,
+        "title": "課堂安排與量測對象",
+        "source": "自編教學安排；作者Ch17 Notebook結構。"
+      },
+      {
+        "slide": 4,
+        "title": "先辨認瓶頸",
+        "source": "自編瓶頸表；本地Ch17導讀與作者Notebook加速分類。"
+      },
+      {
+        "slide": 5,
+        "title": "KV cache 重用先前的投影",
+        "source": "書本：線上Ch17 PDF 7，圖 17-1。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 6,
+        "title": "為何不必快取全部 Q",
+        "source": "書本：本地Ch17導讀；程式：作者Cell18 use_cache對照；線上圖17-1。"
+      },
+      {
+        "slide": 7,
+        "title": "KV cache 記憶體手算",
+        "source": "自編尺寸估算；2代表K和V。"
+      },
+      {
+        "slide": 8,
+        "title": "Cache 的功能比較",
+        "source": "書本 Ch.17，PDF 本地pp.1–2；作者KV Caching；程式依作者 17_speeding_up_transformers.ipynb Cell 18（改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 9,
+        "title": "推測解碼先提案再驗證",
+        "source": "書本：線上Ch17 PDF 10，圖 17-2。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 10,
+        "title": "Greedy 與抽樣的驗證不同",
+        "source": "程式：作者Cell20 assistant_model；本地Ch17推測解碼導讀，圖17-2為greedy教學。"
+      },
+      {
+        "slide": 11,
+        "title": "平行生成與動態批次",
+        "source": "書本：線上Ch17 pp.12–14導讀；自行整理方法角色。"
+      },
+      {
+        "slide": 12,
+        "title": "注意力分數的平方成本",
+        "source": "自編成本計算；本地Ch17 attention導讀。"
+      },
+      {
+        "slide": 13,
+        "title": "稀疏注意力：限制可見位置",
+        "source": "程式：作者BigBird Cells22–24；書本本地Ch17 sparse attention導讀，線上章節sparse目錄。"
+      },
+      {
+        "slide": 14,
+        "title": "近似注意力的不同路線",
+        "source": "程式：作者Cells25–45；Linformer為線上章節低秩注意力補充。"
+      },
+      {
+        "slide": 15,
+        "title": "Performer 的重排概念",
+        "source": "程式：作者Cells29–45，隨機特徵推導；此式省略分母並在文字明示。"
+      },
+      {
+        "slide": 16,
+        "title": "MHA、MQA 與 GQA",
+        "source": "書本：線上Ch17 PDF 36，圖 17-11。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 17,
+        "title": "共享 K／V 的尺寸比較",
+        "source": "自編計算；作者Cells48、50。"
+      },
+      {
+        "slide": 18,
+        "title": "GQA 的讀碼尺寸",
+        "source": "書本 Ch.17，PDF 本地pp.1–2；作者Sharing Projections；程式依作者 17_speeding_up_transformers.ipynb Cell 50（縮小張量） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 19,
+        "title": "MLA 與潛在快取（選讀）",
+        "source": "書本：線上Ch17圖17-12與共享投影段；選讀概念，不提供未驗證實作。"
+      },
+      {
+        "slide": 20,
+        "title": "FlashAttention 的重點",
+        "source": "程式：作者Cells51–57；Cell54指出toy實作只處理長度可整除block的情況。"
+      },
+      {
+        "slide": 21,
+        "title": "分塊 Softmax 的穩定性",
+        "source": "程式：作者flash_attention Cell53；自編錯誤辨識題。"
+      },
+      {
+        "slide": 22,
+        "title": "MoE 的稀疏啟用",
+        "source": "書本：本地Ch17 MoE導讀；線上章節MoE段。作者Notebook此標題下實際接LoRA，無完整MoE實作。"
+      },
+      {
+        "slide": 23,
+        "title": "MoE 的訓練問題（選讀）",
+        "source": "書本：線上Ch17 MoE目錄所列挑戰；自行整理觀察項目。"
+      },
+      {
+        "slide": 24,
+        "title": "LoRA 的低秩參數更新",
+        "source": "書本：線上Ch17 PDF 51，圖 17-15。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 25,
+        "title": "LoRA 的參數量手算",
+        "source": "自編數例；作者Cell59 PEFT配置。"
+      },
+      {
+        "slide": 26,
+        "title": "PEFT：指定要加 LoRA 的模組",
+        "source": "書本 Ch.17，PDF 本地pp.1–2；作者LoRA實作；程式依作者 17_speeding_up_transformers.ipynb Cell 59（節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 27,
+        "title": "Adapters 與其他 PEFT 方法",
+        "source": "書本：本地Ch17 PEFT導讀；作者LoRA段延伸比較。"
+      },
+      {
+        "slide": 28,
+        "title": "Activation checkpointing",
+        "source": "書本：本地Ch17 activation checkpointing導讀。"
+      },
+      {
+        "slide": 29,
+        "title": "Packing 與 bucketing 減少補值",
+        "source": "書本：線上Ch17 PDF 55，圖 17-16。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 30,
+        "title": "Packing 的文件邊界",
+        "source": "自編資料處理檢核；本地Ch17 sequence packing導讀。"
+      },
+      {
+        "slide": 31,
+        "title": "Gradient accumulation",
+        "source": "程式：作者Cell63；原例100batch可被4整除，課堂擴充討論尾組。"
+      },
+      {
+        "slide": 32,
+        "title": "累積梯度：處理最後不足一組",
+        "source": "書本 Ch.17，PDF 本地pp.1–2；作者Gradient Accumulation；程式依作者 17_speeding_up_transformers.ipynb Cell 63（修正尾組的教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 33,
+        "title": "平行訓練的切分方式",
+        "source": "書本：本地Ch17 parallelism導讀；線上章節平行訓練段。"
+      },
+      {
+        "slide": 34,
+        "title": "課堂活動：兩種瓶頸的方案",
+        "source": "自編活動。"
+      },
+      {
+        "slide": 35,
+        "title": "離堂檢核",
+        "source": "自編檢核；快取位置增加；K/V共享；否；可訓練狀態與單次activation峰值。"
+      },
+      {
+        "slide": 36,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "22_生成模型_自編碼器GAN與擴散.md",
+    "chapter": "18",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "生成模型：自編碼器、GAN 與擴散",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.18，PDF pp.1–46；大模型訓練安排課後選做。"
+      },
+      {
+        "slide": 3,
+        "title": "重建與生成的差別",
+        "source": "書本 Ch.18，PDF pp.1–6、21–26"
+      },
+      {
+        "slide": 4,
+        "title": "Autoencoder 的表示學習",
+        "source": "書本 Ch.18，PDF pp.3–6"
+      },
+      {
+        "slide": 5,
+        "title": "線性 Autoencoder 與 PCA",
+        "source": "書本 Ch.18，PDF 6，圖 18-2。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 6,
+        "title": "與本地 PCA 程式的連結",
+        "source": "補充：本地PCA檔17–40行；Ch18 pp.5–6。原檔產生10筆資料，註解的100筆不作依據；繪圖需另處理字型。"
+      },
+      {
+        "slide": 7,
+        "title": "SVD 程式的可用部分與限制",
+        "source": "補充：04_SVD_from_scratch.py 第20–37行，協方差除以n-1，U因此未採標準正交尺度；未修改原程式。"
+      },
+      {
+        "slide": 8,
+        "title": "線性 AE 的最小結構",
+        "source": "書本 Ch.18，PDF pp.5–6；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 22（教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 9,
+        "title": "Stacked AE 的瓶頸",
+        "source": "書本 Ch.18，PDF pp.6–9；作者Cell33。"
+      },
+      {
+        "slide": 10,
+        "title": "重建圖要與原圖成對檢查",
+        "source": "書本 Ch.18，PDF 9，圖 18-4。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 11,
+        "title": "AE 異常偵測的假設",
+        "source": "書本 Ch.18，PDF pp.9–10"
+      },
+      {
+        "slide": 12,
+        "title": "重建誤差閾值活動",
+        "source": "自編數例；不把四筆驗證樣本當真實閾值估計方法。"
+      },
+      {
+        "slide": 13,
+        "title": "表示視覺化與無監督預訓練",
+        "source": "書本 Ch.18，PDF pp.10–12"
+      },
+      {
+        "slide": 14,
+        "title": "Tied weights 與逐層預訓練",
+        "source": "書本 Ch.18，PDF pp.12–15；作者Cell55 TiedAutoencoder。"
+      },
+      {
+        "slide": 15,
+        "title": "卷積 Autoencoder",
+        "source": "書本 Ch.18，PDF pp.14–16"
+      },
+      {
+        "slide": 16,
+        "title": "Denoising AE 的訓練配對",
+        "source": "書本 Ch.18，PDF 16，圖 18-9。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 17,
+        "title": "去噪任務的實作檢查",
+        "source": "書本 Ch.18，PDF pp.16–17；依作者Cells68–77改寫。clean為0到1影像。"
+      },
+      {
+        "slide": 18,
+        "title": "稀疏 AE 的約束",
+        "source": "書本 Ch.18，PDF pp.17–21"
+      },
+      {
+        "slide": 19,
+        "title": "稀疏懲罰的 KL 形式",
+        "source": "書本 Ch.18，PDF pp.18–21；作者Cell81使用clamp。"
+      },
+      {
+        "slide": 20,
+        "title": "VAE 學習潛在分布",
+        "source": "書本 Ch.18，PDF 22，圖 18-12。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 21,
+        "title": "Reparameterization trick",
+        "source": "書本 Ch.18，PDF pp.21–24"
+      },
+      {
+        "slide": 22,
+        "title": "VAE 的抽樣",
+        "source": "書本 Ch.18，PDF pp.22–24；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 92（節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 23,
+        "title": "VAE 的重建與 KL 平衡",
+        "source": "書本 Ch.18，PDF pp.23–25；作者Cell93將KL除以784以配合像素平均MSE。"
+      },
+      {
+        "slide": 24,
+        "title": "標準常態先驗的 KL",
+        "source": "書本 Ch.18，PDF pp.24–25；自編數例。"
+      },
+      {
+        "slide": 25,
+        "title": "從先驗生成與重建的不同",
+        "source": "書本 Ch.18，PDF pp.25–26；需已有訓練VAE、latent_dim、device，完整作者Cells96–103。"
+      },
+      {
+        "slide": 26,
+        "title": "Latent interpolation",
+        "source": "書本 Ch.18，PDF 26，圖 18-14。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 27,
+        "title": "離散 VAE 與 Gumbel-Softmax",
+        "source": "書本 Ch.18，PDF pp.26–28；修正書中一次gumble拼字；作者Cells104–113並註記MPS特定版本處理。"
+      },
+      {
+        "slide": 28,
+        "title": "VQ-VAE 的 codebook",
+        "source": "書本 Ch.18，PDF pp.28–30"
+      },
+      {
+        "slide": 29,
+        "title": "GAN 的兩個模型",
+        "source": "書本 Ch.18，PDF 31，圖 18-15。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 30,
+        "title": "GAN 的訓練目標",
+        "source": "書本 Ch.18，PDF pp.30–34；作者Cell116交替更新。"
+      },
+      {
+        "slide": 31,
+        "title": "訓練 D 時隔開 generator 梯度",
+        "source": "書本 Ch.18，PDF pp.32–34；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 116（節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 32,
+        "title": "訓練 G 時仍須通過 D",
+        "source": "書本 Ch.18，PDF pp.32–34；作者Cell116的兩個更新階段比較。"
+      },
+      {
+        "slide": 33,
+        "title": "Mode collapse",
+        "source": "書本 Ch.18，PDF 35，圖 18-17。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 34,
+        "title": "GAN 的不穩定與 DCGAN",
+        "source": "書本 Ch.18，PDF pp.34–36；作者Cells120–123。"
+      },
+      {
+        "slide": 35,
+        "title": "擴散模型的正向與反向過程",
+        "source": "書本 Ch.18，PDF 37，圖 18-18。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 36,
+        "title": "任意時間步的加噪公式",
+        "source": "書本 Ch.18，PDF pp.36–40，式18-6；t從1起、alpha_bar_0=1的慣例。"
+      },
+      {
+        "slide": 37,
+        "title": "噪聲排程與剩餘訊號",
+        "source": "書本 Ch.18，PDF 39，圖 18-19。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 38,
+        "title": "擴散訓練的輸入與標籤",
+        "source": "書本 Ch.18，PDF pp.39–41；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cells 130–135（改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 39,
+        "title": "去噪網路需要知道時間",
+        "source": "書本 Ch.18，PDF pp.40–41；作者Cells140–144。"
+      },
+      {
+        "slide": 40,
+        "title": "DDPM 與 DDIM 取樣",
+        "source": "書本 Ch.18，PDF pp.41–43；作者Cells145–150作概念導讀，未把其簡化variance直接當所有DDIM scheduler公式。"
+      },
+      {
+        "slide": 41,
+        "title": "Latent diffusion 與條件生成",
+        "source": "書本 Ch.18，PDF pp.43–44"
+      },
+      {
+        "slide": 42,
+        "title": "生成程式的閱讀路線",
+        "source": "程式：作者Ch18；課堂未自動執行模型下載或訓練。"
+      },
+      {
+        "slide": 43,
+        "title": "課堂活動：生成模型比較",
+        "source": "自編活動。"
+      },
+      {
+        "slide": 44,
+        "title": "離堂檢核",
+        "source": "自編檢核。線性/MSE/相同前處理與最適化；支援先驗抽樣；G需梯度；eps是未縮放噪聲而xt含訊號與縮放噪聲。"
+      },
+      {
+        "slide": 45,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "23_強化學習_策略價值與深度RL.md",
+    "chapter": "19",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "強化學習：策略、價值與深度 RL",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.19，PDF pp.1–46"
+      },
+      {
+        "slide": 3,
+        "title": "Agent 與環境的互動",
+        "source": "書本 Ch.19，PDF pp.2–6；修正「RL不需要資料」的常見誤解。"
+      },
+      {
+        "slide": 4,
+        "title": "Reward、return 與 policy",
+        "source": "書本 Ch.19，PDF pp.2–6、12–13"
+      },
+      {
+        "slide": 5,
+        "title": "Policy search 與神經網路策略",
+        "source": "書本 Ch.19，PDF pp.4–6、9–12"
+      },
+      {
+        "slide": 6,
+        "title": "CartPole 的任務",
+        "source": "書本 Ch.19，PDF 7，圖 19-4。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 7,
+        "title": "Gymnasium 的一步互動",
+        "source": "書本 Ch.19，PDF pp.6–9；程式依作者 19_reinforcement_learning.ipynb Cells 21–32（簡化） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 8,
+        "title": "Terminated 與 truncated",
+        "source": "書本 Ch.19，PDF pp.6–9、26–30；區分收集停止與價值目標，自編教學補充。"
+      },
+      {
+        "slide": 9,
+        "title": "折扣回報",
+        "source": "書本 Ch.19，PDF pp.12–13；此課以動作後收到的reward記為r_t，與r_{t+1}慣例等價但勿混用。"
+      },
+      {
+        "slide": 10,
+        "title": "Credit assignment 的回報分配",
+        "source": "書本 Ch.19，PDF 12，圖 19-6。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 11,
+        "title": "回報手算：10、0、−50",
+        "source": "書本 Ch.19，PDF pp.12–13；作者Cell47相同教材數例。"
+      },
+      {
+        "slide": 12,
+        "title": "折扣回報的小函式",
+        "source": "書本 Ch.19，PDF pp.12–13；程式依作者 19_reinforcement_learning.ipynb Cell 46（改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 13,
+        "title": "REINFORCE 的更新方向",
+        "source": "書本 Ch.19，PDF pp.13–16"
+      },
+      {
+        "slide": 14,
+        "title": "Policy gradient 程式導讀",
+        "source": "程式：作者Ch19 REINFORCE。"
+      },
+      {
+        "slide": 15,
+        "title": "Markov 性與 observation",
+        "source": "書本 Ch.19，PDF pp.16–18、38–40"
+      },
+      {
+        "slide": 16,
+        "title": "Markov decision process",
+        "source": "書本 Ch.19，PDF 18，圖 19-8。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 17,
+        "title": "Value iteration 與 Bellman 最優性",
+        "source": "書本 Ch.19，PDF pp.18–21"
+      },
+      {
+        "slide": 18,
+        "title": "TD learning 用樣本更新",
+        "source": "書本 Ch.19，PDF pp.21–22；真正terminal的下一狀態價值設0。"
+      },
+      {
+        "slide": 19,
+        "title": "Q-learning 的更新式",
+        "source": "書本 Ch.19，PDF pp.22–25"
+      },
+      {
+        "slide": 20,
+        "title": "舊稿手算：一般移動",
+        "source": "補充：source_pptx/12_強化學習.pdf p.13；原稿p.10的獎勵尺度不同。"
+      },
+      {
+        "slide": 21,
+        "title": "舊稿手算：抵達終點",
+        "source": "補充：source_pptx/12_強化學習.pdf p.14。"
+      },
+      {
+        "slide": 22,
+        "title": "舊稿手算：碰牆但尚未終止",
+        "source": "補充：source_pptx/12_強化學習.pdf p.15；相對原Q，TD target=0.26更高。"
+      },
+      {
+        "slide": 23,
+        "title": "探索與利用",
+        "source": "書本 Ch.19，PDF pp.24–25"
+      },
+      {
+        "slide": 24,
+        "title": "DQN 用網路近似 Q 函數",
+        "source": "書本 Ch.19，PDF pp.25–27；作者Cell76。"
+      },
+      {
+        "slide": 25,
+        "title": "DQN 的兩個動作輸出",
+        "source": "書本 Ch.19，PDF pp.25–27；程式依作者 19_reinforcement_learning.ipynb Cell 76（簡化） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 26,
+        "title": "Replay buffer 與 target network",
+        "source": "書本 Ch.19，PDF pp.26–32；書中先介紹基本DQN，再加target network等改善。"
+      },
+      {
+        "slide": 27,
+        "title": "DQN 的 TD target",
+        "source": "書本 Ch.19，PDF pp.27–33；程式依作者 19_reinforcement_learning.ipynb Cells 85–91（加入target network的教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 28,
+        "title": "DQN 的常見改善",
+        "source": "書本 Ch.19，PDF pp.31–33；prioritized replay需考慮取樣偏差修正。"
+      },
+      {
+        "slide": 29,
+        "title": "Actor–critic 的兩個角色",
+        "source": "書本 Ch.19，PDF pp.33–38"
+      },
+      {
+        "slide": 30,
+        "title": "Actor loss 與 critic loss 分開",
+        "source": "書本 Ch.19，PDF pp.34–38；程式依作者 19_reinforcement_learning.ipynb Cell 95（加上batch平均） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 31,
+        "title": "PPO 限制策略一次改太多",
+        "source": "書本 Ch.19，PDF pp.38–42；公式為PPO clipped objective教學補充。"
+      },
+      {
+        "slide": 32,
+        "title": "Atari 的影格前處理",
+        "source": "書本 Ch.19，PDF 39，圖 19-11。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 33,
+        "title": "Stable-Baselines3 的小型介面示例",
+        "source": "書本 Ch.19，PDF pp.38–42；程式依作者 19_reinforcement_learning.ipynb Cell 110（由Atari CnnPolicy改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 34,
+        "title": "Atari 完整實驗的閱讀路線",
+        "source": "程式：作者Cell114明示其3000萬步訓練；環境資源與依賴見Notebook。"
+      },
+      {
+        "slide": 35,
+        "title": "演算法比較",
+        "source": "書本 Ch.19，PDF pp.42–44；選擇還需看on/off-policy、資料效率與環境成本。"
+      },
+      {
+        "slide": 36,
+        "title": "On-policy、off-policy 與環境模型",
+        "source": "書本 Ch.19，PDF pp.42–44；Q-learning與PPO作課堂對照。"
+      },
+      {
+        "slide": 37,
+        "title": "連續動作與其他演算法（選讀）",
+        "source": "書本 Ch.19，PDF pp.42–44；依書中RL總覽作概念選讀，不要求課堂重作全部實驗。"
+      },
+      {
+        "slide": 38,
+        "title": "RL 實驗的評估方式",
+        "source": "書本 Ch.19，PDF pp.42–46；自編實驗規格。"
+      },
+      {
+        "slide": 39,
+        "title": "課堂活動：迷宮與 CartPole",
+        "source": "自編活動，結合source_pptx/12_強化學習.pdf與作者Ch19。"
+      },
+      {
+        "slide": 40,
+        "title": "離堂檢核",
+        "source": "自編檢核；否；可以off-policy；Q是回報尺度；外部時間限制可在繼續任務假設下bootstrap。"
+      },
+      {
+        "slide": 41,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "24_附錄A_自動微分與計算圖.md",
+    "chapter": "A",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "附錄 A：自動微分與計算圖",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與使用時機",
+        "source": "書本 Ch.A，PDF pp.1–8"
+      },
+      {
+        "slide": 3,
+        "title": "同一函式的三種求導方式",
+        "source": "書本 Ch.A，PDF pp.1–3"
+      },
+      {
+        "slide": 4,
+        "title": "手算梯度",
+        "source": "書本 Ch.A，PDF pp.1–2；兩條路徑：x²y與直接加y。"
+      },
+      {
+        "slide": 5,
+        "title": "有限差分與步長",
+        "source": "書本 Ch.A，PDF pp.2–3；中央差分為書中前向差分的教學延伸。"
+      },
+      {
+        "slide": 6,
+        "title": "有限差分的可執行小例子",
+        "source": "書本 Ch.A，PDF pp.1–3；程式依作者 Appendix_A_autodiff.ipynb Cells 6、17–23（改寫） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 7,
+        "title": "計算圖與中間變數",
+        "source": "書本 Ch.A，PDF pp.3–7；自編分解，對應作者Toy Computation Graph。"
+      },
+      {
+        "slide": 8,
+        "title": "前向模式沿計算順序傳遞導數",
+        "source": "書本 Ch.A，PDF 4，圖 A-1。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 9,
+        "title": "前向模式手算",
+        "source": "書本 Ch.A，PDF pp.3–5；自編逐步手算。"
+      },
+      {
+        "slide": 10,
+        "title": "對偶數的表示",
+        "source": "書本 Ch.A，PDF pp.4–6，對偶數運算。"
+      },
+      {
+        "slide": 11,
+        "title": "反向模式由輸出往回傳",
+        "source": "書本 Ch.A，PDF 6，圖 A-3。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 12,
+        "title": "反向模式手算",
+        "source": "書本 Ch.A，PDF pp.6–8；自編計算。"
+      },
+      {
+        "slide": 13,
+        "title": "前向與反向模式的選擇",
+        "source": "書本 Ch.A，PDF pp.3–8"
+      },
+      {
+        "slide": 14,
+        "title": "PyTorch autograd 驗算",
+        "source": "書本 Ch.A，PDF pp.7–8；程式依作者 Appendix_A_autodiff.ipynb Cells 85–86 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 15,
+        "title": "梯度累積與計算圖生命週期",
+        "source": "書本：附錄A；作者PyTorch autodiff範例的教學延伸。"
+      },
+      {
+        "slide": 16,
+        "title": "與手刻反向傳播程式對照",
+        "source": "補充：本地手刻ANN；附錄A reverse-mode。"
+      },
+      {
+        "slide": 17,
+        "title": "課堂活動：梯度檢查",
+        "source": "自編活動。detach後x.grad為None，y.grad仍10。"
+      },
+      {
+        "slide": 18,
+        "title": "離堂檢核",
+        "source": "自編檢核；否；鏈鎖律總微分；一次反向遍歷得到多參數梯度；計算圖中斷。"
+      },
+      {
+        "slide": 19,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  },
+  {
+    "deck": "25_附錄B_混合精度與量化.md",
+    "chapter": "B",
+    "slides": [
+      {
+        "slide": 1,
+        "title": "附錄 B：混合精度與量化",
+        "source": "自編章節導入"
+      },
+      {
+        "slide": 2,
+        "title": "學習成果與課堂安排",
+        "source": "書本 Ch.B，PDF pp.1–20；含一次10分鐘休息。"
+      },
+      {
+        "slide": 3,
+        "title": "數值格式的位元分配",
+        "source": "書本 Ch.B，PDF 3，圖 B-1。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 4,
+        "title": "FP32、FP16 與 BF16",
+        "source": "書本 Ch.B，PDF pp.2–4"
+      },
+      {
+        "slide": 5,
+        "title": "模型權重大小估算",
+        "source": "自編十進位GB估算；附錄B pp.1–5。"
+      },
+      {
+        "slide": 6,
+        "title": "降低精度的不同位置",
+        "source": "書本 Ch.B，PDF pp.4–8、16–20"
+      },
+      {
+        "slide": 7,
+        "title": "混合精度訓練",
+        "source": "書本 Ch.B，PDF 6，圖 B-2。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 8,
+        "title": "AMP 與 loss scaling",
+        "source": "書本 Ch.B，PDF pp.5–8"
+      },
+      {
+        "slide": 9,
+        "title": "CUDA FP16 的 AMP 訓練步驟",
+        "source": "書本 Ch.B，PDF pp.5–8；程式依作者 Appendix_B_mixed_precision_and_quantization.ipynb Cell 40（單步節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 10,
+        "title": "AMP 與梯度裁切的順序",
+        "source": "書本：附錄B混合精度；與Ch11梯度裁切整合的教學片段。"
+      },
+      {
+        "slide": 11,
+        "title": "線性量化與反量化",
+        "source": "書本 Ch.B，PDF pp.8–11"
+      },
+      {
+        "slide": 12,
+        "title": "量化手算",
+        "source": "自編量化數例；附錄B pp.8–11。"
+      },
+      {
+        "slide": 13,
+        "title": "對稱量化",
+        "source": "書本 Ch.B，PDF 11，圖 B-3。圖為教材原圖，非本次實驗結果。"
+      },
+      {
+        "slide": 14,
+        "title": "對稱、非對稱與粒度",
+        "source": "書本 Ch.B，PDF pp.8–11、16–20"
+      },
+      {
+        "slide": 15,
+        "title": "對稱 INT8 權重量化",
+        "source": "書本 Ch.B，PDF pp.10–11；程式依作者 Appendix_B_mixed_precision_and_quantization.ipynb Cell 47（加入零範圍保護） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 16,
+        "title": "PTQ 與 QAT",
+        "source": "書本 Ch.B，PDF pp.11–16"
+      },
+      {
+        "slide": 17,
+        "title": "動態與靜態量化",
+        "source": "書本 Ch.B，PDF pp.11–15"
+      },
+      {
+        "slide": 18,
+        "title": "靜態 PTQ 的工作流程",
+        "source": "書本 Ch.B，PDF pp.11–15；作者Cells51–63；書中使用torch.ao量化介面，實作須沿用相容版本。"
+      },
+      {
+        "slide": 19,
+        "title": "書中量化程式的版本邊界",
+        "source": "程式：作者附錄B，固定版本來源；未提供最新API承諾。"
+      },
+      {
+        "slide": 20,
+        "title": "QAT 的 fake quantization",
+        "source": "書本 Ch.B，PDF pp.15–16"
+      },
+      {
+        "slide": 21,
+        "title": "BitsAndBytes 與低位元 LLM",
+        "source": "書本 Ch.B，PDF pp.16–18；作者Cells67–70，原例以CUDA條件執行。"
+      },
+      {
+        "slide": 22,
+        "title": "量化設定與計算精度分開指定",
+        "source": "書本 Ch.B，PDF pp.16–18；程式依作者 Appendix_B_mixed_precision_and_quantization.ipynb Cell 69（設定節錄） 節錄或教學改寫，非完整獨立訓練腳本。"
+      },
+      {
+        "slide": 23,
+        "title": "預先量化模型與格式",
+        "source": "書本 Ch.B，PDF pp.18–20"
+      },
+      {
+        "slide": 24,
+        "title": "課堂活動：精度比較表",
+        "source": "自編活動。"
+      },
+      {
+        "slide": 25,
+        "title": "離堂檢核",
+        "source": "自編檢核；指數/小數分配；需在更新前unscale；避免選設定洩漏；否。"
+      },
+      {
+        "slide": 26,
+        "title": "課後程式與延伸閱讀",
+        "source": "來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。"
+      }
+    ]
+  }
+]

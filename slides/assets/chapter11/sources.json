@@ -1,0 +1,142 @@
+[
+  {
+    "asset": "book_fig_11_1.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 3,
+    "printed_page": 365,
+    "figure": "11-1",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 22,
+    "caption": "Figure 11-1. Sigmoid activation function saturation",
+    "sha256": "3e2fdc9d7ee43fa343dfc0ebd645c849df4765c75c5ded193fc620b231723e18"
+  },
+  {
+    "asset": "book_fig_11_2.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 7,
+    "printed_page": 369,
+    "figure": "11-2",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 69,
+    "caption": "Figure 11-2. Leaky ReLU: like ReLU, but with a small slope for negative values",
+    "sha256": "001157fa255317615ddff8331b798bb9573fcb5e84a5a8ae5adbdcf020799792"
+  },
+  {
+    "asset": "book_fig_11_3.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 9,
+    "printed_page": 371,
+    "figure": "11-3",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 74,
+    "caption": "Figure 11-3. ELU and SELU activation functions",
+    "sha256": "a6f9d95061e02dc63afc3e2d58a6f511177b0cd7490107a4bee3d847f347d884"
+  },
+  {
+    "asset": "book_fig_11_4.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 11,
+    "printed_page": 373,
+    "figure": "11-4",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 79,
+    "caption": "Figure 11-4. GELU, Swish, parametrized Swish, Mish, and ReLU2 activation functions",
+    "sha256": "9f687204949b9dfce6fff23fdb5f8cbc28e0e057db6b1d20610e4306b862c93d"
+  },
+  {
+    "asset": "book_fig_11_5.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 21,
+    "printed_page": 383,
+    "figure": "11-5",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 104,
+    "caption": "Figure 11-5. Reusing pretrained layers",
+    "sha256": "5ca2c5890bc8455d6f0e42644e6315999293295097d8576f0eb9007a25450f19"
+  },
+  {
+    "asset": "book_fig_11_6.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 25,
+    "printed_page": 387,
+    "figure": "11-6",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 113,
+    "caption": "Figure 11-6. Greedy layer-wise pretraining used in the early days of deep learning;\nnowadays the unsupervised part is typically done in one shot on all the data rather than\none layer at a time",
+    "sha256": "2cf6cce08ce1fd36d66606aaa718a3d6ac95e7d1a6d566a2f8ce70f990fd9e22"
+  },
+  {
+    "asset": "book_fig_11_7.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 29,
+    "printed_page": 391,
+    "figure": "11-7",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 122,
+    "caption": "Figure 11-7. Regular versus Nesterov momentum optimization: the former applies the\ngradients computed before the momentum step, while the latter applies the gradients\ncomputed after",
+    "sha256": "d90c2206f18b475efd69a45767868e12aa01cb218d17ad3308b8adbc6770d202"
+  },
+  {
+    "asset": "book_fig_11_8.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 31,
+    "printed_page": 393,
+    "figure": "11-8",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 127,
+    "caption": "Figure 11-8. AdaGrad versus gradient descent: the former can correct its direction\nearlier to point to the optimum",
+    "sha256": "4417e0c63e782be1764449b24008048ccc8a6c9da156daf4d32ed8659c04a311"
+  },
+  {
+    "asset": "book_fig_11_9.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 37,
+    "printed_page": 399,
+    "figure": "11-9",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 142,
+    "caption": "Figure 11-9. Learning curves for various learning rates η",
+    "sha256": "2a6b993d28dd41275c3625a5798e616c824adf5a29cabd4a0eb6cac78e7d8852"
+  },
+  {
+    "asset": "book_fig_11_10.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 38,
+    "printed_page": 400,
+    "figure": "11-10",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 145,
+    "caption": "Figure 11-10. Cosine annealing learning schedule",
+    "sha256": "0d5041401402655631a6e4cf722820c8b462993a6943081d344e03d856c3d10d"
+  },
+  {
+    "asset": "book_fig_11_11.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 41,
+    "printed_page": 403,
+    "figure": "11-11",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 152,
+    "caption": "Figure 11-11. Cosine annealing with warm restarts",
+    "sha256": "af2f00c159b279496727bd3f5699411868d8245b530cc018a09bfe32feda7c63"
+  },
+  {
+    "asset": "book_fig_11_12.png",
+    "source": "book/CHAPTER 11 Training Deep Neural Networks.pdf",
+    "pdf_page": 46,
+    "printed_page": 408,
+    "figure": "11-12",
+    "method": "原始內嵌影像擷取，未重畫",
+    "xref": 165,
+    "caption": "Figure 11-12. With dropout regularization, at each training iteration a random subset\nof all neurons in one or more layers—except the output layer—are “dropped out”; these\nneurons output 0 at this iteration (represented by the dashed arrows)",
+    "sha256": "433a268f3952bbe89aa236e5d38767e4ead3ba54f2d480ec0f59def636afb03b"
+  },
+  {
+    "asset": "ppt_caption_example.png",
+    "source": "source_pptx/11_Image Captioning.pptx",
+    "slide": 3,
+    "part": "ppt/media/image2.png",
+    "method": "原始PPTX媒體擷取，未重畫",
+    "sha256": "efc7d4df3fc876ed05fc411b784fc30f07d4b74baa23fe06b8e776097e739ed4"
+  }
+]

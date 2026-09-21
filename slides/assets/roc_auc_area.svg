@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430" role="img" aria-labelledby="title desc">
+  <title id="title">將八筆資料的 ROC 曲線下面積分成四個長方形</title>
+  <desc id="desc">四個負類分別讓 FPR 增加四分之一，對應長方形高度為四分之一、四分之三、四分之三與一，總面積十一分之十六。</desc>
+  <defs>
+    <marker id="area-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#607681"/></marker>
+  </defs>
+  <g font-family="Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, sans-serif">
+    <rect width="1120" height="430" rx="18" fill="#f8fbfb"/>
+    <text x="28" y="34" font-size="23" font-weight="700" fill="#153e56">每遇到一個負類，FPR 增加 1/4；該橫向區段下方就是一塊面積</text>
+    <rect x="28" y="52" width="675" height="344" rx="14" fill="#ffffff" stroke="#d6e2e4"/>
+    <g transform="translate(80,74)">
+      <g stroke="#e1e9ea" stroke-width="1">
+        <line x1="0" y1="0" x2="560" y2="0"/><line x1="0" y1="70" x2="560" y2="70"/><line x1="0" y1="140" x2="560" y2="140"/><line x1="0" y1="210" x2="560" y2="210"/><line x1="0" y1="280" x2="560" y2="280"/>
+        <line x1="0" y1="0" x2="0" y2="280"/><line x1="140" y1="0" x2="140" y2="280"/><line x1="280" y1="0" x2="280" y2="280"/><line x1="420" y1="0" x2="420" y2="280"/><line x1="560" y1="0" x2="560" y2="280"/>
+      </g>
+      <rect x="0" y="210" width="140" height="70" fill="#f4d9b7" opacity="0.9"/>
+      <rect x="140" y="70" width="140" height="210" fill="#c8e7e3" opacity="0.95"/>
+      <rect x="280" y="70" width="140" height="210" fill="#a9d9d4" opacity="0.95"/>
+      <rect x="420" y="0" width="140" height="280" fill="#78c4be" opacity="0.9"/>
+      <line x1="0" y1="280" x2="578" y2="280" stroke="#607681" stroke-width="2" marker-end="url(#area-arrow)"/>
+      <line x1="0" y1="280" x2="0" y2="-14" stroke="#607681" stroke-width="2" marker-end="url(#area-arrow)"/>
+      <line x1="0" y1="280" x2="560" y2="0" stroke="#9aabad" stroke-width="2" stroke-dasharray="7 6"/>
+      <polyline points="0,280 0,210 140,210 140,140 140,70 280,70 420,70 420,0 560,0" fill="none" stroke="#147d81" stroke-width="5"/>
+      <g font-size="17" font-weight="700" fill="#153e56" text-anchor="middle">
+        <text x="70" y="250">1/16</text><text x="210" y="185">3/16</text><text x="350" y="185">3/16</text><text x="490" y="150">4/16</text>
+      </g>
+      <g font-size="15" fill="#607681" text-anchor="middle">
+        <text x="0" y="302">0</text><text x="140" y="302">.25</text><text x="280" y="302">.50</text><text x="420" y="302">.75</text><text x="560" y="302">1</text>
+        <text x="70" y="326" fill="#c97820" font-weight="700">B</text><text x="210" y="326" fill="#c97820" font-weight="700">E</text><text x="350" y="326" fill="#c97820" font-weight="700">F</text><text x="490" y="326" fill="#c97820" font-weight="700">H</text>
+      </g>
+      <g font-size="15" fill="#607681" text-anchor="end"><text x="-12" y="285">0</text><text x="-12" y="215">.25</text><text x="-12" y="145">.50</text><text x="-12" y="75">.75</text><text x="-12" y="5">1</text></g>
+      <text x="280" y="348" font-size="18" fill="#153e56" text-anchor="middle">FPR（橘字是造成向右移動的負類）</text>
+      <text x="-54" y="-8" font-size="18" fill="#153e56">TPR</text>
+    </g>
+
+    <rect x="728" y="52" width="364" height="344" rx="14" fill="#ffffff" stroke="#d6e2e4"/>
+    <text x="754" y="91" font-size="21" font-weight="700" fill="#147d81">八筆示例的面積加總</text>
+    <text x="754" y="132" font-size="20" fill="#153e56">每一帶寬度都是 1/4：</text>
+    <text x="754" y="173" font-size="21" fill="#153e56">AUC = 1/4 × (</text>
+    <text x="899" y="173" font-size="21" font-weight="700" fill="#c97820">1/4 + 3/4</text>
+    <text x="754" y="207" font-size="21" font-weight="700" fill="#147d81">　　　 + 3/4 + 1</text>
+    <text x="754" y="241" font-size="21" fill="#153e56">　　　)</text>
+    <line x1="754" y1="262" x2="1066" y2="262" stroke="#d6e2e4"/>
+    <text x="754" y="304" font-size="30" font-weight="700" fill="#153e56">= 11/16</text>
+    <text x="754" y="346" font-size="30" font-weight="700" fill="#147d81">= 0.6875</text>
+    <text x="754" y="377" font-size="16" fill="#607681">垂直線段寬度為 0，不增加面積。</text>
+  </g>
+</svg>

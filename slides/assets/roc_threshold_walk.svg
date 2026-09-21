@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="450" viewBox="0 0 1120 450" role="img" aria-labelledby="title desc">
+  <title id="title">八筆資料降低閾值時的 ROC 座標移動</title>
+  <desc id="desc">左側依分數由高到低列出八筆資料；遇到正類向上四分之一，遇到負類向右四分之一。右側畫出對應的 ROC 階梯。</desc>
+  <defs>
+    <marker id="arrow-teal" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#147d81"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#607681"/>
+    </marker>
+  </defs>
+  <g font-family="Noto Sans CJK TC, PingFang TC, Microsoft JhengHei, sans-serif">
+    <rect width="1120" height="450" rx="18" fill="#f8fbfb"/>
+    <text x="30" y="38" font-size="24" font-weight="700" fill="#153e56">① 分數由高到低，逐筆放寬門檻</text>
+    <text x="30" y="66" font-size="17" fill="#607681">正類 P：TP 增加 → TPR 上升　｜　負類 N：FP 增加 → FPR 上升</text>
+
+    <rect x="28" y="82" width="518" height="326" rx="14" fill="#ffffff" stroke="#d6e2e4"/>
+    <text x="48" y="112" font-size="17" font-weight="700" fill="#607681">樣本</text>
+    <text x="130" y="112" font-size="17" font-weight="700" fill="#607681">分數</text>
+    <text x="222" y="112" font-size="17" font-weight="700" fill="#607681">真實類別</text>
+    <text x="344" y="112" font-size="17" font-weight="700" fill="#607681">座標變化</text>
+    <text x="454" y="112" font-size="17" font-weight="700" fill="#607681">新座標</text>
+    <line x1="44" y1="122" x2="528" y2="122" stroke="#d6e2e4"/>
+
+    <g font-size="17" fill="#153e56">
+      <g transform="translate(0,0)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#e4f4f2"/><text x="58" y="151" font-weight="700">A</text><text x="132" y="151">0.95</text><text x="238" y="151" fill="#147d81" font-weight="700">P</text><text x="355" y="151" fill="#147d81">↑ 1/4</text><text x="456" y="151">(0, 1/4)</text></g>
+      <g transform="translate(0,34)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#fff1df"/><text x="58" y="151" font-weight="700">B</text><text x="132" y="151">0.85</text><text x="238" y="151" fill="#c97820" font-weight="700">N</text><text x="355" y="151" fill="#c97820">→ 1/4</text><text x="456" y="151">(1/4, 1/4)</text></g>
+      <g transform="translate(0,68)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#e4f4f2"/><text x="58" y="151" font-weight="700">C</text><text x="132" y="151">0.80</text><text x="238" y="151" fill="#147d81" font-weight="700">P</text><text x="355" y="151" fill="#147d81">↑ 1/4</text><text x="456" y="151">(1/4, 2/4)</text></g>
+      <g transform="translate(0,102)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#e4f4f2"/><text x="58" y="151" font-weight="700">D</text><text x="132" y="151">0.70</text><text x="238" y="151" fill="#147d81" font-weight="700">P</text><text x="355" y="151" fill="#147d81">↑ 1/4</text><text x="456" y="151">(1/4, 3/4)</text></g>
+      <g transform="translate(0,136)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#fff1df"/><text x="58" y="151" font-weight="700">E</text><text x="132" y="151">0.60</text><text x="238" y="151" fill="#c97820" font-weight="700">N</text><text x="355" y="151" fill="#c97820">→ 1/4</text><text x="456" y="151">(2/4, 3/4)</text></g>
+      <g transform="translate(0,170)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#fff1df"/><text x="58" y="151" font-weight="700">F</text><text x="132" y="151">0.40</text><text x="238" y="151" fill="#c97820" font-weight="700">N</text><text x="355" y="151" fill="#c97820">→ 1/4</text><text x="456" y="151">(3/4, 3/4)</text></g>
+      <g transform="translate(0,204)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#e4f4f2"/><text x="58" y="151" font-weight="700">G</text><text x="132" y="151">0.30</text><text x="238" y="151" fill="#147d81" font-weight="700">P</text><text x="355" y="151" fill="#147d81">↑ 1/4</text><text x="456" y="151">(3/4, 4/4)</text></g>
+      <g transform="translate(0,238)"><rect x="44" y="130" width="484" height="31" rx="6" fill="#fff1df"/><text x="58" y="151" font-weight="700">H</text><text x="132" y="151">0.10</text><text x="238" y="151" fill="#c97820" font-weight="700">N</text><text x="355" y="151" fill="#c97820">→ 1/4</text><text x="456" y="151">(4/4, 4/4)</text></g>
+    </g>
+
+    <line x1="560" y1="230" x2="586" y2="230" stroke="#607681" stroke-width="3" marker-end="url(#arrow-gray)"/>
+
+    <text x="610" y="38" font-size="24" font-weight="700" fill="#153e56">② 把每次的新座標連成階梯</text>
+    <rect x="590" y="52" width="502" height="356" rx="14" fill="#ffffff" stroke="#d6e2e4"/>
+    <g stroke="#e1e9ea" stroke-width="1">
+      <line x1="660" y1="88" x2="1040" y2="88"/><line x1="660" y1="158" x2="1040" y2="158"/><line x1="660" y1="228" x2="1040" y2="228"/><line x1="660" y1="298" x2="1040" y2="298"/><line x1="660" y1="368" x2="1040" y2="368"/>
+      <line x1="660" y1="88" x2="660" y2="368"/><line x1="755" y1="88" x2="755" y2="368"/><line x1="850" y1="88" x2="850" y2="368"/><line x1="945" y1="88" x2="945" y2="368"/><line x1="1040" y1="88" x2="1040" y2="368"/>
+    </g>
+    <line x1="660" y1="368" x2="1058" y2="368" stroke="#607681" stroke-width="2" marker-end="url(#arrow-gray)"/>
+    <line x1="660" y1="368" x2="660" y2="72" stroke="#607681" stroke-width="2" marker-end="url(#arrow-gray)"/>
+    <line x1="660" y1="368" x2="1040" y2="88" stroke="#9aabad" stroke-width="2" stroke-dasharray="7 6"/>
+    <polyline points="660,368 660,298 755,298 755,228 755,158 850,158 945,158 945,88 1040,88" fill="none" stroke="#147d81" stroke-width="5" stroke-linejoin="round"/>
+    <g fill="#147d81">
+      <circle cx="660" cy="368" r="5"/><circle cx="660" cy="298" r="5"/><circle cx="755" cy="298" r="5"/><circle cx="755" cy="228" r="5"/><circle cx="755" cy="158" r="5"/><circle cx="850" cy="158" r="5"/><circle cx="945" cy="158" r="5"/><circle cx="945" cy="88" r="5"/><circle cx="1040" cy="88" r="5"/>
+    </g>
+    <g font-size="15" font-weight="700">
+      <text x="642" y="292" fill="#147d81">A</text><text x="763" y="318" fill="#c97820">B</text><text x="763" y="222" fill="#147d81">C</text><text x="763" y="151" fill="#147d81">D</text><text x="858" y="180" fill="#c97820">E</text><text x="953" y="180" fill="#c97820">F</text><text x="954" y="80" fill="#147d81">G</text><text x="1046" y="108" fill="#c97820">H</text>
+    </g>
+    <g font-size="14" fill="#607681">
+      <text x="660" y="389" text-anchor="middle">0</text><text x="755" y="389" text-anchor="middle">.25</text><text x="850" y="389" text-anchor="middle">.50</text><text x="945" y="389" text-anchor="middle">.75</text><text x="1040" y="389" text-anchor="middle">1</text>
+      <text x="647" y="373" text-anchor="end">0</text><text x="647" y="303" text-anchor="end">.25</text><text x="647" y="233" text-anchor="end">.50</text><text x="647" y="163" text-anchor="end">.75</text><text x="647" y="93" text-anchor="end">1</text>
+    </g>
+    <text x="850" y="432" font-size="18" fill="#153e56" text-anchor="middle">FPR = FP / 4（遇到負類向右）</text>
+    <text x="606" y="72" font-size="18" fill="#153e56">TPR</text>
+  </g>
+</svg>

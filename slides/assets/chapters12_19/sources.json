@@ -1,0 +1,641 @@
+{
+  "12-2": {
+    "file": "book_fig_12_2.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 4,
+    "xref": 26,
+    "caption": "Figure 12-2. CNN layers with rectangular local receptive fields",
+    "sha256": "48a6d0175b2aa2698e698ec4482b443164ebc5abf41a6933b09e205341169afc",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-3": {
+    "file": "book_fig_12_3.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 5,
+    "xref": 29,
+    "caption": "Figure 12-3. Connections between layers and zero padding",
+    "sha256": "9c7787066988515f9413fcdb2d263dd00fc1f020d2616564bc197a9eea59e73a",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-5": {
+    "file": "book_fig_12_5.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 6,
+    "xref": 33,
+    "caption": "Figure 12-5. Applying two different filters to get two feature maps",
+    "sha256": "08c429e124aec86634959458fffcb2b1a6b1a5993e1ef681235918c0edb7c23c",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-6": {
+    "file": "book_fig_12_6.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 7,
+    "xref": 36,
+    "caption": "Figure 12-6. Two convolutional layers with multiple filters each (kernels), processing a\ncolor image with three color channels; each convolutional layer outputs one feature map\nper filter",
+    "sha256": "d6097ef0bba0231d182c27bc431d2374dba77917adf6656a7cda685554fc4f3c",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-9": {
+    "file": "book_fig_12_9.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 13,
+    "xref": 75,
+    "caption": "Figure 12-9. Max pooling layer (2 × 2 pooling kernel, stride 2, no padding)",
+    "sha256": "6dab3128046ed94b8a785ed89cc58abb0d8a0bdd3393122d6c9b58e84bdbb743",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-12": {
+    "file": "book_fig_12_12.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 18,
+    "xref": 89,
+    "caption": "Figure 12-12. Typical CNN architecture",
+    "sha256": "ff94bef3ae9d6e44ff36745caf4fb510e8957291e32ba17c91ce4abb725fa15f",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-13": {
+    "file": "book_fig_12_13.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 23,
+    "xref": 104,
+    "caption": "Figure 12-13. Generating new training instances from existing ones",
+    "sha256": "1034decec3af5332e144b9a364943d31af82f22571291bc29121d69dca704aca",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-14": {
+    "file": "book_fig_12_14.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 24,
+    "xref": 107,
+    "caption": "Figure 12-14. Inception module",
+    "sha256": "85a7fd5dd5f4b811b97fa3549bdf0f0af13e3f8711d4c8301ec537dd1d543916",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-16": {
+    "file": "book_fig_12_16.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 28,
+    "xref": 121,
+    "caption": "Figure 12-16. Residual learning",
+    "sha256": "b2cca87d49639d85019c202add091e8142218b977e65b44d60614ffadaf9ac24",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-20": {
+    "file": "book_fig_12_20.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 32,
+    "xref": 133,
+    "caption": "Figure 12-20. Depthwise separable convolutional layer",
+    "sha256": "465cde547545c6630f869b6a47ded86bb1be3af3ad73361ef94c781c3aa6db95",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-22": {
+    "file": "book_fig_12_22.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 34,
+    "xref": 139,
+    "caption": "Figure 12-22. An SE block performs feature map recalibration",
+    "sha256": "f84a30a8830ecdb02e0aac65402f5c3c4cef27f142b2de94a6a8604b66a0b435",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-24": {
+    "file": "book_fig_12_24.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 51,
+    "xref": 179,
+    "caption": "Figure 12-24. IoU metric for bounding boxes",
+    "sha256": "9cd337ac7624ddada5c6ded190bfc4bb225b4ea94acf4006b16980e29329b6ad",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-26": {
+    "file": "book_fig_12_26.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 56,
+    "xref": 191,
+    "caption": "Figure 12-26. The same fully convolutional network processing a small image (left) and a\nlarge one (right)",
+    "sha256": "07b7a1e76cc6111631367b7cf22b9377d92ae6ceeddc9fa50319444164fa5382",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-27": {
+    "file": "book_fig_12_27.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 62,
+    "xref": 204,
+    "caption": "Figure 12-27. Semantic segmentation",
+    "sha256": "8667a922ba80b39127a65a3a174367739fac155c7c22e571e695096ab3818608",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-28": {
+    "file": "book_fig_12_28.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 63,
+    "xref": 207,
+    "caption": "Figure 12-28. Upsampling using a transposed convolutional layer",
+    "sha256": "40fc84fc18cc4d34c0747aa5b762cf0147df0d5573b8246d172722ec96cf7bc9",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "12-29": {
+    "file": "book_fig_12_29.png",
+    "source": "book/CHAPTER 12 Deep Computer Vision Using Convolutional Neural Networks.pdf",
+    "pdf_page": 64,
+    "xref": 210,
+    "caption": "Figure 12-29. Skip layers recover some spatial resolution from lower layers",
+    "sha256": "850d349e624bcceca510b37afdd1fb4bdf90a769cc06b85b0ecb0c66ea4c711b",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-2": {
+    "file": "book_fig_13_2.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 3,
+    "xref": 36,
+    "caption": "Figure 13-2. A layer of recurrent neurons (left) unrolled through time (right)",
+    "sha256": "7aa2ca8c7cce067844c7bb7c317b83dcae5c4ff2ab2040a687c3d3e29e4dd002",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-4": {
+    "file": "book_fig_13_4.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 6,
+    "xref": 45,
+    "caption": "Figure 13-4. Sequence-to-sequence (top left), sequence-to-vector (top right), vector-to-\nsequence (bottom left), and encoder-decoder (bottom right) networks",
+    "sha256": "5771b0ce05a3afb461a5cbf0864cadb141027660a9905662bf22779465f67762",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-5": {
+    "file": "book_fig_13_5.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 7,
+    "xref": 48,
+    "caption": "Figure 13-5. Backpropagation through time",
+    "sha256": "8b8a4478d6d7384ff2d5c287ee8f958888904f3f5483a3f13d2f2aee20ac07b1",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-6": {
+    "file": "book_fig_13_6.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 9,
+    "xref": 65,
+    "caption": "Figure 13-6. Daily ridership in Chicago",
+    "sha256": "1bbbc91fbf99b38e13ecf75c5d096ab766663c786b1ad5d0ed591c5bf4356c0c",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-10": {
+    "file": "book_fig_13_10.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 22,
+    "xref": 96,
+    "caption": "Figure 13-10. A deep RNN (left) unrolled through time (right)",
+    "sha256": "fc8ed931a061cb68ba6641fe4ee22e2b047ae65db240263d9a4caabc0add4d3f",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-11": {
+    "file": "book_fig_13_11.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 25,
+    "xref": 106,
+    "caption": "Figure 13-11. Forecasting 14 steps ahead, 1 step at a time",
+    "sha256": "815aa801bacab8bcfea77eca2a1dda5b9994c187ff0e56e88a5933d00753d291",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-12": {
+    "file": "book_fig_13_12.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 32,
+    "xref": 121,
+    "caption": "Figure 13-12. An LSTM cell",
+    "sha256": "bab41c3fa40c5ad7847a5dacf60044e2bd8049aca7edfc35ef922fc881006442",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-13": {
+    "file": "book_fig_13_13.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 35,
+    "xref": 128,
+    "caption": "Figure 13-13. GRU cell",
+    "sha256": "d721f04e694fdf342da5b46b50d9a63490329ba1905adce3343c405aa689cf87",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "13-14": {
+    "file": "book_fig_13_14.png",
+    "source": "book/CHAPTER 13 Processing Sequences Using RNNs and CNNs.pdf",
+    "pdf_page": 39,
+    "xref": 137,
+    "caption": "Figure 13-14. WaveNet architecture",
+    "sha256": "143ee737f173518c26758702a33e9142cbc9ad77fe07a1cb64e3b6ce736ee65c",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "14-1": {
+    "file": "book_fig_14_1.png",
+    "source": "book/CHAPTER 14 Natural Language Processing with RNNs and Attention.pdf",
+    "pdf_page": 5,
+    "xref": 39,
+    "caption": "Figure 14-1. Each training batch is composed of shuffled windows, along with their\nshifted targets. In this figure, the window length is 10 instead of 50.",
+    "sha256": "5fa511ba4d3b1c0cda1e33afe9edf72581e9ee4491c6c200dccdaece9def4074",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "14-2": {
+    "file": "book_fig_14_2.png",
+    "source": "book/CHAPTER 14 Natural Language Processing with RNNs and Attention.pdf",
+    "pdf_page": 7,
+    "xref": 44,
+    "caption": "Figure 14-2. Embeddings will gradually improve during training",
+    "sha256": "c70fc6d4a83355a9e76598443b05d127c36871efdd8258eff5aa1f874882de2f",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "14-4": {
+    "file": "book_fig_14_4.png",
+    "source": "book/CHAPTER 14 Natural Language Processing with RNNs and Attention.pdf",
+    "pdf_page": 25,
+    "xref": 94,
+    "caption": "Figure 14-4. A bidirectional recurrent layer",
+    "sha256": "e8968336d0ac3643379aae00ab527391ee7d3165c6d150980e76b3a486875973",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "14-5": {
+    "file": "book_fig_14_5.png",
+    "source": "book/CHAPTER 14 Natural Language Processing with RNNs and Attention.pdf",
+    "pdf_page": 36,
+    "xref": 119,
+    "caption": "Figure 14-5. A simple machine translation model",
+    "sha256": "46110494f486862c5daf468aa33580834dda9dcfb75bfae71ac24037dc24d745",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "14-7": {
+    "file": "book_fig_14_7.png",
+    "source": "book/CHAPTER 14 Natural Language Processing with RNNs and Attention.pdf",
+    "pdf_page": 44,
+    "xref": 137,
+    "caption": "Figure 14-7. Beam search, with a beam width of three",
+    "sha256": "70678e057fc0c19be8e132b59b4cf282b7953b6b6fa42e480d1bef530251348d",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "14-8": {
+    "file": "book_fig_14_8.png",
+    "source": "book/CHAPTER 14 Natural Language Processing with RNNs and Attention.pdf",
+    "pdf_page": 46,
+    "xref": 142,
+    "caption": "Figure 14-8. Neural machine translation using an encoder-decoder network with an\nattention model",
+    "sha256": "a65214a07a38f51c9c35924f2f45811c6300853dbbf674c69e91d549322fe39f",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "15-3": {
+    "file": "book_fig_15_3.png",
+    "source": "book/CHAPTER 15 Transformers for Natural Language Processing and Chatbots.pdf",
+    "pdf_page": 6,
+    "xref": 35,
+    "caption": "Figure 15-3. The original 2017 transformer architecture4",
+    "sha256": "f8bf0537c598d11468c746eb9b1fd5deecf5fdba4f9203a3deb2974c02f6950e",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "15-4": {
+    "file": "book_fig_15_4.png",
+    "source": "book/CHAPTER 15 Transformers for Natural Language Processing and Chatbots.pdf",
+    "pdf_page": 11,
+    "xref": 66,
+    "caption": "Figure 15-4. Multi-head attention layer architecture6",
+    "sha256": "163468fef008903a9e4ea281131527e1d668f2fce7240515d963b6b41c7749c3",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "15-5": {
+    "file": "book_fig_15_5.png",
+    "source": "book/CHAPTER 15 Transformers for Natural Language Processing and Chatbots.pdf",
+    "pdf_page": 21,
+    "xref": 92,
+    "caption": "Figure 15-5. Input and target during BERT pretraining, using MLM and NSP",
+    "sha256": "fbbed27cb673b8624806022521ac08030e5bf0aa75503af3d495f3d6d93e13de",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "15-7": {
+    "file": "book_fig_15_7.png",
+    "source": "book/CHAPTER 15 Transformers for Natural Language Processing and Chatbots.pdf",
+    "pdf_page": 24,
+    "xref": 100,
+    "caption": "Figure 15-7. Fine-tuning BERT for sentence classification such as sentiment analysis\n(left) or for token classification such as NER (right)",
+    "sha256": "4bf734f7af47cb7be59051bdc88c22743017ee32aaf98f2382e4e826233d52cf",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "15-9": {
+    "file": "book_fig_15_9.png",
+    "source": "book/CHAPTER 15 Transformers for Natural Language Processing and Chatbots.pdf",
+    "pdf_page": 28,
+    "xref": 110,
+    "caption": "Figure 15-9. DistilBERT pretraining using a weighted sum of two distillation losses and\nthe MLM loss",
+    "sha256": "5c363965508655cc00b117ff57b72e3765ea538b71396e4de9cc3644c783a500",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "15-12": {
+    "file": "book_fig_15_12.png",
+    "source": "book/CHAPTER 15 Transformers for Natural Language Processing and Chatbots.pdf",
+    "pdf_page": 33,
+    "xref": 123,
+    "caption": "Figure 15-12. Generating text one token at a time using a decoder-only model like GPT",
+    "sha256": "84b3e68470e168b1253dffce9a47237888003f6bb7a2f7a2db43d65377c466ed",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "15-17": {
+    "file": "book_fig_15_17.png",
+    "source": "book/CHAPTER 15 Transformers for Natural Language Processing and Chatbots.pdf",
+    "pdf_page": 50,
+    "xref": 162,
+    "caption": "Figure 15-17. How to build a chatbot: pretraining, two-step fine-tuning, and deployment",
+    "sha256": "63e0a5411b460fa91701c7dedc1e48fb8550a6eb1cdee4ae3672d84d7e1087d2",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-2": {
+    "file": "book_fig_16_2.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 5,
+    "xref": 27,
+    "caption": "Figure 16-2. The detection transformer (DETR) for object detection",
+    "sha256": "00ea47c703e8233bc44d85afd71ee16011a1377e672546c880bc105eb1962bba",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-3": {
+    "file": "book_fig_16_3.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 6,
+    "xref": 35,
+    "caption": "Figure 16-3. Vision transformer (ViT) for classification",
+    "sha256": "29ff4235cc9d216b19435dcf530d4e3d3fae2e65e9c0be3107582facc288164c",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-4": {
+    "file": "book_fig_16_4.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 11,
+    "xref": 59,
+    "caption": "Figure 16-4. Data-efficient image transformer (DeiT) = ViT + distillation",
+    "sha256": "c11d16ac7dda8e5569057da6eef11aa870cb28cc59c13977d92a12f518f3bb5c",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-5": {
+    "file": "book_fig_16_5.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 12,
+    "xref": 62,
+    "caption": "Figure 16-5. Pyramid Vision Transformer for dense prediction tasks",
+    "sha256": "ef8919c9dc2039754b11d4635cbde6e1d7ce7a4c577746b3d17d48bc6ccd82ed",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-6": {
+    "file": "book_fig_16_6.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 14,
+    "xref": 67,
+    "caption": "Figure 16-6. Swin Transformer: alternates W-MSA (left) and SW-MSA (center); SW-\nMSA can be optimized to require the same number of windows as W-MSA (right)",
+    "sha256": "a34281b5557377ca39ba001dc4e6e52bfaa2d0fd6aa2705b8ad110f89ed5e7a9",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-7": {
+    "file": "book_fig_16_7.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 16,
+    "xref": 82,
+    "caption": "Figure 16-7. DINO, or self-distillation with no labels",
+    "sha256": "cac99b9fc0dc679991bf63bb87d57a2da231bbd8da6dff46628b5821e392d2f1",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-13": {
+    "file": "book_fig_16_13.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 30,
+    "xref": 117,
+    "caption": "Figure 16-13. CLIP: a batch of image-caption pairs is encoded as vectors, then matching\npairs are pulled closer while mismatched pairs are pushed away",
+    "sha256": "46f1bc6f43600c4a918080eff65214da5c98c5ae0971ddb83faf4dcad51e8b47",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-15": {
+    "file": "book_fig_16_15.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 35,
+    "xref": 129,
+    "caption": "Figure 16-15. Perceiver architecture: inputs are ingested through cross-attention layers,\nwhile the main input is a sequence of learned latent tokens",
+    "sha256": "966eda85f8ab46bba8930eedbd09eeda8aa473a76acbebc0cd691b2a90f3baaf",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-17": {
+    "file": "book_fig_16_17.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 41,
+    "xref": 143,
+    "caption": "Figure 16-17. Flamingo takes any sequence of text and images, and outputs coherent\nfree-form text",
+    "sha256": "d433ab2ba42613ded899cd07d12582931e6f4465f0c289561a2b3136970eb549",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "16-18": {
+    "file": "book_fig_16_18.png",
+    "source": "book/CHAPTER 16 Vision and Multimodal Transformers.pdf",
+    "pdf_page": 43,
+    "xref": 148,
+    "caption": "Figure 16-18. BLIP-2 pretraining, Stage 1: training the Q-Former",
+    "sha256": "9a0ffbc439a0e39504848d7b1c5f534df5f3fcf8b5c700b2060577fce6f22319",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "17-1": {
+    "file": "book_fig_17_1.png",
+    "source": ".build/chapters12_19/HOMLP_Chapter_17_online.pdf",
+    "pdf_page": 7,
+    "xref": 17,
+    "caption": "Figure 17-1",
+    "sha256": "845e07d83af11a4642848f3c0f25312977ef596a5acc9ddc18f3c45ff5ce2e52",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "17-2": {
+    "file": "book_fig_17_2.png",
+    "source": ".build/chapters12_19/HOMLP_Chapter_17_online.pdf",
+    "pdf_page": 10,
+    "xref": 27,
+    "caption": "Figure 17-2",
+    "sha256": "0096f8417a204853c69347612507d2c3471a7400059dcb2358f8e47859711cd4",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "17-11": {
+    "file": "book_fig_17_11.png",
+    "source": ".build/chapters12_19/HOMLP_Chapter_17_online.pdf",
+    "pdf_page": 36,
+    "xref": 115,
+    "caption": "Figure 17-11",
+    "sha256": "31cc6d8251d67582fb9d99eebba0ac168183d10f3f9a5775011b3946726bab75",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "17-15": {
+    "file": "book_fig_17_15.png",
+    "source": ".build/chapters12_19/HOMLP_Chapter_17_online.pdf",
+    "pdf_page": 51,
+    "xref": 165,
+    "caption": "Figure 17-15",
+    "sha256": "39a0fc774e99acad54d1dd49954d94c12657c18daf4f902143ef72a2b7cdadac",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "17-16": {
+    "file": "book_fig_17_16.png",
+    "source": ".build/chapters12_19/HOMLP_Chapter_17_online.pdf",
+    "pdf_page": 55,
+    "xref": 176,
+    "caption": "Figure 17-16",
+    "sha256": "3f6d8525a64cb94fd84244b8187cec828429907c42dd861ebd17694a5e27305d",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-2": {
+    "file": "book_fig_18_2.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 6,
+    "xref": 44,
+    "caption": "Figure 18-2. Approximate PCA performed by an undercomplete linear autoencoder",
+    "sha256": "ecc648ac56797951e3fa5f5ba667e299ab9f83e9a90cd023da95c46ec15c607c",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-4": {
+    "file": "book_fig_18_4.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 9,
+    "xref": 52,
+    "caption": "Figure 18-4. Original images (top) and their reconstructions (bottom)",
+    "sha256": "0ff4bda393e78a677b785782adc63ce5f88e36632233dbe3141ba1e03b7001cb",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-9": {
+    "file": "book_fig_18_9.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 16,
+    "xref": 81,
+    "caption": "Figure 18-9. Denoising autoencoders, with Gaussian noise (left) or dropout (right)",
+    "sha256": "5ef15975ac2cdd3edc4ed7b7024af6c7b1f16841521eb5de9fbe09e86cd6af3b",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-12": {
+    "file": "book_fig_18_12.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 22,
+    "xref": 100,
+    "caption": "Figure 18-12. A variational autoencoder (left) and an instance going through it (right)",
+    "sha256": "10aa1a2ab2a1040aab8253cc22e0e4e1f4d8e690b050f35821c195fbd74b52ff",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-14": {
+    "file": "book_fig_18_14.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 26,
+    "xref": 114,
+    "caption": "Figure 18-14. Semantic interpolation",
+    "sha256": "7b2d4f658a73d0f25544491c7572f7a2db3dfc6a82a1a13b9326898937842040",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-15": {
+    "file": "book_fig_18_15.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 31,
+    "xref": 125,
+    "caption": "Figure 18-15. A generative adversarial network",
+    "sha256": "b3092dd37ac3f1c425f58dae6c1e7ba07114dd84509255c83e2d3adbbc3bc459",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-17": {
+    "file": "book_fig_18_17.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 35,
+    "xref": 135,
+    "caption": "Figure 18-17. Mode collapse while training a GAN (top row) versus successful training\nwithout mode collapse (bottom row)",
+    "sha256": "090688bdfee0f64c45edb1a9850418ae8b7b097ea8ff78469b094d211c465316",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-18": {
+    "file": "book_fig_18_18.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 37,
+    "xref": 140,
+    "caption": "Figure 18-18. The forward process q and reverse process p",
+    "sha256": "1c5e70a42a5705ed84b04a2e8a6cb0f4d0baa80f5cd209c653ec8113ef00c7cf",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "18-19": {
+    "file": "book_fig_18_19.png",
+    "source": "book/CHAPTER 18 Autoencoders, GANs, and Diffusion Models.pdf",
+    "pdf_page": 39,
+    "xref": 145,
+    "caption": "Figure 18-19. Noise variance schedule βt, and the remaining signal variance α̅t",
+    "sha256": "64c3d256fd4fa7721906a1c31f8b8074e13ce939c04b2a28d126ab416c5b5198",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "19-4": {
+    "file": "book_fig_19_4.png",
+    "source": "book/CHAPTER 19 Reinforcement Learning.pdf",
+    "pdf_page": 7,
+    "xref": 46,
+    "caption": "Figure 19-4. The CartPole environment",
+    "sha256": "4e77d37f466a9997ac0173d7299f0d1fdd88298d98ffd740a6a92059b8cb46e2",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "19-6": {
+    "file": "book_fig_19_6.png",
+    "source": "book/CHAPTER 19 Reinforcement Learning.pdf",
+    "pdf_page": 12,
+    "xref": 58,
+    "caption": "Figure 19-6. Computing an action’s return: the sum of discounted future rewards",
+    "sha256": "9ad4bdf6d64a1f68883248315d0337f90f5d9430c305d7dadca8ccf37c01e79d",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "19-8": {
+    "file": "book_fig_19_8.png",
+    "source": "book/CHAPTER 19 Reinforcement Learning.pdf",
+    "pdf_page": 18,
+    "xref": 86,
+    "caption": "Figure 19-8. Example of a Markov decision process",
+    "sha256": "2ef69de5a377b861d6aa77e86e4fb6d04489b1fda9dee607f1ff86cccfdce345",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "19-11": {
+    "file": "book_fig_19_11.png",
+    "source": "book/CHAPTER 19 Reinforcement Learning.pdf",
+    "pdf_page": 39,
+    "xref": 136,
+    "caption": "Figure 19-11. A Breakout frame before (left) and after (right) preprocessing",
+    "sha256": "0c0db6783f8cba1597f9a10bc65072913cbcceb5b884a8faa0c2c9de73125d73",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "A-1": {
+    "file": "book_fig_A_1.png",
+    "source": "book/Appendix A Autodiff.pdf",
+    "pdf_page": 4,
+    "xref": 43,
+    "caption": "Figure A-1. Forward-mode autodiff",
+    "sha256": "e70827a8844c71e9ba8cc3ef2f7a1ed29ffebc737d182ebbb907cc8aa0e6bba8",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "A-3": {
+    "file": "book_fig_A_3.png",
+    "source": "book/Appendix A Autodiff.pdf",
+    "pdf_page": 6,
+    "xref": 49,
+    "caption": "Figure A-3. Reverse-mode autodiff",
+    "sha256": "76958e87a659525ddfd557ab4e3b3e47ba9aeda15643bf2f02d1f82abbb8b6a8",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "B-1": {
+    "file": "book_fig_B_1.png",
+    "source": "book/Appendix B Mixed Precision and Quantization.pdf",
+    "pdf_page": 3,
+    "xref": 28,
+    "caption": "Figure B-1. Common number representations in machine learning",
+    "sha256": "1601e2f976adc1dc9ddf9acc83e4ec79a99bfcef6b27148daecc65d9504b2a83",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "B-2": {
+    "file": "book_fig_B_2.png",
+    "source": "book/Appendix B Mixed Precision and Quantization.pdf",
+    "pdf_page": 6,
+    "xref": 48,
+    "caption": "Figure B-2. Mixed-precision training",
+    "sha256": "6b0bddcf21fb2ee9a5aa7b7b5ab97bd9dd975ef751821d363b562664b1f93774",
+    "method": "原始內嵌影像擷取，未重畫"
+  },
+  "B-3": {
+    "file": "book_fig_B_3.png",
+    "source": "book/Appendix B Mixed Precision and Quantization.pdf",
+    "pdf_page": 11,
+    "xref": 70,
+    "caption": "Figure B-3. Symmetric linear quantization",
+    "sha256": "564f5eeed228f6d9e03ad40bc2d8e91b626f5e48ed9e0e7ac0e669408736ffab",
+    "method": "原始內嵌影像擷取，未重畫"
+  }
+}
