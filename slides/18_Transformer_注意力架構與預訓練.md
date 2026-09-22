@@ -31,7 +31,7 @@ style: |
 成果：能手算小型注意力，追蹤維度並辨識未來資訊洩漏。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：[`18_Transformer_注意力架構與預訓練.ipynb`](../programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb`。程式片段、實際圖表與表格可由此檔重現。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.1–33；兩次10分鐘休息。 -->
 
@@ -50,7 +50,7 @@ weights = softmax(scores)
 
 **觀察**：遮罩後未來位置的注意力總量為 0，權重矩陣呈下三角。
 
-[開啟完整 Notebook](../programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb)
+參考程式：`programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb`
 
 </div>
 <div>
@@ -122,7 +122,7 @@ class PositionalEmbedding(nn.Module):
 
 沿用 `import torch`、`from torch import nn`；X 為 `[B,T,D]`。輸入長度不可超過表長。
 
-[作者程式：Cell 31（移除Dropout以聚焦位置）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/15_transformers_for_nlp_and_chatbots.ipynb)
+作者程式：Cell 31（移除Dropout以聚焦位置）（`15_transformers_for_nlp_and_chatbots.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 31（移除Dropout以聚焦位置） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -191,7 +191,7 @@ context = weights @ V
 
 此自寫程式的 blocked_mask=True 表示禁止關注；每列至少保留一個有效 key。
 
-[作者程式：Cell 35（節錄）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/15_transformers_for_nlp_and_chatbots.ipynb)
+作者程式：Cell 35（節錄）（`15_transformers_for_nlp_and_chatbots.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–14；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 35（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -306,7 +306,7 @@ output = model(src, tgt, tgt_mask=causal_blocked,
 
 src_pad、tgt_pad 中 True 表示 padding；tgt 需使用位移後的目標前綴。
 
-[作者程式：Cell 46（簡化）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/15_transformers_for_nlp_and_chatbots.ipynb)
+作者程式：Cell 46（簡化）（`15_transformers_for_nlp_and_chatbots.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.16–18；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 46（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -358,7 +358,7 @@ model = BertForMaskedLM(config)
 
 這會建立隨機權重，尚未懂語言；`from_pretrained(...)` 才會載入既有權重。
 
-[作者程式：Cell 57（簡化）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/15_transformers_for_nlp_and_chatbots.ipynb)
+作者程式：Cell 57（簡化）（`15_transformers_for_nlp_and_chatbots.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.19–22；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 57（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -436,9 +436,9 @@ model = BertForMaskedLM(config)
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 
-- [作者第 15 章 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/15_transformers_for_nlp_and_chatbots.ipynb)：先執行 Setup，再定位本課指定區段。
+- 作者第 15 章 Notebook（`15_transformers_for_nlp_and_chatbots.ipynb`）：先執行 Setup，再定位本課指定區段。
 - 舊稿 `10_Attention.pptx` s.22–68：Q／K／V、位置、LayerNorm、解碼與損失；重複版本按內容取用。
 
-程式連結固定於教材核對的版本；執行前確認資料、套件與運算資源。
+程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->

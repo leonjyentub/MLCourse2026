@@ -33,7 +33,7 @@ style: |
 成果：能辨認瓶頸，說明速度、記憶體與品質的取捨。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：[`21_Transformer加速_推論與參數高效微調.ipynb`](../programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb`。程式片段、實際圖表與表格可由此檔重現。
 
 <!-- 來源／講者提示：書本：本地Ch17 pp.1–2；線上版PDF共65頁，正文由第5頁起。 -->
 
@@ -52,7 +52,7 @@ full_params = d_in * d_out
 
 **觀察**：r=8、d=4096 時，LoRA 訓練 65,536 個參數，約為完整矩陣的 0.391%。
 
-[開啟完整 Notebook](../programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb)
+參考程式：`programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb`
 
 </div>
 <div>
@@ -139,7 +139,7 @@ with torch.no_grad():
 
 先確認同條件下輸出，再量測速度；第一次載入或編譯不要混入穩態時間。
 
-[作者程式：Cell 18（改寫）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/17_speeding_up_transformers.ipynb)
+作者程式：Cell 18（改寫）（`17_speeding_up_transformers.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者KV Caching；程式依作者 17_speeding_up_transformers.ipynb Cell 18（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -268,7 +268,7 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 
 預期 Y 為 `[2,8,10,64]`；需支援 GQA 的版本與 backend，此例未加因果遮罩。
 
-[作者程式：Cell 50（縮小張量）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/17_speeding_up_transformers.ipynb)
+作者程式：Cell 50（縮小張量）（`17_speeding_up_transformers.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者Sharing Projections；程式依作者 17_speeding_up_transformers.ipynb Cell 50（縮小張量） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -370,7 +370,7 @@ peft_model.print_trainable_parameters()
 
 model 是相容的已載入因果語言模型；模組名稱須與模型實際結構一致。
 
-[作者程式：Cell 59（節錄）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/17_speeding_up_transformers.ipynb)
+作者程式：Cell 59（節錄）（`17_speeding_up_transformers.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者LoRA實作；程式依作者 17_speeding_up_transformers.ipynb Cell 59（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -450,7 +450,7 @@ for start in range(0, len(batches), 4):
 
 batches 是可索引的小型教學資料；不等樣本數時需依實際樣本數加權。
 
-[作者程式：Cell 63（修正尾組的教學改寫）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/17_speeding_up_transformers.ipynb)
+作者程式：Cell 63（修正尾組的教學改寫）（`17_speeding_up_transformers.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者Gradient Accumulation；程式依作者 17_speeding_up_transformers.ipynb Cell 63（修正尾組的教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -495,9 +495,9 @@ B. 微調時反向傳播發生記憶體不足。
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 
-- [作者第 17 章 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/17_speeding_up_transformers.ipynb)：先執行 Setup，再定位本課指定區段。
+- 作者第 17 章 Notebook（`17_speeding_up_transformers.ipynb`）：先執行 Setup，再定位本課指定區段。
 - 舊稿 `10_Attention.pptx` s.71 的 Reformer 作概念銜接；完整章節以作者線上補充與 Notebook 為主。
 
-程式連結固定於教材核對的版本；執行前確認資料、套件與運算資源。
+程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->

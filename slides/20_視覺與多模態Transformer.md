@@ -31,7 +31,7 @@ style: |
 成果：能追蹤 patch 形狀，分辨圖文比對與圖文生成。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：[`20_視覺與多模態Transformer.ipynb`](../programs/notebooks/20_視覺與多模態Transformer.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/20_視覺與多模態Transformer.ipynb`。程式片段、實際圖表與表格可由此檔重現。
 
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.1–50；兩次10分鐘休息。 -->
 
@@ -49,7 +49,7 @@ similarity = normalize(image_emb) @ normalize(text_emb).T
 
 **觀察**：圖文嵌入先正規化，再以餘弦相似度比較；分數只在同一模型空間內有意義。
 
-[開啟完整 Notebook](../programs/notebooks/20_視覺與多模態Transformer.ipynb)
+參考程式：`programs/notebooks/20_視覺與多模態Transformer.ipynb`
 
 </div>
 <div>
@@ -133,14 +133,14 @@ print(tokens.shape)  # 預期 [2, 196, 192]
 
 kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的影像尺寸。
 
-[作者程式：Cell 20（簡化）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/16_vision_and_multimodal_transformers.ipynb)
+作者程式：Cell 20（簡化）（`16_vision_and_multimodal_transformers.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.5–10；程式依作者 16_vision_and_multimodal_transformers.ipynb Cell 20（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
 ## ViT 的模型結構導讀
 
-[作者 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/16_vision_and_multimodal_transformers.ipynb)：Cells 20–22。
+作者 Notebook（`16_vision_and_multimodal_transformers.ipynb`）：Cells 20–22。
 
 找到 patch embedding、CLS token、position embedding、encoder 與分類頭。
 
@@ -207,7 +207,7 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 ---
 ## 自監督表示與 attention 圖
 
-[作者 DINO 範例](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/16_vision_and_multimodal_transformers.ipynb)：Cells 40–45。
+作者 DINO 範例（`16_vision_and_multimodal_transformers.ipynb`）：Cells 40–45。
 
 讀取 attention tensor 前，先確認 query 與 key 軸。
 
@@ -306,7 +306,7 @@ result = classifier(image, candidate_labels=["cat", "dog", "bird"],
 
 image 是已載入的 PIL RGB 影像；需下載模型。先比較不同文字模板，不重新訓練。
 
-[作者程式：Cell 49（改寫）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/16_vision_and_multimodal_transformers.ipynb)
+作者程式：Cell 49（改寫）（`16_vision_and_multimodal_transformers.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.30–33；程式依作者 16_vision_and_multimodal_transformers.ipynb Cell 49（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -460,9 +460,9 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 
-- [作者第 16 章 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/16_vision_and_multimodal_transformers.ipynb)：先執行 Setup，再定位本課指定區段。
+- 作者第 16 章 Notebook（`16_vision_and_multimodal_transformers.ipynb`）：先執行 Setup，再定位本課指定區段。
 - 舊稿 `11_Image Captioning.pptx` 與 `機器學習-08-Image Captioning.pptx`：CNN／RNN 圖片描述與 attention。
 
-程式連結固定於教材核對的版本；執行前確認資料、套件與運算資源。
+程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->
