@@ -32,7 +32,7 @@ style: |
 成果：能區分重建與生成，寫出主要損失，解讀生成失敗的原因。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：[`22_生成模型_自編碼器GAN與擴散.ipynb`](../programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb`。程式片段、實際圖表與表格可由此檔重現。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.1–46；大模型訓練安排課後選做。 -->
 
@@ -51,7 +51,7 @@ X_hat = decoder(Z)
 
 **觀察**：線性欠完備自編碼器的教學對照使用 PCA；重建誤差揭示壓縮會捨棄資訊。
 
-[開啟完整 Notebook](../programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb)
+參考程式：`programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb`
 
 </div>
 <div>
@@ -101,7 +101,7 @@ Encoder 壓縮或轉換資料；decoder 從表示重建輸入。
 ---
 ## 與本地 PCA 程式的連結
 
-[MachineLearning2025：PCA from scratch](../programs/upstream/MachineLearning2025/04_PCA_from_scratch.py)
+MachineLearning2025：PCA from scratch（`programs/upstream/MachineLearning2025/04_PCA_from_scratch.py`）
 
 - 找到中心化／標準化、協方差矩陣、特徵分解與投影。
 - 線性 AE 使用 MSE、沒有非線性，瓶頸維度設為相同。
@@ -114,7 +114,7 @@ PCA 主成分可變號，AE 也可能使用不同基底；不要直接要求 lat
 ---
 ## SVD 程式的可用部分與限制
 
-[MachineLearning2025：SVD_Decomposition](../programs/upstream/MachineLearning2025/04_SVD_from_scratch.py)
+MachineLearning2025：SVD_Decomposition（`programs/upstream/MachineLearning2025/04_SVD_from_scratch.py`）
 
 可讀 `fit()` 的中心化與主方向、`transform()` 的投影。
 
@@ -140,7 +140,7 @@ loss = nn.MSELoss()(autoencoder(X), X)
 
 這只示範模型與損失；需訓練收斂後才能與 PCA 比較。
 
-[作者程式：Cell 22（教學改寫）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/18_autoencoders_gans_and_diffusion_models.ipynb)
+作者程式：Cell 22（教學改寫）（`18_autoencoders_gans_and_diffusion_models.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.5–6；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 22（教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -307,7 +307,7 @@ def sample_codings(mean, logvar):
 
 把 log variance 當標準差直接使用會改變分布。此函式的輸出形狀與 mean 相同。
 
-[作者程式：Cell 92（節錄）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/18_autoencoders_gans_and_diffusion_models.ipynb)
+作者程式：Cell 92（節錄）（`18_autoencoders_gans_and_diffusion_models.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.22–24；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 92（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -426,7 +426,7 @@ optimizer_d.step()
 
 此片段假設 D 已含 Sigmoid、bce=nn.BCELoss()；改用 logits 時搭配 BCEWithLogitsLoss。
 
-[作者程式：Cell 116（節錄）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/18_autoencoders_gans_and_diffusion_models.ipynb)
+作者程式：Cell 116（節錄）（`18_autoencoders_gans_and_diffusion_models.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.32–34；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 116（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -505,7 +505,7 @@ def forward_diffusion(x0, alpha_bar):
 
 alpha_bar 須可broadcast至影像，例如 `[B,1,1,1]`；標籤是未縮放的 eps。
 
-[作者程式：Cells 130–135（改寫）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/18_autoencoders_gans_and_diffusion_models.ipynb)
+作者程式：Cells 130–135（改寫）（`18_autoencoders_gans_and_diffusion_models.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.39–41；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cells 130–135（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -548,7 +548,7 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 ---
 ## 生成程式的閱讀路線
 
-[作者 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/18_autoencoders_gans_and_diffusion_models.ipynb)
+作者 Notebook（`18_autoencoders_gans_and_diffusion_models.ipynb`）
 
 - Cells 91–113：VAE 與離散 latent。
 - Cells 114–123：GAN／DCGAN。
@@ -587,10 +587,10 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 
-- [作者第 18 章 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/18_autoencoders_gans_and_diffusion_models.ipynb)：先執行 Setup，再定位本課指定區段。
+- 作者第 18 章 Notebook（`18_autoencoders_gans_and_diffusion_models.ipynb`）：先執行 Setup，再定位本課指定區段。
 - 舊稿的 PCA／SVD 與神經網路作基礎銜接；生成模型主線依書本與作者第 18 章。
-- [PCA](../programs/upstream/MachineLearning2025/04_PCA_from_scratch.py)、[SVD](../programs/upstream/MachineLearning2025/04_SVD_from_scratch.py)：比較投影與非線性表示。
+- PCA（`programs/upstream/MachineLearning2025/04_PCA_from_scratch.py`）、SVD（`programs/upstream/MachineLearning2025/04_SVD_from_scratch.py`）：比較投影與非線性表示。
 
-程式連結固定於教材核對的版本；執行前確認資料、套件與運算資源。
+程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->

@@ -31,7 +31,7 @@ style: |
 成果：能建立不偷看未來的預測流程，並追蹤序列張量尺寸。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：[`16_序列模型_RNN與時間序列預測.ipynb`](../programs/notebooks/16_序列模型_RNN與時間序列預測.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/16_序列模型_RNN與時間序列預測.ipynb`。程式片段、實際圖表與表格可由此檔重現。
 
 <!-- 來源／講者提示：書本 Ch.13，PDF pp.1–42；兩次10分鐘休息。 -->
 
@@ -50,7 +50,7 @@ y[t] = series[t]
 
 **觀察**：視窗模型只讀過去 12 點；圖同時保留 persistence 基準，避免只看單一模型。
 
-[開啟完整 Notebook](../programs/notebooks/16_序列模型_RNN與時間序列預測.ipynb)
+參考程式：`programs/notebooks/16_序列模型_RNN與時間序列預測.ipynb`
 
 </div>
 <div>
@@ -190,7 +190,7 @@ def make_window(series, i, window_length):
 
 輸入 `[時間, 特徵]`；DataLoader 加上 batch 軸後為 `[B,T,F]`。
 
-[作者程式：Cell 48（簡化）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/13_processing_sequences_using_rnns_and_cnns.ipynb)
+作者程式：Cell 48（簡化）（`13_processing_sequences_using_rnns_and_cnns.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.13，PDF pp.16–18；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cell 48（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -221,7 +221,7 @@ y_pred = head(outputs[:, -1])
 
 outputs `[8,56,32]`，h_n `[1,8,32]`，預測 `[8,1]`。
 
-[作者程式：Cells 58–64（改寫）](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/13_processing_sequences_using_rnns_and_cnns.ipynb)
+作者程式：Cells 58–64（改寫）（`13_processing_sequences_using_rnns_and_cnns.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.13，PDF pp.19–23；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cells 58–64（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -287,7 +287,7 @@ predictions = X[:, -14:, 0]
 
 `unsqueeze(1)` 加的是時間軸；改成 0 會把 batch 軸弄錯。
 
-[作者程式：Cell 80](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/13_processing_sequences_using_rnns_and_cnns.ipynb)
+作者程式：Cell 80（`13_processing_sequences_using_rnns_and_cnns.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.13，PDF pp.24–26；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cell 80 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -389,7 +389,7 @@ out_gru, h_n_gru = gru(X)
 
 LSTM 回傳 hidden 與 cell；兩者逐步輸出皆為 `[8,56,32]`。
 
-[作者程式：Cells 107、112](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/13_processing_sequences_using_rnns_and_cnns.ipynb)
+作者程式：Cells 107、112（`13_processing_sequences_using_rnns_and_cnns.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.13，PDF pp.31–36；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cells 107、112 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -419,7 +419,7 @@ class CausalConv1d(nn.Conv1d):
 
 用 dilation 增加感受野，仍須維持時間方向。
 
-[作者程式：Cell 123](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/13_processing_sequences_using_rnns_and_cnns.ipynb)
+作者程式：Cell 123（`13_processing_sequences_using_rnns_and_cnns.ipynb`）
 
 <!-- 來源／講者提示：書本 Ch.13，PDF pp.38–40；程式依作者 13_processing_sequences_using_rnns_and_cnns.ipynb Cell 123 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -460,9 +460,9 @@ class CausalConv1d(nn.Conv1d):
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 
-- [作者第 13 章 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/13_processing_sequences_using_rnns_and_cnns.ipynb)：先執行 Setup，再定位本課指定區段。
+- 作者第 13 章 Notebook（`13_processing_sequences_using_rnns_and_cnns.ipynb`）：先執行 Setup，再定位本課指定區段。
 - 舊稿 `08_Recurrent Neural Networks.pptx`：循環狀態、LSTM 與序列任務；文字部分留到下一份。
 
-程式連結固定於教材核對的版本；執行前確認資料、套件與運算資源。
+程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->
