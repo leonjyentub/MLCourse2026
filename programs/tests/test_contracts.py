@@ -56,7 +56,7 @@ def test_original_source_snapshots_unchanged():
 
 def test_saved_pipeline_predicts_in_separate_python_process():
     if not (OUT/'models/housing_pipeline.joblib').exists():
-        pytest.skip('Run notebook 04 to create the model before persistence validation')
+        pytest.skip('Run notebook 02 to create the model before persistence validation')
     output = subprocess.check_output([sys.executable,str(ROOT/'scripts/predict_housing.py')],text=True,cwd=ROOT)
     result = json.loads(output)
     assert result['rows']==5
@@ -66,7 +66,7 @@ def test_saved_pipeline_handles_missing_and_unknown_category():
     import joblib
     path = OUT/'models/housing_pipeline.joblib'
     if not path.exists():
-        pytest.skip('Run notebook 04 first')
+        pytest.skip('Run notebook 02 first')
     model = joblib.load(path)
     frame = pd.read_csv(DATA/'housing.csv').head(3).drop(columns='median_house_value')
     frame.loc[0,'total_bedrooms']=np.nan

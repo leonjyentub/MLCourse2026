@@ -1,0 +1,36 @@
+{
+  "lora_params": 65536,
+  "full_params": 16777216,
+  "table": [
+    {
+      "sequence_length": 16,
+      "projected_token_states_without_cache": 136,
+      "with_KV_cache": 16,
+      "ratio": 8.5
+    },
+    {
+      "sequence_length": 32,
+      "projected_token_states_without_cache": 528,
+      "with_KV_cache": 32,
+      "ratio": 16.5
+    },
+    {
+      "sequence_length": 64,
+      "projected_token_states_without_cache": 2080,
+      "with_KV_cache": 64,
+      "ratio": 32.5
+    },
+    {
+      "sequence_length": 128,
+      "projected_token_states_without_cache": 8256,
+      "with_KV_cache": 128,
+      "ratio": 64.5
+    },
+    {
+      "sequence_length": 256,
+      "projected_token_states_without_cache": 32896,
+      "with_KV_cache": 256,
+      "ratio": 128.5
+    }
+  ]
+}

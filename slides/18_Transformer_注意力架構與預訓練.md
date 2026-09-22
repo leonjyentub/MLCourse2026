@@ -22,7 +22,6 @@ style: |
 <!-- 來源／講者提示：自編章節導入 -->
 
 ---
-
 ## 學習成果與課堂安排
 
 - 0–50 分：Transformer 結構、位置資訊與 Q／K／V。
@@ -31,10 +30,38 @@ style: |
 
 成果：能手算小型注意力，追蹤維度並辨識未來資訊洩漏。
 
+<!-- notebook-companion-link -->
+> 💻 **配套 Notebook**：[`18_Transformer_注意力架構與預訓練.ipynb`](../programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.1–33；兩次10分鐘休息。 -->
 
 ---
+<!-- notebook-result-slide -->
+<!-- _class: small -->
+## 程式實驗與實際輸出
 
+<div class="columns wide-left">
+<div>
+
+```python
+scores[future_mask] = -inf
+weights = softmax(scores)
+```
+
+**觀察**：遮罩後未來位置的注意力總量為 0，權重矩陣呈下三角。
+
+[開啟完整 Notebook](../programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb)
+
+</div>
+<div>
+
+![h:330 18_Transformer_注意力架構與預訓練 的實際執行結果](../programs/outputs/figures/18_transformer_mask_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：程式與圖均來自 programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+---
 ## 三種 Transformer 家族
 
 | 架構 | 可見上下文 | 常見任務 |
@@ -48,7 +75,6 @@ style: |
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.1–5、18、33、63–65 -->
 
 ---
-
 <!-- _class: figure-tall -->
 ## 原始 Transformer 的完整架構
 
@@ -71,7 +97,6 @@ style: |
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.5–7，圖15-3；保留原圖，右側依資訊流補充中文導讀。 -->
 
 ---
-
 ## 序列沒有循環，仍需要位置資訊
 
 Self-attention 本身依內容配對，不能單靠 token 集合知道順序。
@@ -83,7 +108,6 @@ Self-attention 本身依內容配對，不能單靠 token 集合知道順序。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；10_Attention.pptx s.38–48。 -->
 
 ---
-
 <!-- _class: small -->
 ## 可學習位置向量
 
@@ -103,7 +127,6 @@ class PositionalEmbedding(nn.Module):
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 31（移除Dropout以聚焦位置） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## 固定位置編碼的概念
 
 $$PE_{p,2i}=\sin\!\left(p/10000^{2i/d}\right)$$
@@ -116,7 +139,6 @@ $$PE_{p,2i+1}=\cos\!\left(p/10000^{2i/d}\right)$$
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；作者Extra Material Fixed Positional Encodings。 -->
 
 ---
-
 ## Q、K、V 的分工
 
 - Query：目前位置要尋找的特徵。
@@ -128,7 +150,6 @@ Self-attention 的三者來自同一序列的不同線性投影；cross-attentio
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–14；補充10_Attention.pptx s.22–35。 -->
 
 ---
-
 ## Scaled dot-product attention
 
 $$\operatorname{Attention}(Q,K,V)=\operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$$
@@ -143,7 +164,6 @@ Softmax 沿 key 位置計算。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–13，式15-1。 -->
 
 ---
-
 <!-- _class: activity -->
 ## 點積注意力手算
 
@@ -158,7 +178,6 @@ Softmax 沿 key 位置計算。
 <!-- 來源／講者提示：自編數例。分數不變，輸出改為[0.660,2.680]。 -->
 
 ---
-
 <!-- _class: small -->
 ## 四行看懂 attention 核心
 
@@ -177,7 +196,6 @@ context = weights @ V
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–14；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 35（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 <!-- _class: figure -->
 ## 多頭注意力分別學習不同投影
 
@@ -188,7 +206,6 @@ context = weights @ V
 <!-- 來源／講者提示：書本 Ch.15，PDF 11，圖 15-4。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 多頭的維度追蹤
 
 設 $B=2,L=10,d_{model}=64,h=4$。
@@ -205,7 +222,6 @@ $64$ 必須可被 $4$ 整除。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.10–14；自編尺寸。 -->
 
 ---
-
 ## 兩種遮罩處理不同問題
 
 | 遮罩 | 禁止看什麼 |
@@ -220,7 +236,6 @@ $64$ 必須可被 $4$ 整除。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–18；作者Cell46；自寫MHA與nn.Transformer的True=block，F.scaled_dot_product_attention布林True=allow。 -->
 
 ---
-
 <!-- _class: activity -->
 ## Causal mask 手算
 
@@ -233,7 +248,6 @@ $$\begin{bmatrix}1&0&0&0\\1&1&0&0\\1&1&1&0\\1&1&1&1\end{bmatrix}$$
 <!-- 來源／講者提示：自編矩陣；對應Ch15 decoder遮罩。 -->
 
 ---
-
 ## Feed-forward network 與殘差
 
 FFN 對每個位置套用同一組非線性轉換。
@@ -247,7 +261,6 @@ Attention 混合不同位置的資訊；FFN 轉換每個位置內的特徵。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–16 -->
 
 ---
-
 <!-- _class: activity -->
 ## LayerNorm 手算：舊稿的四維例子
 
@@ -263,7 +276,6 @@ $[-1.414,0,0,1.414]$。
 <!-- 來源／講者提示：補充：10_Attention.pptx s.52–53；Ch15 pp.14–16。 -->
 
 ---
-
 ## Pre-norm 與 post-norm
 
 原始架構把 norm 放在殘差相加之後；其他設計可放在子層之前。
@@ -278,7 +290,6 @@ $[-1.414,0,0,1.414]$。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–16；變體為架構對照。 -->
 
 ---
-
 <!-- _class: small -->
 ## 翻譯 Transformer 的遮罩位置
 
@@ -300,7 +311,6 @@ src_pad、tgt_pad 中 True 表示 padding；tgt 需使用位移後的目標前�
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.16–18；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 46（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## Encoder-only 模型與 BERT
 
 BERT 用雙向上下文學表示，常用於分類與資訊抽取。
@@ -312,7 +322,6 @@ BERT 用雙向上下文學表示，常用於分類與資訊抽取。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.18–27 -->
 
 ---
-
 <!-- _class: figure -->
 ## BERT 的預訓練目標
 
@@ -323,7 +332,6 @@ MLM 預測選中的 token；原始 BERT 也使用 NSP 判斷句子配對。
 <!-- 來源／講者提示：書本 Ch.15，PDF 21，圖 15-5。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## MLM 的遮蔽規則
 
 原始 BERT 選約 15% token 作預測目標。
@@ -337,7 +345,6 @@ MLM 預測選中的 token；原始 BERT 也使用 NSP 判斷句子配對。
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.19–22 -->
 
 ---
-
 <!-- _class: small -->
 ## 小型 BERT：區分隨機初始化與預訓練
 
@@ -356,7 +363,6 @@ model = BertForMaskedLM(config)
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.19–22；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 57（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 <!-- _class: figure -->
 ## 分類頭與逐 token 任務頭
 
@@ -367,7 +373,6 @@ model = BertForMaskedLM(config)
 <!-- 來源／講者提示：書本 Ch.15，PDF 24，圖 15-7。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 問答任務的輸出設計
 
 | 任務 | 輸出 |
@@ -382,7 +387,6 @@ model = BertForMaskedLM(config)
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.22–27 -->
 
 ---
-
 <!-- _class: figure -->
 ## DistilBERT 的知識蒸餾
 
@@ -393,7 +397,6 @@ model = BertForMaskedLM(config)
 <!-- 來源／講者提示：書本 Ch.15，PDF 28，圖 15-9。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## Encoder 模型的改良方向
 
 | 模型 | 教材中的主要改良 |
@@ -406,7 +409,6 @@ model = BertForMaskedLM(config)
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.27–33；補充ModernBERT等後續模型為架構延伸，不列即時效能排名。 -->
 
 ---
-
 <!-- _class: activity -->
 ## 課堂活動：找出注意力錯誤
 
@@ -421,7 +423,6 @@ model = BertForMaskedLM(config)
 <!-- 來源／講者提示：自編活動。前兩者錯誤；第三者是常見正確資訊流。 -->
 
 ---
-
 ## 離堂檢核
 
 - 自注意力與交叉注意力的 Q／K／V 分別來自哪裡？
@@ -432,7 +433,6 @@ model = BertForMaskedLM(config)
 <!-- 來源／講者提示：自編檢核；15%=候選token，80%=被選中token；config不含學好權重。 -->
 
 ---
-
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 

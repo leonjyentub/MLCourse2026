@@ -24,6 +24,7 @@ def main():
     os.environ['IPYTHONDIR'] = str(ROOT/'.jupyter/ipython')
     os.environ['MPLCONFIGDIR'] = str(ROOT/'.jupyter/matplotlib')
     paths = sorted((ROOT/'notebooks').glob('*.ipynb'))
+    valid_notebooks = {p.name for p in paths}
     if args.names:
         paths = [p for p in paths if any(p.stem.startswith(x) for x in args.names)]
     assert paths, 'No notebooks selected'
@@ -52,7 +53,8 @@ def main():
         print('OK', row, flush=True)
         report = ROOT/'outputs/execution.json'
         existing = json.loads(report.read_text()) if report.exists() else []
-        existing = [r for r in existing if r['notebook'] != path.name] + [row]
+        existing = [r for r in existing
+                    if r['notebook'] in valid_notebooks and r['notebook'] != path.name] + [row]
         report.write_text(json.dumps(sorted(existing,key=lambda r:r['notebook']),indent=2)+'\n')
 
 if __name__ == '__main__':

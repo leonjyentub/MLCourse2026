@@ -22,7 +22,6 @@ style: |
 <!-- 來源／講者提示：自編章節導入 -->
 
 ---
-
 ## 教材範圍與學習成果
 
 本地第 17 章 PDF 是兩頁導讀；完整章節在作者網站。
@@ -33,10 +32,38 @@ style: |
 
 成果：能辨認瓶頸，說明速度、記憶體與品質的取捨。
 
+<!-- notebook-companion-link -->
+> 💻 **配套 Notebook**：[`21_Transformer加速_推論與參數高效微調.ipynb`](../programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+
 <!-- 來源／講者提示：書本：本地Ch17 pp.1–2；線上版PDF共65頁，正文由第5頁起。 -->
 
 ---
+<!-- notebook-result-slide -->
+<!-- _class: small -->
+## 程式實驗與實際輸出
 
+<div class="columns wide-left">
+<div>
+
+```python
+lora_params = r * (d_in + d_out)
+full_params = d_in * d_out
+```
+
+**觀察**：r=8、d=4096 時，LoRA 訓練 65,536 個參數，約為完整矩陣的 0.391%。
+
+[開啟完整 Notebook](../programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb)
+
+</div>
+<div>
+
+![h:330 21_Transformer加速_推論與參數高效微調 的實際執行結果](../programs/outputs/figures/21_transformer_efficiency_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：程式與圖均來自 programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+---
 ## 課堂安排與量測對象
 
 - 0–50 分：prefill、decode、KV cache 與推測解碼。
@@ -48,7 +75,6 @@ style: |
 <!-- 來源／講者提示：自編教學安排；作者Ch17 Notebook結構。 -->
 
 ---
-
 ## 先辨認瓶頸
 
 | 現象 | 優先量測 |
@@ -63,7 +89,6 @@ style: |
 <!-- 來源／講者提示：自編瓶頸表；本地Ch17導讀與作者Notebook加速分類。 -->
 
 ---
-
 <!-- _class: figure -->
 ## KV cache 重用先前的投影
 
@@ -74,7 +99,6 @@ style: |
 <!-- 來源／講者提示：書本：線上Ch17 PDF 7，圖 17-1。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 為何不必快取全部 Q
 
 因果模型新增 token 時，先前位置的表示不需受未來 token 改變。
@@ -86,7 +110,6 @@ Cache 減少重複計算，但序列越長，保存的 K／V 仍持續成長。
 <!-- 來源／講者提示：書本：本地Ch17導讀；程式：作者Cell18 use_cache對照；線上圖17-1。 -->
 
 ---
-
 <!-- _class: activity -->
 ## KV cache 記憶體手算
 
@@ -101,7 +124,6 @@ Cache 減少重複計算，但序列越長，保存的 K／V 仍持續成長。
 <!-- 來源／講者提示：自編尺寸估算；2代表K和V。 -->
 
 ---
-
 <!-- _class: small -->
 ## Cache 的功能比較
 
@@ -122,7 +144,6 @@ with torch.no_grad():
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者KV Caching；程式依作者 17_speeding_up_transformers.ipynb Cell 18（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 <!-- _class: figure -->
 ## 推測解碼先提案再驗證
 
@@ -133,7 +154,6 @@ with torch.no_grad():
 <!-- 來源／講者提示：書本：線上Ch17 PDF 10，圖 17-2。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## Greedy 與抽樣的驗證不同
 
 Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新接續。
@@ -147,7 +167,6 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 <!-- 來源／講者提示：程式：作者Cell20 assistant_model；本地Ch17推測解碼導讀，圖17-2為greedy教學。 -->
 
 ---
-
 ## 平行生成與動態批次
 
 | 方法 | 想降低的等待 |
@@ -161,7 +180,6 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 <!-- 來源／講者提示：書本：線上Ch17 pp.12–14導讀；自行整理方法角色。 -->
 
 ---
-
 ## 注意力分數的平方成本
 
 若 $L=8192$，單一 head 的完整分數有 $L²=67,108,864$ 個值。
@@ -173,7 +191,6 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 <!-- 來源／講者提示：自編成本計算；本地Ch17 attention導讀。 -->
 
 ---
-
 ## 稀疏注意力：限制可見位置
 
 | 模式 | 連接方式 |
@@ -186,7 +203,6 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 <!-- 來源／講者提示：程式：作者BigBird Cells22–24；書本本地Ch17 sparse attention導讀，線上章節sparse目錄。 -->
 
 ---
-
 ## 近似注意力的不同路線
 
 | 路線 | 書中例子 |
@@ -200,7 +216,6 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 <!-- 來源／講者提示：程式：作者Cells25–45；Linformer為線上章節低秩注意力補充。 -->
 
 ---
-
 ## Performer 的重排概念
 
 若 $\operatorname{softmax}$ kernel 可用特徵映射近似，則可先算
@@ -214,7 +229,6 @@ $$\phi(Q)\bigl(\phi(K)^\top V\bigr)$$
 <!-- 來源／講者提示：程式：作者Cells29–45，隨機特徵推導；此式省略分母並在文字明示。 -->
 
 ---
-
 <!-- _class: figure -->
 ## MHA、MQA 與 GQA
 
@@ -225,7 +239,6 @@ $$\phi(Q)\bigl(\phi(K)^\top V\bigr)$$
 <!-- 來源／講者提示：書本：線上Ch17 PDF 36，圖 17-11。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 共享 K／V 的尺寸比較
 
 設 query heads 為 8，每頭 64 維。
@@ -241,7 +254,6 @@ $$\phi(Q)\bigl(\phi(K)^\top V\bigr)$$
 <!-- 來源／講者提示：自編計算；作者Cells48、50。 -->
 
 ---
-
 <!-- _class: small -->
 ## GQA 的讀碼尺寸
 
@@ -261,7 +273,6 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者Sharing Projections；程式依作者 17_speeding_up_transformers.ipynb Cell 50（縮小張量） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## MLA 與潛在快取（選讀）
 
 把 key／value 所需資訊壓到較小的 latent 表示，再配合投影使用。
@@ -273,7 +284,6 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 <!-- 來源／講者提示：書本：線上Ch17圖17-12與共享投影段；選讀概念，不提供未驗證實作。 -->
 
 ---
-
 ## FlashAttention 的重點
 
 以分塊計算與 online Softmax，減少 GPU 記憶體讀寫與大型中間矩陣。
@@ -285,7 +295,6 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 <!-- 來源／講者提示：程式：作者Cells51–57；Cell54指出toy實作只處理長度可整除block的情況。 -->
 
 ---
-
 ## 分塊 Softmax 的穩定性
 
 直接計算 $\exp(s)$ 可能溢位，因此先減去目前最大值。
@@ -297,7 +306,6 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 <!-- 來源／講者提示：程式：作者flash_attention Cell53；自編錯誤辨識題。 -->
 
 ---
-
 ## MoE 的稀疏啟用
 
 Router 對每個 token 選少數 experts，常用來替換 FFN。
@@ -311,7 +319,6 @@ Router 對每個 token 選少數 experts，常用來替換 FFN。
 <!-- 來源／講者提示：書本：本地Ch17 MoE導讀；線上章節MoE段。作者Notebook此標題下實際接LoRA，無完整MoE實作。 -->
 
 ---
-
 ## MoE 的訓練問題（選讀）
 
 容量限制、負載平衡與 router 穩定性都影響結果。
@@ -323,7 +330,6 @@ Router 對每個 token 選少數 experts，常用來替換 FFN。
 <!-- 來源／講者提示：書本：線上Ch17 MoE目錄所列挑戰；自行整理觀察項目。 -->
 
 ---
-
 <!-- _class: figure -->
 ## LoRA 的低秩參數更新
 
@@ -334,7 +340,6 @@ Router 對每個 token 選少數 experts，常用來替換 FFN。
 <!-- 來源／講者提示：書本：線上Ch17 PDF 51，圖 17-15。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 <!-- _class: activity -->
 ## LoRA 的參數量手算
 
@@ -350,7 +355,6 @@ $4096×8+8×4096=65,536$ 個參數。
 <!-- 來源／講者提示：自編數例；作者Cell59 PEFT配置。 -->
 
 ---
-
 <!-- _class: small -->
 ## PEFT：指定要加 LoRA 的模組
 
@@ -371,7 +375,6 @@ model 是相容的已載入因果語言模型；模組名稱須與模型實際�
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者LoRA實作；程式依作者 17_speeding_up_transformers.ipynb Cell 59（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## Adapters 與其他 PEFT 方法
 
 | 方法 | 訓練的位置 |
@@ -385,7 +388,6 @@ model 是相容的已載入因果語言模型；模組名稱須與模型實際�
 <!-- 來源／講者提示：書本：本地Ch17 PEFT導讀；作者LoRA段延伸比較。 -->
 
 ---
-
 ## Activation checkpointing
 
 只保存部分中間結果，在反向傳播時重算其他部分。
@@ -398,7 +400,6 @@ model 是相容的已載入因果語言模型；模組名稱須與模型實際�
 <!-- 來源／講者提示：書本：本地Ch17 activation checkpointing導讀。 -->
 
 ---
-
 <!-- _class: figure -->
 ## Packing 與 bucketing 減少補值
 
@@ -409,7 +410,6 @@ Packing 串接短序列，bucketing 把相近長度分組；兩者仍須維持�
 <!-- 來源／講者提示：書本：線上Ch17 PDF 55，圖 17-16。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## Packing 的文件邊界
 
 兩段獨立文件放入同一序列後，要依訓練目標處理文件邊界。
@@ -421,7 +421,6 @@ Packing 串接短序列，bucketing 把相近長度分組；兩者仍須維持�
 <!-- 來源／講者提示：自編資料處理檢核；本地Ch17 sequence packing導讀。 -->
 
 ---
-
 ## Gradient accumulation
 
 多個 microbatch 累積梯度後才更新一次參數。
@@ -435,7 +434,6 @@ Packing 串接短序列，bucketing 把相近長度分組；兩者仍須維持�
 <!-- 來源／講者提示：程式：作者Cell63；原例100batch可被4整除，課堂擴充討論尾組。 -->
 
 ---
-
 <!-- _class: small -->
 ## 累積梯度：處理最後不足一組
 
@@ -457,7 +455,6 @@ batches 是可索引的小型教學資料；不等樣本數時需依實際樣本
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者Gradient Accumulation；程式依作者 17_speeding_up_transformers.ipynb Cell 63（修正尾組的教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## 平行訓練的切分方式
 
 | 方式 | 切分什麼 | 主要代價 |
@@ -470,7 +467,6 @@ batches 是可索引的小型教學資料；不等樣本數時需依實際樣本
 <!-- 來源／講者提示：書本：本地Ch17 parallelism導讀；線上章節平行訓練段。 -->
 
 ---
-
 <!-- _class: activity -->
 ## 課堂活動：兩種瓶頸的方案
 
@@ -486,7 +482,6 @@ B. 微調時反向傳播發生記憶體不足。
 <!-- 來源／講者提示：自編活動。 -->
 
 ---
-
 ## 離堂檢核
 
 - KV cache 為何會隨對話長度增加？
@@ -497,7 +492,6 @@ B. 微調時反向傳播發生記憶體不足。
 <!-- 來源／講者提示：自編檢核；快取位置增加；K/V共享；否；可訓練狀態與單次activation峰值。 -->
 
 ---
-
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 

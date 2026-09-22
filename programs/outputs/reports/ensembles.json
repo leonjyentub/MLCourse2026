@@ -62,8 +62,8 @@
     },
     "cv_seconds": {
       "shallow_tree": 0.004,
-      "random_forest_200": 0.546,
-      "hist_grad_boosting": 2.081
+      "random_forest_200": 0.541,
+      "hist_grad_boosting": 4.248
     }
   }
 }

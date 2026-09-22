@@ -11,7 +11,7 @@ def main():
     args = parser.parse_args()
     model_path = OUT/'models/housing_pipeline.joblib'
     if not model_path.exists():
-        raise SystemExit('先執行 Notebook 04，產生本機模型。')
+        raise SystemExit('先執行 Notebook 02，產生本機模型。')
     model = joblib.load(model_path)
     metadata = json.loads((model_path.parent/'housing_metadata.json').read_text())
     if args.csv:

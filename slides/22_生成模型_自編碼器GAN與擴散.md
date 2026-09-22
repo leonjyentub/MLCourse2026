@@ -22,7 +22,6 @@ style: |
 <!-- 來源／講者提示：自編章節導入 -->
 
 ---
-
 ## 學習成果與課堂安排
 
 本份可分兩次各 120 分鐘，總計含兩次 10 分鐘休息。
@@ -32,10 +31,38 @@ style: |
 
 成果：能區分重建與生成，寫出主要損失，解讀生成失敗的原因。
 
+<!-- notebook-companion-link -->
+> 💻 **配套 Notebook**：[`22_生成模型_自編碼器GAN與擴散.ipynb`](../programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.1–46；大模型訓練安排課後選做。 -->
 
 ---
+<!-- notebook-result-slide -->
+<!-- _class: small -->
+## 程式實驗與實際輸出
 
+<div class="columns wide-left">
+<div>
+
+```python
+Z = encoder(X)
+X_hat = decoder(Z)
+```
+
+**觀察**：線性欠完備自編碼器的教學對照使用 PCA；重建誤差揭示壓縮會捨棄資訊。
+
+[開啟完整 Notebook](../programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb)
+
+</div>
+<div>
+
+![h:330 22_生成模型_自編碼器GAN與擴散 的實際執行結果](../programs/outputs/figures/22_generative_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：程式與圖均來自 programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+---
 ## 重建與生成的差別
 
 | 任務 | 輸入 | 輸出 |
@@ -49,7 +76,6 @@ style: |
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.1–6、21–26 -->
 
 ---
-
 ## Autoencoder 的表示學習
 
 $$z=f_\theta(x),\qquad\hat x=g_\phi(z)$$
@@ -63,7 +89,6 @@ Encoder 壓縮或轉換資料；decoder 從表示重建輸入。
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.3–6 -->
 
 ---
-
 <!-- _class: figure -->
 ## 線性 Autoencoder 與 PCA
 
@@ -74,7 +99,6 @@ Encoder 壓縮或轉換資料；decoder 從表示重建輸入。
 <!-- 來源／講者提示：書本 Ch.18，PDF 6，圖 18-2。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 與本地 PCA 程式的連結
 
 [MachineLearning2025：PCA from scratch](../programs/upstream/MachineLearning2025/04_PCA_from_scratch.py)
@@ -88,7 +112,6 @@ PCA 主成分可變號，AE 也可能使用不同基底；不要直接要求 lat
 <!-- 來源／講者提示：補充：本地PCA檔17–40行；Ch18 pp.5–6。原檔產生10筆資料，註解的100筆不作依據；繪圖需另處理字型。 -->
 
 ---
-
 ## SVD 程式的可用部分與限制
 
 [MachineLearning2025：SVD_Decomposition](../programs/upstream/MachineLearning2025/04_SVD_from_scratch.py)
@@ -102,7 +125,6 @@ PCA 主成分可變號，AE 也可能使用不同基底；不要直接要求 lat
 <!-- 來源／講者提示：補充：04_SVD_from_scratch.py 第20–37行，協方差除以n-1，U因此未採標準正交尺度；未修改原程式。 -->
 
 ---
-
 <!-- _class: small -->
 ## 線性 AE 的最小結構
 
@@ -123,7 +145,6 @@ loss = nn.MSELoss()(autoencoder(X), X)
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.5–6；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 22（教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## Stacked AE 的瓶頸
 
 多層非線性 encoder 與 decoder 可學彎曲的低維表示。
@@ -137,7 +158,6 @@ loss = nn.MSELoss()(autoencoder(X), X)
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.6–9；作者Cell33。 -->
 
 ---
-
 <!-- _class: figure -->
 ## 重建圖要與原圖成對檢查
 
@@ -148,7 +168,6 @@ loss = nn.MSELoss()(autoencoder(X), X)
 <!-- 來源／講者提示：書本 Ch.18，PDF 9，圖 18-4。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## AE 異常偵測的假設
 
 用正常資料訓練後，異常資料可能出現較大的重建誤差。
@@ -162,7 +181,6 @@ loss = nn.MSELoss()(autoencoder(X), X)
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.9–10 -->
 
 ---
-
 <!-- _class: activity -->
 ## 重建誤差閾值活動
 
@@ -177,7 +195,6 @@ loss = nn.MSELoss()(autoencoder(X), X)
 <!-- 來源／講者提示：自編數例；不把四筆驗證樣本當真實閾值估計方法。 -->
 
 ---
-
 ## 表示視覺化與無監督預訓練
 
 - 先用 encoder 產生 latent，再用 t-SNE 等方法視覺化。
@@ -188,7 +205,6 @@ loss = nn.MSELoss()(autoencoder(X), X)
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.10–12 -->
 
 ---
-
 ## Tied weights 與逐層預訓練
 
 Tied weights 讓 decoder 使用 encoder 權重的轉置，減少自由參數。
@@ -200,7 +216,6 @@ Greedy layerwise pretraining 每次先學一層，再堆疊微調。
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.12–15；作者Cell55 TiedAutoencoder。 -->
 
 ---
-
 ## 卷積 Autoencoder
 
 影像 encoder 用卷積與下採樣，decoder 用上採樣或轉置卷積。
@@ -212,7 +227,6 @@ Greedy layerwise pretraining 每次先學一層，再堆疊微調。
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.14–16 -->
 
 ---
-
 <!-- _class: figure -->
 ## Denoising AE 的訓練配對
 
@@ -223,7 +237,6 @@ Greedy layerwise pretraining 每次先學一層，再堆疊微調。
 <!-- 來源／講者提示：書本 Ch.18，PDF 16，圖 18-9。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 去噪任務的實作檢查
 
 ```python
@@ -239,7 +252,6 @@ loss = nn.MSELoss()(pred, clean)
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.16–17；依作者Cells68–77改寫。clean為0到1影像。 -->
 
 ---
-
 ## 稀疏 AE 的約束
 
 即使 latent 維度較大，也可限制多數神經元平均活化很低。
@@ -251,7 +263,6 @@ loss = nn.MSELoss()(pred, clean)
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.17–21 -->
 
 ---
-
 ## 稀疏懲罰的 KL 形式
 
 $$KL(\rho\Vert\hat\rho_j)=\rho\log\frac{\rho}{\hat\rho_j}+(1-\rho)\log\frac{1-\rho}{1-\hat\rho_j}$$
@@ -263,7 +274,6 @@ $$KL(\rho\Vert\hat\rho_j)=\rho\log\frac{\rho}{\hat\rho_j}+(1-\rho)\log\frac{1-\r
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.18–21；作者Cell81使用clamp。 -->
 
 ---
-
 <!-- _class: figure -->
 ## VAE 學習潛在分布
 
@@ -274,7 +284,6 @@ Encoder 輸出平均與變異數，再抽樣 latent；decoder 用 latent 重建�
 <!-- 來源／講者提示：書本 Ch.18，PDF 22，圖 18-12。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## Reparameterization trick
 
 $$z=\mu(x)+\sigma(x)\odot\epsilon,\qquad\epsilon\sim\mathcal N(0,I)$$
@@ -286,7 +295,6 @@ $$z=\mu(x)+\sigma(x)\odot\epsilon,\qquad\epsilon\sim\mathcal N(0,I)$$
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.21–24 -->
 
 ---
-
 <!-- _class: small -->
 ## VAE 的抽樣
 
@@ -304,7 +312,6 @@ def sample_codings(mean, logvar):
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.22–24；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 92（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## VAE 的重建與 KL 平衡
 
 $$L=L_{recon}+\beta D_{KL}(q_\phi(z\mid x)\Vert p(z))$$
@@ -318,7 +325,6 @@ $$L=L_{recon}+\beta D_{KL}(q_\phi(z\mid x)\Vert p(z))$$
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.23–25；作者Cell93將KL除以784以配合像素平均MSE。 -->
 
 ---
-
 <!-- _class: activity -->
 ## 標準常態先驗的 KL
 
@@ -333,7 +339,6 @@ KL 越小不表示重建必然越好。
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.24–25；自編數例。 -->
 
 ---
-
 ## 從先驗生成與重建的不同
 
 重建：先經 encoder 得到與特定輸入有關的 latent。
@@ -349,7 +354,6 @@ with torch.no_grad():
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.25–26；需已有訓練VAE、latent_dim、device，完整作者Cells96–103。 -->
 
 ---
-
 <!-- _class: figure -->
 ## Latent interpolation
 
@@ -360,7 +364,6 @@ with torch.no_grad():
 <!-- 來源／講者提示：書本 Ch.18，PDF 26，圖 18-14。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 離散 VAE 與 Gumbel-Softmax
 
 離散 latent 可表示為 code IDs，便於與 token 模型串接。
@@ -374,7 +377,6 @@ with torch.no_grad():
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.26–28；修正書中一次gumble拼字；作者Cells104–113並註記MPS特定版本處理。 -->
 
 ---
-
 ## VQ-VAE 的 codebook
 
 Encoder 產生連續表示，選最近的 codebook 向量交給 decoder。
@@ -386,7 +388,6 @@ Encoder 產生連續表示，選最近的 codebook 向量交給 decoder。
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.28–30 -->
 
 ---
-
 <!-- _class: figure -->
 ## GAN 的兩個模型
 
@@ -397,7 +398,6 @@ Generator 產生樣本，discriminator 分辨真實與生成資料；兩者交�
 <!-- 來源／講者提示：書本 Ch.18，PDF 31，圖 18-15。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## GAN 的訓練目標
 
 令 D 輸出「真實」機率：
@@ -410,7 +410,6 @@ $$L_G=-\mathbb E_z\log D(G(z))$$
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.30–34；作者Cell116交替更新。 -->
 
 ---
-
 <!-- _class: small -->
 ## 訓練 D 時隔開 generator 梯度
 
@@ -432,7 +431,6 @@ optimizer_d.step()
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.32–34；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 116（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## 訓練 G 時仍須通過 D
 
 更新 generator 時，loss 必須能經由 discriminator 回傳到 generator。
@@ -444,7 +442,6 @@ optimizer_d.step()
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.32–34；作者Cell116的兩個更新階段比較。 -->
 
 ---
-
 <!-- _class: figure -->
 ## Mode collapse
 
@@ -455,7 +452,6 @@ optimizer_d.step()
 <!-- 來源／講者提示：書本 Ch.18，PDF 35，圖 18-17。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## GAN 的不穩定與 DCGAN
 
 - G 與 D 強弱失衡，會改變彼此的學習訊號。
@@ -466,7 +462,6 @@ optimizer_d.step()
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.34–36；作者Cells120–123。 -->
 
 ---
-
 <!-- _class: figure -->
 ## 擴散模型的正向與反向過程
 
@@ -477,7 +472,6 @@ optimizer_d.step()
 <!-- 來源／講者提示：書本 Ch.18，PDF 37，圖 18-18。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 任意時間步的加噪公式
 
 $$x_t=\sqrt{\bar\alpha_t}x_0+\sqrt{1-\bar\alpha_t}\epsilon$$
@@ -488,7 +482,6 @@ $$\alpha_t=1-\beta_t,\qquad\bar\alpha_t=\prod_{s=1}^{t}\alpha_s$$
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.36–40，式18-6；t從1起、alpha_bar_0=1的慣例。 -->
 
 ---
-
 <!-- _class: figure -->
 ## 噪聲排程與剩餘訊號
 
@@ -499,7 +492,6 @@ $$\alpha_t=1-\beta_t,\qquad\bar\alpha_t=\prod_{s=1}^{t}\alpha_s$$
 <!-- 來源／講者提示：書本 Ch.18，PDF 39，圖 18-19。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 <!-- _class: small -->
 ## 擴散訓練的輸入與標籤
 
@@ -518,7 +510,6 @@ alpha_bar 須可broadcast至影像，例如 `[B,1,1,1]`；標籤是未縮放的 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.39–41；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cells 130–135（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## 去噪網路需要知道時間
 
 同樣的像素值，在輕微噪聲與幾乎純噪聲階段有不同意義。
@@ -530,7 +521,6 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.40–41；作者Cells140–144。 -->
 
 ---
-
 ## DDPM 與 DDIM 取樣
 
 | 方法 | 閱讀重點 |
@@ -543,7 +533,6 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.41–43；作者Cells145–150作概念導讀，未把其簡化variance直接當所有DDIM scheduler公式。 -->
 
 ---
-
 ## Latent diffusion 與條件生成
 
 先以 autoencoder 壓縮影像，再在 latent 空間做擴散。
@@ -557,7 +546,6 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.43–44 -->
 
 ---
-
 ## 生成程式的閱讀路線
 
 [作者 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/18_autoencoders_gans_and_diffusion_models.ipynb)
@@ -572,7 +560,6 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 <!-- 來源／講者提示：程式：作者Ch18；課堂未自動執行模型下載或訓練。 -->
 
 ---
-
 <!-- _class: activity -->
 ## 課堂活動：生成模型比較
 
@@ -587,7 +574,6 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 <!-- 來源／講者提示：自編活動。 -->
 
 ---
-
 ## 離堂檢核
 
 - 線性 AE 何時能與 PCA 子空間比較？
@@ -598,7 +584,6 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 <!-- 來源／講者提示：自編檢核。線性/MSE/相同前處理與最適化；支援先驗抽樣；G需梯度；eps是未縮放噪聲而xt含訊號與縮放噪聲。 -->
 
 ---
-
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 
