@@ -22,7 +22,6 @@ style: |
 <!-- 來源／講者提示：自編章節導入 -->
 
 ---
-
 ## 學習成果與課堂安排
 
 - 0–50 分：影像 token、ViT 與視覺架構。
@@ -31,10 +30,37 @@ style: |
 
 成果：能追蹤 patch 形狀，分辨圖文比對與圖文生成。
 
+<!-- notebook-companion-link -->
+> 💻 **配套 Notebook**：[`20_視覺與多模態Transformer.ipynb`](../programs/notebooks/20_視覺與多模態Transformer.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.1–50；兩次10分鐘休息。 -->
 
 ---
+<!-- notebook-result-slide -->
+<!-- _class: small -->
+## 程式實驗與實際輸出
 
+<div class="columns wide-left">
+<div>
+
+```python
+similarity = normalize(image_emb) @ normalize(text_emb).T
+```
+
+**觀察**：圖文嵌入先正規化，再以餘弦相似度比較；分數只在同一模型空間內有意義。
+
+[開啟完整 Notebook](../programs/notebooks/20_視覺與多模態Transformer.ipynb)
+
+</div>
+<div>
+
+![h:330 20_視覺與多模態Transformer 的實際執行結果](../programs/outputs/figures/20_multimodal_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：程式與圖均來自 programs/notebooks/20_視覺與多模態Transformer.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+---
 ## 視覺注意力的早期脈絡
 
 圖片描述可用 CNN 取得影像區域特徵，再由 RNN 逐詞生成。
@@ -46,7 +72,6 @@ Attention 讓不同詞讀取不同區域，而非只用一個固定向量。
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.3–4；補充11_Image Captioning.pptx s.3–5、20–25。 -->
 
 ---
-
 <!-- _class: figure -->
 ## DETR：用集合預測做偵測
 
@@ -57,7 +82,6 @@ Attention 讓不同詞讀取不同區域，而非只用一個固定向量。
 <!-- 來源／講者提示：書本 Ch.16，PDF 5，圖 16-2。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## DETR 的配對概念
 
 一張圖可能只有三個物件，模型卻有固定數量的輸出槽。
@@ -71,7 +95,6 @@ Object query 是可學習的查詢，不是預先知道的物件名稱。
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.4–5 -->
 
 ---
-
 <!-- _class: figure -->
 ## ViT 把影像切成 token 序列
 
@@ -82,7 +105,6 @@ Object query 是可學習的查詢，不是預先知道的物件名稱。
 <!-- 來源／講者提示：書本 Ch.16，PDF 6，圖 16-3。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 <!-- _class: activity -->
 ## Patch 數量手算
 
@@ -97,7 +119,6 @@ Patch 的原始維度與模型 embedding 維度可相同，也可不同。
 <!-- 來源／講者提示：自編尺寸計算，對應Ch16 pp.5–10。 -->
 
 ---
-
 <!-- _class: small -->
 ## 以 Conv2d 完成 patch embedding
 
@@ -117,7 +138,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.5–10；程式依作者 16_vision_and_multimodal_transformers.ipynb Cell 20（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## ViT 的模型結構導讀
 
 [作者 Notebook](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/16_vision_and_multimodal_transformers.ipynb)：Cells 20–22。
@@ -131,7 +151,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：程式：Ch16 Cells20–39。 -->
 
 ---
-
 <!-- _class: figure -->
 ## DeiT 的蒸餾 token
 
@@ -142,7 +161,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF 11，圖 16-4。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 <!-- _class: figure -->
 ## PVT 的金字塔表示
 
@@ -153,7 +171,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF 12，圖 16-5。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 <!-- _class: figure -->
 ## Swin 的視窗注意力
 
@@ -164,7 +181,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF 14，圖 16-6。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 全域與視窗注意力的成本
 
 設影像共有 $N$ 個 token，每個視窗有 $M$ 個 token。
@@ -179,7 +195,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.11–15；忽略head與batch係數。 -->
 
 ---
-
 <!-- _class: figure -->
 ## DINO 的自蒸餾
 
@@ -190,7 +205,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF 16，圖 16-7。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## 自監督表示與 attention 圖
 
 [作者 DINO 範例](https://github.com/ageron/handson-mlp/blob/47eba45aacc85feae51ba7db68dd1ca66cb25e0a/16_vision_and_multimodal_transformers.ipynb)：Cells 40–45。
@@ -204,7 +218,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.15–18；作者Cell44明確註記方向，教材保留此區別。 -->
 
 ---
-
 ## 其他視覺 Transformer 的路線
 
 | 路線 | 教材例子 |
@@ -219,7 +232,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.18–20 -->
 
 ---
-
 ## 多模態的四種關係
 
 | 問題 | 例子 |
@@ -234,7 +246,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.21–34 -->
 
 ---
-
 ## VideoBERT 與 ViLBERT
 
 - VideoBERT 把影片與語言轉成可共同建模的序列。
@@ -246,7 +257,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.22–28 -->
 
 ---
-
 <!-- _class: figure -->
 ## CLIP 的圖文對比學習
 
@@ -257,7 +267,6 @@ kernel 與 stride 相同，產生不重疊 patches；需先處理不能整除的
 <!-- 來源／講者提示：書本 Ch.16，PDF 30，圖 16-13。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## CLIP 的相似度矩陣
 
 三張圖與三段配對文字，產生 3×3 相似度矩陣。
@@ -271,7 +280,6 @@ $$s_{ij}=\frac{u_i^\top v_j}{\tau}$$
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.28–33；公式為教材對比學習概念的簡化記號。 -->
 
 ---
-
 ## Zero-shot 分類依賴候選文字
 
 把類別寫成文字描述，再與影像向量比較。
@@ -285,7 +293,6 @@ $$s_{ij}=\frac{u_i^\top v_j}{\tau}$$
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.30–33 -->
 
 ---
-
 <!-- _class: small -->
 ## CLIP 推論介面
 
@@ -304,7 +311,6 @@ image 是已載入的 PIL RGB 影像；需下載模型。先比較不同文字�
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.30–33；程式依作者 16_vision_and_multimodal_transformers.ipynb Cell 49（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 ---
-
 ## DALL·E 與 DALL·E 2 的差異
 
 教材以這兩個模型說明文字生成影像的不同路線：
@@ -317,7 +323,6 @@ image 是已載入的 PIL RGB 影像；需下載模型。先比較不同文字�
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.33–34；生成機制延伸至Ch18。 -->
 
 ---
-
 <!-- _class: figure -->
 ## Perceiver 的 latent bottleneck
 
@@ -328,7 +333,6 @@ image 是已載入的 PIL RGB 影像；需下載模型。先比較不同文字�
 <!-- 來源／講者提示：書本 Ch.16，PDF 35，圖 16-15。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## Perceiver IO 的輸出查詢
 
 Perceiver IO 再利用 output queries 從 latent 讀出所需結果。
@@ -342,7 +346,6 @@ Perceiver IO 再利用 output queries 從 latent 讀出所需結果。
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.34–40；作者FourierPositionalEncoding與Perceiver區段。 -->
 
 ---
-
 <!-- _class: figure -->
 ## Flamingo 的交錯圖文輸入
 
@@ -353,7 +356,6 @@ Perceiver IO 再利用 output queries 從 latent 讀出所需結果。
 <!-- 來源／講者提示：書本 Ch.16，PDF 41，圖 16-17。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## BLIP 與 BLIP-2 的銜接
 
 BLIP 結合圖文理解與生成，也用 captioning／filtering 改善圖文配對資料。
@@ -365,7 +367,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.42–47 -->
 
 ---
-
 <!-- _class: figure -->
 ## BLIP-2 的 Q-Former
 
@@ -376,7 +377,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：書本 Ch.16，PDF 43，圖 16-18。圖為教材原圖，非本次實驗結果。 -->
 
 ---
-
 ## BLIP-2 的兩階段學習
 
 1. 先讓可學習 query 與視覺特徵互動，學會有用的圖文表示。
@@ -389,7 +389,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.42–47 -->
 
 ---
-
 ## 舊稿圖片描述程式的閱讀路線
 
 `11_Image Captioning.pptx` s.14–25 提供：
@@ -406,7 +405,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：補充：11_Image Captioning.pptx s.14–25；重複中文檔為同主題來源，不另當課程順序。 -->
 
 ---
-
 ## 其他多模態任務的分類
 
 | 任務方向 | 書中例子 |
@@ -422,7 +420,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.47–49；其他命名模型採選讀。 -->
 
 ---
-
 ## 多模態評估：看得見與推測的差別
 
 同一張桌面照片可能讓模型「補出」不存在的物件。
@@ -436,7 +433,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：自編評估活動，銜接Ch16多模態應用。 -->
 
 ---
-
 <!-- _class: activity -->
 ## 課堂活動：圖片檢索與描述
 
@@ -451,7 +447,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：自編活動。 -->
 
 ---
-
 ## 離堂檢核
 
 - 224×224、patch16 的 token 數是多少？
@@ -462,7 +457,6 @@ BLIP-2 進一步重用凍結的視覺與語言主幹，用 Q-Former 學兩者之
 <!-- 來源／講者提示：自編檢核；196，加CLS為197；CLIP比對；避免對全部輸入反覆self-attention；權重不等於因果證據。 -->
 
 ---
-
 <!-- _class: small -->
 ## 課後程式與延伸閱讀
 

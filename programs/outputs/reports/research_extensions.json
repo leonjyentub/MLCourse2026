@@ -27,8 +27,8 @@
   "robust_models": [
     {
       "model": "OLS",
-      "test_RMSE": 1.2493116588554798,
-      "test_MAE": 1.0495864427345833
+      "test_RMSE": 1.249311658855479,
+      "test_MAE": 1.049586442734583
     },
     {
       "model": "Huber",

@@ -26,8 +26,37 @@ title: 決策樹與SVM補充
 
 能交付：一條預測路徑、一個分割計算，以及有理由的模型選擇。
 
+<!-- notebook-companion-link -->
+> 💻 **配套 Notebook**：[`06_決策樹與SVM補充.ipynb`](../programs/notebooks/06_決策樹與SVM補充.ipynb)。程式片段、實際圖表與表格可由此檔重現。
+
 <!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
 
+---
+<!-- notebook-result-slide -->
+<!-- _class: small -->
+## 程式實驗與實際輸出
+
+<div class="columns wide-left">
+<div>
+
+```python
+DecisionTreeClassifier(max_depth=depth,
+                       random_state=42).fit(X, y)
+```
+
+**觀察**：限制樹深會平滑決策邊界；是否改善泛化仍要看驗證結果。
+
+[開啟完整 Notebook](../programs/notebooks/06_決策樹與SVM補充.ipynb)
+
+</div>
+<div>
+
+![h:330 06_決策樹與SVM補充 的實際執行結果](../programs/outputs/figures/11_tree_regularization.png)
+
+</div>
+</div>
+
+<!-- 講者提示：程式與圖均來自 programs/notebooks/06_決策樹與SVM補充.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
 ---
 <!-- _class: figure -->
 ## 從根節點走到葉節點：Iris 決策樹
