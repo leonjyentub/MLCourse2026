@@ -87,3 +87,7 @@ python3 scripts/extract_assets.py
 ## 教學資料的解讀
 
 頁尾的 `p.` 指主教材印刷頁，`s.` 指舊投影片頁次。教材與舊稿報告值、自編示意數值均分開標示，未將擷取圖表或書中成效宣稱為本次重新執行的實驗。正則化、梯度下降與邏輯斯迴歸只補充必要概念，完整推導依主教材安排在後續 Ch.4。
+
+## 第三方程式授權與來源
+
+`programs/upstream/handson-mlp/` 保存自 [ageron/handson-mlp](https://github.com/ageron/handson-mlp) 的原始 Notebook 快照（Apache License 2.0）；其完整授權文字位於 [`programs/upstream/handson-mlp/LICENSE`](programs/upstream/handson-mlp/LICENSE)。來源版本、逐本改編對照與重用時的授權注意事項見 [`programs/SOURCES.md`](programs/SOURCES.md) 與 [`programs/THIRD_PARTY_NOTICES.md`](programs/THIRD_PARTY_NOTICES.md)。原始快照與課程改編 Notebook 應分開辨識；教材中其他來源的授權須各自核對。
