@@ -45,3 +45,9 @@
 - Pipeline 的前處理在每一折內重新 fit，避免資料洩漏。
 - 12–25 不複製需要 GPU、外部模型或長時間下載的完整實驗；改用固定 seed 的小資料隔離同一機制，並在 Notebook 明示證據界線。
 - Apache-2.0 來源保留授權與歸屬；MachineLearning2025 快照沒有根目錄 LICENSE，因此不推定額外授權。
+
+## Apache-2.0 授權與第三方歸屬
+
+已核對 `ageron/handson-mlp` 固定版本與本地保存的 10 本原始 Notebook：Git blob SHA 完全一致。原始 Apache-2.0 全文位於 [`upstream/handson-mlp/LICENSE`](upstream/handson-mlp/LICENSE)；來源、授權條款與課程改編界線另見 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
+
+`upstream/handson-mlp/` 是原始來源快照，請勿在該目錄直接修改；教學改寫應放在 `notebooks/`，且當個別 Notebook 實際重用並修改來源受保護內容時，必須在該**修改檔案本身**醒目標示修改，並保留適用的原始版權及歸屬宣告。此章節的總覽歸屬不能取代逐檔要求；其他外部圖片、資料或程式須另核對各自授權。
