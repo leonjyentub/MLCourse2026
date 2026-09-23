@@ -137,3 +137,7 @@ uv run python scripts/predict_housing.py --csv your_raw_housing_features.csv
 [SOURCES.md](SOURCES.md) 記錄固定 commit、逐本改編、原程式修正與授權；`upstream/` 保存傳統 ML 章節所需的原始檔案，12–25 的來源則以固定 commit 與章節／cell 範圍記在各 Notebook。原始資料、書中數字、舊 PPTX 數字與本次重跑結果均分開閱讀。
 
 這些實驗用來解釋與檢查方法，不能宣稱某模型普遍最好；少量資料、不同切分與縮小後的模型設定會影響結果。測試資料只用於事先指定流程的最後評估，不能拿來反覆選參數。
+
+## License 與第三方來源
+
+本課程 `notebooks/00–25` 的作者自編／具有授權權利的改編程式及文字採 [Apache License 2.0](LICENSE)。每本 Notebook 第一個 Markdown Cell 已標示來源、改編或參考範圍及授權；這不代表原作者程式均由本課程作者獨立創作。`upstream/handson-mlp/` 仍保留上游原始授權，詳見 [NOTICE.md](NOTICE.md)、[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)、[SOURCES.md](SOURCES.md)。`MachineLearning2025` 為作者自有專案，現已補設 Apache-2.0 LICENSE；其本地固定 commit 快照仍保留歷史原貌，不更動 checksum。第三方資料、圖片、字型與外部模型不因本程式授權而重新授權。
