@@ -44,10 +44,17 @@
 - 早停保存並恢復最佳 checkpoint；validation 用於選擇，test 只在流程決定後開啟。
 - Pipeline 的前處理在每一折內重新 fit，避免資料洩漏。
 - 12–25 不複製需要 GPU、外部模型或長時間下載的完整實驗；改用固定 seed 的小資料隔離同一機制，並在 Notebook 明示證據界線。
-- Apache-2.0 來源保留授權與歸屬；MachineLearning2025 快照沒有根目錄 LICENSE，因此不推定額外授權。
+- Apache-2.0 來源保留授權與歸屬；MachineLearning2025 為課程作者自有專案，現已於其根目錄補設 Apache-2.0 LICENSE，該新授權不涵蓋可能存在的第三方素材。
 
 ## Apache-2.0 授權與第三方歸屬
 
 已核對 `ageron/handson-mlp` 固定版本與本地保存的 10 本原始 Notebook：Git blob SHA 完全一致。原始 Apache-2.0 全文位於 [`upstream/handson-mlp/LICENSE`](upstream/handson-mlp/LICENSE)；來源、授權條款與課程改編界線另見 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
 
-`upstream/handson-mlp/` 是原始來源快照，請勿在該目錄直接修改；教學改寫應放在 `notebooks/`，且當個別 Notebook 實際重用並修改來源受保護內容時，必須在該**修改檔案本身**醒目標示修改，並保留適用的原始版權及歸屬宣告。此章節的總覽歸屬不能取代逐檔要求；其他外部圖片、資料或程式須另核對各自授權。
+`upstream/handson-mlp/` 是原始來源快照，請勿在該目錄直接修改；教學改寫應放在 `notebooks/`，且當個別 Notebook 實際重用並修改來源受保護內容時，必須在該**修改檔案本身**醒目標示修改，並保留適用的原始版權及歸屬宣告。此章節的總覽歸屬不能取代逐檔要求；其他外部圖片、資料或程式須另核對各自授權。課程 26 本 Notebook 均已在第一個 Markdown Cell 補入授權、對應來源或參考概念、及改編／創作範圍；作者自編內容與第三方著作權仍分開辨識。
+
+## 授權適用範圍
+
+- [LICENSE](LICENSE)：本課程 `programs/notebooks/` 的作者自編／具有授權權利的改編程式與文字採 Apache-2.0。
+- [NOTICE.md](NOTICE.md)／[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)：來源歸屬、教學改編與第三方授權範圍；每本 Notebook 第一個 Markdown Cell 有該檔專屬聲明。
+- `programs/upstream/handson-mlp/` 原始快照與上游 LICENSE 保持不變。`programs/upstream/MachineLearning2025/` 是修訂前固定 commit 的歷史快照；不回寫以免破壞其溯源與 checksum，新版授權請參閱原專案根目錄 LICENSE。
+- 資料、字型、圖片、模型及書籍內容另依各自權利處理，不應因程式採 Apache-2.0 而被視為已獲授權。
