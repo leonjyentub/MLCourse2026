@@ -91,3 +91,5 @@ python3 scripts/extract_assets.py
 ## 第三方程式授權與來源
 
 `programs/upstream/handson-mlp/` 保存自 [ageron/handson-mlp](https://github.com/ageron/handson-mlp) 的原始 Notebook 快照（Apache License 2.0）；其完整授權文字位於 [`programs/upstream/handson-mlp/LICENSE`](programs/upstream/handson-mlp/LICENSE)。來源版本、逐本改編對照與重用時的授權注意事項見 [`programs/SOURCES.md`](programs/SOURCES.md) 與 [`programs/THIRD_PARTY_NOTICES.md`](programs/THIRD_PARTY_NOTICES.md)。原始快照與課程改編 Notebook 應分開辨識；教材中其他來源的授權須各自核對。
+
+`programs/notebooks/` 26 本教學 Notebook 現已逐檔補上授權與來源說明；僅作者自編及具有再授權權利的程式與文字採 [`programs/LICENSE`](programs/LICENSE) 的 Apache License 2.0。作者自有的 [`MachineLearning2025`](https://github.com/leonjyentub/MachineLearning2025) 已補設根目錄 LICENSE；原始快照與第三方資產仍依其各自權利處理。詳見 [`programs/NOTICE.md`](programs/NOTICE.md) 與 [`programs/THIRD_PARTY_NOTICES.md`](programs/THIRD_PARTY_NOTICES.md)。
