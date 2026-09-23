@@ -14,4 +14,10 @@ When redistributing adapted material copied from the upstream work, comply with 
 
 The upstream repository did not include a root `NOTICE` file in the compared `main` snapshot. This document is a course-level attribution statement, **not** an upstream NOTICE file.
 
-This attribution concerns the `handson-mlp` material only. It does not assert a license for other third-party data, textbooks, images, slides, or the separate `MachineLearning2025` snapshots; assess their respective rights independently.
+## Course-owned prior work: MachineLearning2025
+
+`leonjyentub/MachineLearning2025` is owned by the course author. Its repository now contains an Apache License 2.0 `LICENSE` file. MLCourse2026 adapted notebook materials may combine the author's own examples with upstream `handson-mlp` examples; see per-notebook notices and [SOURCES.md](SOURCES.md). The new license does not override the rights of any third-party material that may occur in historical notebooks or assets.
+
+## Licensing boundary
+
+Course-authored and properly sublicensable program content in `programs/notebooks/` is now uniformly made available under [Apache License 2.0](LICENSE). This does not assign upstream authorship to the course author, and does not license third-party datasets, images, fonts, books, models, slides, or other separately licensed resources.
