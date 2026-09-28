@@ -849,6 +849,7 @@ name = "mlcourse2026"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "cloudpickle" },
     { name = "ipykernel" },
     { name = "ipywidgets" },
     { name = "joblib" },
@@ -872,6 +873,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "cloudpickle", specifier = ">=3,<4" },
     { name = "ipykernel", specifier = ">=6.30.1,<7" },
     { name = "ipywidgets", specifier = ">=8.1.7,<9" },
     { name = "joblib", specifier = ">=1.5.2,<2" },

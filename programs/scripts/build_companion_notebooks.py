@@ -1,4 +1,4 @@
-"""Build one executable companion notebook for every numbered Marp deck.
+"""Build missing companion notebooks for numbered Marp decks.
 
 The 00--11 notebooks migrate and consolidate the original course notebooks.
 The 12--25 notebooks are short CPU-only teaching experiments adapted from the
@@ -508,6 +508,8 @@ report('quantization', {'scale': scale, 'max_abs_error': np.max(np.abs(err)), 'c
 
 def build_12_25():
     for stem, spec in SPECS.items():
+        if (NOTEBOOKS / f"{stem}.ipynb").exists():
+            continue
         number, title = stem.split("_", 1)
         cells = [
             new_markdown_cell(
@@ -538,6 +540,8 @@ def main():
     NOTEBOOKS.mkdir(parents=True, exist_ok=True)
     migrate_00_11()
     build_12_25()
+    from prepare_colab_notebooks import main as prepare_colab
+    prepare_colab()
     names = sorted(path.stem for path in NOTEBOOKS.glob("*.ipynb"))
     assert len(names) == 26, names
     assert names == [f"{i:02d}_" + names[i].split("_", 1)[1] for i in range(26)]
