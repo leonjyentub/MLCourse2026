@@ -18,10 +18,16 @@ def main():
     for path,slide in zip(notebooks,slides):
         nb=nbformat.read(path,as_version=4)
         nbformat.validate(nb)
-        assert nb.metadata['mlcourse']['deck']==slide.name
+        first_markdown=next(cell.source for cell in nb.cells if cell.cell_type=='markdown')
+        assert first_markdown.startswith(f'# {path.stem[:2]}｜')
         all_code='\n'.join(cell.source for cell in nb.cells if cell.cell_type=='code')
         assert 'mlcourse.common' not in all_code and 'mlcourse.transformers' not in all_code
-        assert 'def data_path(name):' in all_code and 'pip' in all_code
+        code_cells=[cell.source for cell in nb.cells if cell.cell_type=='code']
+        assert code_cells[0].startswith('# 第 1 格：安裝本 Notebook 實際使用的套件。')
+        assert 'pip' in code_cells[0] and '_DATA_URL' not in code_cells[0]
+        assert code_cells[1].startswith('# 第 2 格：本 Notebook 的輸出位置與繪圖設定。')
+        needs_data=path.stem[:2] in {'01','02','03','07'}
+        assert ('def data_path(name):' in code_cells[1])==needs_data
         count=0
         for cell in nb.cells:
             if cell.cell_type=='code':

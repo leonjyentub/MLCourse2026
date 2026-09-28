@@ -41,7 +41,7 @@ def _read(name: str):
 
 def _module_cells(source_name: str, label: str):
     nb = _read(source_name)
-    cells = [new_markdown_cell(f"## {label}\n\n原始分冊：`{source_name}`。內容與已執行輸出完整併入本課同名 Notebook。")]
+    cells = [new_markdown_cell(f"## {label}")]
     cells.extend(nb.cells[1:])
     return cells
 
@@ -56,10 +56,9 @@ def migrate_00_11():
 
     nb00 = _read("00_環境與重現性.ipynb")
     nb00.cells[0] = new_markdown_cell(
-        "# 00｜課程導覽\n\n環境、資料與重現性檢查。對應 `slides/00_課程導覽.md`。"
+        "# 00｜課程導覽\n\n用小型資料練習辨認樣本、特徵與目標，並觀察訓練／測試切分。"
     )
     nb00.metadata.update(KERNEL_METADATA)
-    nb00.metadata["mlcourse"] = {"deck": "00_課程導覽.md", "legacy": ["00_環境與重現性.ipynb"]}
     targets["00_課程導覽.ipynb"] = nb00
 
     merged = {
@@ -90,17 +89,12 @@ def migrate_00_11():
     for target_name, (title, sources) in merged.items():
         cells = [
             new_markdown_cell(
-                f"# {title}\n\n對應 `slides/{target_name.removesuffix('.ipynb')}.md`。"
-                "原分冊依教學順序合併，各節仍可獨立選講。"
+                f"# {title}"
             )
         ]
         for source_name, label in sources:
             cells.extend(_module_cells(source_name, label))
         nb = new_notebook(cells=cells, metadata=KERNEL_METADATA.copy())
-        nb.metadata["mlcourse"] = {
-            "deck": target_name.removesuffix(".ipynb") + ".md",
-            "legacy": [name for name, _ in sources],
-        }
         targets[target_name] = nb
 
     renames = {
@@ -117,14 +111,9 @@ def migrate_00_11():
         nb = _read(source_name)
         title = target_name.removesuffix(".ipynb").replace("_", "｜", 1)
         nb.cells[0] = new_markdown_cell(
-            f"# {title}\n\n對應 `slides/{target_name.removesuffix('.ipynb')}.md`。"
-            f"本檔由 `{source_name}` 改名，程式與已執行輸出保留。"
+            f"# {title}"
         )
         nb.metadata.update(KERNEL_METADATA)
-        nb.metadata["mlcourse"] = {
-            "deck": target_name.removesuffix(".ipynb") + ".md",
-            "legacy": [source_name],
-        }
         targets[target_name] = nb
 
     old_paths = list(NOTEBOOKS.glob("*.ipynb"))
@@ -514,25 +503,18 @@ def build_12_25():
         cells = [
             new_markdown_cell(
                 f"# {number}｜{title}\n\n{spec['summary']}\n\n"
-                f"對應 `slides/{stem}.md`；從第一格依序執行即可重現投影片中的表格與圖。"
+                "從第一格依序執行，再修改參數觀察結果。"
             ),
-            new_markdown_cell(spec["source"]),
             new_code_cell(COMMON_SETUP),
             new_markdown_cell("## 課堂小實驗"),
             new_code_cell(spec["code"]),
             new_markdown_cell("## 執行結果圖"),
             new_code_cell(spec["plot"]),
             new_markdown_cell(
-                "## 解讀與延伸\n\n先描述圖或表直接支持的結果，再說明這個縮編實驗不能代表完整模型的哪些面向。"
+                "## 練習：改動一個參數\n\n先預測結果，再修改程式中的一個參數並重跑；比較圖表或數值，說明差異。"
             ),
         ]
         nb = new_notebook(cells=cells, metadata=KERNEL_METADATA.copy())
-        nb.metadata["mlcourse"] = {
-            "deck": f"{stem}.md",
-            "handson_commit": HANDSON_COMMIT,
-            "teacher_commit": TEACHER_COMMIT,
-            "profile": "cpu-short-demo",
-        }
         nbformat.write(nb, NOTEBOOKS / f"{stem}.ipynb")
 
 

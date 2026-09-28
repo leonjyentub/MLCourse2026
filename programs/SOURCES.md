@@ -13,7 +13,7 @@
 
 | 教學 Notebook | 主要來源與改編 |
 |---|---|
-| 00 | 自編環境、資料 hash 與 seed 檢查 |
+| 00 | 自編小型資料的樣本、特徵、目標與切分示範 |
 | 01 | handson Ch.1／Ch.4；教師 regression、batch GD、overfitting、regularization、early stopping；合併原 01、02、08 |
 | 02 | handson Ch.2；教師 KFold；合併原房價 EDA 與 Pipeline 兩本 |
 | 03 | handson Ch.3／Ch.4；教師 Iris 與 ROC；合併 Iris、threshold、MNIST 三本 |
@@ -50,11 +50,11 @@
 
 已核對 `ageron/handson-mlp` 固定版本與本地保存的 10 本原始 Notebook：Git blob SHA 完全一致。原始 Apache-2.0 全文位於 [`upstream/handson-mlp/LICENSE`](upstream/handson-mlp/LICENSE)；來源、授權條款與課程改編界線另見 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
 
-`upstream/handson-mlp/` 是原始來源快照，請勿在該目錄直接修改；教學改寫應放在 `notebooks/`，且當個別 Notebook 實際重用並修改來源受保護內容時，必須在該**修改檔案本身**醒目標示修改，並保留適用的原始版權及歸屬宣告。此章節的總覽歸屬不能取代逐檔要求；其他外部圖片、資料或程式須另核對各自授權。課程 26 本 Notebook 均已在第一個 Markdown Cell 補入授權、對應來源或參考概念、及改編／創作範圍；作者自編內容與第三方著作權仍分開辨識。
+`upstream/handson-mlp/` 是原始來源快照，請勿在該目錄直接修改；教學改寫應放在 `notebooks/`。若個別 Notebook 實際重用並修改來源受保護內容，仍須依適用授權在該修改檔案本身標示修改，並保留適用的原始版權及歸屬宣告；其他外部圖片、資料或程式也須另核對各自授權。課堂用 Notebook 的來源與改編紀錄集中列於本檔及 NOTICE 文件；作者自編內容與第三方著作權仍分開辨識。
 
 ## 授權適用範圍
 
 - [LICENSE](LICENSE)：本課程 `programs/notebooks/` 的作者自編／具有授權權利的改編程式與文字採 Apache-2.0。
-- [NOTICE.md](NOTICE.md)／[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)：來源歸屬、教學改編與第三方授權範圍；每本 Notebook 第一個 Markdown Cell 有該檔專屬聲明。
+- [NOTICE.md](NOTICE.md)／[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)：來源歸屬、教學改編與第三方授權範圍；課堂用 Notebook 僅保留教學說明。
 - `programs/upstream/handson-mlp/` 原始快照與上游 LICENSE 保持不變。`programs/upstream/MachineLearning2025/` 是修訂前固定 commit 的歷史快照；不回寫以免破壞其溯源與 checksum，新版授權請參閱原專案根目錄 LICENSE。
 - 資料、字型、圖片、模型及書籍內容另依各自權利處理，不應因程式採 Apache-2.0 而被視為已獲授權。
