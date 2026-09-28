@@ -10,7 +10,7 @@ Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab �
 
 | 檔案 | 使用時機 | 主要內容 |
 |---|---|---|
-| [00 課程導覽](notebooks/00_課程導覽.ipynb) | 課前 | 核心、版本、資料 hash、seed |
+| [00 課程導覽](notebooks/00_課程導覽.ipynb) | 課前 | 樣本、特徵、目標與訓練／測試切分 |
 | [01 機器學習概觀](notebooks/01_機器學習概觀.ipynb) | Ch.1 | 生活滿意度、k-NN／線性模型、泛化、正則化、評估陷阱 |
 | [02 端到端機器學習專案](notebooks/02_端到端機器學習專案.ipynb) | Ch.2 | 房價 EDA、分層切分、完整 Pipeline、CV、搜尋、final test |
 | [03 分類與模型評估](notebooks/03_分類與模型評估.ipynb) | Ch.3 | Iris、MNIST、混淆矩陣、PR／ROC、閾值與錯誤分析 |
@@ -46,7 +46,7 @@ Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab �
 
 ## 環境與開啟方式
 
-每本 Notebook 現可直接上傳 Google Colab，從第一個程式格依序執行。該格會安裝缺少的 Python 套件；有外部資料需求時自動下載並驗證。Notebook 使用 NumPy／scikit-learn 的 CPU 實驗，這兩套程式沒有可直接切換的 CUDA 後端。若需重現舊版套件環境，本機仍可使用 `uv.lock`。
+每本 Notebook 現可直接上傳 Google Colab，從第一個程式格依序執行。第一格只安裝該本需要的 Python 套件；第二格準備本章的繪圖、輸出與資料讀取程式。01、02 在首次需要時下載並核對固定版本的 CSV，03、07 在首次需要時下載 MNIST；其餘 Notebook 不會下載外部資料。這些 NumPy／scikit-learn 的 CPU 實驗沒有可直接切換的 CUDA 後端。若需重現舊版套件環境，本機仍可使用 `uv.lock`。
 
 從專案根目錄執行：
 
@@ -68,7 +68,7 @@ UV_CACHE_DIR=/private/tmp/mlcourse2026-uv-cache uv sync --frozen
 
 ## 資料與離線使用
 
-本機交付附有 `data/lifesat.csv`、`data/housing.csv`、`data/mnist_784_v1.npz`。Colab 的檔案是暫時的；Notebook 會在首次需要時自動下載資料。前兩份 CSV 依固定來源的 SHA-256 驗證，MNIST 由 OpenML 下載並檢查資料維度。若要在本機預先備妥資料，可執行：
+本機交付附有 `data/lifesat.csv`、`data/housing.csv`、`data/mnist_784_v1.npz`。Colab 的檔案是暫時的；01、02、03、07 會在首次需要時自動下載各自使用的資料。前兩份 CSV 依固定來源的 SHA-256 驗證，MNIST 由 OpenML 下載並檢查資料維度。若要在本機預先備妥資料，可執行：
 
 ```sh
 uv run python scripts/fetch_data.py
@@ -134,10 +134,10 @@ uv run python scripts/predict_housing.py --csv your_raw_housing_features.csv
 
 ## 來源與閱讀界線
 
-[SOURCES.md](SOURCES.md) 記錄固定 commit、逐本改編、原程式修正與授權；`upstream/` 保存傳統 ML 章節所需的原始檔案，12–25 的來源則以固定 commit 與章節／cell 範圍記在各 Notebook。原始資料、書中數字、舊 PPTX 數字與本次重跑結果均分開閱讀。
+[SOURCES.md](SOURCES.md) 記錄固定 commit、逐本改編、原程式修正與授權；`upstream/` 保存傳統 ML 章節所需的原始檔案。原始資料、書中數字、舊 PPTX 數字與本次重跑結果均分開閱讀。
 
 這些實驗用來解釋與檢查方法，不能宣稱某模型普遍最好；少量資料、不同切分與縮小後的模型設定會影響結果。測試資料只用於事先指定流程的最後評估，不能拿來反覆選參數。
 
 ## License 與第三方來源
 
-本課程 `notebooks/00–25` 的作者自編／具有授權權利的改編程式及文字採 [Apache License 2.0](LICENSE)。每本 Notebook 第一個 Markdown Cell 已標示來源、改編或參考範圍及授權；這不代表原作者程式均由本課程作者獨立創作。`upstream/handson-mlp/` 仍保留上游原始授權，詳見 [NOTICE.md](NOTICE.md)、[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)、[SOURCES.md](SOURCES.md)。`MachineLearning2025` 為作者自有專案，現已補設 Apache-2.0 LICENSE；其本地固定 commit 快照仍保留歷史原貌，不更動 checksum。第三方資料、圖片、字型與外部模型不因本程式授權而重新授權。
+本課程 `notebooks/00–25` 的作者自編／具有授權權利的改編程式及文字採 [Apache License 2.0](LICENSE)。來源、改編或參考範圍及授權集中記錄於 [NOTICE.md](NOTICE.md)、[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)、[SOURCES.md](SOURCES.md)；這不代表原作者程式均由本課程作者獨立創作。`upstream/handson-mlp/` 仍保留上游原始授權。`MachineLearning2025` 為作者自有專案，現已補設 Apache-2.0 LICENSE；其本地固定 commit 快照仍保留歷史原貌，不更動 checksum。第三方資料、圖片、字型與外部模型不因本程式授權而重新授權。
