@@ -19,18 +19,20 @@ def main():
         nb=nbformat.read(path,as_version=4)
         nbformat.validate(nb)
         assert nb.metadata['mlcourse']['deck']==slide.name
+        all_code='\n'.join(cell.source for cell in nb.cells if cell.cell_type=='code')
+        assert 'mlcourse.common' not in all_code and 'mlcourse.transformers' not in all_code
+        assert 'def data_path(name):' in all_code and 'pip' in all_code
         count=0
         for cell in nb.cells:
             if cell.cell_type=='code':
                 ast.parse(cell.source)
                 count+=1
-                assert cell.execution_count==count, (path.name,count,cell.execution_count)
+                assert cell.execution_count is None, (path.name,count,cell.execution_count)
                 assert not any(o.output_type=='error' for o in cell.outputs),path.name
         code_count+=count
-        assert (ROOT/'outputs/html'/f'{path.stem}.html').exists()
         text=slide.read_text()
-        assert f'../programs/notebooks/{path.name}' in text
-        assert 'notebook-companion-link' in text
+        assert f'`programs/notebooks/{path.name}`' in text
+        assert f'](../programs/notebooks/{path.name})' not in text
         if path.stem!='00_課程導覽':
             assert 'notebook-result-slide' in text
     for entry in json.loads((ROOT/'upstream/manifest.json').read_text()):
@@ -43,8 +45,8 @@ def main():
             im.verify()
         ET.parse(path.with_suffix('.svg'))
     assert len(pngs)>=72
-    print(f'PASS: {len(notebooks)} slide-aligned notebooks, {code_count} executed code cells, '
-          f'{len(pngs)} PNG/SVG pairs; slide links and source/data hashes verified.')
+    print(f'PASS: {len(notebooks)} slide-aligned notebooks, {code_count} parseable code cells, '
+          f'{len(pngs)} PNG/SVG pairs; plain-text slide references and source/data hashes verified.')
 
 if __name__=='__main__':
     main()

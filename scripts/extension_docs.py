@@ -4,6 +4,13 @@ Run after editing slides 04–11. This does not rewrite the slide sources.
 from pathlib import Path
 import re,json
 ROOT=Path(__file__).resolve().parents[1]
+def write_section(path, marker, generated, preserve_marker=None):
+ text=path.read_text() if path.exists() else ''
+ prefix=text.split(marker,1)[0].rstrip() if marker in text else text.rstrip()
+ preserved=''
+ if preserve_marker and preserve_marker in text:
+  preserved='\n\n'+preserve_marker+text.split(preserve_marker,1)[1]
+ path.write_text(prefix+'\n\n---\n\n'+marker+'\n\n'+generated.rstrip()+'\n'+preserved)
 files=sorted(p for p in (ROOT/'slides').glob('*.md') if p.name[:2].isdigit() and 4<=int(p.name[:2])<=11)
 D={}
 for f in files:
@@ -80,8 +87,8 @@ for week,(title,segments,homework) in enumerate(six,1):
   plan.append(f'| {timer} | {refs} | {name} |')
   if j<2:plan.append(f'| {"50–60" if j==0 else "120–130"} 分 | 休息 | 保留 10 分鐘 |')
  plan+=['',homework]
-plan+=['','## 教學與評量方式','','- 小組討論後，每人先獨立提交一題答案，避免只由熟悉程式的同學操作。','- 活動單與講者答案分開提供；每個程式活動皆有手算或文字設計替代。','- 建議配分：資料角色與流程 30%、數學／圖表解釋 30%、可查核產出 25%、限制與反思 15%。不以是否使用 GPU 或付費工具評分。','- 圖表中的 accuracy、RMSE、迭代次數均標明為教材例子；本次未把它們當作重新執行的實驗結果。','- 程式頁是教學片段，`X_train` 等變數需由前面資料準備流程提供；完整課堂操作可使用已備妥的小資料，避免課中臨時下載大型資料。','- 90 張教材編號圖以原圖保留；公式、表格、正文與講者提示可直接在 Marp 編輯。圖中英文標籤保留，中文解說在圖旁／圖下。','','## 相關檔案','','- [完整講者備註](後續課程_講者備註.md)','- [學生課堂活動單](後續課程_活動單.md)','- [來源與完整性對照](SOURCE_MAP_CH04_09.md)']
-(ROOT/'後續課程_6至8週規劃.md').write_text('\n'.join(plan)+'\n')
+plan+=['','## 教學與評量方式','','- 小組討論後，每人先獨立提交一題答案，避免只由熟悉程式的同學操作。','- 活動單與講者答案分開提供；每個程式活動皆有手算或文字設計替代。','- 建議配分：資料角色與流程 30%、數學／圖表解釋 30%、可查核產出 25%、限制與反思 15%。不以是否使用 GPU 或付費工具評分。','- 圖表中的 accuracy、RMSE、迭代次數均標明為教材例子；本次未把它們當作重新執行的實驗結果。','- 程式頁是教學片段，`X_train` 等變數需由前面資料準備流程提供；完整課堂操作可使用已備妥的小資料，避免課中臨時下載大型資料。','- 90 張教材編號圖以原圖保留；公式、表格、正文與講者提示可直接在 Marp 編輯。圖中英文標籤保留，中文解說在圖旁／圖下。','','## 相關檔案','','- [完整講者備註](教學講者備註.md)','- [學生課堂活動單](課堂活動單.md)','- [來源與完整性對照](SOURCE_MAP.md)']
+write_section(ROOT/'教學指引.md','<!-- extension-plan -->','\n'.join(plan))
 notes=['# 後續八週：講者備註與活動答案','','每頁分鐘數含講解或活動；每份合計 180 分鐘，包含兩次 10 分鐘休息。圖中教材結果非本班重跑結果。']
 activities=['# 後續八週：學生課堂活動單','','姓名：＿＿＿＿　日期：＿＿＿＿　組別：＿＿＿＿','','先獨立完成一個小題，再與同組比較。允許計算機；沒有電腦時完成每題的手算或流程設計替代。答案與評分提示另見講者備註。']
 source=['# Ch.4–9 來源與知識點對照','','主來源為使用者提供的六份 PDF；舊 PPTX 只補充主教材相關內容或明確標記的延伸。頁尾 p. 指書內印刷頁，PDF 頁另見下表；s. 指舊投影片頁。','','## PDF 定位','','| 主教材檔案 | PDF 頁數 | 印刷頁換算 |','|---|---:|---|']
@@ -141,7 +148,8 @@ for n,d in D.items():
   source.append(f"| {i} | {s['minutes']} | {s['title']} | {s['source']} |")
   if s['block']>=0 and ('手算' in s['title'] or '實作' in s['title'] or s['title'].startswith(('診斷工作單','選模工作單','機率不是最後','同樣三個','算一次分割','先猜方向','迴歸葉節點'))):
    activities += [f"### p.{i}｜{s['title']}",'',s['body'],'','我的計算／流程與證據：','', '＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿','','我的限制與下一步：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿','']
-(ROOT/'後續課程_講者備註.md').write_text('\n'.join(notes)+'\n')
-(ROOT/'後續課程_活動單.md').write_text('\n'.join(activities)+'\n')
-(ROOT/'SOURCE_MAP_CH04_09.md').write_text('\n'.join(source)+'\n')
+write_section(ROOT/'教學講者備註.md','<!-- extension-notes -->','\n'.join(notes))
+write_section(ROOT/'課堂活動單.md','<!-- extension-activities -->','\n'.join(activities))
+write_section(ROOT/'SOURCE_MAP.md','<!-- extension-source-map -->','\n'.join(source),
+              '<!-- historical-review-06-11 -->')
 print('產生六週指定頁次、講者備註、活動單與來源對照。')

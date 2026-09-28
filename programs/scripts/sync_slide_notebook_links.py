@@ -1,4 +1,4 @@
-"""Add one companion-notebook link and one code/result slide to each Marp deck."""
+"""Add one plain-text companion-notebook filename and one code/result slide."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -49,11 +49,11 @@ RESULTS = {
 
 
 def add_outcomes_link(part: str, notebook_name: str) -> str:
-    if "notebook-companion-link" in part:
+    if "notebook-companion-link" in part or f"programs/notebooks/{notebook_name}" in part:
         return part
     block = (
         f"\n\n<!-- notebook-companion-link -->\n"
-        f"> 💻 **配套 Notebook**：[`{notebook_name}`](../programs/notebooks/{notebook_name})。"
+        f"> 💻 **配套 Notebook**：`programs/notebooks/{notebook_name}`。"
         "程式片段、實際圖表與表格可由此檔重現。\n"
     )
     note = part.find("<!--")
@@ -79,7 +79,7 @@ def result_slide(stem: str, notebook_name: str) -> str:
 
 **觀察**：{observation}
 
-[開啟完整 Notebook](../programs/notebooks/{notebook_name})
+完整 Notebook：`programs/notebooks/{notebook_name}`
 
 </div>
 <div>

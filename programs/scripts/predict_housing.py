@@ -1,7 +1,7 @@
 """Local inference demonstration with the saved complete housing pipeline."""
 import argparse
 import json
-import joblib
+import cloudpickle
 import pandas as pd
 from mlcourse.common import DATA, OUT
 
@@ -9,10 +9,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--csv', help='CSV with the nine original feature columns')
     args = parser.parse_args()
-    model_path = OUT/'models/housing_pipeline.joblib'
+    model_path = OUT/'models/housing_pipeline.pkl'
     if not model_path.exists():
         raise SystemExit('先執行 Notebook 02，產生本機模型。')
-    model = joblib.load(model_path)
+    with model_path.open("rb") as file:
+        model = cloudpickle.load(file)
     metadata = json.loads((model_path.parent/'housing_metadata.json').read_text())
     if args.csv:
         frame = pd.read_csv(args.csv)

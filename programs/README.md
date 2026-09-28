@@ -1,8 +1,8 @@
 # 機器學習教學程式
 
-以 **26 本可編輯 Jupyter Notebook** 配合 `slides/00–25`。檔名與投影片完全一致；每本保存本次實際執行的表格、數值與圖，投影片中的「配套 Notebook」可直接開啟對應檔案。
+以 **26 本可編輯 Jupyter Notebook** 配合 `slides/00–25`。檔名與投影片完全一致；投影片中的「配套 Notebook」以純文字標示對應檔名。各本可單獨上傳 Colab，從第一個程式格執行。
 
-Notebook 已保留本次實際執行的圖表、數值與練習答案。教師可在對應段落使用程式圖表取代部分講解，補充實驗安排課後。[教學對照與取捨](TEACHING_MAP.md) 說明每本的使用位置。
+Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab 本次執行。教師可在對應段落重新執行程式並展示圖表；[教學對照與取捨](TEACHING_MAP.md) 說明每本的使用位置。
 
 ## Notebook 導覽
 
@@ -42,11 +42,11 @@ Notebook 已保留本次實際執行的圖表、數值與練習答案。教師�
 | [24 自動微分](notebooks/24_附錄A_自動微分與計算圖.ipynb) | 解析梯度與有限差分 |
 | [25 混合精度與量化](notebooks/25_附錄B_混合精度與量化.ipynb) | 對稱 int8 量化 |
 
-無需啟動核心即可閱讀 [HTML 閱讀入口](outputs/html/index.html)。圖表與文字已嵌入；互動滑桿需 Jupyter，HTML 的數學排版可能需要瀏覽器載入 MathJax。
+先前產生的 [HTML 閱讀入口](outputs/html/index.html) 保留作歷史快照；Notebook 目前已清空舊執行輸出，請重新執行後再將新結果用於授課。互動滑桿需 Jupyter，HTML 的數學排版可能需要瀏覽器載入 MathJax。
 
 ## 環境與開啟方式
 
-本資料夾已建立 `.venv`，採 Python **3.12.10**；主要科學套件版本固定在 `pyproject.toml`，完整相依版本由 `uv.lock` 固定。使用 CPU，無需安裝 PyTorch／CUDA。
+每本 Notebook 現可直接上傳 Google Colab，從第一個程式格依序執行。該格會安裝缺少的 Python 套件；有外部資料需求時自動下載並驗證。Notebook 使用 NumPy／scikit-learn 的 CPU 實驗，這兩套程式沒有可直接切換的 CUDA 後端。若需重現舊版套件環境，本機仍可使用 `uv.lock`。
 
 從專案根目錄執行：
 
@@ -68,7 +68,7 @@ UV_CACHE_DIR=/private/tmp/mlcourse2026-uv-cache uv sync --frozen
 
 ## 資料與離線使用
 
-交付已附 `data/lifesat.csv`、`data/housing.csv`、`data/mnist_784_v1.npz`。每本只讀本機檔案，不在儲存格中臨時下載。首次建立資料或補回缺檔時執行：
+本機交付附有 `data/lifesat.csv`、`data/housing.csv`、`data/mnist_784_v1.npz`。Colab 的檔案是暫時的；Notebook 會在首次需要時自動下載資料。前兩份 CSV 依固定來源的 SHA-256 驗證，MNIST 由 OpenML 下載並檢查資料維度。若要在本機預先備妥資料，可執行：
 
 ```sh
 uv run python scripts/fetch_data.py
@@ -94,7 +94,7 @@ MLCOURSE_PROFILE=full uv run jupyter lab
 
 ## 重跑、圖表與驗證
 
-各本可獨立執行，無需先執行前一本。以 `.ipynb` 為正式編修來源；編修後執行「Restart Kernel and Run All」。全套批次執行每本使用新的本機核心：
+各本可獨立執行，無需先執行前一本。以 `.ipynb` 為正式編修來源；編修後執行「Restart Kernel and Run All」。以下本機批次命令會覆寫 Notebook 的執行輸出；首次執行可能需下載套件或資料：
 
 ```sh
 uv run python scripts/execute_notebooks.py --html
@@ -121,7 +121,7 @@ uv run python scripts/hyperparameter_search_demo.py
 - `outputs/reports/`：機器可讀的實際數據。
 - `outputs/execution.json`：逐本執行時間與成功狀態。
 - `outputs/models/`：02 產生的完整房價管線及中繼資料，可重新生成，不納入 Git。
-- `VERIFICATION.md`：本次驗證範圍、實際結果與限制。
+- 舊環境的驗證紀錄已整併於根目錄 `README.md`，不代表 Colab 版已完成全套執行。
 
 本機推論示範：
 

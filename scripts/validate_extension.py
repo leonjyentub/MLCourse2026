@@ -5,7 +5,6 @@ from pathlib import Path
 import re,json,hashlib,math,ast
 import fitz
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'output/qa';OUT.mkdir(exist_ok=True)
 report={'decks':[],'worked_examples':{},'input_integrity':[]}
 files=sorted(p for p in (ROOT/'slides').glob('*.md') if p.name[:2].isdigit() and 4<=int(p.name[:2])<=11)
 assert len(files)==8
@@ -32,7 +31,7 @@ for p in files:
 figures=json.loads((ROOT/'slides/assets/chapters04_09/sources.json').read_text())
 assert len(figures)==90
 for f in figures:assert f['asset'].split('/')[-1] in all_text
-source_map=(ROOT/'SOURCE_MAP_CH04_09.md').read_text()
+source_map=(ROOT/'SOURCE_MAP.md').read_text()
 assert len(re.findall(r'^\| 式 [4-9]-\d+ \|',source_map,re.M))==42
 assert len(re.findall(r'^\| 表 [4-9]-\d+ \|',source_map,re.M))==4
 report['numbered_figures']=90;report['numbered_equations']=42;report['numbered_tables']=4
@@ -109,6 +108,5 @@ if layout.exists():
  assert not any(s['bad'] or s['broken'] or s['mathErrors'] or s['rawMarkdown'] for r in rows for s in r['slides'])
  report['layout_audit']={'decks':8,'slides':sum(len(r['slides']) for r in rows),'issues':0}
 report['total_slides']=sum(r['slides'] for r in report['decks']);report['teaching_hours_including_breaks']=24
-(OUT/'chapters04_09_validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:report[k] for k in ['total_slides','numbered_figures','numbered_equations','numbered_tables','teaching_hours_including_breaks']},ensure_ascii=False))
 print('Worked examples verified:',len(report['worked_examples']),'groups; unchanged originals:',len(report['input_integrity']))

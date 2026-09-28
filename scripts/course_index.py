@@ -75,5 +75,12 @@ sm.append('''
 
 舊稿补充插入相關概念當下，均標示補充，不另開與主教材平行的重複主線。Colab 操作、自訂 Transformer 類別、完整搜尋程式、ClassifierChain 實作與教材程式習題僅概述或列為後續閱讀，以符合三週概念導向的教學時間。
 '''.replace('旧','舊').replace('补充','補充'))
-(ROOT/'SOURCE_MAP.md').write_text(''.join(sm));(ROOT/'教學講者備註.md').write_text(''.join(notes));(ROOT/'.build/course_index.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n')
+def write_base_with_extension(path, base, marker):
+ old=path.read_text() if path.exists() else ''
+ extension=('\n\n---\n\n'+marker+old.split(marker,1)[1]) if marker in old else ''
+ path.write_text(base.rstrip()+'\n'+extension)
+write_base_with_extension(ROOT/'SOURCE_MAP.md',''.join(sm),'<!-- extension-source-map -->')
+write_base_with_extension(ROOT/'教學講者備註.md',''.join(notes),'<!-- extension-notes -->')
+(ROOT/'.build').mkdir(exist_ok=True)
+(ROOT/'.build/course_index.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n')
 print('Indexed',len(records),'slides;',sum(x['minutes'] for x in records),'teaching minutes')
