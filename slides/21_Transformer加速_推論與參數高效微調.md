@@ -33,9 +33,11 @@ style: |
 成果：能辨認瓶頸，說明速度、記憶體與品質的取捨。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：`programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb`。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb`。本檔提供公式驗算、機制實驗與結果圖；框架片段及完整模型案例另依頁面說明閱讀。
 
 <!-- 來源／講者提示：書本：本地Ch17 pp.1–2；線上版PDF共65頁，正文由第5頁起。 -->
+
+<!-- Notebook 對照：程式 21-01、21-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- notebook-result-slide -->
@@ -63,6 +65,9 @@ full_params = d_in * d_out
 </div>
 
 <!-- 講者提示：程式與圖均來自 programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+
+<!-- Notebook 對照：程式 21-04；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+
 ---
 ## 課堂安排與量測對象
 
@@ -88,6 +93,8 @@ full_params = d_in * d_out
 
 <!-- 來源／講者提示：自編瓶頸表；本地Ch17導讀與作者Notebook加速分類。 -->
 
+<!-- Notebook 對照：程式 21-03、21-04；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## KV cache 重用先前的投影
@@ -97,6 +104,8 @@ full_params = d_in * d_out
 只計算新 token 的 query，並把新 key／value 接到快取尾端。
 
 <!-- 來源／講者提示：書本：線上Ch17 PDF 7，圖 17-1。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 21-03、21-04、21-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 為何不必快取全部 Q
@@ -108,6 +117,8 @@ full_params = d_in * d_out
 Cache 減少重複計算，但序列越長，保存的 K／V 仍持續成長。
 
 <!-- 來源／講者提示：書本：本地Ch17導讀；程式：作者Cell18 use_cache對照；線上圖17-1。 -->
+
+<!-- Notebook 對照：程式 21-03、21-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: activity -->
@@ -122,6 +133,8 @@ Cache 減少重複計算，但序列越長，保存的 K／V 仍持續成長。
 這只計 K／V 儲存；未含權重、allocator 與其他張量。
 
 <!-- 來源／講者提示：自編尺寸估算；2代表K和V。 -->
+
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -143,6 +156,8 @@ with torch.no_grad():
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者KV Caching；程式依作者 17_speeding_up_transformers.ipynb Cell 18（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## 推測解碼先提案再驗證
@@ -152,6 +167,8 @@ with torch.no_grad():
 小模型提出一段候選，大模型批次驗證；能接受多少 token 影響效益。
 
 <!-- 來源／講者提示：書本：線上Ch17 PDF 10，圖 17-2。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 21-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## Greedy 與抽樣的驗證不同
@@ -166,6 +183,8 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 
 <!-- 來源／講者提示：程式：作者Cell20 assistant_model；本地Ch17推測解碼導讀，圖17-2為greedy教學。 -->
 
+<!-- Notebook 對照：程式 21-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 平行生成與動態批次
 
@@ -179,6 +198,8 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 
 <!-- 來源／講者提示：書本：線上Ch17 pp.12–14導讀；自行整理方法角色。 -->
 
+<!-- Notebook 對照：程式 21-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 注意力分數的平方成本
 
@@ -189,6 +210,8 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 不一定每種 kernel 都真的建立完整矩陣，這正是實作最佳化的切入點。
 
 <!-- 來源／講者提示：自編成本計算；本地Ch17 attention導讀。 -->
+
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## 稀疏注意力：限制可見位置
@@ -201,6 +224,8 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 | 內容路由 | 依內容把相似token分組 |
 
 <!-- 來源／講者提示：程式：作者BigBird Cells22–24；書本本地Ch17 sparse attention導讀，線上章節sparse目錄。 -->
+
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## 近似注意力的不同路線
@@ -215,6 +240,8 @@ Greedy 可逐位置比較目標模型的最佳 token，第一個不符後重新�
 
 <!-- 來源／講者提示：程式：作者Cells25–45；Linformer為線上章節低秩注意力補充。 -->
 
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Performer 的重排概念
 
@@ -228,6 +255,8 @@ $$\phi(Q)\bigl(\phi(K)^\top V\bigr)$$
 
 <!-- 來源／講者提示：程式：作者Cells29–45，隨機特徵推導；此式省略分母並在文字明示。 -->
 
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## MHA、MQA 與 GQA
@@ -237,6 +266,8 @@ $$\phi(Q)\bigl(\phi(K)^\top V\bigr)$$
 減少 K／V 的 head 數，讓多個 query heads 共用投影與快取。
 
 <!-- 來源／講者提示：書本：線上Ch17 PDF 36，圖 17-11。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 共享 K／V 的尺寸比較
@@ -252,6 +283,8 @@ $$\phi(Q)\bigl(\phi(K)^\top V\bigr)$$
 這是 K／V 快取比較，不代表整個模型同倍縮小。
 
 <!-- 來源／講者提示：自編計算；作者Cells48、50。 -->
+
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -272,6 +305,8 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者Sharing Projections；程式依作者 17_speeding_up_transformers.ipynb Cell 50（縮小張量） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## MLA 與潛在快取（選讀）
 
@@ -282,6 +317,8 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 評估時同時追蹤快取尺寸與重建／投影的運算成本。
 
 <!-- 來源／講者提示：書本：線上Ch17圖17-12與共享投影段；選讀概念，不提供未驗證實作。 -->
+
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## FlashAttention 的重點
@@ -294,6 +331,8 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 
 <!-- 來源／講者提示：程式：作者Cells51–57；Cell54指出toy實作只處理長度可整除block的情況。 -->
 
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 分塊 Softmax 的穩定性
 
@@ -304,6 +343,8 @@ Y = F.scaled_dot_product_attention(Q, K, V, enable_gqa=True)
 若只把每塊各自 Softmax 後串接，總和與完整 Softmax 不一致。
 
 <!-- 來源／講者提示：程式：作者flash_attention Cell53；自編錯誤辨識題。 -->
+
+<!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## MoE 的稀疏啟用
@@ -318,6 +359,8 @@ Router 對每個 token 選少數 experts，常用來替換 FFN。
 
 <!-- 來源／講者提示：書本：本地Ch17 MoE導讀；線上章節MoE段。作者Notebook此標題下實際接LoRA，無完整MoE實作。 -->
 
+<!-- Notebook 對照：程式 21-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## MoE 的訓練問題（選讀）
 
@@ -329,6 +372,8 @@ Router 對每個 token 選少數 experts，常用來替換 FFN。
 
 <!-- 來源／講者提示：書本：線上Ch17 MoE目錄所列挑戰；自行整理觀察項目。 -->
 
+<!-- Notebook 對照：程式 21-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## LoRA 的低秩參數更新
@@ -338,6 +383,8 @@ Router 對每個 token 選少數 experts，常用來替換 FFN。
 凍結原權重，以兩個較小矩陣描述新增的權重變化。
 
 <!-- 來源／講者提示：書本：線上Ch17 PDF 51，圖 17-15。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 21-03、21-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 <!-- _class: activity -->
@@ -353,6 +400,8 @@ $4096×8+8×4096=65,536$ 個參數。
 低秩更新節省可訓練參數與 optimizer 狀態；仍要載入主幹。
 
 <!-- 來源／講者提示：自編數例；作者Cell59 PEFT配置。 -->
+
+<!-- Notebook 對照：程式 21-03、21-06；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -374,6 +423,8 @@ model 是相容的已載入因果語言模型；模組名稱須與模型實際�
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者LoRA實作；程式依作者 17_speeding_up_transformers.ipynb Cell 59（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 21-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Adapters 與其他 PEFT 方法
 
@@ -387,6 +438,8 @@ model 是相容的已載入因果語言模型；模組名稱須與模型實際�
 
 <!-- 來源／講者提示：書本：本地Ch17 PEFT導讀；作者LoRA段延伸比較。 -->
 
+<!-- Notebook 對照：程式 21-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Activation checkpointing
 
@@ -399,6 +452,8 @@ model 是相容的已載入因果語言模型；模組名稱須與模型實際�
 
 <!-- 來源／講者提示：書本：本地Ch17 activation checkpointing導讀。 -->
 
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## Packing 與 bucketing 減少補值
@@ -408,6 +463,8 @@ model 是相容的已載入因果語言模型；模組名稱須與模型實際�
 Packing 串接短序列，bucketing 把相近長度分組；兩者仍須維持正確遮罩。
 
 <!-- 來源／講者提示：書本：線上Ch17 PDF 55，圖 17-16。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## Packing 的文件邊界
@@ -419,6 +476,8 @@ Packing 串接短序列，bucketing 把相近長度分組；兩者仍須維持�
 只拼接 token 卻保留普通 causal mask，第二段就可能讀到第一段。
 
 <!-- 來源／講者提示：自編資料處理檢核；本地Ch17 sequence packing導讀。 -->
+
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## Gradient accumulation
@@ -432,6 +491,8 @@ Packing 串接短序列，bucketing 把相近長度分組；兩者仍須維持�
 有 BatchNorm、Dropout 或不等長 token 時，不保證與一次大 batch 完全等價。
 
 <!-- 來源／講者提示：程式：作者Cell63；原例100batch可被4整除，課堂擴充討論尾組。 -->
+
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -454,6 +515,8 @@ batches 是可索引的小型教學資料；不等樣本數時需依實際樣本
 
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者Gradient Accumulation；程式依作者 17_speeding_up_transformers.ipynb Cell 63（修正尾組的教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 平行訓練的切分方式
 
@@ -465,6 +528,8 @@ batches 是可索引的小型教學資料；不等樣本數時需依實際樣本
 | 狀態分片 | 參數／梯度／optimizer狀態 | 蒐集與同步 |
 
 <!-- 來源／講者提示：書本：本地Ch17 parallelism導讀；線上章節平行訓練段。 -->
+
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: activity -->
@@ -481,6 +546,8 @@ B. 微調時反向傳播發生記憶體不足。
 
 <!-- 來源／講者提示：自編活動。 -->
 
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 離堂檢核
 
@@ -490,6 +557,8 @@ B. 微調時反向傳播發生記憶體不足。
 - LoRA 與 gradient accumulation 分別節省什麼？
 
 <!-- 來源／講者提示：自編檢核；快取位置增加；K/V共享；否；可訓練狀態與單次activation峰值。 -->
+
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -501,3 +570,22 @@ B. 微調時反向傳播發生記憶體不足。
 程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->
+
+<!-- Notebook 對照：程式 21-07；完整對照見本章 ipynb 開頭。 -->
+
+---
+<!-- _class: small -->
+## Notebook 導讀：可執行的機制與驗收
+
+| 實驗 | 驗收證據 |
+|---|---|
+| KV／GQA／分塊 Softmax | 與完整計算相同；512 MiB 手算 |
+| 推測解碼／LoRA／MoE | 抽樣邊際分布；主幹不變；專家負載 |
+| Packing／梯度累積 | 跨文件遮罩；不等大小批次加權 |
+
+圖中投影次數不是實測加速比；分塊算法不代表已執行 GPU FlashAttention。
+核重排用 ELU+1 特徵示範，MLA／平行訓練框架保留為延伸讀碼。
+
+<!-- 講者提示：NumPy CPU 小型實驗對應公式、形狀與流程；教材架構與外部模型成效不宣稱完整重現。 可用於程式課或課後，不增加原核心時間。 -->
+
+<!-- Notebook 對照：程式 21-05、21-06、21-07；完整對照見本章 ipynb 開頭。 -->

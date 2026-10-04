@@ -1,0 +1,314 @@
+{
+  "02_端到端機器學習專案": {
+    "source_sha256": "8f101f01cb99e6a3e16f1243d26d2ea42c429d4e3eb19766e8920deedd6998f7",
+    "execution": {
+      "notebook": "02_端到端機器學習專案.ipynb",
+      "seconds": 20.06,
+      "code_cells": 28,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "8f101f01cb99e6a3e16f1243d26d2ea42c429d4e3eb19766e8920deedd6998f7",
+      "executed_at": "2026-10-04T11:06:13.609692+00:00",
+      "source_preserved": true
+    }
+  },
+  "03_分類與模型評估": {
+    "source_sha256": "bd7bec5005aa2c8170e2439c2323426c43e218ea541fcf44b13ef05d8a364452",
+    "execution": {
+      "notebook": "03_分類與模型評估.ipynb",
+      "seconds": 26.4,
+      "code_cells": 32,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "bd7bec5005aa2c8170e2439c2323426c43e218ea541fcf44b13ef05d8a364452",
+      "executed_at": "2026-10-04T11:06:40.458808+00:00",
+      "source_preserved": true
+    }
+  },
+  "04_線性模型與最佳化": {
+    "source_sha256": "2d1e2504dc7d34071230249b66c23b2b5c0fed49a49bef93744c65c9b799ecb6",
+    "execution": {
+      "notebook": "04_線性模型與最佳化.ipynb",
+      "seconds": 4.29,
+      "code_cells": 20,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "2d1e2504dc7d34071230249b66c23b2b5c0fed49a49bef93744c65c9b799ecb6",
+      "executed_at": "2026-10-04T11:06:45.130247+00:00",
+      "source_preserved": true
+    }
+  },
+  "05_正則化與機率分類": {
+    "source_sha256": "31eb08aecc839ccede828938319103dad7c5ff5badf32d9ce35b37daf472bbbd",
+    "execution": {
+      "notebook": "05_正則化與機率分類.ipynb",
+      "seconds": 2.93,
+      "code_cells": 13,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "31eb08aecc839ccede828938319103dad7c5ff5badf32d9ce35b37daf472bbbd",
+      "executed_at": "2026-10-04T11:06:48.358649+00:00",
+      "source_preserved": true
+    }
+  },
+  "06_決策樹與SVM補充": {
+    "source_sha256": "3856b8e95e87bbfd68719e6365c8806905271ac69a22769e1ebbc4b8f3fa8142",
+    "execution": {
+      "notebook": "06_決策樹與SVM補充.ipynb",
+      "seconds": 3.66,
+      "code_cells": 14,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "3856b8e95e87bbfd68719e6365c8806905271ac69a22769e1ebbc4b8f3fa8142",
+      "executed_at": "2026-10-04T11:06:52.247502+00:00",
+      "source_preserved": true
+    }
+  },
+  "07_集成學習與隨機森林": {
+    "source_sha256": "c79ed4cc748b87949d2390aaed7aa73550aba5abc46705b00cff897f9d9d43b2",
+    "execution": {
+      "notebook": "07_集成學習與隨機森林.ipynb",
+      "seconds": 9.23,
+      "code_cells": 12,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "c79ed4cc748b87949d2390aaed7aa73550aba5abc46705b00cff897f9d9d43b2",
+      "executed_at": "2026-10-04T11:07:01.680110+00:00",
+      "source_preserved": true
+    }
+  },
+  "08_降維與資料表示": {
+    "source_sha256": "05ff71c8bb6fe1e2972874aac0c034a921efad95af3a463a7a2e677541e87ff2",
+    "execution": {
+      "notebook": "08_降維與資料表示.ipynb",
+      "seconds": 4.1,
+      "code_cells": 12,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "05ff71c8bb6fe1e2972874aac0c034a921efad95af3a463a7a2e677541e87ff2",
+      "executed_at": "2026-10-04T11:07:06.006298+00:00",
+      "source_preserved": true
+    }
+  },
+  "09_分群與表示應用": {
+    "source_sha256": "5b510694ab9d692c5550f13f41f9400ee028867d614e4e5a64273fcc808d351a",
+    "execution": {
+      "notebook": "09_分群與表示應用.ipynb",
+      "seconds": 4.18,
+      "code_cells": 11,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "5b510694ab9d692c5550f13f41f9400ee028867d614e4e5a64273fcc808d351a",
+      "executed_at": "2026-10-04T11:07:10.372812+00:00",
+      "source_preserved": true
+    }
+  },
+  "10_密度分群與機率模型": {
+    "source_sha256": "7df8cfd26cf7984e2eefbefb680d07cfcf408aeb769a7d9ef94a41684dd08f26",
+    "execution": {
+      "notebook": "10_密度分群與機率模型.ipynb",
+      "seconds": 4.1,
+      "code_cells": 13,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "7df8cfd26cf7984e2eefbefb680d07cfcf408aeb769a7d9ef94a41684dd08f26",
+      "executed_at": "2026-10-04T11:07:14.684763+00:00",
+      "source_preserved": true
+    }
+  },
+  "11_人工神經網路入門": {
+    "source_sha256": "e57c755fe3f4a61429763ee52b7746a96ce1b0bb0aedda7e0ff0aa9181a97005",
+    "execution": {
+      "notebook": "11_人工神經網路入門.ipynb",
+      "seconds": 3.13,
+      "code_cells": 12,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "e57c755fe3f4a61429763ee52b7746a96ce1b0bb0aedda7e0ff0aa9181a97005",
+      "executed_at": "2026-10-04T11:07:18.030602+00:00",
+      "source_preserved": true
+    }
+  },
+  "12_深層神經網路訓練_梯度與遷移": {
+    "source_sha256": "c99472c92ddc343d2ee318f6dbe18ae076678fb3de107b66346073a59f7810cf",
+    "execution": {
+      "notebook": "12_深層神經網路訓練_梯度與遷移.ipynb",
+      "seconds": 1.9,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "c99472c92ddc343d2ee318f6dbe18ae076678fb3de107b66346073a59f7810cf",
+      "executed_at": "2026-10-04T11:07:20.180543+00:00",
+      "source_preserved": true
+    }
+  },
+  "13_深層神經網路訓練_最佳化與正則化": {
+    "source_sha256": "6a5433576d30b174bd88de5848f73085d900fc930688d0dbba79509f238b3a9a",
+    "execution": {
+      "notebook": "13_深層神經網路訓練_最佳化與正則化.ipynb",
+      "seconds": 2.22,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "6a5433576d30b174bd88de5848f73085d900fc930688d0dbba79509f238b3a9a",
+      "executed_at": "2026-10-04T11:07:22.539647+00:00",
+      "source_preserved": true
+    }
+  },
+  "14_卷積神經網路_影像特徵與架構": {
+    "source_sha256": "0bde8f33779d5baeaf478f0ad45eee79d652794afa7efd4c4d13a7f7bdb6af24",
+    "execution": {
+      "notebook": "14_卷積神經網路_影像特徵與架構.ipynb",
+      "seconds": 1.57,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "0bde8f33779d5baeaf478f0ad45eee79d652794afa7efd4c4d13a7f7bdb6af24",
+      "executed_at": "2026-10-04T11:07:24.283535+00:00",
+      "source_preserved": true
+    }
+  },
+  "15_電腦視覺_遷移學習與偵測分割": {
+    "source_sha256": "95ff4fcbfc5c643b87bf6458e82186da70c82e037cbcd40e88a4af9f8579a1ea",
+    "execution": {
+      "notebook": "15_電腦視覺_遷移學習與偵測分割.ipynb",
+      "seconds": 1.62,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "95ff4fcbfc5c643b87bf6458e82186da70c82e037cbcd40e88a4af9f8579a1ea",
+      "executed_at": "2026-10-04T11:07:26.023211+00:00",
+      "source_preserved": true
+    }
+  },
+  "16_序列模型_RNN與時間序列預測": {
+    "source_sha256": "88edc4dccc834ed178d64ead7b0611a0d02b259f644c203e5c3f3b00ebde36e7",
+    "execution": {
+      "notebook": "16_序列模型_RNN與時間序列預測.ipynb",
+      "seconds": 2.03,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "88edc4dccc834ed178d64ead7b0611a0d02b259f644c203e5c3f3b00ebde36e7",
+      "executed_at": "2026-10-04T11:07:28.185860+00:00",
+      "source_preserved": true
+    }
+  },
+  "17_自然語言處理_詞嵌入與注意力": {
+    "source_sha256": "c9eea0f03c1e0350d25ffce113cf549e254319fd2b361bb14e77b5848144f2a0",
+    "execution": {
+      "notebook": "17_自然語言處理_詞嵌入與注意力.ipynb",
+      "seconds": 1.46,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "c9eea0f03c1e0350d25ffce113cf549e254319fd2b361bb14e77b5848144f2a0",
+      "executed_at": "2026-10-04T11:07:29.816269+00:00",
+      "source_preserved": true
+    }
+  },
+  "18_Transformer_注意力架構與預訓練": {
+    "source_sha256": "8ea9aa1a9801aa5588f6c376da35cf18b6f7b58be2bff772995530ae99c49d81",
+    "execution": {
+      "notebook": "18_Transformer_注意力架構與預訓練.ipynb",
+      "seconds": 1.42,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "8ea9aa1a9801aa5588f6c376da35cf18b6f7b58be2bff772995530ae99c49d81",
+      "executed_at": "2026-10-04T11:07:31.357808+00:00",
+      "source_preserved": true
+    }
+  },
+  "19_大型語言模型_生成與聊天系統": {
+    "source_sha256": "5881b81372ae5ab7fb079b0ae3a967dfe4604c2acf4a6e748e7cdde2d9dc9924",
+    "execution": {
+      "notebook": "19_大型語言模型_生成與聊天系統.ipynb",
+      "seconds": 1.31,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "5881b81372ae5ab7fb079b0ae3a967dfe4604c2acf4a6e748e7cdde2d9dc9924",
+      "executed_at": "2026-10-04T11:07:32.796892+00:00",
+      "source_preserved": true
+    }
+  },
+  "20_視覺與多模態Transformer": {
+    "source_sha256": "bc18ccdea100fb4587dfafb8918926d9b19e166972d6e44086bd0aee5a0c7720",
+    "execution": {
+      "notebook": "20_視覺與多模態Transformer.ipynb",
+      "seconds": 1.51,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "bc18ccdea100fb4587dfafb8918926d9b19e166972d6e44086bd0aee5a0c7720",
+      "executed_at": "2026-10-04T11:07:34.446186+00:00",
+      "source_preserved": true
+    }
+  },
+  "21_Transformer加速_推論與參數高效微調": {
+    "source_sha256": "c4bcbd69b4a885cb530ba4b0924c3ac4d55785c8b87c7bca8a25408bc2191598",
+    "execution": {
+      "notebook": "21_Transformer加速_推論與參數高效微調.ipynb",
+      "seconds": 1.27,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "c4bcbd69b4a885cb530ba4b0924c3ac4d55785c8b87c7bca8a25408bc2191598",
+      "executed_at": "2026-10-04T11:07:35.841343+00:00",
+      "source_preserved": true
+    }
+  },
+  "22_生成模型_自編碼器GAN與擴散": {
+    "source_sha256": "b9ff6395af8fecc91564a72cb91b88c8e437e00527130c95b49ae8fac782896e",
+    "execution": {
+      "notebook": "22_生成模型_自編碼器GAN與擴散.ipynb",
+      "seconds": 2.51,
+      "code_cells": 8,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "b9ff6395af8fecc91564a72cb91b88c8e437e00527130c95b49ae8fac782896e",
+      "executed_at": "2026-10-04T11:07:38.470359+00:00",
+      "source_preserved": true
+    }
+  },
+  "23_強化學習_策略價值與深度RL": {
+    "source_sha256": "31e619753259163cf4d3be9eb4cd94a3b0b07d75682cf5328649f3f4b4051d78",
+    "execution": {
+      "notebook": "23_強化學習_策略價值與深度RL.ipynb",
+      "seconds": 1.54,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "31e619753259163cf4d3be9eb4cd94a3b0b07d75682cf5328649f3f4b4051d78",
+      "executed_at": "2026-10-04T11:07:40.188350+00:00",
+      "source_preserved": true
+    }
+  },
+  "24_附錄A_自動微分與計算圖": {
+    "source_sha256": "948b3adac3b9ca4fe5ea83f4a6ceab0405ea10d00330ddac69ba5ec882d4f0fd",
+    "execution": {
+      "notebook": "24_附錄A_自動微分與計算圖.ipynb",
+      "seconds": 1.18,
+      "code_cells": 6,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "948b3adac3b9ca4fe5ea83f4a6ceab0405ea10d00330ddac69ba5ec882d4f0fd",
+      "executed_at": "2026-10-04T11:07:41.508877+00:00",
+      "source_preserved": true
+    }
+  },
+  "25_附錄B_混合精度與量化": {
+    "source_sha256": "1372ffad286a93124228436cc9c7c9d9cdd77e564de25b4730e63059fddc11c8",
+    "execution": {
+      "notebook": "25_附錄B_混合精度與量化.ipynb",
+      "seconds": 1.43,
+      "code_cells": 7,
+      "errors": 0,
+      "profile": "fast",
+      "source_sha256": "1372ffad286a93124228436cc9c7c9d9cdd77e564de25b4730e63059fddc11c8",
+      "executed_at": "2026-10-04T11:07:43.053029+00:00",
+      "source_preserved": true
+    }
+  }
+}

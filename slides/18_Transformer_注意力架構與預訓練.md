@@ -31,9 +31,11 @@ style: |
 成果：能手算小型注意力，追蹤維度並辨識未來資訊洩漏。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：`programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb`。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb`。本檔提供公式驗算、機制實驗與結果圖；框架片段及完整模型案例另依頁面說明閱讀。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.1–33；兩次10分鐘休息。 -->
+
+<!-- Notebook 對照：程式 18-01、18-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- notebook-result-slide -->
@@ -61,6 +63,9 @@ weights = softmax(scores)
 </div>
 
 <!-- 講者提示：程式與圖均來自 programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+
+<!-- Notebook 對照：程式 18-04；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+
 ---
 ## 三種 Transformer 家族
 
@@ -73,6 +78,8 @@ weights = softmax(scores)
 家族名稱描述資訊流，不直接代表模型大小或品質。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.1–5、18、33、63–65 -->
+
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: figure-tall -->
@@ -96,6 +103,8 @@ weights = softmax(scores)
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.5–7，圖15-3；保留原圖，右側依資訊流補充中文導讀。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+
 ---
 ## 序列沒有循環，仍需要位置資訊
 
@@ -106,6 +115,8 @@ Self-attention 本身依內容配對，不能單靠 token 集合知道順序。
 把位置向量與 token embedding 相加時，兩者最後一維必須相同。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；10_Attention.pptx s.38–48。 -->
+
+<!-- Notebook 對照：程式 18-03、18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -126,6 +137,8 @@ class PositionalEmbedding(nn.Module):
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 31（移除Dropout以聚焦位置） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 固定位置編碼的概念
 
@@ -138,6 +151,8 @@ $$PE_{p,2i+1}=\cos\!\left(p/10000^{2i/d}\right)$$
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；作者Extra Material Fixed Positional Encodings。 -->
 
+<!-- Notebook 對照：程式 18-03、18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Q、K、V 的分工
 
@@ -148,6 +163,8 @@ $$PE_{p,2i+1}=\cos\!\left(p/10000^{2i/d}\right)$$
 Self-attention 的三者來自同一序列的不同線性投影；cross-attention 的來源不同。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–14；補充10_Attention.pptx s.22–35。 -->
+
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## Scaled dot-product attention
@@ -163,6 +180,8 @@ Softmax 沿 key 位置計算。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–13，式15-1。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: activity -->
 ## 點積注意力手算
@@ -176,6 +195,8 @@ Softmax 沿 key 位置計算。
 活動：交換兩個 value 後，分數與輸出各會如何改變？
 
 <!-- 來源／講者提示：自編數例。分數不變，輸出改為[0.660,2.680]。 -->
+
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -195,6 +216,8 @@ context = weights @ V
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–14；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 35（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## 多頭注意力分別學習不同投影
@@ -204,6 +227,8 @@ context = weights @ V
 每個 head 產生一組 context，串接後再經輸出投影。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF 11，圖 15-4。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 多頭的維度追蹤
@@ -221,6 +246,8 @@ $64$ 必須可被 $4$ 整除。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.10–14；自編尺寸。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 兩種遮罩處理不同問題
 
@@ -235,6 +262,8 @@ $64$ 必須可被 $4$ 整除。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–18；作者Cell46；自寫MHA與nn.Transformer的True=block，F.scaled_dot_product_attention布林True=allow。 -->
 
+<!-- Notebook 對照：程式 18-03、18-04、18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: activity -->
 ## Causal mask 手算
@@ -246,6 +275,8 @@ $$\begin{bmatrix}1&0&0&0\\1&1&0&0\\1&1&1&0\\1&1&1&1\end{bmatrix}$$
 訓練時可平行計算所有位置，但每個位置只能用自己的前綴。
 
 <!-- 來源／講者提示：自編矩陣；對應Ch15 decoder遮罩。 -->
+
+<!-- Notebook 對照：程式 18-03、18-04、18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## Feed-forward network 與殘差
@@ -259,6 +290,8 @@ Attention 混合不同位置的資訊；FFN 轉換每個位置內的特徵。
 殘差連接要求輸入與輸出的 $d_{model}$ 一致。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–16 -->
+
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: activity -->
@@ -275,6 +308,8 @@ $[-1.414,0,0,1.414]$。
 
 <!-- 來源／講者提示：補充：10_Attention.pptx s.52–53；Ch15 pp.14–16。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Pre-norm 與 post-norm
 
@@ -288,6 +323,8 @@ $[-1.414,0,0,1.414]$。
 讀碼時確認 norm 的位置，不因都叫 Transformer 就假設相同。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–16；變體為架構對照。 -->
+
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -310,6 +347,8 @@ src_pad、tgt_pad 中 True 表示 padding；tgt 需使用位移後的目標前�
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.16–18；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 46（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Encoder-only 模型與 BERT
 
@@ -321,6 +360,8 @@ BERT 用雙向上下文學表示，常用於分類與資訊抽取。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.18–27 -->
 
+<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## BERT 的預訓練目標
@@ -330,6 +371,8 @@ BERT 用雙向上下文學表示，常用於分類與資訊抽取。
 MLM 預測選中的 token；原始 BERT 也使用 NSP 判斷句子配對。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF 21，圖 15-5。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## MLM 的遮蔽規則
@@ -343,6 +386,8 @@ MLM 預測選中的 token；原始 BERT 也使用 NSP 判斷句子配對。
 這是原始設計，後續模型可採不同訓練配方。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.19–22 -->
+
+<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -362,6 +407,8 @@ model = BertForMaskedLM(config)
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.19–22；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 57（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 18-05、18-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## 分類頭與逐 token 任務頭
@@ -371,6 +418,8 @@ model = BertForMaskedLM(config)
 句子分類輸出每句一組標籤；NER 或 POS 則要對齊每個有效 token。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF 24，圖 15-7。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 問答任務的輸出設計
@@ -386,6 +435,8 @@ model = BertForMaskedLM(config)
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.22–27 -->
 
+<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## DistilBERT 的知識蒸餾
@@ -395,6 +446,8 @@ model = BertForMaskedLM(config)
 學生同時學任務訊號與教師行為；壓縮模型需重新衡量品質與成本。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF 28，圖 15-9。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 18-07；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## Encoder 模型的改良方向
@@ -407,6 +460,8 @@ model = BertForMaskedLM(config)
 | DeBERTa | 分開處理內容與位置資訊 |
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.27–33；補充ModernBERT等後續模型為架構延伸，不列即時效能排名。 -->
+
+<!-- Notebook 對照：程式 18-07；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: activity -->
@@ -422,6 +477,8 @@ model = BertForMaskedLM(config)
 
 <!-- 來源／講者提示：自編活動。前兩者錯誤；第三者是常見正確資訊流。 -->
 
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 離堂檢核
 
@@ -431,6 +488,8 @@ model = BertForMaskedLM(config)
 - 建立 config 是否等於載入預訓練知識？
 
 <!-- 來源／講者提示：自編檢核；15%=候選token，80%=被選中token；config不含學好權重。 -->
+
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -442,3 +501,23 @@ model = BertForMaskedLM(config)
 程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->
+
+<!-- Notebook 對照：程式 18-07；完整對照見本章 ipynb 開頭。 -->
+
+---
+<!-- _class: small -->
+## Notebook 導讀：可執行的機制與驗收
+
+| 實驗 | 驗收證據 |
+|---|---|
+| Encoder／decoder 與多頭 | Q/K/V 形狀、FFN、殘差、norm |
+| Causal 與 padding mask | 改未來不改過去；padding 權重為零 |
+| MLM、分類、token 與 QA 頭 | 受監督位置、輸出形狀、合法 span |
+| 蒸餾 | 固定教師分布、學生 KL 下降 |
+
+權重隨機或只優化玩具 logits；不稱為已預訓練 BERT／DistilBERT。
+完整模型 API 仍作讀碼；小型實驗提供可核對的公式與資料流。
+
+<!-- 講者提示：NumPy CPU 小型實驗對應公式、形狀與流程；教材架構與外部模型成效不宣稱完整重現。 可用於程式課或課後，不增加原核心時間。 -->
+
+<!-- Notebook 對照：程式 18-05、18-06、18-07；完整對照見本章 ipynb 開頭。 -->

@@ -1,0 +1,255 @@
+{
+  "exported_at": "2026-10-04",
+  "chapters": "02–25",
+  "pdf_count": 24,
+  "html_slide_count": 24,
+  "pages": 980,
+  "pdf_visually_sampled_pages": 72,
+  "offline_slide_html_external_requests": 0,
+  "notebook_html_count": 24,
+  "notebook_code_cells": 265,
+  "notebook_html_images": 160,
+  "notebook_profile": "fast",
+  "files": [
+    {
+      "chapter": "02",
+      "pages": 47,
+      "source": "slides/02_端到端機器學習專案.md",
+      "source_sha256": "9c7333702878059f4a8cda549d9028f1c5a7f6b0f81377f5d6e8167ba0b58c6c",
+      "pdf": "output/pdf/02_端到端機器學習專案.pdf",
+      "pdf_sha256": "c2f7919f216574e15d66ae7e1e7eaa0626a8e5d76e6719070647ee0260ff622b",
+      "html": "output/html/02_端到端機器學習專案.html",
+      "html_sha256": "b4930a02cd3c38348806e6bf5e1a09cab5126d3ca31f9f282109ec7807795500"
+    },
+    {
+      "chapter": "03",
+      "pages": 43,
+      "source": "slides/03_分類與模型評估.md",
+      "source_sha256": "da0c18a50019926756ce62aecbd1bf12e9f5a315cc520e45d25914c9b3f1c4ae",
+      "pdf": "output/pdf/03_分類與模型評估.pdf",
+      "pdf_sha256": "20c64936f66fefaba9094bbaecd2e34162523edbd17544f7badd4e7eb86b0639",
+      "html": "output/html/03_分類與模型評估.html",
+      "html_sha256": "65e89984e33d4d04b1e9ff00b2ab2d8ed4b4092218ef91ec42af81474da4f0aa"
+    },
+    {
+      "chapter": "04",
+      "pages": 52,
+      "source": "slides/04_線性模型與最佳化.md",
+      "source_sha256": "33d17a6c955775e94644153a28754afc813c544e65ee22b9c7901f49861a52d1",
+      "pdf": "output/pdf/04_線性模型與最佳化.pdf",
+      "pdf_sha256": "fdbc0434d1bf646956d32e9240e2096abcc05fc7ab8773dfce165dcf2efd40fe",
+      "html": "output/html/04_線性模型與最佳化.html",
+      "html_sha256": "b3a88a4178cc56c81c7c292ac17dad8699dc1a3dbbc1a8342ce5e52721b5b353"
+    },
+    {
+      "chapter": "05",
+      "pages": 43,
+      "source": "slides/05_正則化與機率分類.md",
+      "source_sha256": "093ec752cf3d8ed36aa3fb23509785586c385f979e7a61131f89ad2930932cb6",
+      "pdf": "output/pdf/05_正則化與機率分類.pdf",
+      "pdf_sha256": "9a731bc82dd92530d5f389a2eb3f4d8d9f09c2089c2b7832706d91a35a509c20",
+      "html": "output/html/05_正則化與機率分類.html",
+      "html_sha256": "7b30bdabc57b325af7a42cb7de92b86ee4474dcee188cdb238fd497ff936d9c6"
+    },
+    {
+      "chapter": "06",
+      "pages": 45,
+      "source": "slides/06_決策樹與SVM補充.md",
+      "source_sha256": "b3d08f8406fb74890b778c964032ac4814e5cd0c39379427ea7ac3a642e6f68b",
+      "pdf": "output/pdf/06_決策樹與SVM補充.pdf",
+      "pdf_sha256": "6ad4bb89c2c28459f0c25fb031eb93474be2059dc3aeec79cdd0b89e0d577d30",
+      "html": "output/html/06_決策樹與SVM補充.html",
+      "html_sha256": "cd19a931c109d563c80359994025f19d54129049eed22b753b4486bd596d1baf"
+    },
+    {
+      "chapter": "07",
+      "pages": 48,
+      "source": "slides/07_集成學習與隨機森林.md",
+      "source_sha256": "21c007fe0f0fc9fea5e21156c6275acd5a074f6a3c735b8b26e44ce17d7238c7",
+      "pdf": "output/pdf/07_集成學習與隨機森林.pdf",
+      "pdf_sha256": "f2e0782ba99a1c05a15953926596576075f658fe3891be5d36d4ad91621c1905",
+      "html": "output/html/07_集成學習與隨機森林.html",
+      "html_sha256": "954179ec019e5bd4db2523c76de00341076785dc8ddc8d0310c7a31293711214"
+    },
+    {
+      "chapter": "08",
+      "pages": 45,
+      "source": "slides/08_降維與資料表示.md",
+      "source_sha256": "7ac6d73c3ba7a827e2145d1da735555301e94a89c9b67b57e2693d339037d8b1",
+      "pdf": "output/pdf/08_降維與資料表示.pdf",
+      "pdf_sha256": "5475529d286211f336ab9a013f4a5a3001319a6aea4e6b29fcd369142f98d869",
+      "html": "output/html/08_降維與資料表示.html",
+      "html_sha256": "5ea4dd0164390cca2a9095ca8e736b51c72903aa4d3aef703a305281b6339c4c"
+    },
+    {
+      "chapter": "09",
+      "pages": 40,
+      "source": "slides/09_分群與表示應用.md",
+      "source_sha256": "56ee0e80a98b9bc8fd1f73302741d5d593174c67f5a0de7f42a466c616f32dfe",
+      "pdf": "output/pdf/09_分群與表示應用.pdf",
+      "pdf_sha256": "4edc6444e09ce66d4800e63801b041d29f106d1c658941c6a096d76d320660ff",
+      "html": "output/html/09_分群與表示應用.html",
+      "html_sha256": "a5192bfe8c531296d8aca3fa5fe44f688611683c7babb1b2558cdd772a0ff646"
+    },
+    {
+      "chapter": "10",
+      "pages": 44,
+      "source": "slides/10_密度分群與機率模型.md",
+      "source_sha256": "c32a286538e979fc7e991d79f0bf444d72c64a5a0a2a30c8e1f8227efe3741d8",
+      "pdf": "output/pdf/10_密度分群與機率模型.pdf",
+      "pdf_sha256": "9620643adfadcd196aec13f59ae1a3a7795aa1c03000eea71ff0ab6357bec3a5",
+      "html": "output/html/10_密度分群與機率模型.html",
+      "html_sha256": "8ce21052a065f7c88714eef39dc83dffa1f66cefd57b500f751315c896b4f740"
+    },
+    {
+      "chapter": "11",
+      "pages": 53,
+      "source": "slides/11_人工神經網路入門.md",
+      "source_sha256": "9a0535ea4d53384b260fd4568359ee398bcd1ad65499102865eb7ea54712c554",
+      "pdf": "output/pdf/11_人工神經網路入門.pdf",
+      "pdf_sha256": "6f4ee75b22dc0d27e56a7e603e41ff2517bde5d9ebda28cd448f47872583f6fa",
+      "html": "output/html/11_人工神經網路入門.html",
+      "html_sha256": "330cc8da3f04f7a3336c9fd2e159637a01bc882fa37044091c44be79c91fc35c"
+    },
+    {
+      "chapter": "12",
+      "pages": 50,
+      "source": "slides/12_深層神經網路訓練_梯度與遷移.md",
+      "source_sha256": "7a088bc5841275fb943356234efa8cbeda2974c229ad86909c7a2f88a0b4496c",
+      "pdf": "output/pdf/12_深層神經網路訓練_梯度與遷移.pdf",
+      "pdf_sha256": "ef306ef934b8ae7f949ed4e688f3179844fd6edd93535b63273e9a6af58e30f9",
+      "html": "output/html/12_深層神經網路訓練_梯度與遷移.html",
+      "html_sha256": "75f2dba244ada101376c36d5c1d5ac5fe387a72b235948f15a50bc81cd3d3d67"
+    },
+    {
+      "chapter": "13",
+      "pages": 53,
+      "source": "slides/13_深層神經網路訓練_最佳化與正則化.md",
+      "source_sha256": "2e55e8b81896596ac6dd3fe79c09da602b4279331100b02b7c2f551ec4dbf394",
+      "pdf": "output/pdf/13_深層神經網路訓練_最佳化與正則化.pdf",
+      "pdf_sha256": "55ad09bdce8e9b871b3fab77730e30b2c5dbf9fd7aa863d92e4be069d18e651c",
+      "html": "output/html/13_深層神經網路訓練_最佳化與正則化.html",
+      "html_sha256": "665e8e31596e7c4ebca8566928cf6d6b084cce8da69787bdde356ae1217d94e2"
+    },
+    {
+      "chapter": "14",
+      "pages": 38,
+      "source": "slides/14_卷積神經網路_影像特徵與架構.md",
+      "source_sha256": "fedc14b53610da6035dd9f1e5b4de14874f05a69077f9ea492899f987c698977",
+      "pdf": "output/pdf/14_卷積神經網路_影像特徵與架構.pdf",
+      "pdf_sha256": "d98396d88254d9286abdb11b5bbba8710add1148d4d3f505ac7614bac7cbb3be",
+      "html": "output/html/14_卷積神經網路_影像特徵與架構.html",
+      "html_sha256": "a61a73ba0d4415d2852b3e0368f9179aab9d63fbd010043d005dea311bffeea1"
+    },
+    {
+      "chapter": "15",
+      "pages": 30,
+      "source": "slides/15_電腦視覺_遷移學習與偵測分割.md",
+      "source_sha256": "b1cb57d677feea77d87fcf5d33b26e77b3ff8a0e01ed4cec9afcbea438fdf9d1",
+      "pdf": "output/pdf/15_電腦視覺_遷移學習與偵測分割.pdf",
+      "pdf_sha256": "d5409f32241fa425db1eb1fadd23b95107b4a6ed421515ba4335510cb763d152",
+      "html": "output/html/15_電腦視覺_遷移學習與偵測分割.html",
+      "html_sha256": "c80ab1e3051e15f1a4b1cb6f293ff5467522e2fa07a15686fb39619fed8a8cae"
+    },
+    {
+      "chapter": "16",
+      "pages": 36,
+      "source": "slides/16_序列模型_RNN與時間序列預測.md",
+      "source_sha256": "42bcafcce096f967306afcf51bda1c52d844cf5573b4ff682bd0aeea92eb5fd2",
+      "pdf": "output/pdf/16_序列模型_RNN與時間序列預測.pdf",
+      "pdf_sha256": "ff71527b8e35637180c8b99fbf8fd593839bd5874d23d81681e3a931dd70850a",
+      "html": "output/html/16_序列模型_RNN與時間序列預測.html",
+      "html_sha256": "20a93538a1d2402974a14d78d42f8459247568403d0677a71a13f92d27f62181"
+    },
+    {
+      "chapter": "17",
+      "pages": 37,
+      "source": "slides/17_自然語言處理_詞嵌入與注意力.md",
+      "source_sha256": "df298547e868fe0843bbdd491c6c4954be8fe813065928367f333dac0b117ab6",
+      "pdf": "output/pdf/17_自然語言處理_詞嵌入與注意力.pdf",
+      "pdf_sha256": "2aec124c5bbdde281e3f9000a6897c0cc6f03069807c1c7213ce8d5d9ae54652",
+      "html": "output/html/17_自然語言處理_詞嵌入與注意力.html",
+      "html_sha256": "3204fe094c0a893569b000ac9271be05fdb91bdad62bed04bd17d77c60592370"
+    },
+    {
+      "chapter": "18",
+      "pages": 32,
+      "source": "slides/18_Transformer_注意力架構與預訓練.md",
+      "source_sha256": "dc0085516ceae792389d00ada01e46ae85ca3779e95e78fc6586f9047db75ba5",
+      "pdf": "output/pdf/18_Transformer_注意力架構與預訓練.pdf",
+      "pdf_sha256": "e500467bb9e39305bb08ac66b3e01f339538c3a9934c3fce497f4af4b44a75bd",
+      "html": "output/html/18_Transformer_注意力架構與預訓練.html",
+      "html_sha256": "4a2298921839ab2cae0b7b41f14449ea713f513a4ca0fda50d2dcef67edc0daf"
+    },
+    {
+      "chapter": "19",
+      "pages": 30,
+      "source": "slides/19_大型語言模型_生成與聊天系統.md",
+      "source_sha256": "4f99693bced904df13511ca02d91e3a29a164cc5d47b37df1c380ee8246c55a7",
+      "pdf": "output/pdf/19_大型語言模型_生成與聊天系統.pdf",
+      "pdf_sha256": "80f33e939edd8f06cca40c82024a2f7d1b19de928a78e7402c13226c685dd168",
+      "html": "output/html/19_大型語言模型_生成與聊天系統.html",
+      "html_sha256": "3e36d4730fdbb184ae92640ab0cc246cf395cfa5606d0cde17660cfb0e87da65"
+    },
+    {
+      "chapter": "20",
+      "pages": 37,
+      "source": "slides/20_視覺與多模態Transformer.md",
+      "source_sha256": "2df0403db19eb36e446bee7a135f1314417fdab114b0be1becc6056df83a5d45",
+      "pdf": "output/pdf/20_視覺與多模態Transformer.pdf",
+      "pdf_sha256": "9db162b90f610788a3e2f08cae6465d758a4cfdc0f6c25c1b256c29ab0893aac",
+      "html": "output/html/20_視覺與多模態Transformer.html",
+      "html_sha256": "cf03ffef0350bf5d32c168c02f778c57dc1b75b26d4465dbaea68080fb56f057"
+    },
+    {
+      "chapter": "21",
+      "pages": 38,
+      "source": "slides/21_Transformer加速_推論與參數高效微調.md",
+      "source_sha256": "8e6cdedf4f68eda012232aee65ab5dafb5fb01309a674edf4f4cff1123d28981",
+      "pdf": "output/pdf/21_Transformer加速_推論與參數高效微調.pdf",
+      "pdf_sha256": "d63ae05688b75a32ad74340a6c56e91c9d2f70efeff92b5ae9f0d47d5ca70f96",
+      "html": "output/html/21_Transformer加速_推論與參數高效微調.html",
+      "html_sha256": "c7e91f234a85b5f4637e0ed75299b5e524191ebee0a170fc9fee563db4f279a4"
+    },
+    {
+      "chapter": "22",
+      "pages": 47,
+      "source": "slides/22_生成模型_自編碼器GAN與擴散.md",
+      "source_sha256": "f5acbbfa4ee65607546c5955cf06eaaa742e48731e515bd2e912353c0007f54d",
+      "pdf": "output/pdf/22_生成模型_自編碼器GAN與擴散.pdf",
+      "pdf_sha256": "d13da045f694f3759d12492b68ecc81376cf0db7c1c3a948baa3157f3997c779",
+      "html": "output/html/22_生成模型_自編碼器GAN與擴散.html",
+      "html_sha256": "5d7c5b1899bea3def8a6f2e6ffda46740c3c85348608f0b2015417fcc67731c5"
+    },
+    {
+      "chapter": "23",
+      "pages": 43,
+      "source": "slides/23_強化學習_策略價值與深度RL.md",
+      "source_sha256": "caac35d285fce4aa5109238cacc7f6f3aa800c8efd90777ba02781843468d9ec",
+      "pdf": "output/pdf/23_強化學習_策略價值與深度RL.pdf",
+      "pdf_sha256": "b77fda07924f6f65575be9ac48fc2f2efdd8858e625eaa6c29f7d9533e461229",
+      "html": "output/html/23_強化學習_策略價值與深度RL.html",
+      "html_sha256": "31176e896b563db3eae79fdb438d9079bef8efb40a23d1361471e9ef7aa43c5e"
+    },
+    {
+      "chapter": "24",
+      "pages": 21,
+      "source": "slides/24_附錄A_自動微分與計算圖.md",
+      "source_sha256": "270d35ea2e668d8198f29c3b720ace8a7d14ac32d02446c2261b1d826be8e351",
+      "pdf": "output/pdf/24_附錄A_自動微分與計算圖.pdf",
+      "pdf_sha256": "8b1e71b4996a4fae1cc4606a51355b4a30cdd873c724e0f1888753e7aee429ad",
+      "html": "output/html/24_附錄A_自動微分與計算圖.html",
+      "html_sha256": "a95931e528e96ba8f645182568eabef99c11914e43de2b7a19f2376e11a2e09f"
+    },
+    {
+      "chapter": "25",
+      "pages": 28,
+      "source": "slides/25_附錄B_混合精度與量化.md",
+      "source_sha256": "d399c501b1e15ac85ec60adc0b6ec1f43d1a258651262e72c3654af8b3670265",
+      "pdf": "output/pdf/25_附錄B_混合精度與量化.pdf",
+      "pdf_sha256": "40ac64aa41117abbbecd0a628c9fd1329b61a00b12a8d3c6eecb57be6a2cac68",
+      "html": "output/html/25_附錄B_混合精度與量化.html",
+      "html_sha256": "117e81c2a8c946d8d4abd86556bd248555c83b7dab701c47d766547d103d61ab"
+    }
+  ]
+}

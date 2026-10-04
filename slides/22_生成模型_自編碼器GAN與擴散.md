@@ -32,9 +32,11 @@ style: |
 成果：能區分重建與生成，寫出主要損失，解讀生成失敗的原因。
 
 <!-- notebook-companion-link -->
-> 💻 **配套 Notebook**：`programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb`。程式片段、實際圖表與表格可由此檔重現。
+> 💻 **配套 Notebook**：`programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb`。本檔提供公式驗算、機制實驗與結果圖；框架片段及完整模型案例另依頁面說明閱讀。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.1–46；大模型訓練安排課後選做。 -->
+
+<!-- Notebook 對照：程式 22-01、22-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- notebook-result-slide -->
@@ -62,6 +64,9 @@ X_hat = decoder(Z)
 </div>
 
 <!-- 講者提示：程式與圖均來自 programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+
+<!-- Notebook 對照：程式 22-04；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+
 ---
 ## 重建與生成的差別
 
@@ -74,6 +79,8 @@ X_hat = decoder(Z)
 重建誤差很小，不代表隨便抽一個潛在向量也能得到合理樣本。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.1–6、21–26 -->
+
+<!-- Notebook 對照：程式 22-03；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## Autoencoder 的表示學習
@@ -88,6 +95,8 @@ Encoder 壓縮或轉換資料；decoder 從表示重建輸入。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.3–6 -->
 
+<!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## 線性 Autoencoder 與 PCA
@@ -97,6 +106,8 @@ Encoder 壓縮或轉換資料；decoder 從表示重建輸入。
 適當條件下，線性瓶頸模型學到與 PCA 相同的主要子空間；座標軸不必相同。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 6，圖 18-2。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 與本地 PCA 程式的連結
@@ -111,6 +122,8 @@ PCA 主成分可變號，AE 也可能使用不同基底；不要直接要求 lat
 
 <!-- 來源／講者提示：補充：本地PCA檔17–40行；Ch18 pp.5–6。原檔產生10筆資料，註解的100筆不作依據；繪圖需另處理字型。 -->
 
+<!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## SVD 程式的可用部分與限制
 
@@ -123,6 +136,8 @@ MachineLearning2025：SVD_Decomposition（`programs/upstream/MachineLearning2025
 本課用它對照主子空間，不把原檔 U／sigma 直接當標準 SVD 結果。
 
 <!-- 來源／講者提示：補充：04_SVD_from_scratch.py 第20–37行，協方差除以n-1，U因此未採標準正交尺度；未修改原程式。 -->
+
+<!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -144,6 +159,8 @@ loss = nn.MSELoss()(autoencoder(X), X)
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.5–6；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 22（教學改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Stacked AE 的瓶頸
 
@@ -157,6 +174,8 @@ loss = nn.MSELoss()(autoencoder(X), X)
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.6–9；作者Cell33。 -->
 
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## 重建圖要與原圖成對檢查
@@ -166,6 +185,8 @@ loss = nn.MSELoss()(autoencoder(X), X)
 觀察哪些細節消失、哪些類別重建較差；平均 MSE 無法完整描述視覺品質。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 9，圖 18-4。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-04、22-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## AE 異常偵測的假設
@@ -179,6 +200,8 @@ loss = nn.MSELoss()(autoencoder(X), X)
 - 在新領域重新檢查誤差分布。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.9–10 -->
+
+<!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: activity -->
@@ -194,6 +217,8 @@ loss = nn.MSELoss()(autoencoder(X), X)
 
 <!-- 來源／講者提示：自編數例；不把四筆驗證樣本當真實閾值估計方法。 -->
 
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 表示視覺化與無監督預訓練
 
@@ -203,6 +228,8 @@ loss = nn.MSELoss()(autoencoder(X), X)
 - 比較隨機初始化與預訓練，使用相同資料切分。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.10–12 -->
+
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## Tied weights 與逐層預訓練
@@ -215,6 +242,8 @@ Greedy layerwise pretraining 每次先學一層，再堆疊微調。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.12–15；作者Cell55 TiedAutoencoder。 -->
 
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 卷積 Autoencoder
 
@@ -226,6 +255,8 @@ Greedy layerwise pretraining 每次先學一層，再堆疊微調。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.14–16 -->
 
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## Denoising AE 的訓練配對
@@ -235,6 +266,8 @@ Greedy layerwise pretraining 每次先學一層，再堆疊微調。
 輸入加入噪聲或 dropout，目標仍是乾淨的原始影像。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 16，圖 18-9。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 去噪任務的實作檢查
@@ -251,6 +284,8 @@ loss = nn.MSELoss()(pred, clean)
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.16–17；依作者Cells68–77改寫。clean為0到1影像。 -->
 
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 稀疏 AE 的約束
 
@@ -261,6 +296,8 @@ loss = nn.MSELoss()(pred, clean)
 目標活化率 $\rho$ 與觀測平均 $\hat\rho_j$ 應使用一致定義。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.17–21 -->
+
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## 稀疏懲罰的 KL 形式
@@ -273,6 +310,8 @@ $$KL(\rho\Vert\hat\rho_j)=\rho\log\frac{\rho}{\hat\rho_j}+(1-\rho)\log\frac{1-\r
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.18–21；作者Cell81使用clamp。 -->
 
+<!-- Notebook 對照：程式 22-05；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## VAE 學習潛在分布
@@ -282,6 +321,8 @@ $$KL(\rho\Vert\hat\rho_j)=\rho\log\frac{\rho}{\hat\rho_j}+(1-\rho)\log\frac{1-\r
 Encoder 輸出平均與變異數，再抽樣 latent；decoder 用 latent 重建。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 22，圖 18-12。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## Reparameterization trick
@@ -293,6 +334,8 @@ $$z=\mu(x)+\sigma(x)\odot\epsilon,\qquad\epsilon\sim\mathcal N(0,I)$$
 通常輸出 log variance，再用 $\exp(0.5\,logvar)$ 得到標準差。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.21–24 -->
+
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -311,6 +354,8 @@ def sample_codings(mean, logvar):
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.22–24；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 92（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## VAE 的重建與 KL 平衡
 
@@ -323,6 +368,8 @@ $$L=L_{recon}+\beta D_{KL}(q_\phi(z\mid x)\Vert p(z))$$
 比較 $\beta$ 前，先固定 reduction 的方式。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.23–25；作者Cell93將KL除以784以配合像素平均MSE。 -->
+
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: activity -->
@@ -337,6 +384,8 @@ $$KL=\frac12\sum_j\left(\mu_j^2+\sigma_j^2-\log\sigma_j^2-1\right)$$
 KL 越小不表示重建必然越好。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.24–25；自編數例。 -->
+
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## 從先驗生成與重建的不同
@@ -353,6 +402,8 @@ with torch.no_grad():
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.25–26；需已有訓練VAE、latent_dim、device，完整作者Cells96–103。 -->
 
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## Latent interpolation
@@ -362,6 +413,8 @@ with torch.no_grad():
 在兩個潛在向量之間插值，再解碼成影像；效果取決於學到的空間結構。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 26，圖 18-14。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 離散 VAE 與 Gumbel-Softmax
@@ -376,6 +429,8 @@ with torch.no_grad():
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.26–28；修正書中一次gumble拼字；作者Cells104–113並註記MPS特定版本處理。 -->
 
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## VQ-VAE 的 codebook
 
@@ -387,6 +442,8 @@ Encoder 產生連續表示，選最近的 codebook 向量交給 decoder。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.28–30 -->
 
+<!-- Notebook 對照：程式 22-06；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## GAN 的兩個模型
@@ -396,6 +453,8 @@ Encoder 產生連續表示，選最近的 codebook 向量交給 decoder。
 Generator 產生樣本，discriminator 分辨真實與生成資料；兩者交替更新。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 31，圖 18-15。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-07；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## GAN 的訓練目標
@@ -408,6 +467,8 @@ $$L_G=-\mathbb E_z\log D(G(z))$$
 第二式採常用 non-saturating generator loss，避免初期梯度過弱。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.30–34；作者Cell116交替更新。 -->
+
+<!-- Notebook 對照：程式 22-07；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -430,6 +491,8 @@ optimizer_d.step()
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.32–34；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cell 116（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 22-07；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 訓練 G 時仍須通過 D
 
@@ -441,6 +504,8 @@ optimizer_d.step()
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.32–34；作者Cell116的兩個更新階段比較。 -->
 
+<!-- Notebook 對照：程式 22-07；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## Mode collapse
@@ -450,6 +515,8 @@ optimizer_d.step()
 生成器可能反覆產生少數樣式；單張看起來逼真，整體仍缺乏多樣性。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 35，圖 18-17。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-07；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## GAN 的不穩定與 DCGAN
@@ -461,6 +528,8 @@ optimizer_d.step()
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.34–36；作者Cells120–123。 -->
 
+<!-- Notebook 對照：程式 22-07；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## 擴散模型的正向與反向過程
@@ -470,6 +539,8 @@ optimizer_d.step()
 正向逐步加入噪聲；模型學習反向去噪，生成時從噪聲開始。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 37，圖 18-18。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 ## 任意時間步的加噪公式
@@ -481,6 +552,8 @@ $$\alpha_t=1-\beta_t,\qquad\bar\alpha_t=\prod_{s=1}^{t}\alpha_s$$
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.36–40，式18-6；t從1起、alpha_bar_0=1的慣例。 -->
 
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: figure -->
 ## 噪聲排程與剩餘訊號
@@ -490,6 +563,8 @@ $$\alpha_t=1-\beta_t,\qquad\bar\alpha_t=\prod_{s=1}^{t}\alpha_s$$
 排程決定每個時間步有多少訊號與噪聲；$\bar\alpha_t$ 越小，原圖成分越少。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF 39，圖 18-19。圖為教材原圖，非本次實驗結果。 -->
+
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
 
 ---
 <!-- _class: small -->
@@ -509,6 +584,8 @@ alpha_bar 須可broadcast至影像，例如 `[B,1,1,1]`；標籤是未縮放的 
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.39–41；程式依作者 18_autoencoders_gans_and_diffusion_models.ipynb Cells 130–135（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 去噪網路需要知道時間
 
@@ -519,6 +596,8 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 輸出形狀通常與輸入影像相同，用來預測噪聲。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.40–41；作者Cells140–144。 -->
+
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## DDPM 與 DDIM 取樣
@@ -532,6 +611,8 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.41–43；作者Cells145–150作概念導讀，未把其簡化variance直接當所有DDIM scheduler公式。 -->
 
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## Latent diffusion 與條件生成
 
@@ -544,6 +625,8 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 生成品質同時受到壓縮器、去噪器、條件與取樣設定影響。
 
 <!-- 來源／講者提示：書本 Ch.18，PDF pp.43–44 -->
+
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## 生成程式的閱讀路線
@@ -559,6 +642,8 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 
 <!-- 來源／講者提示：程式：作者Ch18；課堂未自動執行模型下載或訓練。 -->
 
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
+
 ---
 <!-- _class: activity -->
 ## 課堂活動：生成模型比較
@@ -573,6 +658,8 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 
 <!-- 來源／講者提示：自編活動。 -->
 
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
+
 ---
 ## 離堂檢核
 
@@ -582,6 +669,8 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 - 擴散訓練的噪聲目標與含噪輸入有何不同？
 
 <!-- 來源／講者提示：自編檢核。線性/MSE/相同前處理與最適化；支援先驗抽樣；G需梯度；eps是未縮放噪聲而xt含訊號與縮放噪聲。 -->
+
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -594,3 +683,23 @@ U-Net 類架構結合下採樣、上採樣與跨尺度跳接，再加入 time em
 程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->
+
+<!-- Notebook 對照：程式 22-08；完整對照見本章 ipynb 開頭。 -->
+
+---
+<!-- _class: small -->
+## Notebook 導讀：可執行的機制與驗收
+
+| 類型 | Notebook 的可執行範圍 |
+|---|---|
+| AE／去噪 | train-only PCA、測試重建、noisy→clean 配對 |
+| VAE／VQ | 重參數化、KL、PCA latent 插值、最近 code |
+| GAN | 一維交替更新、梯度邊界、刻意構造的 collapse |
+| 擴散 | 加噪排程、解析高斯去噪器的 DDPM／DDIM |
+
+重建、抽樣公式與訓練好的影像生成模型分開解讀。
+原 VAE／GAN／擴散圖保留；小型程序驗證機制，不宣稱重現原圖品質。
+
+<!-- 講者提示：NumPy CPU 小型實驗對應公式、形狀與流程；教材架構與外部模型成效不宣稱完整重現。 可用於程式課或課後，不增加原核心時間。 -->
+
+<!-- Notebook 對照：程式 22-05、22-06、22-07、22-08；完整對照見本章 ipynb 開頭。 -->

@@ -5,7 +5,7 @@ def slides(p):
     text=re.sub(r"^---\n.*?\n---\n", "", p.read_text(), count=1, flags=re.S)
     return re.split(r"\n---\s*\n", text)
 ROOT=Path(__file__).resolve().parents[1]
-expected=[4,36,43,39]
+expected=[4,36,47,43]
 for p,count in zip(sorted((ROOT/'slides').glob('0[0-3]_*.md')),expected,strict=True):
  blocks=slides(p);assert len(blocks)==count,(p,len(blocks))
  for i,b in enumerate(blocks,1):

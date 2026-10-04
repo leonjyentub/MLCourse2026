@@ -4,6 +4,20 @@
 
 Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab 本次執行。教師可在對應段落重新執行程式並展示圖表；[教學對照與取捨](TEACHING_MAP.md) 說明每本的使用位置。
 
+## 第 02–04 章雙向對照
+
+[逐圖與逐程式格對照](SLIDE_NOTEBOOK_MAP_02_04.md) 對應 02／03／04 投影片的 47／43／52 頁，以及 Notebook 的 28／32／20 個程式格。每個程式格標有代碼與投影片頁次。保留教材原圖，另以同概念程式重做；手算例使用相同輸入驗算。
+
+三本已用現有套件與本機資料，在專案外分別由新 Python 程序依序執行全部程式格；未驗證 full 模式、Colab 或首次網路下載。Notebook 保留空白執行輸出，圖檔更新於 `outputs/figures/`。
+
+## 第 05–25 章雙向對照
+
+[逐圖與逐程式格對照](SLIDE_NOTEBOOK_MAP_05_25.md) 涵蓋 21 組教材、838 頁、182 個圖檔引用及 185 個程式格。每本新增程式導讀與穩定程式代碼；投影片講者提示可反查 Notebook。
+
+05–11 補齊圖表、手算、模型實驗及評估切分；12–25 擴充成可執行的公式、張量、遮罩、損失與更新流程。原圖保留，區分同程式輸出、同概念重畫、數值驗算與機制／形狀對照。完整預訓練模型和框架片段仍按教材作讀碼，不宣稱由小型 CPU 範例重現其成效。
+
+21 本已在獨立 Python 程序依序驗證；第 07 章使用現有 MNIST 快取，未測 Colab、首次安裝／下載或大型 GPU 訓練。新圖位於 `outputs/figures/`，Notebook 保留空白執行輸出。2026-10-04 已另行匯出 02–25 的投影片 PDF／HTML，並以真正的 Jupyter 核心重跑 24 本、265 個程式格，更新 Notebook HTML。
+
 ## Notebook 導覽
 
 ### 基礎與傳統機器學習（00–11）
@@ -27,22 +41,22 @@ Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab �
 
 | 檔案 | 課堂短實驗 |
 |---|---|
-| [12 梯度與遷移](notebooks/12_深層神經網路訓練_梯度與遷移.ipynb) | 導數連乘與梯度範數裁剪 |
-| [13 最佳化與正則化](notebooks/13_深層神經網路訓練_最佳化與正則化.ipynb) | GD 與 Momentum 的損失曲線 |
-| [14 CNN](notebooks/14_卷積神經網路_影像特徵與架構.ipynb) | 2D 互相關、ReLU 與 pooling |
-| [15 遷移、偵測與分割](notebooks/15_電腦視覺_遷移學習與偵測分割.ipynb) | IoU 與 NMS |
-| [16 RNN 與時間序列](notebooks/16_序列模型_RNN與時間序列預測.ipynb) | 視窗預測與 persistence 基準 |
-| [17 詞嵌入與注意力](notebooks/17_自然語言處理_詞嵌入與注意力.ipynb) | scaled dot-product attention |
-| [18 Transformer](notebooks/18_Transformer_注意力架構與預訓練.ipynb) | 位置編碼與 causal mask |
-| [19 LLM](notebooks/19_大型語言模型_生成與聊天系統.ipynb) | temperature、greedy 與 top-k sampling |
-| [20 視覺與多模態 Transformer](notebooks/20_視覺與多模態Transformer.ipynb) | patchify 與圖文餘弦相似度 |
-| [21 Transformer 加速與 PEFT](notebooks/21_Transformer加速_推論與參數高效微調.ipynb) | KV cache 與 LoRA 參數量 |
-| [22 生成模型](notebooks/22_生成模型_自編碼器GAN與擴散.ipynb) | 欠完備表示與重建誤差 |
-| [23 強化學習](notebooks/23_強化學習_策略價值與深度RL.ipynb) | epsilon-greedy bandit |
-| [24 自動微分](notebooks/24_附錄A_自動微分與計算圖.ipynb) | 解析梯度與有限差分 |
-| [25 混合精度與量化](notebooks/25_附錄B_混合精度與量化.ipynb) | 對稱 int8 量化 |
+| [12 梯度與遷移](notebooks/12_深層神經網路訓練_梯度與遷移.ipynb) | 激活／初始化、BN／LN、梯度裁剪、凍結與解凍 |
+| [13 最佳化與正則化](notebooks/13_深層神經網路訓練_最佳化與正則化.ipynb) | 六種最佳化器、排程、Dropout／MC、Max-norm、早停 |
+| [14 CNN](notebooks/14_卷積神經網路_影像特徵與架構.ipynb) | 多通道卷積、CNN 構件、殘差／Depthwise／SE、增強 |
+| [15 遷移、偵測與分割](notebooks/15_電腦視覺_遷移學習與偵測分割.ipynb) | IoU／NMS／AP、分割、轉置卷積、追蹤配對 |
+| [16 RNN 與時間序列](notebooks/16_序列模型_RNN與時間序列預測.ipynb) | RNN／BPTT、多步預測、LSTM／GRU、因果卷積 |
+| [17 詞嵌入與注意力](notebooks/17_自然語言處理_詞嵌入與注意力.ipynb) | Embedding、padding、雙向 RNN、beam、cross-attention |
+| [18 Transformer](notebooks/18_Transformer_注意力架構與預訓練.ipynb) | 多頭與完整 block、MLM／任務頭、QA、蒸餾 |
+| [19 LLM](notebooks/19_大型語言模型_生成與聊天系統.ipynb) | 自迴歸、top-p、SFT／DPO、本地 RAG／工具介面 |
+| [20 視覺與多模態 Transformer](notebooks/20_視覺與多模態Transformer.ipynb) | Patch／視窗、集合配對、對比學習、latent queries |
+| [21 Transformer 加速與 PEFT](notebooks/21_Transformer加速_推論與參數高效微調.ipynb) | KV／GQA／分塊 Softmax、推測、LoRA、packing |
+| [22 生成模型](notebooks/22_生成模型_自編碼器GAN與擴散.ipynb) | AE／去噪、VAE／VQ、GAN 梯度、玩具擴散取樣 |
+| [23 強化學習](notebooks/23_強化學習_策略價值與深度RL.ipynb) | Bandit、LineWorld／Bellman／DQN、PPO 損失 |
+| [24 自動微分](notebooks/24_附錄A_自動微分與計算圖.ipynb) | 對偶數、反向微分引擎、有限差分、detach |
+| [25 混合精度與量化](notebooks/25_附錄B_混合精度與量化.ipynb) | 格式／loss scaling、量化粒度、PTQ／QAT／STE |
 
-先前產生的 [HTML 閱讀入口](outputs/html/index.html) 保留作歷史快照；Notebook 目前已清空舊執行輸出，請重新執行後再將新結果用於授課。互動滑桿需 Jupyter，HTML 的數學排版可能需要瀏覽器載入 MathJax。
+[HTML 閱讀入口](outputs/html/index.html) 的 02–25 已同步目前原稿並包含本次執行結果；00–01 明列為歷史快照。[HTML 教學使用說明](HTML_TEACHING_GUIDE.md) 解釋如何閱讀程式／圖表，以及預習、課堂討論與實作的安排。另有 [投影片 PDF／HTML 入口](../output/html/index.html)。互動滑桿需 Jupyter；Notebook HTML 的數學排版可能需要網路載入 MathJax。
 
 ## 環境與開啟方式
 
@@ -107,6 +121,14 @@ uv run python scripts/validate_deliverables.py
 ```sh
 uv run python scripts/execute_notebooks.py 02 14 --html
 ```
+
+只更新含執行結果的 HTML，保留原 `.ipynb` 空白輸出及既有圖檔／報告：
+
+```sh
+uv run python scripts/execute_notebooks.py 02 14 --html --preserve-source
+```
+
+此模式在暫存目錄執行，HTML 的執行紀錄另存 `outputs/html_execution.json`。
 
 若要在課堂上快速示範網格搜尋、隨機搜尋與 n-fold 成本，不必開啟 Notebook：
 
