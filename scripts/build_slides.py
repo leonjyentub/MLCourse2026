@@ -58,7 +58,7 @@ def make_index():
     body = '''<!doctype html><html lang="zh-Hant"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>機器學習投影片</title>
 <style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;line-height:1.7;color:#24364b}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ddd;padding:10px;text-align:left}a{color:#116b70}</style>
-<h1>機器學習投影片</h1><p>由目前 Marp 原稿匯出；HTML 可用方向鍵翻頁，PDF 適合註記與列印。HTML 已內嵌本地圖片。</p>
+<h1>機器學習投影片</h1><p>由目前 Marp 投影片內容匯出；HTML 可用方向鍵翻頁，PDF 適合註記與列印。HTML 已內嵌本地圖片。</p>
 <p><a href="../../programs/outputs/html/index.html">Notebook：程式與執行結果閱讀版</a></p>
 <table><thead><tr><th>章節</th><th>投影片</th><th>講義</th></tr></thead><tbody>'''
     (ROOT / 'output/html/index.html').write_text(body + ''.join(rows) + '</tbody></table></html>', encoding='utf-8')

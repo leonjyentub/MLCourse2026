@@ -4,32 +4,32 @@ theme: ml-course
 size: 16:9
 paginate: true
 math: katex
-title: 決策樹與SVM補充
+title: 決策樹與支援向量機
 ---
 <!-- _class: cover -->
-# 決策樹與SVM補充
+# 決策樹與支援向量機
 
-第 6 週｜從可解釋的分割規則，走到模型邊界比較
+第 6 週｜從可解釋的分割規則，走到最大間隔與非線性核方法
 
-課堂主線 180 分鐘（含兩次 10 分鐘休息）；「選讀」頁安排課後或替換同段內容
-
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 ---
-## 本週成果與三段安排
+## 學習重點與成果
 
-0–50 分：走訪決策樹、機率與不純度。
+- 走訪決策樹、機率與不純度。
 
-60–120 分：CART、正則化與迴歸樹。
+- CART、正則化與迴歸樹。
 
-130–180 分：穩定性、SVM 補充與模型比較。
+- 決策樹的穩定性與模型比較。
+
+- SVM 的最大間隔、軟間隔、對偶問題與核方法。
 
 能交付：一條預測路徑、一個分割計算，以及有理由的模型選擇。
 
 <!-- notebook-companion-link -->
 > 💻 **配套 Notebook**：`programs/notebooks/06_決策樹與SVM補充.ipynb`。程式片段、實際圖表與表格可由此檔重現。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 <!-- Notebook 對照：程式 06-01、06-02；完整對照見本章 ipynb 開頭。 -->
 
@@ -58,9 +58,9 @@ DecisionTreeClassifier(max_depth=depth,
 </div>
 </div>
 
-<!-- 講者提示：程式與圖均來自 programs/notebooks/06_決策樹與SVM補充.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+<!-- 講者提示：程式與圖為 programs/notebooks/06_決策樹與SVM補充.ipynb 的已執行輸出。 -->
 
-<!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 <!-- _class: figure -->
@@ -72,7 +72,7 @@ DecisionTreeClassifier(max_depth=depth,
 
 <!-- 講者提示：左支代表條件成立。圖中 samples 與 value 是教材訓練資料計數；不同版本 API 的 value 可能顯示比例。 -->
 
-<!-- Notebook 對照：程式 06-03；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-03；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## 讀懂節點上的四種資訊
@@ -82,7 +82,7 @@ DecisionTreeClassifier(max_depth=depth,
 - `value`：各類別的計數或比例，依顯示工具而異。
 - `gini`：混雜程度；0 表示節點內只有一類。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 <!-- Notebook 對照：程式 06-03；完整對照見本章 ipynb 開頭。 -->
 
@@ -94,9 +94,9 @@ DecisionTreeClassifier(max_depth=depth,
 
 第一次分割作用於全區域；後續分割只作用於相應子區域。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
-<!-- Notebook 對照：程式 06-08；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-08；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## 葉節點的機率來自到達此處的樣本
@@ -123,7 +123,7 @@ $$\hat p=(0,49/54,5/54)\approx(0,.907,.093)$$
 
 scikit-learn 的一般決策樹不直接分割字串類別。部分設定支援缺失值，需確認模型與設定。
 
-<!-- 講者提示：淺樹的白箱規則便於追蹤，但可讀性不等於因果解釋。缺失值的原生支援有 splitter／criterion 條件，預處理仍須放在訓練折內。API 依 sklearn 1.7 文件：https://scikit-learn.org/1.7/modules/tree.html -->
+<!-- 講者提示：淺樹的白箱規則便於追蹤，但可讀性不等於因果解釋。缺失值的原生支援有 splitter／criterion 條件，預處理仍須放在訓練折內。API 依 sklearn 1.7 文件：https://scikit-learn.org/1.7/modules/tree.html。 -->
 
 <!-- Notebook 對照：程式 06-03；完整對照見本章 ipynb 開頭。 -->
 
@@ -136,7 +136,7 @@ $$G_i=1-\sum_{k=1}^K p_{i,k}^2$$
 
 三類均等時 $G=2/3$，因此 Gini 的最大值不固定為 0.5。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 <!-- Notebook 對照：程式 06-04；完整對照見本章 ipynb 開頭。 -->
 
@@ -149,7 +149,7 @@ $$H_i=-\sum_{k:p_{i,k}>0}p_{i,k}\log_2p_{i,k}$$
 
 Gini 與 Entropy 常給出相近分割，但不保證完全相同。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 <!-- Notebook 對照：程式 06-04；完整對照見本章 ipynb 開頭。 -->
 
@@ -186,11 +186,17 @@ proba = tree.predict_proba(X_test[:2])
 
 ---
 <!-- _class: activity -->
-## 休息 10 分鐘
+## 分割計算：加權不純度
 
-離開座位、休息眼睛。回來後先用一句話回答上一段的核心問題。
+母節點有 $8$ 正例、$8$ 負例，Gini 不純度為 $1-(8/16)^2-(8/16)^2=0.5$。
 
-<!-- 講者提示：保留完整休息；不要用來補講延伸內容。 -->
+若切成左節點 $(6,2)$、右節點 $(2,6)$：
+
+- 每個子節點 Gini 都是 $1-(6/8)^2-(2/8)^2=0.375$。
+- 加權子節點不純度是 $(8/16)0.375+(8/16)0.375=0.375$。
+- 不純度下降 $0.5-0.375=0.125$；要與其他候選切點比較，不能只看單側。
+
+<!-- 講者提示：先讓學生獨立檢核本頁的假設、公式與結論，再與相鄰的模型概念對照。 -->
 
 ---
 ## CART：挑選加權子節點不純度最小的分割
@@ -201,7 +207,7 @@ $$J(k,t_k)=\frac{m_L}{m}G_L+\frac{m_R}{m}G_R$$
 
 這是貪婪的二元分割；每步最佳不代表整棵樹全域最佳。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 <!-- Notebook 對照：程式 06-05、06-13；完整對照見本章 ipynb 開頭。 -->
 
@@ -219,7 +225,7 @@ $$IG=H(\text{父})-\sum_c\frac{m_c}{m}H(c)$$
 
 `criterion="entropy"` 仍是 sklearn 的 CART 型二元樹，不會變成 ID3。
 
-<!-- 講者提示：增益比為 IG 除以分支比例的 entropy；分母為零不作有效分割。原稿把 C4.5 和 ID3 的準則混寫，這裡分開。https://scikit-learn.org/1.7/modules/tree.html#tree-algorithms-id3-c4-5-c5-0-and-cart -->
+<!-- 講者提示：增益比為 IG 除以分支比例的 entropy；分母為零不作有效分割。ID3 使用資訊增益，C4.5 使用增益比，兩者分開說明。https://scikit-learn.org/1.7/modules/tree.html#tree-algorithms-id3-c4-5-c5-0-and-cart。 -->
 
 <!-- Notebook 對照：程式 06-05、06-13；完整對照見本章 ipynb 開頭。 -->
 
@@ -247,7 +253,7 @@ $$IG=H(\text{父})-\sum_c\frac{m_c}{m}H(c)$$
 
 可追讀 `03_Decision_Tree_from_scratch.py` 的 `fit`、`find_best_split`、`_get_prediction`，對照圖 5-1。
 
-<!-- 講者提示：課後選讀或替換同段講解，不計入 180 分鐘課堂主線。實際檔案位於 programs/upstream/MachineLearning2025。手刻碼採 entropy；本頁保留演算法閱讀重點，並非將其視為已驗證的通用實作。 -->
+<!-- 講者提示：手刻碼採 entropy；本頁著重演算法閱讀，不將簡化程式視為已驗證的通用實作。 -->
 
 <!-- Notebook 對照：程式 06-13；完整對照見本章 ipynb 開頭。 -->
 
@@ -268,7 +274,7 @@ $$IG=H(\text{父})-\sum_c\frac{m_c}{m}H(c)$$
 
 ---
 <!-- _class: small -->
-## 選讀｜原課程 80 筆資料的分割比較
+## 選讀｜80 筆資料的分割比較
 
 父節點 `[40,40]`。A 分成 `[30,10]`、`[10,30]`；B 分成 `[20,40]`、`[20,0]`。
 
@@ -280,7 +286,7 @@ $$IG=H(\text{父})-\sum_c\frac{m_c}{m}H(c)$$
 
 兩種準則都偏好 B。B 的左右權重為 60/80、20/80，不能各取一半。
 
-<!-- 講者提示：課後選讀或替換同段講解，不計入 180 分鐘課堂主線。A 的左右各 40 筆。B 的純葉不會讓另一子節點也自動變純；檢查的是加權總和。 -->
+<!-- 講者提示：A 的左右各 40 筆。B 的純葉不會讓另一子節點也自動變純；檢查的是加權總和。 -->
 
 <!-- Notebook 對照：程式 06-13；完整對照見本章 ipynb 開頭。 -->
 
@@ -295,7 +301,7 @@ $$IG=H(\text{父})-\sum_c\frac{m_c}{m}H(c)$$
 | min_samples_leaf | 葉節點最少樣本數 | 調大 |
 | max_leaf_nodes | 葉節點數上限 | 調小 |
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 <!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。 -->
 
@@ -325,9 +331,9 @@ $$IG=H(\text{父})-\sum_c\frac{m_c}{m}H(c)$$
 
 增加葉節點最少樣本數，可以減少為個別樣本切出的細碎區域。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
-<!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## 迴歸樹：葉節點改成輸出數值平均
@@ -338,7 +344,7 @@ $$\hat y_{\rm node}=\frac1{m_{\rm node}}\sum_{i\in\rm node}y^{(i)}$$
 
 輸出通常是分段常數；不會自然外插出向上延伸的直線。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
 <!-- Notebook 對照：程式 06-07；完整對照見本章 ipynb 開頭。 -->
 
@@ -350,9 +356,9 @@ $$\hat y_{\rm node}=\frac1{m_{\rm node}}\sum_{i\in\rm node}y^{(i)}$$
 
 每個葉節點顯示預測平均值及其平方誤差；不再顯示類別 Gini。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
-<!-- Notebook 對照：程式 06-08；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-08；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## CART 迴歸目標：比較子節點的加權 MSE
@@ -373,9 +379,9 @@ $$\operatorname{MSE}_{\rm node}=\frac1{m_{\rm node}}\sum_{i\in\rm node}(y^{(i)}-
 
 深度增加可降低訓練誤差，也可能開始追逐雜訊。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
-<!-- Notebook 對照：程式 06-07；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-07；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 <!-- _class: figure -->
@@ -386,9 +392,9 @@ $$\operatorname{MSE}_{\rm node}=\frac1{m_{\rm node}}\sum_{i\in\rm node}(y^{(i)}-
 
 限制最小葉樣本數，能減少尖銳、短促的階梯。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
-<!-- Notebook 對照：程式 06-08；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-08；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 <!-- _class: activity -->
@@ -406,11 +412,15 @@ $$\operatorname{MSE}_{\rm node}=\frac1{m_{\rm node}}\sum_{i\in\rm node}(y^{(i)}-
 
 ---
 <!-- _class: activity -->
-## 休息 10 分鐘
+## 迴歸樹的葉節點為何用平均值？
 
-離開座位、休息眼睛。回來後先用一句話回答上一段的核心問題。
+葉節點含目標值 $2,4,9$，若以常數 $c$ 預測並最小化平方誤差：
 
-<!-- 講者提示：保留完整休息；不要用來補講延伸內容。 -->
+$$L(c)=(2-c)^2+(4-c)^2+(9-c)^2$$
+
+令導數 $L'(c)=6c-30=0$，得 $c=5$。平均值最小化葉內平方誤差；若改用絕對誤差，最佳常數通常是中位數 $4$。
+
+<!-- 講者提示：先讓學生獨立檢核本頁的假設、公式與結論，再與相鄰的模型概念對照。 -->
 
 ---
 <!-- _class: figure -->
@@ -420,9 +430,9 @@ $$\operatorname{MSE}_{\rm node}=\frac1{m_{\rm node}}\sum_{i\in\rm node}(y^{(i)}-
 
 樹的分割通常平行於特徵軸；旋轉資料後，原本簡單的斜線可能需很多階梯。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
-<!-- Notebook 對照：程式 06-10、06-09；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-10、06-09；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 <!-- _class: figure -->
@@ -434,7 +444,7 @@ $$\operatorname{MSE}_{\rm node}=\frac1{m_{\rm node}}\sum_{i\in\rm node}(y^{(i)}-
 
 <!-- 講者提示：若採 PCA，必須把 PCA 與樹一起放入交叉驗證；不可先對全資料 fit。 -->
 
-<!-- Notebook 對照：程式 06-10、06-09；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 06-10、06-09；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 <!-- _class: figure -->
@@ -447,144 +457,356 @@ model](assets/chapters04_09/book_fig_5_9.png)
 
 固定 random_state 有助重現；下一週以多棵不同的樹降低變異。
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
 
-<!-- Notebook 對照：程式 06-10、06-09；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
-
----
-## 補充 SVM：用間隔比較不同的分隔面
-
-$$f(x)=w^Tx+b,\qquad\hat y=\operatorname{sign}(f(x))$$
-
-線性可分時，將邊界兩側最近點的函數間隔規範為 $\pm1$，兩條支持超平面距離為 $2/\|w\|$。
-
-<!-- 講者提示：y 使用 -1,+1；支持向量是影響邊界的樣本，不是所有資料平均。 -->
-
-<!-- Notebook 對照：程式 06-11、06-14；完整對照見本章 ipynb 開頭。 -->
+<!-- Notebook 對照：程式 06-10、06-09；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
-## 補充 SVM：軟間隔與 hinge loss
+<!-- _class: lead -->
+## 第二部分：支援向量機
 
-$$\min_{w,b}\frac12\|w\|^2+C\sum_i\max(0,1-y^{(i)}f(x^{(i)}))$$
+SVM 是本週的正式教材。學習路徑由幾何直覺進入最佳化，再延伸至非線性核方法。
 
-$C$ 越大，越重視違反間隔的代價；越小，越容許違反以換取較大間隔。
+1. 超平面、距離與最大間隔。
+2. 軟間隔、hinge loss 與懲罰權重 $C$。
+3. 對偶問題、支持向量與核函數。
 
-特徵尺度會改變距離與懲罰，通常要先標準化。
-
-<!-- 講者提示：hinge 非零不一定分類錯：位於正確側但在 margin 內也有損失。 -->
-
-<!-- Notebook 對照：程式 06-11、06-14；完整對照見本章 ipynb 開頭。 -->
+<!-- 講者提示：本段對應 source_pptx/03_SVM_DecistionTree_RandomForest.pptx 第 2–29 頁，重新組織為可完整教學的主線。 -->
 
 ---
-<!-- _class: small -->
-## 補充 SVM：分對仍可能有損失
+## 超平面與特徵空間
 
-令 $u=yf(x)$，hinge loss 為 $\max(0,1-u)$，標籤 $y\in\{-1,+1\}$。
+輸入 $x\in\mathbb{R}^d$，線性分類邊界為
 
-| $u$ | 預測與位置 | 損失 |
-| --- | --- | ---: |
-| 1.5 | 分對且超過間隔 | 0 |
-| 0.4 | 分對但位於間隔內 | 0.6 |
-| −0.5 | 分錯 | 1.5 |
+$$\mathcal P=\{x:w^Tx+b=0\},\qquad \hat y=\operatorname{sign}(w^Tx+b)$$
 
-軟間隔以鬆弛變數 $\xi_i\ge0$ 表示違反程度：$y_if(x_i)\ge1-\xi_i$。
+- $w$ 是超平面的法向量。
+- $d=2$ 時邊界是直線，$d=3$ 時是平面，$d>3$ 時稱為超平面。
+- 核 SVM 把 $x$ 映射為 $\phi(x)$，再於高維或無限維特徵空間尋找超平面。
 
-<!-- 講者提示：請學生用本頁的例子說明概念，再連結前後頁。 -->
+`hyperplane` 是邊界，`feature space` 是映射後的空間。「hyper space」不是本單元的標準術語。
+
+<!-- 講者提示：超平面的維度是 d-1。參考 scikit-learn SVM mathematical formulation：https://scikit-learn.org/stable/modules/svm.html#mathematical-formulation。 -->
+
+---
+## 函數間隔與幾何間隔
+
+對標籤 $y_i\in\{-1,+1\}$ 與分數 $f(x)=w^Tx+b$：
+
+$$\text{函數間隔}=y_if(x_i),\qquad
+\text{幾何間隔}=\frac{y_if(x_i)}{\|w\|}$$
+
+點 $x$ 到決策邊界的距離為
+
+$$\operatorname{dist}(x,\mathcal P)=\frac{|w^Tx+b|}{\|w\|}$$
+
+同時將 $(w,b)$ 乘上正常數不會改變邊界，卻會改變函數間隔。除以 $\|w\|$ 後才得到不受縮放影響的幾何距離。
+
+<!-- 講者提示：可讓學生比較 (w,b) 與 (10w,10b)，決策面不變，函數間隔放大 10 倍。 -->
 
 <!-- Notebook 對照：程式 06-14；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- _class: small -->
-## 補充 SVM：原始問題與對偶的關係
+## 硬間隔 SVM 的目標函數
 
-硬間隔：$\min\frac12\|w\|^2$，限制 $y_i(w^Tx_i+b)\ge1$。
+線性可分時，將最近點規範為 $y_if(x_i)=1$：
 
-對偶：$\max_a\sum_i a_i-\frac12\sum_{i,j}a_ia_jy_iy_jK(x_i,x_j)$。
+$$\min_{w,b}\frac12\|w\|^2
+\quad\text{subject to}\quad y_i(w^Tx_i+b)\ge1$$
 
-限制 $a_i\ge0,\ \sum_i a_iy_i=0$；軟間隔再加 $a_i\le C$。
+兩條間隔邊界是 $w^Tx+b=+1$ 與 $-1$，它們之間的寬度為
 
-線性模型先用 $K(x_i,x_j)=x_i^Tx_j$；後面再以核函數替換內積。支持向量對應非零對偶係數。
+$$\frac{2}{\|w\|}$$
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+因此最小化 $\|w\|^2$ 等價於最大化間隔。達到等式的訓練點是支持向量。
 
-<!-- Notebook 對照：程式 06-14；完整對照見本章 ipynb 開頭。 -->
-
----
-## 選讀｜SVM 對偶如何得到預測函數
-
-$$w=\sum_i a_i y_i x_i,\qquad f(x)=\sum_i a_i y_i K(x_i,x)+b$$
-
-由拉格朗日函數對 $w,b$ 的一階條件，得到第一式與 $\sum_i a_i y_i=0$。
-
-只有非零 $a_i$ 的支持向量參與預測；核技巧就在這個內積位置代入 $K$。
-
-軟間隔中，$0<a_i<C$ 的點位於間隔邊界，可用來求 $b=y_i-\sum_j a_jy_jK(x_j,x_i)$。
-
-<!-- 講者提示：課後選讀或替換同段講解，不計入 180 分鐘課堂主線。不要把所有支持向量都說成恰好落在 margin 上；a_i=C 的點可能違反間隔。 -->
+<!-- 講者提示：決策邊界在 0，間隔邊界在 ±1。不要把「間隔寬度」說成點到決策面的單邊距離，單邊距離是 1/||w||。 -->
 
 <!-- Notebook 對照：程式 06-14；完整對照見本章 ipynb 開頭。 -->
 
 ---
-## 補充 SVM：核函數與 RBF 的 gamma
+## 軟間隔：允許可控制的違規
 
-$$K(x,z)=\phi(x)^T\phi(z),\qquad K_{\rm RBF}(x,z)=e^{-\gamma\|x-z\|^2}$$
+$$\min_{w,b,\xi}\frac12\|w\|^2+C\sum_{i=1}^{m}\xi_i$$
 
-核技巧以相似度取代顯式高維展開。$\gamma$ 越大，單點影響越局部，邊界可能更細碎。
+$$\text{subject to}\quad y_i(w^T\phi(x_i)+b)\ge1-\xi_i,\qquad \xi_i\ge0$$
 
-<!-- 講者提示：gamma 與 C 需一起驗證；核 SVM 在大樣本時訓練成本可能高。 -->
+$\xi_i$ 記錄第 $i$ 點跨入間隔或跨過決策邊界的程度。$C$ 權衡間隔寬度與違規懲罰。
+
+消去 $\xi_i$ 後，目標可寫成 hinge loss 形式：
+
+$$\min_{w,b}\frac12\|w\|^2+C\sum_i\max(0,1-y_if(x_i))$$
+
+<!-- 講者提示：軟間隔與 hinge 形式的對應為 xi_i=max(0,1-y_if_i)。原始論文：Cortes & Vapnik, 1995, https://doi.org/10.1007/BF00994018。 -->
 
 <!-- Notebook 對照：程式 06-11、06-14；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
-## 補充 SVM：多項式特徵與核技巧
+## 懲罰權重 $C$ 如何改變模型
+
+| $C$ | 正則化力量 | 間隔與違規 | 常見風險 |
+| --- | --- | --- | --- |
+| 小 | 強 | 傾向較寬間隔，容許較多違規 | 過度平滑、欠擬合 |
+| 大 | 弱 | 更重視單點懲罰，傾向縮窄間隔 | 邊界對雜訊敏感、過擬合 |
+
+- $C$ 是全局懲罰尺度，不是單純的「準確率旋鈕」。
+- `class_weight` 改變各類別的相對懲罰，`sample_weight` 可改變單筆樣本的相對懲罰。
+- 特徵尺度會改變距離與 $\|w\|$，SVM 通常要在 Pipeline 內標準化。
+
+<!-- 講者提示：scikit-learn 定義 C 的正則化強度與 C 成反比；class_weight[i] 會將第 i 類的 C 乘上對應權重。https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html。 -->
+
+---
+<!-- _class: small -->
+## Hinge loss：分對仍可能有損失
+
+令 $u=yf(x)$，hinge loss 為 $\ell(u)=\max(0,1-u)$。
+
+| $u$ | 預測與位置 | $\ell(u)$ | $\xi$ |
+| ---: | --- | ---: | ---: |
+| 1.5 | 分對且超過間隔 | 0 | 0 |
+| 1.0 | 位於間隔邊界 | 0 | 0 |
+| 0.4 | 分對但位於間隔內 | 0.6 | 0.6 |
+| 0 | 位於決策邊界 | 1 | 1 |
+| −0.5 | 分錯 | 1.5 | 1.5 |
+
+分類錯誤只看 $u<0$，hinge 還懲罰 $0<u<1$ 的「分對但不夠安全」樣本。
+
+<!-- 講者提示：原始 PPTX 第 19–20 頁的三種狀態在此改為同一個 u 軸上的可驗算表格。 -->
+
+<!-- Notebook 對照：程式 06-14；完整對照見本章 ipynb 開頭。 -->
+
+---
+<!-- _class: small -->
+## 從原始問題建立拉格朗日函數
+
+令 $\phi_i=\phi(x_i)$，並對軟間隔的兩組限制引入 $\alpha_i\ge0$ 與 $\mu_i\ge0$：
+
+$$\begin{aligned}
+L(w,b,\xi,\alpha,\mu)
+=&\frac12\|w\|^2+C\sum_i\xi_i\\
+&-\sum_i\alpha_i[y_i(w^T\phi_i+b)-1+\xi_i]
+-\sum_i\mu_i\xi_i
+\end{aligned}$$
+
+原始問題對 $(w,b,\xi)$ 最小化。對偶問題改為對 $(\alpha,\mu)$ 最大化可保證的下界。
+
+<!-- 講者提示：此處使用 phi_i=phi(x_i) 縮短公式。SVM 目標是凸二次規劃，對偶化後只留下樣本間內積。參考 Cortes & Vapnik 1995 與 https://scikit-learn.org/stable/modules/svm.html#svc。 -->
+
+---
+## 一階條件消去 $w$、$b$ 與 $\xi$
+
+$$\frac{\partial L}{\partial w}=0
+\quad\Rightarrow\quad
+w=\sum_i\alpha_i y_i\phi(x_i)$$
+
+$$\frac{\partial L}{\partial b}=0
+\quad\Rightarrow\quad
+\sum_i\alpha_i y_i=0$$
+
+$$\frac{\partial L}{\partial\xi_i}=0
+\quad\Rightarrow\quad
+C-\alpha_i-\mu_i=0
+\quad\Rightarrow\quad 0\le\alpha_i\le C$$
+
+最後一個上界是軟間隔與硬間隔對偶問題的關鍵差異。
+
+<!-- 講者提示：mu_i>=0 與 alpha_i+mu_i=C 同時給出 alpha_i<=C。原始 PPTX 第 14–16 頁展示了這組一階條件。 -->
+
+---
+<!-- _class: small -->
+## SVM 的對偶問題
+
+$$\max_{\alpha}\quad
+\sum_i\alpha_i-\frac12\sum_{i,j}\alpha_i\alpha_jy_iy_jK(x_i,x_j)$$
+
+$$\text{subject to}\quad 0\le\alpha_i\le C,\qquad \sum_i\alpha_i y_i=0$$
+
+對偶二次項矩陣 $Q$ 的元素為 $Q_{ij}=y_iy_jK(x_i,x_j)$。對偶目標只通過內積比較樣本，所以可將 $\phi(x_i)^T\phi(x_j)$ 直接替換為 $K(x_i,x_j)$，不必顯式建立高維特徵。
+
+<!-- 講者提示：scikit-learn 文件把同一對偶寫成最小化 1/2 alpha^T Q alpha - e^T alpha，與本頁最大化形式等價。https://scikit-learn.org/stable/modules/svm.html#svc。 -->
+
+<!-- Notebook 對照：程式 06-14；完整對照見本章 ipynb 開頭。 -->
+
+---
+<!-- _class: small -->
+## KKT 條件解釋哪些點會支撐邊界
+
+| $\alpha_i$ | 典型位置 | 對預測的影響 |
+| ---: | --- | --- |
+| $0$ | 間隔外，$y_if_i>1$ | 不出現在核展開中 |
+| $0<\alpha_i<C$ | 間隔邊界，$y_if_i=1$ | 支持向量，可用來求 $b$ |
+| $\alpha_i=C$ | 可能位於間隔內或分類錯誤 | 支持向量，違規懲罰已達上界 |
+
+$$f(x)=\sum_{i\in SV}\alpha_i y_iK(x_i,x)+b$$
+
+只有 $\alpha_i>0$ 的支持向量出現在 `decision_function`。`dual_coef_` 儲存的是含標籤符號的對偶係數。
+
+<!-- 講者提示：表格是非退化情況下的典型解釋。alpha_i=C 不代表一定分錯，它也可能只是位於間隔內。 -->
+
+<!-- Notebook 對照：程式 06-14 以 support_vectors_、dual_coef_ 與 intercept_ 手算 decision_function。 -->
+
+---
+## 特徵映射與核技巧
+
+$$\phi:\mathcal X\rightarrow\mathcal H,\qquad
+K(x,z)=\langle\phi(x),\phi(z)\rangle_{\mathcal H}$$
+
+在特徵空間 $\mathcal H$ 中使用線性超平面，映回原始輸入空間後可形成非線性邊界。
+
+對有限訓練集，Gram 矩陣 $G_{ij}=K(x_i,x_j)$ 應為對稱半正定，才能對應內積幾何與凸對偶問題。
+
+核技巧的重點是直接計算 $K(x,z)$，而不是先建立巨大的 $\phi(x)$。
+
+<!-- 講者提示：原始 PPTX 第 24、26、27 頁使用二維映射三維的例子。scikit-learn 對偶式也明列 Q 為半正定矩陣：https://scikit-learn.org/stable/modules/svm.html#svc。 -->
+
+---
+<!-- _class: activity -->
+## 多項式核的空間轉換影片
+
+原始 PPTX 第 25 頁嵌入的 HD 影片：
+
+### [SVM with polynomial kernel visualization (HD)](https://www.youtube.com/watch?v=OdlNM96sHio)
+
+觀看時請記錄：
+
+1. 原始二維資料為什麼無法用直線分開？
+2. 新特徵 $z=x^2+y^2$ 如何將資料抬到三維？
+3. 三維平面映回二維後，邊界變成什麼形狀？
+
+<!-- 講者提示：影片作者 udiprod，2021 年 HD 重製版。影片說明使用 phi([x,y])=[x,y,x^2+y^2]。PPTX 內的原始關聯目標為 https://www.youtube.com/embed/OdlNM96sHio?feature=oembed。 -->
+
+---
+<!-- _class: small -->
+## `SVC` 內建的四種核函數
+
+| `kernel` | $K(x,z)$ | 主要參數 | 典型用法 |
+| --- | --- | --- | --- |
+| `linear` | $x^Tz$ | $C$ | 高維稀疏特徵、可解釋權重 |
+| `poly` | $(\gamma x^Tz+r)^d$ | $C,\gamma,d,r$ | 指定階數的特徵交互 |
+| `rbf` | $e^{-\gamma\|x-z\|^2}$ | $C,\gamma$ | 一般非線性邊界，常作為起點 |
+| `sigmoid` | $\tanh(\gamma x^Tz+r)$ | $C,\gamma,r$ | 類似神經元激活，須特別驗證參數 |
+
+scikit-learn 以 `degree=d`、`coef0=r` 與 `gamma=γ` 命名公式中的參數。
+
+<!-- 講者提示：SVC 內建選項與公式來自 https://scikit-learn.org/stable/modules/svm.html#kernel-functions 與 https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html。 -->
+
+---
+<!-- _class: small -->
+## 自訂與預計算核的延伸
+
+| 核函數 | 公式或用法 | 適合情境 |
+| --- | --- | --- |
+| Laplacian | $e^{-\gamma\|x-z\|_1}$ | 希望使用 L1 差異，對特徵差異的反應與 RBF 不同 |
+| $\chi^2$ | $e^{-\gamma\sum_j (x_j-z_j)^2/(x_j+z_j)}$ | 非負的頻數或直方圖特徵 |
+| cosine | $x^Tz/(\|x\|\|z\|)$ | 方向比長度更重要的特徵 |
+| precomputed | 直接提供 Gram 矩陣 | 已有可驗證的相似度或領域核 |
+
+`SVC` 可接受 callable 或 `kernel="precomputed"`。自訂核必須對訓練與測試使用一致的 Gram 定義。
+
+<!-- 講者提示：scikit-learn 的 pairwise_kernels 另列 additive_chi2、chi2、laplacian、cosine 等核，這些不是 SVC kernel 參數的內建字串，應以 callable 或 precomputed 方式傳入。https://scikit-learn.org/stable/modules/metrics.html#pairwise-metrics-affinities-and-kernels。 -->
+
+---
+<!-- _class: small -->
+## 多項式特徵與核技巧
 
 對二維輸入，令 $\phi(x)=(x_1^2,\sqrt2x_1x_2,x_2^2)$，則
 
 $$\phi(x)^T\phi(z)=(x^Tz)^2$$
 
-$(1,1)$ 轉成 $(1,\sqrt2,1)$。XOR 可用 $x_1^2+x_2^2-2x_1x_2=0.5$ 分隔。
+$(1,1)$ 轉成 $(1,\sqrt2,1)$。對 XOR 四點，可在特徵空間使用
 
-- 顯式展開：`PolynomialFeatures` 後接 `LinearSVC`。
-- 核方法：`SVC(kernel="poly")`，直接算相似度。
+$$-x_1^2+2x_1x_2-x_2^2+0.5=0$$
 
-展開方式、縮放與懲罰不同時，兩段程式不保證得到相同模型。
+分開兩類。顯式展開可用 `PolynomialFeatures` 後接線性 SVM，核方法則使用 `SVC(kernel="poly")`。
 
-<!-- 講者提示：原稿公式已有 sqrt(2)，但 (1,1) 的映射數例寫成 (1,1,1)；正確為 (1,sqrt(2),1)。這裡統一公式與數例；RBF 與 polynomial 為主要範例，sigmoid kernel K(x,z)=tanh(γxᵀz+c) 僅列選讀，並非任意參數都給出有效的半正定核。 -->
+<!-- 講者提示：上式可寫成 (x1-x2)^2=0.5。顯式展開與核方法若使用不同縮放、bias 特徵或懲罰，不保證得到完全相同的模型。 -->
+
+<!-- Notebook 對照：程式 06-14 計算二次多項式核矩陣。 -->
+
+---
+## RBF 核的 $\gamma$ 決定影響範圍
+
+$$K_{\rm RBF}(x,z)=\exp(-\gamma\|x-z\|^2),\qquad
+\gamma=\frac{1}{2\sigma^2}$$
+
+- $\gamma$ 小：相似度隨距離下降較慢，單點影響範圍較大，邊界通常較平滑。
+- $\gamma$ 大：只有很靠近的點仍相似，邊界可能變得細碎。
+- `gamma="scale"` 使用 $1/(d\operatorname{Var}(X))$，仍要與 $C$ 一起經交叉驗證比較。
+
+特徵未縮放時，大數值特徵會主導 $\|x-z\|^2$，讓 $\gamma$ 難以解釋。
+
+<!-- 講者提示：參考 https://scikit-learn.org/stable/modules/svm.html#parameters-of-the-rbf-kernel。官方建議以指數尺度的 C 與 gamma 網格開始搜尋。 -->
 
 <!-- Notebook 對照：程式 06-11、06-14；完整對照見本章 ipynb 開頭。 -->
 
 ---
+<!-- _class: figure -->
+## $C$ 與 $\gamma$ 需要一起觀察
+
+![h:335 RBF SVM 在不同 gamma 與 C 下的決策邊界](../programs/outputs/figures/11_svm_rbf.png)
+
+這次固定切分中，$(\gamma,C)=(5,100)$ 產生較細碎的邊界，測試正確率反而低於 $(5,1)$。單次測試分數只能解讀這次實驗，調參應改用訓練折內交叉驗證。
+
+<!-- 講者提示：圖由 programs/notebooks/06_決策樹與SVM補充.ipynb 程式 06-11 實際產生。不從三個 test 分數中選最佳設定。 -->
+
+<!-- Notebook 對照：程式 06-11；完整對照見本章 ipynb 開頭。 -->
+
+---
 <!-- _class: small -->
-## 補充 SVM：多類別與模型比較
+## 程式實作：核函數、$C$ 與 $\gamma$
 
-| 策略 | K 類需訓練的二元模型數 | 整合方式 |
-| --- | ---: | --- |
-| OvR，一對其餘 | $K$ | 比較各類分數 |
-| OvO，一對一 | $K(K-1)/2$ | 成對比較後投票 |
+```python
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
 
-`SVC` 採 OvO 訓練；`decision_function_shape="ovr"` 是分數輸出格式。
+linear = make_pipeline(StandardScaler(), SVC(kernel="linear", C=1))
+poly = make_pipeline(StandardScaler(), SVC(kernel="poly", degree=3,
+                                            gamma="scale", coef0=1, C=1))
+rbf = make_pipeline(StandardScaler(), SVC(kernel="rbf", gamma=0.5, C=1))
+sigmoid = make_pipeline(StandardScaler(), SVC(kernel="sigmoid",
+                                              gamma="scale", coef0=0, C=1))
+```
 
-SVM 與 Logistic 都可能受離群點影響，須比較縮放、正則化與驗證結果。
+以同一份交叉驗證切分比較模型，並在折內完成 `StandardScaler.fit`。多項式與 RBF 的邊界實驗已收錄在現有程式。
 
-<!-- 講者提示：https://scikit-learn.org/1.7/modules/generated/sklearn.svm.SVC.html 。避免沿用「SVM 不受離群點影響」的絕對說法。 -->
+<!-- 講者提示：相關可執行程式已存在：programs/notebooks/06_決策樹與SVM補充.ipynb 程式 06-11、06-14；programs/upstream/MachineLearning2025/03_svm_kernel.py 包含顯式多項式特徵、poly kernel、RBF 與 C/gamma 組合。 -->
+
+---
+<!-- _class: small -->
+## 多類別、分數與計算限制
+
+| 主題 | `SVC` 的行為 | 教學重點 |
+| --- | --- | --- |
+| 多類別 | 內部訓練 OvO，共 $K(K-1)/2$ 個二元模型 | `decision_function_shape="ovr"` 只改變輸出形式 |
+| 分數 | `decision_function` 與超平面距離成比例 | 分數不等於機率 |
+| 規模 | 核 `SVC` 的 fit 時間至少隨樣本數二次成長 | 大樣本先考慮 `LinearSVC`、SGD 或核近似 |
+
+SVM 並非天生不受離群點影響。$C$、核參數、縮放與權重都會改變邊界。
+
+<!-- 講者提示：SVC API 說明 fit time 至少為樣本數的二次成長，可能在數萬筆以上就不實際。https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html。 -->
 
 <!-- Notebook 對照：程式 06-12；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
-## 選讀｜SVM 的次梯度與核參數實驗
+## 選讀｜線性 SVM 的次梯度
 
 $$J=\frac\lambda2\|w\|^2+\frac1m\sum_i\max(0,1-y_if_i)$$
 
-$$\nabla_wJ=\lambda w-\frac1m\sum_{y_if_i<1}y_ix_i,\quad
+$$\partial_wJ=\lambda w-\frac1m\sum_{y_if_i<1}y_ix_i,\qquad
 \partial_bJ=-\frac1m\sum_{y_if_i<1}y_i$$
 
-在折內標準化後，比較 `SVC(C=c, gamma=g)` 的 `c=[0.1,1,10]`、`g=[0.1,1,10]`。核的 `degree` 屬於 `SVC` 或 `PolynomialFeatures`，不是 `LinearSVC` 的參數。
+- $y_if_i>1$ 的點只留下正則化梯度。
+- $y_if_i<1$ 的點會推動 $w,b$ 改變邊界。
+- $y_if_i=1$ 處不可微，但可使用合法次梯度。
 
-<!-- 講者提示：課後選讀或替換同段講解，不計入 180 分鐘課堂主線。邊界 y_if_i=1 處取一個合法次梯度。若與 1/2||w||²+CΣhinge 比較，λ=1/(Cm)。不要混用總和與平均的學習率尺度。 -->
+這是 plain hinge 的教學版。`LinearSVC` 的預設損失為 `squared_hinge`，與本頁更新式不完全相同。
 
-<!-- Notebook 對照：程式 06-11、06-14；完整對照見本章 ipynb 開頭。 -->
+<!-- 講者提示：邊界 y_if_i=1 處取一個合法次梯度。若與 1/2||w||²+CΣhinge 比較，λ=1/(Cm)。不要混用總和與平均的學習率尺度。 -->
+
+<!-- Notebook 對照：程式 06-14 含單筆樣本的次梯度驗算。 -->
 
 ---
 <!-- _class: small -->
@@ -592,41 +814,43 @@ $$\nabla_wJ=\lambda w-\frac1m\sum_{y_if_i<1}y_ix_i,\quad
 
 | 模型 | 典型邊界 | 重要檢查 |
 | --- | --- | --- |
-| Logistic | 線性分數＋機率 | 正則化、校準、閾值 |
-| SVM（補充） | 線性或核邊界 | 縮放、C、gamma；分數不等於機率 |
+| Logistic | 線性分數與機率 | 正則化、校準、閾值 |
+| SVM | 原始空間的線性邊界，或核所得的非線性邊界 | 縮放、$C$、核參數，分數不等於機率 |
 | 決策樹 | 軸平行分區 | 深度、葉樣本數、穩定性 |
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的教材結果僅作來源示例，不能當作本班重跑結果。 -->
+<!-- 講者提示：同一份資料可能因特徵縮放、樣本量與邊界形狀而改變合適模型，不宜以單一表格直接宣告勝負。 -->
 
 <!-- Notebook 對照：程式 06-12；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: activity -->
-## 比較實作：同一切分，兩種模型
+## 比較實作：同一切分，三種模型
 
-使用同一份訓練與測試資料。
+使用同一份彎月資料與同一組交叉驗證切分。
 
-1. CV 比較樹深度 `[2,4,8,None]`。
-2. 比較標準化 Logistic；八週版再加入標準化 SVM。
-3. 除指標外，報告模型規則、錯誤案例與訓練時間。
-4. 離線：解釋斜向邊界為何可能讓淺樹吃虧。
+1. 比較樹深度 `[2,4,8,None]`。
+2. 比較 Pipeline 內標準化的 Logistic 與 RBF SVM。
+3. 對 RBF SVM 比較 $C\in\{0.1,1,10\}$ 與 $\gamma\in\{0.1,1,10\}$。
+4. 報告 CV 平均、標準差、訓練時間與一組錯誤案例。
 
-<!-- 講者提示：評分：同一資料切分、前處理在 CV 內、測試一次、有證據的邊界解釋。SVM 是補充，六週版移課後。 -->
+<!-- 講者提示：評分證據包含同一切分、前處理放入 Pipeline、參數只用訓練折選擇，測試集只在最後評估一次。 -->
 
-<!-- Notebook 對照：程式 06-12；完整對照見本章 ipynb 開頭。 -->
+<!-- Notebook 對照：程式 06-11、06-12；完整對照見本章 ipynb 開頭。 -->
 
 ---
 ## 離堂檢核與作業
 
-1. CART 為何要依樣本數加權？
-2. 為什麼葉節點很純，仍可能測試表現差？
-3. 哪一種資料改動可能明顯改變樹的規則？
+1. 為什麼決策樹的子節點不純度要依樣本數加權？
+2. 請分別說明函數間隔與幾何間隔。
+3. $C$ 從 1 增至 100 時，模型在懲罰什麼？為什麼不保證測試分數變好？
+4. 對偶問題為什麼使核技巧成為可能？
+5. RBF 核的 $\gamma$ 過大時，決策邊界會出現什麼風險？
 
-課後：Ch.5 練習 1–7；進階以多個抽樣子集比較樹的穩定性。
+課後：完成本章 Notebook 的樹深度與 SVM 參數比較，附上一張邊界圖與一段不超過 150 字的證據解釋。
 
-<!-- 講者提示：答案：各樣本權重一致；過度適配少量資料；資料抽樣／移除關鍵點／旋轉特徵。 -->
+<!-- 講者提示：第 2 題要提到 ||w||；第 4 題要提到對偶目標只含樣本間內積。 -->
 
-<!-- Notebook 對照：程式 06-12；完整對照見本章 ipynb 開頭。 -->
+<!-- Notebook 對照：程式 06-11、06-12；完整對照見本章 ipynb 開頭。 -->
 
 ---
 <!-- _class: small -->
@@ -636,12 +860,23 @@ $$\nabla_wJ=\lambda w-\frac1m\sum_{y_if_i<1}y_ix_i,\quad
 |---|---|
 | CART | 枚舉閾值、加權 Gini、遞迴停止及走訪預測 |
 | 迴歸樹 | 節點平均、階梯曲線與葉樣本限制 |
-| 旋轉／PCA | 比較座標與邊界；PCA 不保證使樹更簡單 |
-| SVM | 支持向量核加權＝decision_function；hinge 次梯度 |
+| 旋轉／PCA | 比較座標與邊界，PCA 不保證使樹更簡單 |
+| SVM | 間隔寬度、hinge loss、$C/\gamma$ 邊界、核加權與 `decision_function` |
 
-幾何示意可使用全部訓練樣本；模型比較使用同一切分與 CV。
-固定示範設定的 test 數字不能拿來反覆選最佳深度或 gamma。
+幾何示意可使用全部訓練樣本。模型比較使用同一切分與 CV，不使用固定 test 數字反覆選參數。
 
-<!-- 講者提示：程式課／課後補充，不增加原核心時間。保持完整原始教材圖片，以本Notebook的小型資料重做概念。 -->
+<!-- 講者提示：現有 programs/notebooks/06_決策樹與SVM補充.ipynb 已含本次需要的程式範例，因此無需另建重複程式檔。 -->
 
-<!-- Notebook 對照：程式 06-08、06-10、06-13、06-14；完整對照見本章 ipynb 開頭。 -->
+<!-- Notebook 對照：程式 06-08、06-10、06-11、06-12、06-13、06-14。 -->
+
+---
+<!-- _class: small -->
+## SVM 主要來源與延伸閱讀
+
+- Cortes, C., & Vapnik, V. (1995). *Support-Vector Networks*. Machine Learning, 20, 273–297. [DOI](https://doi.org/10.1007/BF00994018)
+- scikit-learn, [*Support Vector Machines: mathematical formulation and kernels*](https://scikit-learn.org/stable/modules/svm.html)
+- scikit-learn, [`SVC` API](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
+- Udi Aharoni, [*SVM with polynomial kernel visualization (HD)*](https://www.youtube.com/watch?v=OdlNM96sHio)
+- 原始教學素材：`source_pptx/03_SVM_DecistionTree_RandomForest.pptx`，第 2–29 頁。
+
+<!-- 講者提示：對偶問題與軟間隔以原始論文與官方數學文件核對。核類型、C、gamma、class_weight、複雜度與多類別行為以當前 scikit-learn stable 文件核對。 -->

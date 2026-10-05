@@ -6,11 +6,11 @@
 |---|---|---|
 | `../output/html/` | Marp 投影片，保留一頁一頁的版面 | 教師投影、方向鍵翻頁、講解概念與公式 |
 | `outputs/html/` | Notebook 的文字、公式、程式與該次執行結果 | 免安裝閱讀、逐段解讀圖表、課前預習與課後複習 |
-| `notebooks/*.ipynb` | 可編輯並執行的原稿 | 改參數、重跑實驗、操作需要 Python 的互動滑桿、繳交作業 |
+| `notebooks/*.ipynb` | 可編輯並執行的 Notebook | 改參數、重跑實驗、操作需要 Python 的互動滑桿、繳交作業 |
 
 [投影片 PDF／HTML 入口](../output/html/index.html)與 [Notebook 閱讀入口](outputs/html/index.html)互相連通。投影片 PDF 存於 `../output/pdf/`，適合註記與列印。
 
-2026-10-04 已更新第 02–25 章：24 份投影片 PDF／HTML，以及 24 份重新執行的 Notebook HTML。Notebook 共 265 個程式格於本機新的 Jupyter 核心以 `fast` 模式執行通過；原 `.ipynb` 的空白執行輸出保持不變。00–01 的 Notebook HTML 仍是歷史快照，入口已標示。原有全課程合併壓縮 PDF 也仍是舊版，授課請使用本次各章 PDF。
+第 02–25 章提供 24 份投影片 PDF／HTML，以及 24 份含執行結果的 Notebook HTML。Notebook 共 265 個程式格曾於獨立 Jupyter 核心以 `fast` 模式執行通過；`.ipynb` 維持空白執行輸出。授課以各章 PDF 與同名 Notebook 為準；00–01 的 Notebook HTML 與全課程合併壓縮 PDF 不作授課依據。
 
 ## 一段 Notebook HTML 的閱讀順序
 
@@ -18,7 +18,7 @@
 2. **找程式代碼與投影片頁次**：例如 `程式 05-06` 是穩定的教學定位；可以在投影片講者提示及雙向對照表反查。
 3. **讀程式的輸入、處理、輸出**：先找 `X`／`y`、資料切分、模型參數，再看 `fit`、`predict` 或矩陣運算。`In [n]` 是該次執行順序，不是章節、書本頁碼或投影片頁碼。
 4. **讀表格與數字**：先確認 training／validation／test、指標名稱及單位。同為 accuracy 的數字，也可能來自不同資料或不同切分；不能直接排出所有模型的優劣。
-5. **讀圖**：先看座標軸、圖例與資料範圍，再描述趨勢，最後連回公式。教材原圖與程式概念重畫可能有不同樣本、種子及分數。
+5. **讀圖**：先看座標軸、圖例與資料範圍，再描述趨勢，最後連回公式。投影片圖與程式概念重畫可能使用不同樣本、種子及分數。
 6. **讀檢查結果**：`assert` 沒有失敗時通常不顯示訊息；這表示指定性質通過，不代表模型對所有資料皆正確。警告訊息須看內容，例如收斂警告與執行錯誤的意義不同。
 
 HTML 是一次執行的紀錄；重新整理頁面不會重訓模型。頁首標示執行時間、模式與程式格數。修改程式後，原 HTML 不會自動更新；必須重新執行、匯出。
@@ -30,7 +30,7 @@ HTML 是一次執行的紀錄；重新整理頁面不會重訓模型。頁首標
 | 課前 | 指定一小節的 HTML，找出輸入、目標與一個參數 | 用一句話預測參數改變後的現象 |
 | 講解後 | 投影片說明公式，再切到同名 HTML 找到對應程式及圖 | 指出公式中的符號對應哪個變數 |
 | 結果討論 | 先停在程式區，請學生預測，再往下展示結果 | 描述座標軸、趨勢與可能原因 |
-| 實作 | 改用 `.ipynb`，一次只改一項設定並重跑 | 原圖、新圖、參數差異與解釋 |
+| 實作 | 改用 `.ipynb`，一次只改一項設定並重跑 | 基準圖、修改後圖、參數差異與解釋 |
 | 課後 | 用 HTML 作對照；讓學生交付 `.ipynb` 或其執行 HTML | 能追溯到程式與資料範圍的結論 |
 
 ### 20 分鐘示例：第 03 章分類閾值
@@ -56,10 +56,10 @@ HTML 是一次執行的紀錄；重新整理頁面不會重訓模型。頁首標
 python3 scripts/build_slides.py --pdf --html --weeks 3 4
 ```
 
-重新執行指定 Notebook 並匯出 HTML，同時保留原 `.ipynb` 及既有圖檔／報告：
+重新執行指定 Notebook 並匯出 HTML，同時保留來源 `.ipynb` 及既有圖檔／報告：
 
 ```sh
 MLCOURSE_PROFILE=fast programs/.venv/bin/python programs/scripts/execute_notebooks.py 03 04 --html --preserve-source
 ```
 
-執行結果記錄於 `outputs/html_execution.json`；`outputs/html/manifest.json` 記錄匯出時的原稿 SHA-256 與執行狀態。這些紀錄用來核對版本；真正的數值與圖表以每篇 HTML 的輸出區為準。
+執行結果記錄於 `outputs/html_execution.json`；`outputs/html/manifest.json` 記錄匯出時的 Notebook SHA-256 與執行狀態。這些紀錄用來核對版本；真正的數值與圖表以每篇 HTML 的輸出區為準。

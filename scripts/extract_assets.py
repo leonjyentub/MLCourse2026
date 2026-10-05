@@ -22,6 +22,6 @@ for stem,n,j,name in [('00_Machine Learning',7,0,'ppt_supervised_regression'),('
  with zipfile.ZipFile(p) as z:
   s=E.fromstring(z.read(f'ppt/slides/slide{n}.xml'));rel=E.fromstring(z.read(f'ppt/slides/_rels/slide{n}.xml.rels'));rs={x.attrib['Id']:x.attrib['Target'] for x in rel}
   b=s.findall('.//a:blip',ns)[j];rid=b.attrib['{'+ns['r']+'}embed'];src=posixpath.normpath(posixpath.join('ppt/slides',rs[rid]));out=OUT/(name+Path(src).suffix);out.write_bytes(z.read(src))
-  manifest.append(dict(asset=str(out.relative_to(ROOT)),source=str(p.relative_to(ROOT)),slide=n,media=src,method='原始內嵌影像擷取；舊稿示例，不視為本次實驗'))
+  manifest.append(dict(asset=str(out.relative_to(ROOT)),source=str(p.relative_to(ROOT)),slide=n,media=src,method='內嵌影像擷取；教材示例，不視為本次實驗'))
 (OUT/'sources.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 print('Extracted',len(manifest),'figures')

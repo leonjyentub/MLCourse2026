@@ -72,7 +72,7 @@ def main():
         nb['metadata']['kernelspec'] = {'display_name': 'Python 3', 'language': 'python', 'name': 'python3'}
         nb['metadata']['language_info'] = {'name': 'python'}
         nb['metadata'].pop('mlcourse', None)
-        # 舊執行結果來自修改前的環境，清空以免被誤認為 Colab 本次輸出。
+        # 清空既有執行結果，避免被誤認為目前 Colab 環境的輸出。
         for cell in cells:
             if cell['cell_type'] == 'code':
                 cell['execution_count'] = None

@@ -17,23 +17,21 @@ style: |
 
 書本第 15 章
 
-建議 180 分鐘，含活動與休息
-
 <!-- 來源／講者提示：自編章節導入 -->
 
 ---
-## 學習成果與課堂安排
+## 學習重點與成果
 
-- 0–50 分：Transformer 結構、位置資訊與 Q／K／V。
-- 60–110 分：多頭注意力、遮罩、殘差與翻譯。
-- 120–180 分：BERT 預訓練、微調與模型比較。
+- Transformer 結構、位置資訊與 Q／K／V。
+- 多頭注意力、遮罩、殘差與翻譯。
+- BERT 預訓練、微調與模型比較。
 
 成果：能手算小型注意力，追蹤維度並辨識未來資訊洩漏。
 
 <!-- notebook-companion-link -->
 > 💻 **配套 Notebook**：`programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb`。本檔提供公式驗算、機制實驗與結果圖；框架片段及完整模型案例另依頁面說明閱讀。
 
-<!-- 來源／講者提示：書本 Ch.15，PDF pp.1–33；兩次10分鐘休息。 -->
+<!-- 來源／講者提示：書本 Ch.15，PDF pp.1–33。 -->
 
 <!-- Notebook 對照：程式 18-01、18-02；完整對照見本章 ipynb 開頭。 -->
 
@@ -62,9 +60,9 @@ weights = softmax(scores)
 </div>
 </div>
 
-<!-- 講者提示：程式與圖均來自 programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb 的已執行輸出；來源與改編界線見 Notebook。 -->
+<!-- 講者提示：程式與圖為 programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb 的已執行輸出。 -->
 
-<!-- Notebook 對照：程式 18-04；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 18-04；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## 三種 Transformer 家族
@@ -103,7 +101,7 @@ weights = softmax(scores)
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.5–7，圖15-3；保留原圖，右側依資訊流補充中文導讀。 -->
 
-<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## 序列沒有循環，仍需要位置資訊
@@ -131,9 +129,7 @@ class PositionalEmbedding(nn.Module):
         return X + self.pos[:X.size(1)]
 ```
 
-沿用 `import torch`、`from torch import nn`；X 為 `[B,T,D]`。輸入長度不可超過表長。
-
-作者程式：Cell 31（移除Dropout以聚焦位置）（`15_transformers_for_nlp_and_chatbots.ipynb`）
+使用 `torch` 與 `torch.nn`；X 為 `[B,T,D]`。輸入長度不可超過表長。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.8–9；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 31（移除Dropout以聚焦位置） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
@@ -212,8 +208,6 @@ context = weights @ V
 
 此自寫程式的 blocked_mask=True 表示禁止關注；每列至少保留一個有效 key。
 
-作者程式：Cell 35（節錄）（`15_transformers_for_nlp_and_chatbots.ipynb`）
-
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.9–14；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 35（節錄） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 <!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
@@ -226,9 +220,9 @@ context = weights @ V
 
 每個 head 產生一組 context，串接後再經輸出投影。
 
-<!-- 來源／講者提示：書本 Ch.15，PDF 11，圖 15-4。圖為教材原圖，非本次實驗結果。 -->
+<!-- 來源／講者提示：書本 Ch.15，PDF 11，圖 15-4。此圖用於機制解說，不代表課堂重跑結果。 -->
 
-<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## 多頭的維度追蹤
@@ -258,7 +252,7 @@ $64$ 必須可被 $4$ 整除。
 
 翻譯 decoder 還要在 cross-attention 中排除來源端 padding。
 
-不同 API 的布林 mask 意義可能相反，不能直接沿用變數。
+不同 API 的布林 mask 意義可能相反，不能直接套用同一變數。
 
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–18；作者Cell46；自寫MHA與nn.Transformer的True=block，F.scaled_dot_product_attention布林True=allow。 -->
 
@@ -295,7 +289,7 @@ Attention 混合不同位置的資訊；FFN 轉換每個位置內的特徵。
 
 ---
 <!-- _class: activity -->
-## LayerNorm 手算：舊稿的四維例子
+## LayerNorm 手算：四維例子
 
 對單一 token 向量 $[2,4,4,6]$：
 
@@ -343,8 +337,6 @@ output = model(src, tgt, tgt_mask=causal_blocked,
 
 src_pad、tgt_pad 中 True 表示 padding；tgt 需使用位移後的目標前綴。
 
-作者程式：Cell 46（簡化）（`15_transformers_for_nlp_and_chatbots.ipynb`）
-
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.16–18；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 46（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 <!-- Notebook 對照：程式 18-05；完整對照見本章 ipynb 開頭。 -->
@@ -370,9 +362,9 @@ BERT 用雙向上下文學表示，常用於分類與資訊抽取。
 
 MLM 預測選中的 token；原始 BERT 也使用 NSP 判斷句子配對。
 
-<!-- 來源／講者提示：書本 Ch.15，PDF 21，圖 15-5。圖為教材原圖，非本次實驗結果。 -->
+<!-- 來源／講者提示：書本 Ch.15，PDF 21，圖 15-5。此圖用於機制解說，不代表課堂重跑結果。 -->
 
-<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## MLM 的遮蔽規則
@@ -403,8 +395,6 @@ model = BertForMaskedLM(config)
 
 這會建立隨機權重，尚未懂語言；`from_pretrained(...)` 才會載入既有權重。
 
-作者程式：Cell 57（簡化）（`15_transformers_for_nlp_and_chatbots.ipynb`）
-
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.19–22；程式依作者 15_transformers_for_nlp_and_chatbots.ipynb Cell 57（簡化） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 <!-- Notebook 對照：程式 18-05、18-06；完整對照見本章 ipynb 開頭。 -->
@@ -417,9 +407,9 @@ model = BertForMaskedLM(config)
 
 句子分類輸出每句一組標籤；NER 或 POS 則要對齊每個有效 token。
 
-<!-- 來源／講者提示：書本 Ch.15，PDF 24，圖 15-7。圖為教材原圖，非本次實驗結果。 -->
+<!-- 來源／講者提示：書本 Ch.15，PDF 24，圖 15-7。此圖用於機制解說，不代表課堂重跑結果。 -->
 
-<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 18-06；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## 問答任務的輸出設計
@@ -445,9 +435,9 @@ model = BertForMaskedLM(config)
 
 學生同時學任務訊號與教師行為；壓縮模型需重新衡量品質與成本。
 
-<!-- 來源／講者提示：書本 Ch.15，PDF 28，圖 15-9。圖為教材原圖，非本次實驗結果。 -->
+<!-- 來源／講者提示：書本 Ch.15，PDF 28，圖 15-9。此圖用於機制解說，不代表課堂重跑結果。 -->
 
-<!-- Notebook 對照：程式 18-07；完整對照見本章 ipynb 開頭。教材原圖與小型實驗的對應範圍依對照表標示，不直接沿用原圖模型分數。 -->
+<!-- Notebook 對照：程式 18-07；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
 ## Encoder 模型的改良方向
@@ -467,7 +457,7 @@ model = BertForMaskedLM(config)
 <!-- _class: activity -->
 ## 課堂活動：找出注意力錯誤
 
-20 分鐘，檢查三個設計：
+檢查下列三個設計：
 
 1. Softmax 沿 batch 軸。
 2. Decoder 訓練時可以看到目標下一個 token。
@@ -496,9 +486,8 @@ model = BertForMaskedLM(config)
 ## 課後程式與延伸閱讀
 
 - 作者第 15 章 Notebook（`15_transformers_for_nlp_and_chatbots.ipynb`）：先執行 Setup，再定位本課指定區段。
-- 舊稿 `10_Attention.pptx` s.22–68：Q／K／V、位置、LayerNorm、解碼與損失；重複版本按內容取用。
 
-程式來源依教材核對版本標示；執行前確認資料、套件與運算資源。
+執行前確認資料、套件與運算資源。
 
 <!-- 來源／講者提示：來源：作者 notebook 固定 commit 47eba45aacc85feae51ba7db68dd1ca66cb25e0a；Cell 編號從 0 起算。範例片段以讀碼為主，完整依賴見 notebook。 -->
 
@@ -518,6 +507,6 @@ model = BertForMaskedLM(config)
 權重隨機或只優化玩具 logits；不稱為已預訓練 BERT／DistilBERT。
 完整模型 API 仍作讀碼；小型實驗提供可核對的公式與資料流。
 
-<!-- 講者提示：NumPy CPU 小型實驗對應公式、形狀與流程；教材架構與外部模型成效不宣稱完整重現。 可用於程式課或課後，不增加原核心時間。 -->
+<!-- 講者提示：NumPy CPU 小型實驗用來核對公式、形狀與流程，不代表完整模型成效。 -->
 
 <!-- Notebook 對照：程式 18-05、18-06、18-07；完整對照見本章 ipynb 開頭。 -->

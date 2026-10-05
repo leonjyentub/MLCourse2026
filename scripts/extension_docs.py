@@ -91,7 +91,7 @@ plan+=['','## 教學與評量方式','','- 小組討論後，每人先獨立提�
 write_section(ROOT/'教學指引.md','<!-- extension-plan -->','\n'.join(plan))
 notes=['# 後續八週：講者備註與活動答案','','每頁分鐘數含講解或活動；每份合計 180 分鐘，包含兩次 10 分鐘休息。圖中教材結果非本班重跑結果。']
 activities=['# 後續八週：學生課堂活動單','','姓名：＿＿＿＿　日期：＿＿＿＿　組別：＿＿＿＿','','先獨立完成一個小題，再與同組比較。允許計算機；沒有電腦時完成每題的手算或流程設計替代。答案與評分提示另見講者備註。']
-source=['# Ch.4–9 來源與知識點對照','','主來源為使用者提供的六份 PDF；舊 PPTX 只補充主教材相關內容或明確標記的延伸。頁尾 p. 指書內印刷頁，PDF 頁另見下表；s. 指舊投影片頁。','','## PDF 定位','','| 主教材檔案 | PDF 頁數 | 印刷頁換算 |','|---|---:|---|']
+source=['# Ch.4–9 來源與知識點對照','','主來源為使用者提供的六份 PDF；補充 PPTX 用於主教材相關內容或明確標記的延伸。頁尾 p. 指書內印刷頁，PDF 頁另見下表；s. 指投影片頁。','','## PDF 定位','','| 主教材檔案 | PDF 頁數 | 印刷頁換算 |','|---|---:|---|']
 for chapter,count,offset in [(4,44,134),(5,16,178),(6,26,194),(7,24,220),(8,38,244),(9,34,282)]:
  f=next((ROOT/'book').glob(f'CHAPTER {chapter:02d}*.pdf'))
  source.append(f'| [{f.name}](<book/{f.name}>) | {count} | 印刷頁 = PDF 頁 + {offset} |')
@@ -102,7 +102,7 @@ source+=['','Ch.9 PDF 第 1–2 頁為 Part II 扉頁／空白，章正文從 PD
 '| 7 | 維度災難、投影／流形、PCA／SVD、保留維度／重建、隨機／增量 PCA、隨機投影／JL、LLE 與其他降維 | 08 |',
 '| 8 | K-means／初始化／加速／Mini-batch、inertia／silhouette／限制、影像與半監督／主動學習、DBSCAN／其他分群、GMM／EM／共變異、密度／異常／似然／AIC／BIC／Bayesian GMM／其他異常方法 | 09、10 |',
 '| 9 | 生物／人工神經元、Perceptron／XOR／MLP、反向傳播與激活、迴歸／分類架構、sklearn MLP、Fashion MNIST／過度自信、容量／學習率／批次／最佳化 | 11 |','',
-'## 舊投影片整合','','| PPTX | 採用內容與修正 |','|---|---|',
+'## PPTX 內容整合','','| PPTX | 採用內容與修正 |','|---|---|',
 '| 01_Regressions | 梯度下降與 Logistic 推導脈絡；以主教材式號與符號為準 |',
 '| 02_Validation and Regularization | 多項式、正則化與早停；補足最佳參數保存、驗證資料角色 |',
 '| 03_SVM_DecistionTree_RandomForest | 樹不純度、剪枝、方向與變異、森林；SVM 明確放補充；更正把 Boosting 包在 Random Forest 之下的分類 |',

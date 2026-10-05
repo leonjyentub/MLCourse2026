@@ -5,7 +5,7 @@ def slides(p):
     text=re.sub(r"^---\n.*?\n---\n", "", p.read_text(), count=1, flags=re.S)
     return re.split(r"\n---\s*\n", text)
 ROOT=Path(__file__).resolve().parents[1]
-expected=[4,36,47,43]
+expected=[4,36,47,53]
 for p,count in zip(sorted((ROOT/'slides').glob('0[0-3]_*.md')),expected,strict=True):
  blocks=slides(p);assert len(blocks)==count,(p,len(blocks))
  for i,b in enumerate(blocks,1):
@@ -21,6 +21,15 @@ assert round((tp+tn)/60000*100,2)==95.70
 assert round(tp/(tp+fp)*100,2)==83.71
 assert round(tp/(tp+fn)*100,2)==65.12
 assert round(2*tp/(2*tp+fp+fn),3)==.733
+# Chapter 3 entropy and cross-entropy worked examples.
+entropy=lambda p: -p*math.log2(p)-(1-p)*math.log2(1-p)
+assert round(entropy(.4),3)==.971
+assert round(entropy(.99),3)==.081
+model1=[.4,.4,.5,.1];model2=[.7,.8,.9,.3]
+assert round(sum(-math.log2(p) for p in model1),3)==6.966
+assert round(sum(-math.log2(p) for p in model2),3)==2.725
+assert round(sum(-math.log2(p) for p in model1)/4,3)==1.741
+assert round(sum(-math.log2(p) for p in model2)/4,3)==.681
 scores=[.95,.85,.8,.7,.6,.4,.3,.1];ys=[1,0,1,1,0,0,1,0]
 for t,expected_cm in [(.8,(2,1,2,3)),(.5,(3,2,1,2)),(.2,(4,3,0,1))]:
  pred=[s>=t for s in scores];tp=sum(p and y for p,y in zip(pred,ys));fp=sum(p and not y for p,y in zip(pred,ys));fn=sum(not p and y for p,y in zip(pred,ys));tn=sum(not p and not y for p,y in zip(pred,ys));assert (tp,fp,fn,tn)==expected_cm

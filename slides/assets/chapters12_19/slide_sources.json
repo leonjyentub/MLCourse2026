@@ -548,8 +548,8 @@
       },
       {
         "slide": 8,
-        "title": "舊稿補充：One-hot、詞袋與詞向量",
-        "source": "補充：08_Recurrent Neural Networks.pptx s.40–80；修正舊稿混用token one-hot與文件表示的說法。"
+        "title": "補充：One-hot、詞袋與詞向量",
+        "source": "補充：08_Recurrent Neural Networks.pptx s.40–80；區分 token one-hot 與文件表示。"
       },
       {
         "slide": 9,
@@ -604,7 +604,7 @@
       {
         "slide": 19,
         "title": "POS tagging 的逐 token 標籤",
-        "source": "補充：09_POS tagging.pptx s.2–3。將舊稿jumps泛寫VB修正為Penn第三人稱單數現在式VBZ；與UD粗標籤不同。"
+        "source": "補充：09_POS tagging.pptx s.2–3。jumps 在 Penn Treebank 標籤中應為第三人稱單數現在式 VBZ；與 UD 粗標籤不同。"
       },
       {
         "slide": 20,
@@ -774,7 +774,7 @@
       },
       {
         "slide": 17,
-        "title": "LayerNorm 手算：舊稿的四維例子",
+        "title": "LayerNorm 手算：四維例子",
         "source": "補充：10_Attention.pptx s.52–53；Ch15 pp.14–16。"
       },
       {
@@ -1141,7 +1141,7 @@
       },
       {
         "slide": 30,
-        "title": "舊稿圖片描述程式的閱讀路線",
+        "title": "圖片描述程式的閱讀路線",
         "source": "補充：11_Image Captioning.pptx s.14–25；重複中文檔為同主題來源，不另當課程順序。"
       },
       {
@@ -1689,17 +1689,17 @@
       },
       {
         "slide": 20,
-        "title": "舊稿手算：一般移動",
-        "source": "補充：source_pptx/12_強化學習.pdf p.13；原稿p.10的獎勵尺度不同。"
+        "title": "手算：一般移動",
+        "source": "補充：source_pptx/12_強化學習.pdf p.13；另一個例子的獎勵尺度不同。"
       },
       {
         "slide": 21,
-        "title": "舊稿手算：抵達終點",
+        "title": "手算：抵達終點",
         "source": "補充：source_pptx/12_強化學習.pdf p.14。"
       },
       {
         "slide": 22,
-        "title": "舊稿手算：碰牆但尚未終止",
+        "title": "手算：碰牆但尚未終止",
         "source": "補充：source_pptx/12_強化學習.pdf p.15；相對原Q，TD target=0.26更高。"
       },
       {

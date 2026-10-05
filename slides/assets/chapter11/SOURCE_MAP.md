@@ -8,7 +8,7 @@
 
 | 書本 | 現有11投影片的對應程度 | 本次處理 |
 | --- | --- | --- |
-| Ch.9 Introduction to Artificial Neural Networks | 完整入門主線，另有舊稿補充 | 原稿保持不變 |
+| Ch.9 Introduction to Artificial Neural Networks | 完整入門主線，另有補充素材 | 該章保持不變 |
 | Ch.10 Building Neural Networks with PyTorch | 只有後續閱讀、Keras對照等導引，尚無完整PyTorch課 | 新12的第3–10頁提供必要銜接與舊碼對照 |
 | Ch.11 Training Deep Neural Networks | 激活、梯度消失、Dropout等初步/選讀，尚未完整展開 | 新12與13依本章原順序設計 |
 
@@ -43,13 +43,13 @@ Ch.10 的自訂 Module、多輸入/多輸出、Optuna、模型部署等不在這
 | LLM.pptx | 16–17 | 預訓練/微調用途，接在輔助任務與自監督段落 |
 | 12_強化學習.pdf | 12、20 | Q-table概念改寫為可編輯選讀比較表，DQN屬未來擴充，沒有假裝它是本章訓練實作 |
 
-`機器學習-08-Image Captioning.pptx` 與 `11_Image Captioning.pptx` 的相關段落重複，採後者定位，不重複計算。Attention的另一份舊稿以相同概念為主，手算採實際具有該例的 `10_Attention.pptx`。回歸、SVM、降維、分群、RNN、POS tagging、LLM執行與其他Attention頁沒有因檔案編號而插入本章。強化學習PDF為20張影像頁，已目視檢視全份，主體為表格型Q-learning。
+`機器學習-08-Image Captioning.pptx` 與 `11_Image Captioning.pptx` 的相關段落重複，採後者定位，不重複計算。Attention 的另一份補充投影片以相同概念為主，手算採實際具有該例的 `10_Attention.pptx`。回歸、SVM、降維、分群、RNN、POS tagging、LLM 執行與其他 Attention 頁沒有因檔案編號而插入本章。強化學習 PDF 為 20 張影像頁，已目視檢視全份，主體為表格型 Q-learning。
 
 ## 方法與來源差異的處理
 
-- Regularization統一譯為「正則化」，Normalization為「正規化」。不沿用舊稿混用名稱。
+- Regularization 統一譯為「正則化」，Normalization 為「正規化」，不混用名稱。
 - 遷移案例71.6%/92.5%明確標成書中示例，保留作者p.386揭露挑選成功設定的限制。
-- 不將舊稿Dropout改善1–2%或optimizer排名當成普遍保證。
+- 不將特定教材中的 Dropout 改善 1–2% 或 optimizer 排名當成普遍保證。
 - BN參數/緩衝區分開。Momentum以PyTorch新批次權重慣例說明，推論預設使用移動統計。
 - 梯度裁剪對所傳參數的整體梯度範數作用，Max-norm則限制每個Linear輸出神經元的權重列。
 - SGD與L2/weight decay等價的推導限定無動量的基本形式；AdamW解耦衰減另述。
@@ -149,7 +149,7 @@ Notebook的cell索引一律**從0起算**，並提供搜尋詞，避免誤認為
 | 41 | PyTorch：複製骨幹，先只訓練新頭 | 來源：Ch.11 pp.385–386；optimizer是教學選擇。model_A架構為784→100→100→100→8且已訓練，X_batch是兩類影像，y_binary已重編碼0/1。此段是前提明確的讀碼片段，非獨立訓練程式。 |
 | 42 | PyTorch：解凍後建立分組學習率 | 來源：Ch.11 pp.384–386、406，教學改編。不是只把requires_grad設True就保證原optimizer更新新參數。本例全解凍以簡化示範，實際可先只解凍最上方隱藏層。 |
 | 43 | 書中成效：為何 92.5% 不能直接當保證？ | 來源：Ch.11 p.386（PDF p.24）。兩數均為書中示例，非本次實驗。這段是教材刻意揭露選擇性報告的教學安排，不可只引用成功數字；小型全連接網路的遷移成效也未必像大型CNN/Transformer。 |
-| 44 | 舊稿補充：圖片描述的預訓練 Encoder | 來源：source_pptx/11_Image Captioning.pptx s.3原圖、s.5/12/16概念；與機器學習-08-Image Captioning.pptx對應內容重複，只計一次。原圖保留其來源標記。這裡只補充遷移用途，不要求先學CNN/RNN或沿用舊Inception API。 |
+| 44 | 補充：圖片描述的預訓練 Encoder | 來源：source_pptx/11_Image Captioning.pptx s.3 原圖、s.5/12/16 概念；與機器學習-08-Image Captioning.pptx 對應內容重複，只計一次。原圖保留其來源標記。這裡只補充遷移用途，不要求先學 CNN/RNN 或使用已停用的 Inception API。 |
 | 45 | 圖 11-6：無監督預訓練的想法 | 來源：Ch.11 圖11-6，p.387（PDF p.25）；pp.386–387。大量無標註資料可先學重建等任務，再用少量標註做監督微調。不要把歷史逐層RBM流程當成所有現代預訓練標準。 |
 | 46 | 輔助任務與自監督預訓練 | 來源：Ch.11 p.388（PDF p.26），改寫遮詞例；source_pptx/LLM.pptx s.16–17補充預訓練/微調用途。預訓練資料不納入用於最終評估的保留集；實務還需記錄資料來源與重複樣本。 |
 | 47 | 小組設計：只有少量服飾標註時 | 來源：Ch.11 pp.384–388，自編活動，建議12分鐘。驗收：三組使用同樣驗證資料，至少記錄validation loss、accuracy與時間；說明凍結參數和BN狀態分開處理。不承諾遷移一定勝出。 |
@@ -189,7 +189,7 @@ Notebook的cell索引一律**從0起算**，並提供搜尋詞，避免誤認為
 | 28 | 選讀｜舊 mini-batch 範例的排程計數 | 來源：01_batchgradientDescent.ipynb cell 0的learning_schedule與mini_gradient_descent。原SGD已用epoch*m+iteration，mini-batch卻只用iteration；本頁標示為修正版，原檔不變。xi/yi/theta均沿用原迴圈變數；改len(xi)使不足整批時梯度仍按實際樣本數平均。修正用於原本平滑衰減目的，並非說所有週期性重升都錯；刻意warm restart是另一種排程。 |
 | 29 | 診斷活動：排程為什麼失去作用？ | 來源：Ch.11排程與optimizer概念，自編活動，建議8分鐘。答案：A統一單位；B每optimizer update step一次；Coptimizer建在epoch迴圈外；D改max。可畫epoch/batch兩層迴圈在白板標位置，無環境亦可做。 |
 | 30 | 休息 10 分鐘 | 講者提示：中段60分鐘結束。 |
-| 31 | 正則化：用驗證集判斷是否改善泛化 | 來源：Ch.11 pp.405–409；source_pptx/02_Validation and Regularization.pptx s.10–14；06_Artificial Neural Networks.pptx s.33–35；07_Convolutional Neural Networks.pptx s.37。舊稿Regularization統一譯為正則化，Normalization譯為正規化。 |
+| 31 | 正則化：用驗證集判斷是否改善泛化 | 來源：Ch.11 pp.405–409；source_pptx/02_Validation and Regularization.pptx s.10–14；06_Artificial Neural Networks.pptx s.33–35；07_Convolutional Neural Networks.pptx s.37。Regularization 統一譯為正則化，Normalization 譯為正規化。 |
 | 32 | L1、L2 與手動加入懲罰 | 來源：Ch.11 pp.405–406；舊02 PPTX s.10–14。這是手動L2方案，optimizer的weight_decay應設0以避免重複懲罰。係數含1/2使梯度為λw；若不寫1/2，梯度係數為2λ，不能直接把超參數視為相同。 |
 | 33 | AdamW 分組：只衰減本例的線性權重 | 來源：Ch.11 p.406的parameter groups概念，改以模組型別及參數id分類。不能只搜尋名字含bn，因Sequential的BN可能只有數字名稱。此方案替換上一頁手動L2，不同時套用；一般共享權重模型還需去重。 |
 | 34 | 早停與最佳參數回復 | 來源：Ch.11 p.405銜接Ch.10 PDF pp.40–41。此片段不是獨立完整迴圈；假設val_loss有限且第一輪成功建立best_state。deepcopy避免最佳狀態隨後續訓練改變；若只回復推論模型，不必回復optimizer，但續訓必須保留對應狀態。 |
@@ -197,12 +197,12 @@ Notebook的cell索引一律**從0起算**，並提供搜尋詞，避免誤認為
 | 36 | 選讀｜Keras callback：停止與回復最佳權重 | 來源：06_neural_nets_with_keras.ipynb cell 107–108，原碼換行整理。這段是房價迴歸模型，前頁Fashion MNIST模型不可直接混用。cell107示範ModelCheckpoint(save_best_only=True)後load_model，cell108加入EarlyStopping。預設監控val_loss；是舊Keras來源對照，不是本課PyTorch可直接執行程式，也不代表optimizer狀態隨最佳權重一起回復。 |
 | 37 | 圖 11-12：Dropout 的隨機遮罩 | 來源：Ch.11圖11-12，p.408（PDF p.46）；source_pptx/06_Artificial Neural Networks.pptx s.34–35。圖的虛線代表當次被遮蔽，不是永久剪枝；一般不遮分類任務的輸出logits。 |
 | 38 | Dropout 手算：為什麼要除以保留率？ | 來源：Ch.11 pp.408–409，自編活動，建議5分鐘。答案[4,0,12,0]，eval為[2,4,6,8]；E[r]=1-p。期望相同不表示每次輸出的總和或分布完全相同。p須小於1，此公式才可除以保留率。 |
-| 39 | PyTorch：Dropout 與評估公平性 | 來源：Ch.11 p.409；06 ANN PPTX s.34–35。舊稿1–2%改善為特定研究情境，不作本課成效保證。此模型須重新建立optimizer；不要拿model_drop的梯度卻step舊model的optimizer。SELU則另考慮AlphaDropout。 |
+| 39 | PyTorch：Dropout 與評估公平性 | 來源：Ch.11 p.409；06 ANN PPTX s.34–35。1–2% 改善為特定研究情境，不作本課成效保證。此模型須重新建立 optimizer；不要拿 model_drop 的梯度卻 step 另一個模型的 optimizer。SELU 則另考慮 AlphaDropout。 |
 | 40 | MC Dropout：保留遮罩，多次預測 | 來源：Ch.11 pp.410–412。三次數字是自編示意，正式估計可增加T；平均0.5、以T作分母的std約0.245。變動提供不確定性線索，不是自動校準的可信區間，也不保證總能改善accuracy。 |
 | 41 | 選讀｜MC Dropout 只打開需要的層 | 來源：Ch.11 pp.410–412，改寫成逐次抽樣以便讀碼。X_new已在device；模型已用Dropout訓練。本片段適用nn.Dropout，非AlphaDropout/Dropout2d通用切換。不能直接model.train()把BN統計也打開，且不能每次前向重設同一seed造成相同遮罩。 |
 | 42 | Max-norm：限制每個神經元的權重範數 | 來源：Ch.11 pp.412–413；自編手算。零向量不需縮放。原書敘述有row/column混用，對PyTorch Linear的[out,in]權重應沿dim=1求每列範數。 |
 | 43 | 選讀｜只對 Linear 權重施加 Max-norm | 來源：Ch.11 p.413，限制在Linear的安全教學改寫。使用clamp max=1只縮小超界列，與書中所有非bias參數一律dim=1相比，避免BN/LN參數維度錯誤。不是呼叫clip_grad_norm_。 |
-| 44 | 舊稿補充：資料擴增要保留標籤意義 | 來源：source_pptx/07_Convolutional Neural Networks.pptx s.37；連結Ch.11正則化。表格為教學改寫，未引用舊稿外部部落格內容。驗證/測試前處理固定，除非另定義測試時擴增協定。 |
+| 44 | 補充：資料擴增要保留標籤意義 | 來源：source_pptx/07_Convolutional Neural Networks.pptx s.37；連結 Ch.11 正則化。表格為教學整理，未引用外部部落格內容。驗證／測試前處理固定，除非另定義測試時擴增協定。 |
 | 45 | 表 11-3：深層網路的起始設定 | 來源：Ch.11表11-3，pp.413–414（PDF pp.51–52）。這是作者的起始指南，不是唯一標準。配合task/domain選預訓練模型；遇SELU等特殊架構須另外配對。 |
 | 46 | 綜合實驗：每次只回答一個比較問題 | 來源：Ch.11整章，自編綜合實驗，課堂用10分鐘規劃，完整執行作課後。不能同時換深度/初始化/optimizer後將差異歸因單一方法；保留基準與多個隨機種子。 |
 | 47 | 實驗提交與離線替代 | 來源：Ch.11實驗原則；自編活動驗收。測試集只在選定最終設定後使用，所有實測欄位由學生填入，不預造訓練結果。 |
@@ -210,4 +210,3 @@ Notebook的cell索引一律**從0起算**，並提供搜尋詞，避免誤認為
 | 49 | 課後延伸：書中 CIFAR10 深層網路實驗 | 來源：Ch.11練習8 a–g，p.415（PDF p.53）。資料50,000訓練/10,000測試，驗證由訓練資料切出。20層是刻意放大問題，不是推薦的影像最佳架構。SELU/AlphaDropout的MC版本要特別實作，不能直接套前面只切nn.Dropout的片段。 |
 | 50 | 選讀｜強化學習 PDF：Q-table 與神經網路 | 來源：source_pptx/12_強化學習.pdf pp.12、20，中文可編輯比較表。原PDF為20張影像頁，已全份目視檢查。p.12原圖的maze軸標籤有歧義，保留查表概念而不直接貼圖。Q-table不能直接表示連續狀態，可先離散化或改函數近似；DQN完整內容留到book Ch.19，不宣稱舊PDF已提供深層訓練實作。 |
 | 51 | 離堂檢核：以證據選方法 | 來源：Ch.11 pp.394–415。答案：全域尺度仍控制更新；訓練有隨機遮罩與縮放、評估無；backward後step前裁剪梯度，step後限制權重；有隨機變異和選擇性報告，需公平預算、固定資料與多次結果。 |
-

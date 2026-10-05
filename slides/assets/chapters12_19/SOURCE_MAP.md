@@ -52,9 +52,9 @@ PDF 頁碼均由各檔第一頁起算；第 17 章原圖取自線上完整章節
 
 作者 Notebook 的 hash 與章節資訊保存在 [notebook_sources.json](notebook_sources.json)。原圖的 PDF 頁、xref 與檔案 hash 保存在 [sources.json](sources.json)。圖片均從原始 PDF 內嵌影像擷取，未重畫。
 
-## 舊稿補充位置
+## 補充素材位置
 
-| 舊稿 | 實際使用方式 |
+| 補充素材 | 實際使用方式 |
 | --- | --- |
 | 07_Convolutional Neural Networks.pptx | CNN、ResNet、增強，補於14／15 |
 | 08_Recurrent Neural Networks.pptx | RNN、LSTM、詞袋／Word2Vec、情感與字元生成，補於16／17 |

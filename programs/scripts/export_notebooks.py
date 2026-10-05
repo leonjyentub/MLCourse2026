@@ -58,14 +58,14 @@ def make_index():
         fresh=record.get('source_sha256')==hashlib.sha256(path.read_bytes()).hexdigest()
         execution=record.get('execution')
         label=(f"已同步並執行 · {execution['profile']} · {execution['code_cells']} 格" if fresh and execution
-               else '僅匯出原稿，未重跑' if fresh else '歷史快照，尚未同步')
+               else '僅匯出 Notebook，未重跑' if fresh else '尚未同步目前 Notebook，請勿作授課依據')
         items.append(f'<li><a href="{html.escape(path.stem)}.html">{html.escape(title)}</a><br><small>{label}</small></li>')
     body='''<!doctype html><html lang="zh-Hant"><meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>機器學習教學 Notebook</title>
     <style>body{font-family:system-ui,sans-serif;max-width:850px;margin:60px auto;padding:0 24px;line-height:1.8;color:#243744;background:#f7f9fb}h1{line-height:1.3}a{color:#17626b}li{padding:9px 0}main{background:white;border:1px solid #dce4ea;border-radius:14px;padding:30px}small{color:#586d79}</style>
     <main><small>MLCourse2026 · 完整課程配套</small><h1>概念、程式與實際輸出</h1>
-    <p>這是 Notebook 的靜態閱讀版：說明 → 程式 → 表格／數字／圖形。各章下方標示是否與目前原稿同步，以及是否重新執行。</p>
+    <p>這是 Notebook 的靜態閱讀版：說明 → 程式 → 表格／數字／圖形。各章下方標示是否與目前版本同步，以及是否重新執行。</p>
     <p><strong>教學用法：</strong>課前找出輸入與目標；課中先預測結果、再展開閱讀；課後回到同名 .ipynb 修改一項參數，交付新圖及解釋。</p>
     <p>In [n] 是執行順序，不是章節或投影片頁碼；表格分數須連同資料切分、模式與指標閱讀。HTML 不會執行 Python；滑桿需 Jupyter／Colab，公式可能需網路載入 MathJax。</p>
     <p><a href="../../../output/html/index.html">投影片 PDF／HTML 入口</a></p><ol>'''

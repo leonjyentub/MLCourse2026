@@ -47,7 +47,7 @@ def _module_cells(source_name: str, label: str):
 
 
 def migrate_00_11():
-    """Consolidate 17 legacy notebooks into 12 slide-aligned notebooks."""
+    """Consolidate 17 input notebooks into 12 slide-aligned notebooks."""
     legacy_marker = NOTEBOOKS / "01_從資料到線性模型.ipynb"
     if not legacy_marker.exists():
         return
@@ -129,11 +129,11 @@ def source_markdown(handson: str, cells: str, teacher: str | None = None) -> str
         teacher_line = (
             f"\n- `MachineLearning2025/{teacher}`，固定 commit `{TEACHER_COMMIT}`。"
         )
-    return f"""## 來源與改編界線
+    return f"""## 實驗範圍與授權
 
 - Aurélien Géron，`handson-mlp/{handson}`，固定 commit `{HANDSON_COMMIT}`，參考 {cells}。
 {teacher_line}
-- 本 Notebook 為課堂短實驗：保留核心張量、演算法或評估流程，改用 NumPy／scikit-learn 與小型資料，讓 CPU 能快速重跑。
+- 本 Notebook 使用 NumPy／scikit-learn 與小型資料，讓核心張量、演算法或評估流程可在 CPU 快速執行。
 - 圖表與數值是本檔實際執行結果，不代表原書完整模型成效。原始程式授權與歸屬見 `../NOTICE.md`。"""
 
 

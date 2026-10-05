@@ -2,11 +2,11 @@
 
 以 **26 本可編輯 Jupyter Notebook** 配合 `slides/00–25`。檔名與投影片完全一致；投影片中的「配套 Notebook」以純文字標示對應檔名。各本可單獨上傳 Colab，從第一個程式格執行。
 
-Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab 本次執行。教師可在對應段落重新執行程式並展示圖表；[教學對照與取捨](TEACHING_MAP.md) 說明每本的使用位置。
+Notebook 預設不保存執行輸出；教師可在對應段落執行程式並展示目前環境產生的圖表。[教學對照與取捨](TEACHING_MAP.md) 說明每本的使用位置。
 
 ## 第 02–04 章雙向對照
 
-[逐圖與逐程式格對照](SLIDE_NOTEBOOK_MAP_02_04.md) 對應 02／03／04 投影片的 47／43／52 頁，以及 Notebook 的 28／32／20 個程式格。每個程式格標有代碼與投影片頁次。保留教材原圖，另以同概念程式重做；手算例使用相同輸入驗算。
+[逐圖與逐程式格對照](SLIDE_NOTEBOOK_MAP_02_04.md) 對應 02／03／04 投影片的 47／53／52 頁，以及 Notebook 的 28／32／20 個程式格。每個程式格標有代碼與投影片頁次。投影片圖用於概念解說，Notebook 以小型資料驗證同一機制；手算例使用相同輸入核對。
 
 三本已用現有套件與本機資料，在專案外分別由新 Python 程序依序執行全部程式格；未驗證 full 模式、Colab 或首次網路下載。Notebook 保留空白執行輸出，圖檔更新於 `outputs/figures/`。
 
@@ -14,7 +14,7 @@ Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab �
 
 [逐圖與逐程式格對照](SLIDE_NOTEBOOK_MAP_05_25.md) 涵蓋 21 組教材、838 頁、182 個圖檔引用及 185 個程式格。每本新增程式導讀與穩定程式代碼；投影片講者提示可反查 Notebook。
 
-05–11 補齊圖表、手算、模型實驗及評估切分；12–25 擴充成可執行的公式、張量、遮罩、損失與更新流程。原圖保留，區分同程式輸出、同概念重畫、數值驗算與機制／形狀對照。完整預訓練模型和框架片段仍按教材作讀碼，不宣稱由小型 CPU 範例重現其成效。
+05–11 包含圖表、手算、模型實驗及評估切分；12–25 包含可執行的公式、張量、遮罩、損失與更新流程。圖表依用途區分為程式輸出、概念重畫、數值驗算與機制／形狀對照。完整預訓練模型和框架片段只作讀碼，不宣稱由小型 CPU 範例重現其成效。
 
 21 本已在獨立 Python 程序依序驗證；第 07 章使用現有 MNIST 快取，未測 Colab、首次安裝／下載或大型 GPU 訓練。新圖位於 `outputs/figures/`，Notebook 保留空白執行輸出。2026-10-04 已另行匯出 02–25 的投影片 PDF／HTML，並以真正的 Jupyter 核心重跑 24 本、265 個程式格，更新 Notebook HTML。
 
@@ -56,11 +56,11 @@ Notebook 的既有輸出已清空，避免把舊環境的結果誤認為 Colab �
 | [24 自動微分](notebooks/24_附錄A_自動微分與計算圖.ipynb) | 對偶數、反向微分引擎、有限差分、detach |
 | [25 混合精度與量化](notebooks/25_附錄B_混合精度與量化.ipynb) | 格式／loss scaling、量化粒度、PTQ／QAT／STE |
 
-[HTML 閱讀入口](outputs/html/index.html) 的 02–25 已同步目前原稿並包含本次執行結果；00–01 明列為歷史快照。[HTML 教學使用說明](HTML_TEACHING_GUIDE.md) 解釋如何閱讀程式／圖表，以及預習、課堂討論與實作的安排。另有 [投影片 PDF／HTML 入口](../output/html/index.html)。互動滑桿需 Jupyter；Notebook HTML 的數學排版可能需要網路載入 MathJax。
+[HTML 閱讀入口](outputs/html/index.html) 的 02–25 已與目前 Notebook 同步並包含執行結果；00–01 的 HTML 不作授課依據。[HTML 教學使用說明](HTML_TEACHING_GUIDE.md) 解釋如何閱讀程式／圖表，以及預習、課堂討論與實作的安排。另有 [投影片 PDF／HTML 入口](../output/html/index.html)。互動滑桿需 Jupyter；Notebook HTML 的數學排版可能需要網路載入 MathJax。
 
 ## 環境與開啟方式
 
-每本 Notebook 現可直接上傳 Google Colab，從第一個程式格依序執行。第一格只安裝該本需要的 Python 套件；第二格準備本章的繪圖、輸出與資料讀取程式。01、02 在首次需要時下載並核對固定版本的 CSV，03、07 在首次需要時下載 MNIST；其餘 Notebook 不會下載外部資料。這些 NumPy／scikit-learn 的 CPU 實驗沒有可直接切換的 CUDA 後端。若需重現舊版套件環境，本機仍可使用 `uv.lock`。
+每本 Notebook 可直接上傳 Google Colab，從第一個程式格依序執行。第一格只安裝該本需要的 Python 套件；第二格準備本章的繪圖、輸出與資料讀取程式。01、02 在首次需要時下載並核對固定版本的 CSV，03、07 在首次需要時下載 MNIST；其餘 Notebook 不會下載外部資料。這些 NumPy／scikit-learn 的 CPU 實驗沒有可直接切換的 CUDA 後端。本機可依 `uv.lock` 重建固定套件環境。
 
 從專案根目錄執行：
 
@@ -143,7 +143,7 @@ uv run python scripts/hyperparameter_search_demo.py
 - `outputs/reports/`：機器可讀的實際數據。
 - `outputs/execution.json`：逐本執行時間與成功狀態。
 - `outputs/models/`：02 產生的完整房價管線及中繼資料，可重新生成，不納入 Git。
-- 舊環境的驗證紀錄已整併於根目錄 `README.md`，不代表 Colab 版已完成全套執行。
+- 本機驗證範圍記錄於根目錄 `README.md`；該結果不代表 Colab 已完成全套執行。
 
 本機推論示範：
 

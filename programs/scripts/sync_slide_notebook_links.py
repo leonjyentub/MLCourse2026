@@ -89,7 +89,7 @@ def result_slide(stem: str, notebook_name: str) -> str:
 </div>
 </div>
 
-<!-- 講者提示：程式與圖均來自 programs/notebooks/{notebook_name} 的已執行輸出；來源與改編界線見 Notebook。 -->
+<!-- 講者提示：程式與圖為 programs/notebooks/{notebook_name} 的已執行輸出。 -->
 """.strip()
 
 
@@ -100,10 +100,6 @@ def main():
         stem = path.stem
         notebook_name = stem + ".ipynb"
         text = path.read_text()
-        text = text.replace(
-            f"<!-- 程式與圖均來自 programs/notebooks/{notebook_name} 的已執行輸出；來源與改編界線見 Notebook。 -->",
-            f"<!-- 講者提示：程式與圖均來自 programs/notebooks/{notebook_name} 的已執行輸出；來源與改編界線見 Notebook。 -->",
-        )
         for old, new in LEGACY_REFS.items():
             text = text.replace(old, new)
         parts = re.split(r"^---\s*$", text, flags=re.MULTILINE)
