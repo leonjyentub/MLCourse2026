@@ -35,35 +35,6 @@ style: |
 <!-- Notebook 對照：程式 22-01、22-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- notebook-result-slide -->
-<!-- _class: small -->
-## 程式實驗與實際輸出
-
-<div class="columns wide-left">
-<div>
-
-```python
-Z = encoder(X)
-X_hat = decoder(Z)
-```
-
-**觀察**：線性欠完備自編碼器的教學對照使用 PCA；重建誤差揭示壓縮會捨棄資訊。
-
-參考程式：`programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb`
-
-</div>
-<div>
-
-![h:330 22_生成模型_自編碼器GAN與擴散 的實際執行結果](../programs/outputs/figures/22_generative_demo.png)
-
-</div>
-</div>
-
-<!-- 講者提示：程式與圖為 programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb 的已執行輸出。 -->
-
-<!-- Notebook 對照：程式 22-04；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
-
----
 ## 重建與生成的差別
 
 | 任務 | 輸入 | 輸出 |
@@ -101,24 +72,45 @@ Encoder 壓縮或轉換資料；decoder 從表示重建輸入。
 
 適當條件下，線性瓶頸模型學到與 PCA 相同的主要子空間；座標軸不必相同。
 
+**先預測**：把 64 維壓成 12 維再重建，是否一定逐像素還原？沒有訓練的 AE 能直接拿來與 PCA 比較嗎？
+
 <!-- 來源／講者提示：書本 Ch.18，PDF 6，圖 18-2。此圖用於機制解說，不代表課堂重跑結果。 -->
 
 <!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
 
 ---
-## 與本地 PCA 程式的連結
 
-延伸練習：用本章 Notebook 比較線性投影與自編碼器重建。
+<!-- _class: small -->
+## PCA 重建：作為線性 AE 的比較基準
 
-- 找到中心化／標準化、協方差矩陣、特徵分解與投影。
-- 線性 AE 使用 MSE、沒有非線性，瓶頸維度設為相同。
-- 必須在相同前處理與資料尺度下比較重建誤差。
+<div class="columns wide-left">
+<div>
 
-PCA 主成分可變號，AE 也可能使用不同基底；不要直接要求 latent 值逐格相同。
+digits 的 64 個像素除以 16；PCA 只在訓練集擬合，壓縮為 12 維再還原。
 
-<!-- 講者提示：PCA 範例使用 10 筆資料；繪圖需另行處理中文字型。 -->
+```python
+pca = PCA(n_components=12).fit(X[train22])
+Z = pca.transform(X[test22])
+recon = pca.inverse_transform(Z)
+```
 
-<!-- Notebook 對照：程式 22-03、22-05；完整對照見本章 ipynb 開頭。 -->
+上排原圖、下排重建；每欄同一測試樣本，標題為逐圖 MSE。這是 PCA 基準，不是已訓練 AE 或生成新樣本。
+
+AE 比較需訓練收斂，固定前處理與瓶頸維度；不同基底的 latent 值不必逐格相同。
+
+參考程式：`programs/notebooks/22_生成模型_自編碼器GAN與擴散.ipynb`
+
+</div>
+<div>
+
+![h:330 digits 測試樣本的原圖與十二維 PCA 重建](../programs/outputs/figures/22_generative_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：圖由Notebook 22-03、22-04用load_digits建立，不是十筆PCA小表。完整程式transform全部X再挑test22，片段直接transform測試集等價；上圖保留前兩個測試樣本與該測試集重建MSE最大樣本，不代表隨機抽三張的平均品質。Notebook 22-05用PCA主方向構成中心化線性encoder／decoder核對同一重建，未另訓練PyTorch AE。線性AE與PCA的比較需相同MSE、維度與尺度；不要直接比較有符號／基底差異的latent座標。 -->
+
+<!-- Notebook 對照：程式 22-03、22-04、22-05；以程式代碼定位配套 Notebook。 -->
 
 ---
 ## SVD 程式的可用部分與限制

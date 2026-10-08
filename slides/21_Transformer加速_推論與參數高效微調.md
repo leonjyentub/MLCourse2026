@@ -38,35 +38,6 @@ style: |
 <!-- Notebook 對照：程式 21-01、21-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- notebook-result-slide -->
-<!-- _class: small -->
-## 程式實驗與實際輸出
-
-<div class="columns wide-left">
-<div>
-
-```python
-lora_params = r * (d_in + d_out)
-full_params = d_in * d_out
-```
-
-**觀察**：r=8、d=4096 時，LoRA 訓練 65,536 個參數，約為完整矩陣的 0.391%。
-
-參考程式：`programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb`
-
-</div>
-<div>
-
-![h:330 21_Transformer加速_推論與參數高效微調 的實際執行結果](../programs/outputs/figures/21_transformer_efficiency_demo.png)
-
-</div>
-</div>
-
-<!-- 講者提示：程式與圖為 programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb 的已執行輸出。 -->
-
-<!-- Notebook 對照：程式 21-04；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
-
----
 ## 學習重點與成果
 
 - prefill、decode、KV cache 與推測解碼。
@@ -150,9 +121,42 @@ with torch.no_grad():
 
 先確認同條件下輸出，再量測速度；第一次載入或編譯不要混入穩態時間。
 
+**先計數**：從長度 1 逐步生成到 4，重算前綴要投影多少個 token 狀態？只投影新增位置呢？
+
 <!-- 來源／講者提示：書本 Ch.17，PDF 本地pp.1–2；作者KV Caching；程式依作者 17_speeding_up_transformers.ipynb Cell 18（改寫） 節錄或教學改寫，非完整獨立訓練腳本。 -->
 
 <!-- Notebook 對照：程式 21-05；完整對照見本章 ipynb 開頭。 -->
+
+---
+
+<!-- _class: small -->
+## 比較 KV cache 省下的重複投影
+
+<div class="columns wide-left">
+<div>
+
+數值例：每步新增一個 token。無快取重算整個前綴；有快取只加入新位置的 K／V。
+
+```python
+without_cache = lengths * (lengths + 1) / 2
+with_cache = lengths
+```
+
+橫軸是生成長度，縱軸是累計投影的 token 狀態數，兩軸皆為對數尺度。比較 $L(L+1)/2$ 與 $L$，不是實際時間或記憶體。
+
+參考程式：`programs/notebooks/21_Transformer加速_推論與參數高效微調.ipynb`
+
+</div>
+<div>
+
+![h:330 逐步生成時重算前綴與 KV cache 的投影數量](../programs/outputs/figures/21_transformer_efficiency_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：lengths=[16,32,64,128,256]；以一份K／V投影工作的token數計數，沒有計入固定prompt的prefill成本。QK注意力與其他運算仍需執行，圖不能當作端到端速度提升倍數，也不是LoRA參數量圖。前頁只做模型功能對照，時間量測需另外完成。後面的LoRA手算再比較低秩更新與完整矩陣的參數數量。 -->
+
+<!-- Notebook 對照：程式 21-03、21-04；以程式代碼定位配套 Notebook。 -->
 
 ---
 <!-- _class: figure -->

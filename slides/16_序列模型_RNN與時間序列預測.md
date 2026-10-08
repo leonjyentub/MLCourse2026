@@ -36,35 +36,6 @@ style: |
 <!-- Notebook 對照：程式 16-01、16-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- notebook-result-slide -->
-<!-- _class: small -->
-## 程式實驗與實際輸出
-
-<div class="columns wide-left">
-<div>
-
-```python
-X[t] = series[t-12:t]
-y[t] = series[t]
-```
-
-**觀察**：視窗模型只讀過去 12 點；圖同時保留 persistence 基準，避免只看單一模型。
-
-參考程式：`programs/notebooks/16_序列模型_RNN與時間序列預測.ipynb`
-
-</div>
-<div>
-
-![h:330 16_序列模型_RNN與時間序列預測 的實際執行結果](../programs/outputs/figures/16_sequence_demo.png)
-
-</div>
-</div>
-
-<!-- 講者提示：程式與圖為 programs/notebooks/16_序列模型_RNN與時間序列預測.ipynb 的已執行輸出。 -->
-
-<!-- Notebook 對照：程式 16-04；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
-
----
 <!-- _class: figure -->
 ## 循環層沿時間重用參數
 
@@ -226,9 +197,42 @@ def make_window(series, i, window_length):
 
 若原始資料除以一百萬，MAE 也在縮放後單位；報告時換回人次。
 
+**先預測**：persistence 把最後觀測當成下一點，遇到轉折時可能如何落後？線性視窗是否一定更好？
+
 <!-- 來源／講者提示：書本 Ch.13，PDF pp.18–20；作者Cell52。 -->
 
 <!-- Notebook 對照：程式 16-03、16-04、16-06；完整對照見本章 ipynb 開頭。 -->
+
+---
+
+<!-- _class: small -->
+## 用過去 12 點比較線性視窗與 persistence
+
+<div class="columns wide-left">
+<div>
+
+合成時間序列先以較早的 170 筆視窗訓練線性迴歸；後段每次只讀當時已知的過去 12 點，預測下一點。
+
+```python
+pred = model.predict(X[split:])
+persistence = X[split:, -1]
+```
+
+橫軸為時間，縱軸為合成數值。藍線是真值，橘線是線性視窗，綠線沿用最後觀測；在轉折附近比較落後情形，再核對 RMSE。
+
+參考程式：`programs/notebooks/16_序列模型_RNN與時間序列預測.ipynb`
+
+</div>
+<div>
+
+![h:330 後段時間的單步線性視窗與最後觀測值基準](../programs/outputs/figures/16_sequence_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：model、X、split在Notebook 16-03建立，window=12、split=170，X每列有12個歷史值。建窗後依目標時間分組，訓練標籤都早於後段評估；後段可使用剛取得的實際觀測，此圖是逐時點單步回測，不是從同一起點遞迴預測整段。前頁教材56天運量例和本頁12點合成例不同；本圖沒有訓練RNN，不能比較成RNN優於persistence。 -->
+
+<!-- Notebook 對照：程式 16-03、16-04；以程式代碼定位配套 Notebook。 -->
 
 ---
 <!-- _class: small -->

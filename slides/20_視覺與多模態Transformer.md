@@ -36,34 +36,6 @@ style: |
 <!-- Notebook 對照：程式 20-01、20-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- notebook-result-slide -->
-<!-- _class: small -->
-## 程式實驗與實際輸出
-
-<div class="columns wide-left">
-<div>
-
-```python
-similarity = normalize(image_emb) @ normalize(text_emb).T
-```
-
-**觀察**：圖文嵌入先正規化，再以餘弦相似度比較；分數只在同一模型空間內有意義。
-
-參考程式：`programs/notebooks/20_視覺與多模態Transformer.ipynb`
-
-</div>
-<div>
-
-![h:330 20_視覺與多模態Transformer 的實際執行結果](../programs/outputs/figures/20_multimodal_demo.png)
-
-</div>
-</div>
-
-<!-- 講者提示：程式與圖為 programs/notebooks/20_視覺與多模態Transformer.ipynb 的已執行輸出。 -->
-
-<!-- Notebook 對照：程式 20-04；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
-
----
 ## 視覺注意力的早期脈絡
 
 圖片描述可用 CNN 取得影像區域特徵，再由 RNN 逐詞生成。
@@ -312,9 +284,42 @@ $$s_{ij}=\frac{u_i^\top v_j}{\tau}$$
 
 此處 $u,v$ 已做長度正規化；溫度影響分數差異。
 
+**先判斷**：若只保留餘弦相似度而不做 Softmax，每列是否一定加總為 1？圖找文應沿哪個方向比較？
+
 <!-- 來源／講者提示：書本 Ch.16，PDF pp.28–33；公式為教材對比學習概念的簡化記號。 -->
 
 <!-- Notebook 對照：程式 20-03、20-04、20-06；完整對照見本章 ipynb 開頭。 -->
+
+---
+
+<!-- _class: small -->
+## 用相似度矩陣做圖找文
+
+<div class="columns wide-left">
+<div>
+
+兩個手設影像向量、三個手設文字向量，先將每列向量正規化，再計算餘弦相似度。
+
+```python
+norm = lambda a: a / np.linalg.norm(a, axis=1, keepdims=True)
+sim = norm(image_emb) @ norm(text_emb).T
+```
+
+橫軸為「貓、街景、戶外動物」，縱軸為影像 A／B。逐列挑最大值做圖找文；這是原始相似度，不是每列和為 1 的機率。
+
+參考程式：`programs/notebooks/20_視覺與多模態Transformer.ipynb`
+
+</div>
+<div>
+
+![h:330 兩個影像與三個文字向量的餘弦相似度](../programs/outputs/figures/20_multimodal_demo.png)
+
+</div>
+</div>
+
+<!-- 講者提示：image_emb與text_emb在Notebook 20-03手工設定，分別為2×2及3×2矩陣，並非CLIP編碼的真實影像或文字。圖中沒有除以CLIP溫度或做Softmax；若與前頁s_ij=u_i.Tv_j/tau對照，此圖只是其中的餘弦部分。A挑貓，B挑街景；列和不必為1。相似度矩陣有候選詞語不代表模型已學會語意，實際CLIP推論在後文另讀。 -->
+
+<!-- Notebook 對照：程式 20-03、20-04；以程式代碼定位配套 Notebook。 -->
 
 ---
 ## Zero-shot 分類依賴候選文字

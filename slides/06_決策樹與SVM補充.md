@@ -34,35 +34,6 @@ title: 決策樹與支援向量機
 <!-- Notebook 對照：程式 06-01、06-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- notebook-result-slide -->
-<!-- _class: small -->
-## 程式實驗與實際輸出
-
-<div class="columns wide-left">
-<div>
-
-```python
-DecisionTreeClassifier(max_depth=depth,
-                       random_state=42).fit(X, y)
-```
-
-**觀察**：限制樹深會平滑決策邊界；是否改善泛化仍要看驗證結果。
-
-參考程式：`programs/notebooks/06_決策樹與SVM補充.ipynb`
-
-</div>
-<div>
-
-![h:330 06_決策樹與SVM補充 的實際執行結果](../programs/outputs/figures/11_tree_regularization.png)
-
-</div>
-</div>
-
-<!-- 講者提示：程式與圖為 programs/notebooks/06_決策樹與SVM補充.ipynb 的已執行輸出。 -->
-
-<!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
-
----
 <!-- _class: figure -->
 ## 從根節點走到葉節點：Iris 決策樹
 
@@ -318,22 +289,41 @@ $$IG=H(\text{父})-\sum_c\frac{m_c}{m}H(c)$$
 
 預剪枝在生長時停止分割；後剪枝先長樹再移除子樹。兩者都要由訓練集內的驗證選擇。
 
+**先預測**：增加 `min_samples_leaf` 後，細碎區域與訓練 accuracy 會怎麼變？測試 accuracy 是否一定提高？
+
 <!-- 講者提示：非參數模型是參數數量不預先固定，不是沒有超參數。ccp_alpha 在訓練資料內用 CV 選擇。 -->
 
 <!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- _class: figure -->
-## 正則化前後：彎月資料的邊界
 
-![h:390 Decision boundaries of an unregularized tree (left) and a regularized tree
-(right)](assets/chapters04_09/book_fig_5_3.png)
+<!-- _class: small -->
+## 比較葉節點限制前後的彎月邊界
 
-增加葉節點最少樣本數，可以減少為個別樣本切出的細碎區域。
+<div class="columns">
+<div>
 
-<!-- 講者提示：先讓學生說明本頁符號或圖形，再連結前後概念。圖表中的固定結果僅供讀圖，不能當作本班重跑結果。 -->
+![w:510 h:250 教材中未限制與限制葉節點樣本數的決策邊界](assets/chapters04_09/book_fig_5_3.png)
 
-<!-- Notebook 對照：程式 06-06；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
+教材圖：增加葉節點最少樣本數，減少細碎區域。
+
+</div>
+<div>
+
+![w:510 h:250 固定彎月資料切分比較 min_samples_leaf](../programs/outputs/figures/11_tree_regularization.png)
+
+Notebook 圖：同一切分，比較無限制與 `min_samples_leaf=20`。
+
+</div>
+</div>
+
+點與背景色分別表示訓練標籤與模型預測；兩軸是合成特徵。限制後訓練 accuracy 較低，本次測試 accuracy 較高，不能只憑邊界較簡單宣稱泛化改善。
+
+參考程式：`programs/notebooks/06_決策樹與SVM補充.ipynb`
+
+<!-- 講者提示：前頁先預測限制的影響，再看圖上 train／test 數字。Notebook 實際比較 min_samples_leaf，不是 max_depth；核心片段為 DecisionTreeClassifier(min_samples_leaf=20, random_state=42).fit(Xmtr, ymtr)。左圖是教材實驗，右圖是另一次合成彎月切分，數字不可混用。右圖測試結果只描述既有這次比較，正式選超參數要在訓練資料內用驗證，不能反覆依測試集挑設定。 -->
+
+<!-- Notebook 對照：程式 06-06；以程式代碼定位配套 Notebook。 -->
 
 ---
 ## 迴歸樹：葉節點改成輸出數值平均

@@ -36,35 +36,6 @@ style: |
 <!-- Notebook 對照：程式 18-01、18-02；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- notebook-result-slide -->
-<!-- _class: small -->
-## 程式實驗與實際輸出
-
-<div class="columns wide-left">
-<div>
-
-```python
-scores[future_mask] = -inf
-weights = softmax(scores)
-```
-
-**觀察**：遮罩後未來位置的注意力總量為 0，權重矩陣呈下三角。
-
-參考程式：`programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb`
-
-</div>
-<div>
-
-![h:330 18_Transformer_注意力架構與預訓練 的實際執行結果](../programs/outputs/figures/18_transformer_mask_demo.png)
-
-</div>
-</div>
-
-<!-- 講者提示：程式與圖為 programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb 的已執行輸出。 -->
-
-<!-- Notebook 對照：程式 18-04；完整對照見本章 ipynb 開頭。圖例與小型實驗的資料、評估方式及適用範圍各自標示。 -->
-
----
 ## 三種 Transformer 家族
 
 | 架構 | 可見上下文 | 常見任務 |
@@ -254,23 +225,51 @@ $64$ 必須可被 $4$ 整除。
 
 不同 API 的布林 mask 意義可能相反，不能直接套用同一變數。
 
+**先畫圖**：位置從 0 起算，query 位於 2 時，哪些 key 應禁止？請畫出四個位置的允許矩陣。
+
 <!-- 來源／講者提示：書本 Ch.15，PDF pp.14–18；作者Cell46；自寫MHA與nn.Transformer的True=block，F.scaled_dot_product_attention布林True=allow。 -->
 
 <!-- Notebook 對照：程式 18-03、18-04、18-05；完整對照見本章 ipynb 開頭。 -->
 
 ---
-<!-- _class: activity -->
-## Causal mask 手算
+
+<!-- _class: small -->
+## 從允許矩陣核對 causal mask 的權重
 
 四個位置，1 表示允許關注：
 
 $$\begin{bmatrix}1&0&0&0\\1&1&0&0\\1&1&1&0\\1&1&1&1\end{bmatrix}$$
 
-訓練時可平行計算所有位置，但每個位置只能用自己的前綴。
+<div class="columns wide-left">
+<div>
 
-<!-- 來源／講者提示：自編矩陣；對應Ch15 decoder遮罩。 -->
+下圖擴為六個位置；程式的布林 `True` 表示禁止，看的是上三角。
 
-<!-- Notebook 對照：程式 18-03、18-04、18-05；完整對照見本章 ipynb 開頭。 -->
+```python
+masked = np.where(causal_mask, -1e9, scores)
+weights = np.exp(masked - masked.max(1, keepdims=True))
+weights /= weights.sum(1, keepdims=True)
+```
+
+每列只分配給自身與過去位置；訓練可平行計算，仍不能看未來。
+
+</div>
+<div>
+
+![h:260 六個位置的因果遮罩注意力權重](../programs/outputs/figures/18_transformer_mask_demo.png)
+
+橫軸 key，縱軸 query；黑色表示權重 0。
+
+</div>
+</div>
+
+參考程式：`programs/notebooks/18_Transformer_注意力架構與預訓練.ipynb`
+
+<!-- 來源：自編允許矩陣；對應Ch.15 decoder遮罩。 -->
+
+<!-- 講者提示：先收回前頁對query位置2的回答：只能讀key0、1、2。四位置的0／1矩陣是允許關係，不是Softmax權重；下圖為六個固定位置向量pe（維度4）的數值例，scores=pe@pe.T/sqrt(4)。causal_mask=np.triu(np.ones((6,6),dtype=bool),k=1)，True代表禁止，與上方允許矩陣相反。-1e9在此浮點計算中讓未來位置的exp下溢為0；每列至少保留自身。本圖不代表訓練Transformer後的注意力。 -->
+
+<!-- Notebook 對照：程式 18-03、18-04、18-05；以程式代碼定位配套 Notebook。 -->
 
 ---
 ## Feed-forward network 與殘差
